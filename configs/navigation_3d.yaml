@@ -1,0 +1,35 @@
+seed: 42
+device: cpu
+num_threads: 4
+environment:
+  name: navigation_3d
+  n_samples: 512
+  path_length: 32
+  grid_resolution: 17
+model:
+  backbone: transformer
+  hidden_dim: 64
+  num_layers: 3
+  num_heads: 4
+  conditioner: mlp
+scheduler:
+  kind: ddpm
+  num_train_timesteps: 1000
+  prediction_type: v_prediction
+training:
+  epochs: 200
+  batch_size: 64
+  learning_rate: 0.0005
+  condition_dropout: 0.15
+  ema_decay: 0.99
+  objective: diffusion
+  loss: mse
+  regularizers:
+    endpoint: 1.0
+    collision: 2.0
+    smoothness: 0.1
+    bounds: 1.0
+sampling:
+  steps: 100
+  num_samples: 128
+  guidance_scale: 1.5

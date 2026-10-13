@@ -1,0 +1,23 @@
+seed: 42
+device: cpu
+num_threads: 2
+environment:
+  name: rotating_rays
+  n_samples: 256
+  n_classes: 4
+model:
+  hidden_dim: 32
+  num_layers: 2
+  conditioner: one_hot
+scheduler:
+  kind: ddim
+  num_train_timesteps: 100
+  prediction_type: v_prediction
+training:
+  epochs: 3
+  batch_size: 64
+  ema_decay: 0.9
+sampling:
+  steps: 20
+  num_samples: 128
+  guidance_scale: 1.0

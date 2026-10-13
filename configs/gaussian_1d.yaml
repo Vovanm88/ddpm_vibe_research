@@ -1,0 +1,21 @@
+seed: 42
+device: cpu
+environment:
+  name: gaussian_mixture_1d
+  n_samples: 2048
+  n_classes: 3
+model:
+  hidden_dim: 64
+  num_layers: 3
+  conditioner: one_hot
+scheduler:
+  kind: ddpm
+  num_train_timesteps: 500
+training:
+  epochs: 100
+  batch_size: 128
+  learning_rate: 0.001
+  ema_decay: 0.99
+sampling:
+  steps: 50
+  num_samples: 512
