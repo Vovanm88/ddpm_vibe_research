@@ -68,7 +68,7 @@
     "margin": 0.035,
     "collision_free": true
   },
-  "color": "turbo, original normalized waypoint/time index in [0,1]; fixed across frames",
+  "color": "turbo_r: red start → orange → yellow → green → blue → purple finish; original normalized waypoint/time index in [0,1], fixed across frames",
   "animation": {
     "fps": 12,
     "max_frames": 60,

@@ -109,7 +109,7 @@ def make_demo(run="demo", output="demo/figures", *, num_paths=16, seed=127):
             "margin": scene.margin,
             "collision_free": bool(scene.collision_free(navigation_path)),
         },
-        "color": "turbo, original normalized waypoint/time index in [0,1]; fixed across frames",
+        "color": "turbo_r: red start → orange → yellow → green → blue → purple finish; original normalized waypoint/time index in [0,1], fixed across frames",
         "animation": {"fps": 12, "max_frames": 60, "actual_original_waypoints": True},
     }
     (output / "trajectory_metadata.json").write_text(

@@ -177,7 +177,7 @@ def _build(paths, *, cmap, walls, ax, title, progress, start_label, end_label):
 def plot_rainbow_trajectories(
     paths,
     *,
-    cmap="turbo",
+    cmap="turbo_r",
     progress=None,
     walls=(),
     ax=None,
@@ -210,7 +210,7 @@ def save_trajectory_gif(
     *,
     fps=12,
     max_frames=80,
-    cmap="turbo",
+    cmap="turbo_r",
     walls=(),
     title="Particle trajectories · Start → Finish",
     dpi=90,

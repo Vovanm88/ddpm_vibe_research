@@ -230,6 +230,8 @@ output.enable_custom_widget_manager()
 Цвет сегмента соответствует его исходному индексу от 0 до 1 и не меняется
 при удлинении следа; границы осей и colorbar также фиксированы. В 1D
 горизонтальная ось — индекс пути, вертикальная — положение x.
+По умолчанию `cmap="turbo_r"`: красный старт → оранжевый → жёлтый → зелёный →
+синий → фиолетовый финиш. Можно передать свой Matplotlib colormap.
 
 ```python
 from diffusion_lab.visualization import save_trajectory_gif

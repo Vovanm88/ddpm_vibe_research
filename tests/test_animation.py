@@ -11,6 +11,20 @@ from diffusion_lab.visualization import animation as trajectory_animation
 from diffusion_lab.visualization.animation import plot_rainbow_trajectories, save_trajectory_gif
 
 
+def test_default_rainbow_runs_from_red_start_to_purple_finish():
+    figure, axis = plot_rainbow_trajectories([[0, 0], [1, 1]])
+    markers = {item.get_label(): item for item in axis.collections}
+    start = markers["Start A"].get_facecolors()[0, :3]
+    finish = markers["Finish B"].get_facecolors()[0, :3]
+    assert start[0] > 3 * start[1] and start[0] > 3 * start[2]
+    assert finish[0] > 2 * finish[1] and finish[2] > 2 * finish[1]
+    trail = next(item for item in axis.collections if isinstance(item, LineCollection))
+    assert trail.cmap.name == "turbo_r"
+    np.testing.assert_allclose(start, trail.cmap(0.0)[:3])
+    np.testing.assert_allclose(finish, trail.cmap(1.0)[:3])
+    plt.close(figure)
+
+
 def test_torch_history_paths_and_explicit_noise_sample_labels():
     history = torch.tensor([[[0.0, 1.0]], [[1.0, 1.0]], [[2.0, 0.0]]])
     paths = history.permute(1, 0, 2)
