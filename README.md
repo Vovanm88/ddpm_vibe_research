@@ -17,6 +17,14 @@
 · [PyTorch quickstart в Colab](https://colab.research.google.com/github/Vovanm88/ddpm_vibe_research/blob/main/notebooks/03_standalone_quickstart.ipynb)
 · [Изменение компонентов в Colab](https://colab.research.google.com/github/Vovanm88/ddpm_vibe_research/blob/main/notebooks/04_change_components.ipynb)
 
+Обучение student-моделей и reflow целиком видно в отдельных ноутбуках:
+[дистилляция шагов 100 → 50 → 25](https://colab.research.google.com/github/Vovanm88/ddpm_vibe_research/blob/main/notebooks/07_progressive_distillation.ipynb),
+[меньшая модель и дистилляция CFG](https://colab.research.google.com/github/Vovanm88/ddpm_vibe_research/blob/main/notebooks/08_model_and_guidance_distillation.ipynb),
+[Rectified Flow → reflow](https://colab.research.google.com/github/Vovanm88/ddpm_vibe_research/blob/main/notebooks/09_rectified_flow_reflow.ipynb).
+Формулы targets, loss, sampler и `backward/step` редактируются в ячейках.
+Все три примера обучены на CPU; результаты и особенности —
+[docs/distillation.md](docs/distillation.md).
+
 Установка из пустого Jupyter:
 
 ```python

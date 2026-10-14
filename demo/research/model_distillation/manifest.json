@@ -1,0 +1,154 @@
+{
+  "method": "v_prediction output KD + architecture compression + fixed guidance baking",
+  "paper": "https://arxiv.org/abs/2210.03142",
+  "teacher_sha256": "78b51788f6f507785fd1b4fe324464c85d673128d25b054717d02b18252bd263",
+  "teacher_state_sha256_before": "cf1b131ebcee65a90f665d6884913c5e6c76d585f81c6d73d7580a9110f33068",
+  "teacher_state_sha256_after": "cf1b131ebcee65a90f665d6884913c5e6c76d585f81c6d73d7580a9110f33068",
+  "teacher_architecture": {
+    "sample_shape": [
+      2
+    ],
+    "hidden_dim": 128,
+    "num_layers": 4,
+    "num_heads": 4,
+    "backbone": "mlp",
+    "conditioner": "embedding",
+    "num_classes": 4,
+    "condition_dim": 0,
+    "_class_name": "PointDenoiser",
+    "_diffusers_version": "0.39.0",
+    "_name_or_path": "/Users/vvmelnikov/Documents/thub_eda/diffusion-lab/demo/pipeline/model"
+  },
+  "student_architecture": {
+    "sample_shape": [
+      2
+    ],
+    "hidden_dim": 96,
+    "num_layers": 2,
+    "num_heads": 4,
+    "backbone": "mlp",
+    "conditioner": "embedding",
+    "num_classes": 4,
+    "condition_dim": 0,
+    "_use_default_values": [
+      "condition_dim",
+      "num_heads",
+      "backbone"
+    ],
+    "_class_name": "PointDenoiser",
+    "_diffusers_version": "0.39.0"
+  },
+  "baked_guidance": 1.5,
+  "deployment_guidance_scale": 1.0,
+  "null_probability": 0.15,
+  "x0_loss_weight": 0.1,
+  "epochs": 150,
+  "optimizer_steps": 2400,
+  "training_seconds": 16.943738291971385,
+  "train_samples": 4096,
+  "reference_samples": 4096,
+  "eval_samples": 1024,
+  "train_seed": 801,
+  "eval_seed": 802,
+  "sampling_seed": 803,
+  "inference_steps": 100,
+  "timing_repeats": 2,
+  "timing_includes_history": true,
+  "device": "cpu",
+  "threads": 4,
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "torch_version": "2.14.1",
+  "diffusers_version": "0.39.0",
+  "diffusion_lab_version": "0.3.2",
+  "parity": {
+    "heldout_v_mse": 0.00032738695153966546,
+    "heldout_x0_mse": 9.145882359007373e-05,
+    "heldout_null_v_mse": 0.000323960353853181
+  },
+  "generation_comparison": [
+    {
+      "model": "Teacher guided",
+      "parameters": 431362,
+      "guidance_scale": 1.5,
+      "steps": 100,
+      "nfe": 200,
+      "median_seconds": 1.1353757085744292,
+      "sliced_wasserstein": 0.05441941947031065,
+      "mean_error": 0.010119808837771416,
+      "std_error": 0.051176901906728745,
+      "class_0_sliced_wasserstein": 0.06114842303473085,
+      "class_1_sliced_wasserstein": 0.05472254951283926,
+      "class_2_sliced_wasserstein": 0.07158003085495766,
+      "class_3_sliced_wasserstein": 0.07526218612152769,
+      "teacher_student_swd": 0.0
+    },
+    {
+      "model": "Student untrained",
+      "parameters": 131714,
+      "guidance_scale": 1.0,
+      "steps": 100,
+      "nfe": 100,
+      "median_seconds": 0.3198058749549091,
+      "sliced_wasserstein": 0.5442013935978094,
+      "mean_error": 0.4281882643699646,
+      "std_error": 0.8058100938796997,
+      "class_0_sliced_wasserstein": 0.9573848315011786,
+      "class_1_sliced_wasserstein": 0.6697171568625472,
+      "class_2_sliced_wasserstein": 0.5628350036373021,
+      "class_3_sliced_wasserstein": 0.5790994990040215,
+      "teacher_student_swd": 0.5312357447237072
+    },
+    {
+      "model": "Student distilled",
+      "parameters": 131714,
+      "guidance_scale": 1.0,
+      "steps": 100,
+      "nfe": 100,
+      "median_seconds": 0.32081891666166484,
+      "sliced_wasserstein": 0.054996070961214914,
+      "mean_error": 0.00957867968827486,
+      "std_error": 0.052246201783418655,
+      "class_0_sliced_wasserstein": 0.06148432459944649,
+      "class_1_sliced_wasserstein": 0.055066126275334186,
+      "class_2_sliced_wasserstein": 0.07200194895379655,
+      "class_3_sliced_wasserstein": 0.0767089204712719,
+      "teacher_student_swd": 0.001758493982917404
+    },
+    {
+      "model": "Teacher CFG off (conditional)",
+      "parameters": 431362,
+      "guidance_scale": 1.0,
+      "steps": 100,
+      "nfe": 100,
+      "median_seconds": 0.5611870205029845,
+      "sliced_wasserstein": 0.012504267879957238,
+      "mean_error": 0.004500214010477066,
+      "std_error": 0.008978140540421009,
+      "class_0_sliced_wasserstein": 0.020358544296617678,
+      "class_1_sliced_wasserstein": 0.01707779244122859,
+      "class_2_sliced_wasserstein": 0.01889541291023515,
+      "class_3_sliced_wasserstein": 0.018389048318739942,
+      "teacher_student_swd": 0.054052361216735303
+    }
+  ],
+  "unconditional": {
+    "teacher": {
+      "sliced_wasserstein": 0.032914117114503594,
+      "mean_error": 0.008563731797039509,
+      "std_error": 0.01460858341306448
+    },
+    "student": {
+      "sliced_wasserstein": 0.03389552134146099,
+      "mean_error": 0.010923138819634914,
+      "std_error": 0.012263012118637562
+    }
+  },
+  "trajectory_files": [
+    "outputs/model_distillation/teacher_trajectories.png",
+    "outputs/model_distillation/teacher_trajectories.svg",
+    "outputs/model_distillation/teacher_trajectories.gif",
+    "outputs/model_distillation/student_trajectories.png",
+    "outputs/model_distillation/student_trajectories.svg",
+    "outputs/model_distillation/student_trajectories.gif"
+  ]
+}

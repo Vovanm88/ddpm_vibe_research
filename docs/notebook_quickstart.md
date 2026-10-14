@@ -148,6 +148,16 @@ display(sampling)
 
 ## Что можно менять — с обучением
 
+Для обучения по родительской модели есть самостоятельные notebooks:
+
+- [`07_progressive_distillation.ipynb`](../notebooks/07_progressive_distillation.ipynb): два DDIM-перехода teacher становятся одним переходом student, стадии 100 → 50 → 25.
+- [`08_model_and_guidance_distillation.ipynb`](../notebooks/08_model_and_guidance_distillation.ipynb): новая меньшая модель учится по ответам teacher, фиксированный CFG включён в target.
+- [`09_rectified_flow_reflow.ipynb`](../notebooks/09_rectified_flow_reflow.ipynb): обучение 1-RF, генерация связанных пар noise/teacher-endpoint и обучение 2-RF; опционально 3-RF.
+
+Код алгоритмов, targets, losses и обучения расположен в ячейках. Каждый пример
+сохраняет отдельные веса, метрики, графики и GIF. Формулы, параметры запуска и
+фактические сравнения описаны в [distillation.md](distillation.md).
+
 | Изменение | Пример в `04_change_components.ipynb` |
 |---|---|
 | Архитектура | MLP, Transformer, свой обучаемый residual input adapter |

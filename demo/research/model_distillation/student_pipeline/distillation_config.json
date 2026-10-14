@@ -1,0 +1,6 @@
+{
+  "fixed_guidance": 1.5,
+  "inference_guidance": 1.0,
+  "num_inference_steps": 100,
+  "null_prediction": "trained to teacher unconditional v_prediction"
+}

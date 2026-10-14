@@ -14,6 +14,9 @@ ROOT = Path(__file__).resolve().parents[1]
         "04_change_components.ipynb",
         "05_live_visualizations.ipynb",
         "06_trained_interactive_demo.ipynb",
+        "07_progressive_distillation.ipynb",
+        "08_model_and_guidance_distillation.ipynb",
+        "09_rectified_flow_reflow.ipynb",
     ],
 )
 def test_downloadable_notebooks_compile_without_binary_payloads(name):

@@ -1,0 +1,95 @@
+{
+  "paper": "https://arxiv.org/abs/2202.00512",
+  "teacher_source": "/Users/vvmelnikov/Documents/thub_eda/diffusion-lab/demo/pipeline",
+  "teacher_weights_sha256": "78b51788f6f507785fd1b4fe324464c85d673128d25b054717d02b18252bd263",
+  "teacher_original_training_epochs": 120,
+  "stages": [
+    100,
+    50,
+    25
+  ],
+  "epochs_per_stage": [
+    60,
+    100
+  ],
+  "training_seconds_this_execution": 33.07593545829877,
+  "seed": 314,
+  "train_seed": 123,
+  "reference_seed": 2718,
+  "eval_seed": 1618,
+  "eval_samples": 1024,
+  "eval_guidance_scale": 1.0,
+  "condition_dropout": 0.15,
+  "ema_decay": 0.99,
+  "device": "cpu",
+  "torch_version": "2.14.1",
+  "metrics": [
+    {
+      "name": "Teacher 100",
+      "nfe": 100,
+      "sliced_wasserstein": 0.01333346862890306,
+      "mean_class_swd": 0.017746088207602966,
+      "paired_teacher_rmse": 0.0,
+      "median_sampling_seconds": 0.47700920794159174,
+      "timing_runs_seconds": [
+        0.47700920794159174,
+        0.5288269170559943,
+        0.4013601248152554
+      ]
+    },
+    {
+      "name": "Original teacher 50",
+      "nfe": 50,
+      "sliced_wasserstein": 0.01377034447560359,
+      "mean_class_swd": 0.01782076480187987,
+      "paired_teacher_rmse": 0.007173724472522736,
+      "median_sampling_seconds": 0.24658108409494162,
+      "timing_runs_seconds": [
+        0.24400666682049632,
+        0.32901420816779137,
+        0.24658108409494162
+      ]
+    },
+    {
+      "name": "Student 50",
+      "nfe": 50,
+      "sliced_wasserstein": 0.013334509593423475,
+      "mean_class_swd": 0.017747638292149252,
+      "paired_teacher_rmse": 0.0006735421484336257,
+      "median_sampling_seconds": 0.16437058290466666,
+      "timing_runs_seconds": [
+        0.21198808308690786,
+        0.16437058290466666,
+        0.1470158752053976
+      ]
+    },
+    {
+      "name": "Original teacher 25",
+      "nfe": 25,
+      "sliced_wasserstein": 0.01637582312865263,
+      "mean_class_swd": 0.020821944413887534,
+      "paired_teacher_rmse": 0.020300257951021194,
+      "median_sampling_seconds": 0.07310983305796981,
+      "timing_runs_seconds": [
+        0.07310983305796981,
+        0.07196633331477642,
+        0.0755608337931335
+      ]
+    },
+    {
+      "name": "Student 25",
+      "nfe": 25,
+      "sliced_wasserstein": 0.013338971327391261,
+      "mean_class_swd": 0.017751714666468528,
+      "paired_teacher_rmse": 0.0015326834982261062,
+      "median_sampling_seconds": 0.07401904230937362,
+      "timing_runs_seconds": [
+        0.07116141682490706,
+        0.07401904230937362,
+        0.07467545801773667
+      ]
+    }
+  ],
+  "interpretation": "Student learned two-to-one deterministic DDIM targets on its own timestep grid; quality is empirical.",
+  "training_seconds_total": 33.00433220807463
+}

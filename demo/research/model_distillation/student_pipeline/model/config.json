@@ -1,0 +1,14 @@
+{
+  "_class_name": "PointDenoiser",
+  "_diffusers_version": "0.39.0",
+  "backbone": "mlp",
+  "condition_dim": 0,
+  "conditioner": "embedding",
+  "hidden_dim": 96,
+  "num_classes": 4,
+  "num_heads": 4,
+  "num_layers": 2,
+  "sample_shape": [
+    2
+  ]
+}

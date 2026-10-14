@@ -198,3 +198,46 @@ Ruff check/format прошли. Легенда GIF вынесена за обл�
 все массивы history/paths/conditions/timesteps/navigation в NPZ совпали
 с прежними побитово. Orientation regression проверяет цвета markers и cmap.
 Полный прогон **218 passed in 17.60s**, Ruff check/format и git diff check прошли.
+
+## Дистилляция и reflow в видимых notebook loops
+
+Notebooks 07/08/09 целиком выполнены в локальном Python 3.11 окружении на CPU,
+четыре потока, torch 2.14.1 / diffusers 0.39.0 / diffusion-lab 0.3.2.
+Для обучения используются реальные loops из ячеек, не отдельные копии алгоритмов.
+Все notebook outputs и execution counts очищены; nbformat validation прошла.
+Исходники имеют размер 35–42 КБ; wheel, weights и widget state не встроены.
+
+- 07: 60 + 100 эпох progressive DDIM, обучение 33.08 с, NFE 100 → 50 → 25.
+  Heldout SWD teacher-100 0.01333347, student-25 0.01333897 при guidance=1.
+  Native Diffusers reload с обученными 50/25 шагами воспроизводит samples.
+- 08: 150 эпох, обучение 16.94 с; новая student 131714 параметров против teacher
+  431362. SWD 0.54420 до обучения, 0.05500 после, guided teacher 0.05442.
+  Реальные forward hooks подтверждают NFE 200 → 100. Teacher SHA256 до/после
+  совпадает; native reload точен. Fixed guidance=1.5 применяется в target,
+  при deployment scale=1. CFG-off teacher получает SWD 0.01250: цель опыта —
+  воспроизвести выбранный guided teacher, а не доказать оптимальность CFG.
+- 09: 100 + 100 эпох RF/reflow; весь notebook с artifacts и reload — 37.4 с.
+  One-step conditional SWD 0.105188 → 0.022763, плотная 64-step length/chord
+  1.075811 → 1.000622. Null one-step SWD 0.319506 → 0.053596; null 64-step
+  0.045260 → 0.050350. Frozen 1-RF teacher сохранён побитово.
+
+Дополнительно 07 целиком выполнен с 1 + 1 эпохами и меньшими datasets;
+повторное выполнение training cell восстанавливает обе EMA модели точно,
+а число запрошенных эпох меньше уже сохранённого отклоняется. 09 целиком
+выполнен из отдельного рабочего каталога с 2 + 2 эпохами, включённым 3-RF
+ещё на две эпохи и resume 2-RF ещё на одну: export/reload/продолжение прошли.
+Эти локальные дополнительные проверки использовали установленный checkout;
+облачный Colab и GPU не проверялись.
+
+Новые regression tests извлекают actual функции и training cell из AST ноутбуков:
+официальный DDIM и известный clean oracle проверяют все 75 вложенных интервалов,
+включая terminal r=-1; guidance oracle проверяет scale 0/1/1.5 и null target;
+constant-velocity oracle проверяет знак Euler и histories при 1/4/16 шагах.
+Tiny actual training проверяет обновление students, неизменность teachers,
+сохранение paired rows/masks после shuffle и отсутствие target gradients.
+
+Полный прогон: **233 passed in 16.25s**. Ruff check/format и git diff check прошли.
+Фактические модели, checkpoints, paired данные, метрики и визуализации —
+[demo/research](../demo/research/README.md); интерпретация —
+[distillation.md](distillation.md). Отдельные seeds/settings между опытами не
+позволяют считать их честным сравнением методов на одинаковом бюджете.

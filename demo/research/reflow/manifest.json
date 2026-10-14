@@ -1,0 +1,48 @@
+{
+  "algorithm": "1-Rectified Flow trained here, then paired teacher-endpoint reflow to 2-RF",
+  "paper": "https://arxiv.org/abs/2209.03003",
+  "time_convention": "sigma=1 noise; sigma=0 data; target velocity=noise-endpoint",
+  "coupling": "whole-row noise/endpoint/label/fixed_keep_mask; teacher frozen during generation",
+  "parameters": {
+    "seed": 2026,
+    "device": "cpu",
+    "n_train": 4096,
+    "n_pairs": 4096,
+    "n_eval": 1024,
+    "n_classes": 4,
+    "hidden_dim": 96,
+    "num_layers": 3,
+    "batch_size": 256,
+    "rf_epochs": 100,
+    "reflow_epochs": 100,
+    "learning_rate": 0.001,
+    "condition_dropout": 0.15,
+    "teacher_steps": 64,
+    "eval_steps": [
+      1,
+      4,
+      16,
+      64
+    ],
+    "warm_start_reflow": true,
+    "third_reflow": false,
+    "dense_steps": 64,
+    "train_timesteps": 1000,
+    "weight_decay": 0.0001,
+    "grad_clip": 1.0,
+    "eval_batch_size": 256,
+    "third_reflow_epochs": 100,
+    "evaluate_unconditional": true,
+    "save_gifs": true,
+    "gif_particles": 16,
+    "resume_extra_epochs": 0
+  },
+  "teacher_sha256": "74bc45b8c26ca5a90d8a39edcfcb5b0973051567b0332ef42c5d6983d265572f",
+  "python": "3.11.16",
+  "versions": {
+    "torch": "2.14.1",
+    "diffusers": "0.39.0",
+    "diffusion-lab": "0.3.2"
+  },
+  "duration_seconds": 32.57435879157856
+}

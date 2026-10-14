@@ -1,0 +1,12 @@
+{
+  "_class_name": "ResearchDiffusionPipeline",
+  "_diffusers_version": "0.39.0",
+  "model": [
+    "diffusion_lab.models",
+    "PointDenoiser"
+  ],
+  "scheduler": [
+    "diffusers",
+    "FlowMatchEulerDiscreteScheduler"
+  ]
+}

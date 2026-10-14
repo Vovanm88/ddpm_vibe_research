@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "1-RF",
+    "steps": 1,
+    "sliced_wasserstein": 0.3195060476458215,
+    "mean_error": 0.05585337057709694,
+    "std_error": 0.519412636756897,
+    "dense_length_over_chord": 1.6255372294430388,
+    "dense_velocity_deviation": 0.32940687923477185,
+    "nonzero_chord_fraction": 1.0,
+    "teacher_endpoint_l2": 0.5262835621833801
+  },
+  {
+    "stage": "1-RF",
+    "steps": 4,
+    "sliced_wasserstein": 0.12655077677212734,
+    "mean_error": 0.06510769575834274,
+    "std_error": 0.1867407113313675,
+    "dense_length_over_chord": 1.6255372294430388,
+    "dense_velocity_deviation": 0.32940687923477185,
+    "nonzero_chord_fraction": 1.0,
+    "teacher_endpoint_l2": 0.18914386630058289
+  },
+  {
+    "stage": "1-RF",
+    "steps": 16,
+    "sliced_wasserstein": 0.049462386484430715,
+    "mean_error": 0.048281144350767136,
+    "std_error": 0.029214737936854362,
+    "dense_length_over_chord": 1.6255372294430388,
+    "dense_velocity_deviation": 0.32940687923477185,
+    "nonzero_chord_fraction": 1.0,
+    "teacher_endpoint_l2": 0.031168904155492783
+  },
+  {
+    "stage": "1-RF",
+    "steps": 64,
+    "sliced_wasserstein": 0.04525955627429783,
+    "mean_error": 0.04345548525452614,
+    "std_error": 0.018329264596104622,
+    "dense_length_over_chord": 1.6255372294430388,
+    "dense_velocity_deviation": 0.32940687923477185,
+    "nonzero_chord_fraction": 1.0,
+    "teacher_endpoint_l2": 0.0
+  },
+  {
+    "stage": "2-RF",
+    "steps": 1,
+    "sliced_wasserstein": 0.053596094062813834,
+    "mean_error": 0.04832559451460838,
+    "std_error": 0.044043298810720444,
+    "dense_length_over_chord": 1.0052484473829155,
+    "dense_velocity_deviation": 0.0015345980903062827,
+    "nonzero_chord_fraction": 1.0,
+    "teacher_endpoint_l2": 0.04090248793363571
+  },
+  {
+    "stage": "2-RF",
+    "steps": 4,
+    "sliced_wasserstein": 0.051507758552155315,
+    "mean_error": 0.05368192493915558,
+    "std_error": 0.026060091331601143,
+    "dense_length_over_chord": 1.0052484473829155,
+    "dense_velocity_deviation": 0.0015345980903062827,
+    "nonzero_chord_fraction": 1.0,
+    "teacher_endpoint_l2": 0.02116885408759117
+  },
+  {
+    "stage": "2-RF",
+    "steps": 16,
+    "sliced_wasserstein": 0.05021047908011939,
+    "mean_error": 0.05158737674355507,
+    "std_error": 0.02161414548754692,
+    "dense_length_over_chord": 1.0052484473829155,
+    "dense_velocity_deviation": 0.0015345980903062827,
+    "nonzero_chord_fraction": 1.0,
+    "teacher_endpoint_l2": 0.017112523317337036
+  },
+  {
+    "stage": "2-RF",
+    "steps": 64,
+    "sliced_wasserstein": 0.05034992175001714,
+    "mean_error": 0.051537394523620605,
+    "std_error": 0.021601350978016853,
+    "dense_length_over_chord": 1.0052484473829155,
+    "dense_velocity_deviation": 0.0015345980903062827,
+    "nonzero_chord_fraction": 1.0,
+    "teacher_endpoint_l2": 0.01713172160089016
+  }
+]
