@@ -13,6 +13,7 @@ from .plots import (
     save_denoising_gif,
     save_figure,
 )
+from .widgets import notebook_field_explorer, notebook_sampling_explorer
 
 __all__ = [
     "Grid",
@@ -20,6 +21,8 @@ __all__ = [
     "evaluate_field",
     "recover_potential",
     "interactive_field",
+    "notebook_field_explorer",
+    "notebook_sampling_explorer",
     "draw_walls",
     "estimate_density",
     "plot_dataset",

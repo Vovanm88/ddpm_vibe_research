@@ -1,7 +1,8 @@
 # Визуализация и потенциальные поля
 
 Визуализаторы работают с точками `[N,D]`, `D=1,2,3`; траектории имеют форму
-`[N,T,D]`. Они возвращают `(figure, axes)` и не вызывают `plt.show()` автоматически.
+`[N,T,D]`. Функции Matplotlib возвращают `(figure, axes)` и не вызывают
+`plt.show()` автоматически. Jupyter explorers возвращают `ipywidgets.VBox`.
 Классы могут иметь любые значения: например, метки `4` и `9` остаются `4` и `9`.
 
 ```python
@@ -109,6 +110,100 @@ U может быть отрицательным и имеет произвол�
 нормированная плотность. Только для настоящего консервативного score
 `U=−log p_t+C`; применять `exp(−U)` к любому denoising или flow-полю как к
 плотности некорректно.
+
+## Живые графики в Jupyter / Colab
+
+Готовый пример с весами после **120 эпох** —
+[`06_trained_interactive_demo.ipynb`](../notebooks/06_trained_interactive_demo.ipynb)
+([открыть в Colab](https://colab.research.google.com/github/Vovanm88/ddpm_vibe_research/blob/main/notebooks/06_trained_interactive_demo.ipynb)).
+Первая ячейка устанавливает пакет из GitHub. Обученная модель загружается из
+`demo/pipeline` в локальном checkout; в отдельном Jupyter / Colab ноутбук
+клонирует репозиторий с GitHub. Для загрузки нужен интернет. В
+[`05_live_visualizations.ipynb`](../notebooks/05_live_visualizations.ipynb) такой же
+интерфейс загружает локальный запуск из `outputs/visual_demo_rays`. Для его
+повторения из корня проекта выполните `python examples/train_visual_demo.py`.
+
+После собственного обычного PyTorch обучения передайте pipeline напрямую:
+
+```python
+from IPython.display import display
+from diffusion_lab.visualization import (
+    notebook_field_explorer, notebook_sampling_explorer,
+)
+
+fields = notebook_field_explorer(pipeline, dataset, resolution=32)
+fields.controls["potential"].value = True
+display(fields)
+
+sampling = notebook_sampling_explorer(pipeline, dataset, steps=50, seed=42)
+display(sampling)  # генерация начнётся после нажатия Generate
+```
+
+`notebook_field_explorer` пересчитывает поле по текущей модели при отпускании
+ползунка. Это живой запрос pipeline, поэтому можно исследовать любое допустимое
+время, а не только заранее сохранённые состояния.
+
+| Контрол | Что меняет |
+|---|---|
+| Condition | Класс / unconditional либо непрерывный вектор условий |
+| t | Индекс DDPM/DDIM `0..T−1`; для flow также доступен `T`, показана `sigma=t/T` |
+| CFG | `guidance_scale` от 0 до 3 |
+| Field | `score`, `epsilon`, `denoising`; для flow — `velocity`, `denoising` |
+| Grid | Разрешение сетки от 4 до 64 по каждой координате |
+| Normalize arrows | Масштаб отображения стрелок; цвет сохраняет исходную норму |
+| Streamlines (2D) | Линии потока на равномерной двумерной сетке |
+| Recover potential | Второй график U и диагностика residual / relative curl |
+
+Потенциал вычисляется по исходным векторам: нормировка стрелок не меняет U.
+Для 3D рядом с объёмным полем показан средний срез U по z. Если поле не проходит
+проверку консервативности, интерфейс явно сообщает о least-squares projection.
+
+По умолчанию categorical conditioner получает список классов, а continuous —
+несколько реальных строк `dataset.conditions`. Для своих сцен передайте
+`condition_options={"Название сцены": vector}`; ширина вектора должна совпадать
+с `pipeline.model.config.condition_dim`. Поля доступны для модели точек
+`sample_shape=(D,)`, `D=1,2,3`. Для `[L,D]` используйте sampling explorer.
+
+`notebook_sampling_explorer` позволяет выбрать condition, CFG, число шагов и
+seed. **Generate** запускает генерацию; изменение параметров само по себе её
+не запускает. **Play** и **Frame** показывают сохранённую `history` того же
+запуска: frame 0 — стартовый шум, frame k — результат k реальных переходов
+scheduler, последний frame — итоговая выборка. Перемещение по истории не
+семплирует новый шум. Для навигационного dataset с явной разметкой
+`condition_layout` фиксируются концы A/B и отображаются стены из выбранного
+условия. Пересечения стен нужно дополнительно оценивать через `collision_free`.
+
+Оба объекта открыты для доработки в notebook:
+
+```python
+fields.controls["kind"].value = "denoising"
+grid, raw_vectors = fields.state["grid"], fields.state["vectors"]
+potential_result = fields.state["potential"]
+
+result = sampling.generate()  # программный эквивалент Generate
+history, timesteps = sampling.state["history"], sampling.state["timesteps"]
+sampling.controls["frame"].value = 0
+```
+
+`.controls` содержит виджеты, `.state` — результат последнего расчёта,
+`.output` — область графика, `.refresh()` — явную перерисовку. Для генерации
+дополнительно доступна `.generate()`. При ошибке текст отображается рядом с
+графиком, а исключение доступно в `.state["error"]`.
+
+Нужны зависимости `[interactive]`; ноутбуки устанавливают пакет из GitHub первой
+ячейкой:
+
+```python
+%pip install "diffusion-lab[interactive] @ git+https://github.com/Vovanm88/ddpm_vibe_research.git"
+```
+
+В Colab они также включают `enable_custom_widget_manager()`. Для своих
+ячеек при необходимости выполните:
+
+```python
+from google.colab import output
+output.enable_custom_widget_manager()
+```
 
 ## Экспорт и галерея
 

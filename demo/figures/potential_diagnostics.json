@@ -1,0 +1,10 @@
+{
+  "field": "score",
+  "condition": 0,
+  "timestep": 349,
+  "relative_residual": 0.007776501940305941,
+  "curl_rms": 0.1501387734691546,
+  "relative_curl": 0.08318566709796277,
+  "is_conservative_on_grid": false,
+  "message": "Least-squares potential projection; the sampled field is not certified conservative. F=-grad(U); 1 independently anchored connected component(s). Local curl and graph residual are numerical diagnostics; topology and grid resolution limit conclusions about a global potential."
+}

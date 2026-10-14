@@ -1,0 +1,29 @@
+{
+  "projection_seed": 123,
+  "swd_projections": 128,
+  "reference_samples": 4096,
+  "generated_samples_per_snapshot": 1024,
+  "initial_swd": 0.658185139778249,
+  "final_swd": 0.057219864688772736,
+  "epochs": 120,
+  "guidance_scale": 1.5,
+  "field_timesteps": [
+    99,
+    349,
+    649
+  ],
+  "conditions": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "figures": [
+    "comparison",
+    "learning",
+    "density",
+    "score_fields",
+    "potential_diagnostics"
+  ],
+  "offline_explorer": "explorer.html"
+}

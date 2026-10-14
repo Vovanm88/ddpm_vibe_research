@@ -3,9 +3,24 @@
 Откройте [`03_standalone_quickstart.ipynb`](../notebooks/03_standalone_quickstart.ipynb).
 Для замены архитектуры, loss, conditioner, optimizer и метода обучения —
 [`04_change_components.ipynb`](../notebooks/04_change_components.ipynb).
-Оба файла самостоятельные: первая ячейка устанавливает встроенный wheel пакета
-в Python текущего ядра. Репозиторий клонировать не нужно. Установка зависимостей
-требует интернета; сами эксперименты используют синтетические данные.
+Оба ноутбука лёгкие: первая ячейка устанавливает пакет из GitHub в Python
+текущего ядра. Для установки нужен интернет; эксперименты используют
+синтетические данные и обучают модель прямо в ноутбуке.
+
+Прямые ссылки:
+[quickstart в Colab](https://colab.research.google.com/github/Vovanm88/ddpm_vibe_research/blob/main/notebooks/03_standalone_quickstart.ipynb),
+[изменение компонентов в Colab](https://colab.research.google.com/github/Vovanm88/ddpm_vibe_research/blob/main/notebooks/04_change_components.ipynb),
+[обученная модель и живые графики в Colab](https://colab.research.google.com/github/Vovanm88/ddpm_vibe_research/blob/main/notebooks/06_trained_interactive_demo.ipynb).
+
+Для просмотра уже обученной диффузии используйте
+[`06_trained_interactive_demo.ipynb`](../notebooks/06_trained_interactive_demo.ipynb):
+он загружает веса EMA после **120 эпох** из `demo/pipeline` в репозитории.
+В локальном checkout используются файлы проекта; в отдельном Jupyter / Colab
+ноутбук клонирует репозиторий с GitHub. После загрузки можно исследовать поля и
+генерировать точки, затем перейти к своему обучению в `03` / `04`. Отдельный
+[`05_live_visualizations.ipynb`](../notebooks/05_live_visualizations.ipynb) —
+локальный вариант для `outputs/visual_demo_rays`; этот запуск создаёт команда
+`python examples/train_visual_demo.py` из корня репозитория.
 
 Нужен Python 3.11 или новее. В [Google Colab](https://research.google.com/colaboratory/faq.html) загрузите `.ipynb` и выполните ячейки
 сверху вниз. В локальном Jupyter откройте файл и выберите нужное ядро.
@@ -17,9 +32,13 @@
 создаются отдельно и доступны напрямую. Loss — обычная функция или `nn.Module`;
 можно редактировать формулы обучения и добавлять свои loss terms.
 
-Для пустого notebook можно скачать wheel, поместить его рядом с notebook и выполнить
-`%pip install "./diffusion_lab-0.2.0-py3-none-any.whl[interactive]"`. Либо скопируйте
-первую установочную ячейку из самостоятельного файла. Выполняйте установку перед
+В пустом Jupyter можно установить пакет прямо из GitHub:
+
+```python
+%pip install "diffusion-lab[interactive] @ git+https://github.com/Vovanm88/ddpm_vibe_research.git"
+```
+
+Или скопируйте первую установочную ячейку из `03` / `04`. Выполняйте установку перед
 импортами; после обновления уже импортированного пакета перезапустите kernel.
 Вот минимальная сборка с реальным обучением:
 
@@ -79,6 +98,51 @@ plot_dataset(generated.samples, torch.arange(64) % dataset.num_classes)
 по метрикам и графикам. Scheduler должен зашумлять данные до распределения,
 близкого к стартовому Gaussian noise генерации. В примерах используется cosine
 schedule; для сравнения epsilon / v — одинаковый linear schedule с 1000 timesteps.
+
+## Интерактивные поля и генерация после обучения
+
+Передайте те же `pipeline` и `dataset` виджетам — их не нужно пересоздавать через
+trainer или experiment:
+
+```python
+from IPython.display import display
+from diffusion_lab.visualization import (
+    notebook_field_explorer, notebook_sampling_explorer,
+)
+
+fields = notebook_field_explorer(pipeline, dataset, resolution=24)
+fields.controls["potential"].value = True
+display(fields)
+
+# Здесь 24 <= num_train_timesteps=64 из минимального примера выше.
+sampling = notebook_sampling_explorer(pipeline, dataset, steps=24, seed=43)
+display(sampling)
+```
+
+В поле доступны condition / unconditional, timestep, CFG, тип поля, разрешение
+сетки, нормировка стрелок, 2D streamlines и **Recover potential**. Слайдеры
+пересчитывают поле по модели при отпускании ползунка. Цвет стрелок показывает
+исходную норму; U вычисляется по исходному полю и сопровождается residual/curl,
+чтобы отличать потенциальное поле от его численной проекции.
+
+В генераторе выберите condition, CFG, steps и seed, затем нажмите **Generate**.
+**Play** и **Frame** показывают настоящие сохранённые шаги денойзинга этого же
+запуска. Изменение настроек не запускает генерацию автоматически; повторный
+запуск можно вызвать через `sampling.generate()`.
+
+Виджеты доступны в `.controls`, данные — в `.state`. Например,
+`fields.state["vectors"]` содержит исходное поле,
+`sampling.state["history"]` — историю, а `sampling.state["timesteps"]` —
+реальные времена scheduler. Для continuous conditioner можно передать
+`condition_options={"Сцена": feature_vector}` либо использовать
+репрезентативные строки dataset. Поддерживаются точки 1D/2D/3D; для моделей
+траекторий sampling explorer рисует пути, а для явно размеченной навигации —
+стены и фиксированные A/B.
+
+В `03` / `04` есть готовые ячейки с этими контролами. Ноутбуки включают
+`enable_custom_widget_manager()` для Colab; локальному Jupyter нужны установленные
+`ipywidgets` из `[interactive]`. Полный API и интерпретация полей описаны в
+[visualization.md](visualization.md).
 
 ## Что можно менять — с обучением
 
@@ -158,13 +222,19 @@ python examples/notebook_components.py --epochs 3 --samples 256
 outputs, history и metrics. CLI применяет `--epochs` ко всем сравнениям компонентов;
 навигационный smoke ограничен двумя эпохами.
 
-После изменения пакета обновите встроенную копию кода в ноутбуках:
+Для изменения самого пакета клонируйте проект и установите его исходники:
 
 ```bash
-uv build --wheel
-uv run python scripts/build_notebook_bundle.py --wheel dist/diffusion_lab-0.2.0-py3-none-any.whl
-uv run pytest tests/test_notebook_bundle.py
+git clone https://github.com/Vovanm88/ddpm_vibe_research.git
+cd ddpm_vibe_research
+python -m pip install -e ".[interactive,dev]"
+python -m pytest tests/test_notebook_api.py tests/test_widgets.py
 ```
+
+Редактируйте `src/diffusion_lab`, затем перезапустите kernel для обновления
+импортов. Изменения модели, loss и training loop в самих notebook применяются
+при повторном выполнении соответствующих ячеек; после смены архитектуры
+создавайте новую модель и optimizer.
 
 Для компактных конфигурационных запусков в пакете также остаются опциональные
 `DiffusionTrainer` и `create_experiment`. Ноутбуки быстрого старта используют

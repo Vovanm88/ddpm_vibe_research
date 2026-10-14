@@ -1,0 +1,32 @@
+seed: 123
+device: cpu
+num_threads: 4
+environment:
+  name: rotating_rays
+  n_samples: 4096
+  n_classes: 4
+  seed: 123
+model:
+  sample_shape:
+  - 2
+  hidden_dim: 128
+  num_layers: 4
+  conditioner: embedding
+  num_classes: 4
+scheduler:
+  kind: ddpm
+  num_train_timesteps: 1000
+  beta_schedule: squaredcos_cap_v2
+  prediction_type: v_prediction
+training:
+  epochs: 120
+  batch_size: 256
+  learning_rate: 0.001
+  condition_dropout: 0.15
+  ema_decay: 0.99
+  loss: mse
+sampling:
+  scheduler: ddim
+  steps: 100
+  num_samples: 1024
+  guidance_scale: 1.5

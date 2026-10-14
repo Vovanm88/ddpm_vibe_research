@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "diffusion-lab"
-version = "0.2.0"
+version = "0.3.0"
 description = "Small, extensible diffusion and flow-matching experiments on points and paths"
 requires-python = ">=3.11"
 dependencies = [

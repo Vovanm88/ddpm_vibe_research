@@ -11,13 +11,32 @@
 [`FlowMatchEulerDiscreteScheduler`](https://huggingface.co/docs/diffusers/api/schedulers/flow_match_euler_discrete).
 Модель и scheduler сохраняются через `save_pretrained`; веса — Safetensors.
 
+## Открыть и попробовать
+
+[Обученная модель в Colab](https://colab.research.google.com/github/Vovanm88/ddpm_vibe_research/blob/main/notebooks/06_trained_interactive_demo.ipynb)
+· [PyTorch quickstart в Colab](https://colab.research.google.com/github/Vovanm88/ddpm_vibe_research/blob/main/notebooks/03_standalone_quickstart.ipynb)
+· [Изменение компонентов в Colab](https://colab.research.google.com/github/Vovanm88/ddpm_vibe_research/blob/main/notebooks/04_change_components.ipynb)
+
+Установка из пустого Jupyter:
+
+```python
+%pip install "diffusion-lab[interactive] @ git+https://github.com/Vovanm88/ddpm_vibe_research.git"
+```
+
+В [обученном notebook](notebooks/06_trained_interactive_demo.ipynb) пакет устанавливается
+из GitHub, веса и контрольная выборка загружаются из отдельных файлов `demo/`.
+Можно сразу менять condition/timestep/CFG,
+тип поля и потенциальную проекцию, генерировать точки и проигрывать денойзинг.
+Результат нового запуска — в [demo/](demo/README.md): **120 эпох, SWD 0.658 → 0.057**
+на отдельной выборке. Есть PNG/SVG, GIF, интерактивный HTML и checkpoint.
+
 ## Новый Jupyter / Colab
 
 Откройте [03_standalone_quickstart.ipynb](notebooks/03_standalone_quickstart.ipynb)
-или [04_change_components.ipynb](notebooks/04_change_components.ipynb). Каждый файл
-содержит установочный wheel; первой ячейкой он устанавливается в текущий kernel.
-Нужны Python 3.11+ и интернет для зависимостей, доступ к локальному репозиторию
-не требуется. Подробности — [docs/notebook_quickstart.md](docs/notebook_quickstart.md).
+или [04_change_components.ipynb](notebooks/04_change_components.ipynb). Первая ячейка
+устанавливает пакет из GitHub в текущий kernel. Нужны Python 3.11+, Git и интернет;
+локальная папка проекта не требуется. Подробности —
+[docs/notebook_quickstart.md](docs/notebook_quickstart.md).
 
 Главный интерфейс — обычные PyTorch / Diffusers компоненты:
 
@@ -46,20 +65,15 @@ optimizer = torch.optim.AdamW(model.parameters(), lr=1e-3)
 MSE/Huber/свой loss, one-hot/embedding/Fourier conditioner, AdamW/Adam,
 epsilon/v prediction, rectified flow и среды разных размерностей.
 
-Для совсем пустого notebook скачайте wheel из `dist/`, загрузите его рядом
-с notebook и выполните `%pip install "./diffusion_lab-0.2.0-py3-none-any.whl[interactive]"`.
+Для совсем пустого notebook используйте установку из GitHub выше или скопируйте
+первую установочную ячейку из самостоятельного notebook.
 Обычный `DiffusionTrainer` и краткий `create_experiment` доступны как дополнительные
 утилиты; ручной training loop использует непосредственно torch-модель и scheduler.
 
-Пересборка переносимых файлов после изменения пакета:
-
-```bash
-uv build --wheel
-uv run python scripts/build_notebook_bundle.py --wheel dist/diffusion_lab-0.2.0-py3-none-any.whl
-```
-
-Builder сверяет код wheel с `src`, обновляет встроенный пакет в двух ноутбуках
-и создаёт `dist/diffusion-lab-0.2.0-source.zip` с исходниками.
+Ноутбуки содержат только код и описания. После изменения пакета обновите его
+в GitHub и повторите установочную ячейку; если пакет уже импортирован,
+перезапустите kernel. Для разработки из локального checkout используйте
+`pip install -e '.[dev,interactive]'`.
 
 ## Быстрый старт
 
@@ -217,8 +231,8 @@ SHA256 данных, историю, checkpoint с optimizer/EMA/RNG и эксп
 иметь другую численную воспроизводимость. `device` принимает `cpu`, `cuda`,
 `mps`, `auto`; по умолчанию используется CPU.
 
-`outputs/` и `.venv/` исключены из Git. Репозиторий локальный; remote можно добавить
-после выбора места публикации.
+`outputs/` и `.venv/` исключены из Git. Выбранный обученный пример публикуется
+в `demo/`. Remote: `git@github.com:Vovanm88/ddpm_vibe_research.git`.
 
 ```bash
 uv run pytest -q

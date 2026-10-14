@@ -1,0 +1,124 @@
+{
+  "git_revision": "8057c8e32d0676daf10e9abc339262e7eeb0b257",
+  "training_seconds": 22.747223916929215,
+  "optimizer_steps": 1920,
+  "config": {
+    "seed": 123,
+    "device": "cpu",
+    "num_threads": 4,
+    "environment": {
+      "name": "rotating_rays",
+      "n_samples": 4096,
+      "n_classes": 4,
+      "seed": 123
+    },
+    "model": {
+      "sample_shape": [
+        2
+      ],
+      "hidden_dim": 128,
+      "num_layers": 4,
+      "conditioner": "embedding",
+      "num_classes": 4
+    },
+    "scheduler": {
+      "kind": "ddpm",
+      "num_train_timesteps": 1000,
+      "beta_schedule": "squaredcos_cap_v2",
+      "prediction_type": "v_prediction"
+    },
+    "training": {
+      "epochs": 120,
+      "batch_size": 256,
+      "learning_rate": 0.001,
+      "condition_dropout": 0.15,
+      "ema_decay": 0.99,
+      "loss": "mse"
+    },
+    "sampling": {
+      "scheduler": "ddim",
+      "steps": 100,
+      "num_samples": 1024,
+      "guidance_scale": 1.5
+    }
+  },
+  "training_data_seed": 123,
+  "heldout_data_seed": 124,
+  "heldout_metrics": {
+    "sliced_wasserstein": 0.05693081457248393,
+    "mean_error": 0.03397046774625778,
+    "std_error": 0.05151158198714256,
+    "class_0_sliced_wasserstein": 0.06328268698977191,
+    "class_1_sliced_wasserstein": 0.06305607612326544,
+    "class_2_sliced_wasserstein": 0.06765720122093807,
+    "class_3_sliced_wasserstein": 0.07798218231767828
+  },
+  "snapshot_metrics": [
+    {
+      "epoch": 0,
+      "sliced_wasserstein": 0.658185139778249,
+      "mean_error": 0.8338356614112854,
+      "std_error": 0.7344327569007874,
+      "class_0_sliced_wasserstein": 0.7509194452550321,
+      "class_1_sliced_wasserstein": 0.7913306608514663,
+      "class_2_sliced_wasserstein": 1.1577913523983758,
+      "class_3_sliced_wasserstein": 1.2208347012153622
+    },
+    {
+      "epoch": 1,
+      "sliced_wasserstein": 0.33990474443696667,
+      "mean_error": 0.4270874559879303,
+      "std_error": 0.3988211452960968,
+      "class_0_sliced_wasserstein": 0.402975502812889,
+      "class_1_sliced_wasserstein": 0.4248110298875386,
+      "class_2_sliced_wasserstein": 0.629009185242452,
+      "class_3_sliced_wasserstein": 0.6127797737872339
+    },
+    {
+      "epoch": 5,
+      "sliced_wasserstein": 0.13642390953491892,
+      "mean_error": 0.013641894795000553,
+      "std_error": 0.2015298306941986,
+      "class_0_sliced_wasserstein": 0.13992269942527896,
+      "class_1_sliced_wasserstein": 0.1516936780186024,
+      "class_2_sliced_wasserstein": 0.11082582584243911,
+      "class_3_sliced_wasserstein": 0.20609497011934694
+    },
+    {
+      "epoch": 20,
+      "sliced_wasserstein": 0.08380147241260663,
+      "mean_error": 0.03300105035305023,
+      "std_error": 0.0961260199546814,
+      "class_0_sliced_wasserstein": 0.10307583377554005,
+      "class_1_sliced_wasserstein": 0.09775822042499406,
+      "class_2_sliced_wasserstein": 0.09663228322818967,
+      "class_3_sliced_wasserstein": 0.10207874347487027
+    },
+    {
+      "epoch": 60,
+      "sliced_wasserstein": 0.0584600813192053,
+      "mean_error": 0.03396693244576454,
+      "std_error": 0.059891752898693085,
+      "class_0_sliced_wasserstein": 0.059765967766121066,
+      "class_1_sliced_wasserstein": 0.07877685038380577,
+      "class_2_sliced_wasserstein": 0.057113943648871984,
+      "class_3_sliced_wasserstein": 0.08044139160237357
+    },
+    {
+      "epoch": 120,
+      "sliced_wasserstein": 0.057219864688772736,
+      "mean_error": 0.03397046774625778,
+      "std_error": 0.05151158198714256,
+      "class_0_sliced_wasserstein": 0.06091354301607119,
+      "class_1_sliced_wasserstein": 0.06630816567323145,
+      "class_2_sliced_wasserstein": 0.06381277441831887,
+      "class_3_sliced_wasserstein": 0.08143774044032573
+    }
+  ],
+  "versions": {
+    "torch": "2.14.1",
+    "diffusers": "0.39.0",
+    "numpy": "2.4.6",
+    "matplotlib": "3.11.2"
+  }
+}
