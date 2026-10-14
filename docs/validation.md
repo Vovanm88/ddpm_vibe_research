@@ -205,7 +205,7 @@ Notebooks 07/08/09 целиком выполнены в локальном Pytho
 четыре потока, torch 2.14.1 / diffusers 0.39.0 / diffusion-lab 0.3.2.
 Для обучения используются реальные loops из ячеек, не отдельные копии алгоритмов.
 Все notebook outputs и execution counts очищены; nbformat validation прошла.
-Исходники имеют размер 35–42 КБ; wheel, weights и widget state не встроены.
+Исходники меньше 50 КБ; wheel, weights и widget state не встроены.
 
 - 07: 60 + 100 эпох progressive DDIM, обучение 33.08 с, NFE 100 → 50 → 25.
   Heldout SWD teacher-100 0.01333347, student-25 0.01333897 при guidance=1.
@@ -229,6 +229,21 @@ Notebooks 07/08/09 целиком выполнены в локальном Pytho
 Эти локальные дополнительные проверки использовали установленный checkout;
 облачный Colab и GPU не проверялись.
 
+После публикации commit `06abcf3` notebook 07 с коротким бюджетом 1 + 1 эпохи
+целиком выполнен из `/private/tmp` в отдельном Python окружении, где до запуска
+был установлен diffusion-lab 0.3.1. Его собственная первая ячейка установила
+0.3.2 из GitHub; `direct_url.json` подтвердил commit `06abcf3`. Следующая ячейка
+самостоятельно клонировала отдельные teacher weights. Обучение обеих стадий,
+три GIF и native student reload прошли; папка исходного checkout не использовалась
+для импортов или загрузки teacher.
+
+Интерактивные ячейки 07/09 дополнительно выполнены на сохранённых обученных
+моделях и реальных datasets: field/sampling widgets без ошибок и с конечными
+значениями. Student-25 даёт 25 forward и history `[26,256,2]`, его sampling
+контрол шагов зафиксирован на обученной сетке. 2-RF даёт history `[5,128,2]`
+при четырёх шагах; отдельно проверено переключение на Unconditional.
+В обоих notebooks внешний CFG по умолчанию выключен, effective scale=1.
+
 Новые regression tests извлекают actual функции и training cell из AST ноутбуков:
 официальный DDIM и известный clean oracle проверяют все 75 вложенных интервалов,
 включая terminal r=-1; guidance oracle проверяет scale 0/1/1.5 и null target;
@@ -236,7 +251,8 @@ constant-velocity oracle проверяет знак Euler и histories при 1
 Tiny actual training проверяет обновление students, неизменность teachers,
 сохранение paired rows/masks после shuffle и отсутствие target gradients.
 
-Полный прогон: **233 passed in 16.25s**. Ruff check/format и git diff check прошли.
+Полный прогон после интерактивных дополнений: **233 passed in 16.49s**.
+Ruff check/format и git diff check прошли.
 Фактические модели, checkpoints, paired данные, метрики и визуализации —
 [demo/research](../demo/research/README.md); интерпретация —
 [distillation.md](distillation.md). Отдельные seeds/settings между опытами не

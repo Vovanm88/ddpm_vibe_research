@@ -27,6 +27,8 @@ Teacher делает `t → s → r`, затем код инвертирует �
 чистый sample с alpha=1, sigma=0; отрицательная индексация массива не используется.
 Teacher заморожен, одинаковый condition mask действует на оба его перехода и student.
 EMA student становится teacher следующей стадии.
+После обучения есть интерактивные field/sampling explorers; бюджет student-25
+зафиксирован в sampling widget, Play/Frame показывает настоящие DDIM states.
 
 Здесь `num_train_timesteps=1000`, trailing grid, `eta=0`, без clipping.
 Числа шагов должны делить 1000, а соседние сетки — быть вложенными через каждый
@@ -87,6 +89,8 @@ Null endpoints получены teacher с null-условием. По умол�
 length/chord и velocity deviation. Один Euler-шаг всегда рисует прямую линию,
 поэтому эта геометрия не используется как доказательство reflow.
 GIF показывает actual ODE: красный старт → фиолетовый финиш, общие оси и endpoints.
+В конце доступны интерактивные поля и sampling explorer обученного 2-RF:
+condition/Unconditional, время, шаги, Play/Frame и потенциальная проекция с symlog.
 
 ## Фактические запуски
 
