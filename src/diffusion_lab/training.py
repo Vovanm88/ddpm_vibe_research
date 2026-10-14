@@ -2,6 +2,7 @@
 
 import copy
 import hashlib
+import json
 from contextlib import contextmanager
 from dataclasses import asdict, dataclass, field
 from pathlib import Path
@@ -201,11 +202,13 @@ class DiffusionTrainer:
 
     def load_checkpoint(self, path):
         checkpoint = torch.load(path, map_location="cpu", weights_only=True)
-        if checkpoint["model_config"] != _semantic_config(self.model.config):
+        if _semantic_config(checkpoint["model_config"]) != _semantic_config(self.model.config):
             raise ValueError("Resume model config differs from checkpoint")
-        if checkpoint["scheduler_class"] != type(self.pipeline.scheduler).__name__ or checkpoint[
-            "scheduler_config"
-        ] != _semantic_config(self.pipeline.scheduler.config):
+        if checkpoint["scheduler_class"] != type(
+            self.pipeline.scheduler
+        ).__name__ or _semantic_config(checkpoint["scheduler_config"]) != _semantic_config(
+            self.pipeline.scheduler.config
+        ):
             raise ValueError("Resume scheduler config differs from checkpoint")
         saved = checkpoint["config"].copy()
         current = asdict(self.config)
@@ -231,4 +234,7 @@ class DiffusionTrainer:
 
 
 def _semantic_config(config):
-    return {key: value for key, value in dict(config).items() if not key.startswith("_")}
+    # Diffusers save_pretrained changes tuples to JSON lists. Also canonicalize
+    # older checkpoints when comparing so portable reload preserves semantics.
+    semantic = {key: value for key, value in dict(config).items() if not key.startswith("_")}
+    return json.loads(json.dumps(semantic))

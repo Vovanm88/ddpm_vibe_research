@@ -48,21 +48,23 @@ def evaluate_samples(dataset, generated, conditions=None, seed=42):
                     )
         return result
     environment = dataset.environment
-    condition_values = np.asarray(
-        conditions.detach().cpu() if hasattr(conditions, "detach") else conditions
-    )
     dim = generated.shape[-1]
-    return {
+    result = {
         "collision_free_fraction": float(environment.collision_free(generated).mean()),
-        "endpoint_error": float(
-            (
-                np.linalg.norm(generated[:, 0] - condition_values[:, :dim], axis=-1)
-                + np.linalg.norm(generated[:, -1] - condition_values[:, dim : 2 * dim], axis=-1)
-            ).mean()
-            / 2
-        ),
         "mean_path_length": float(
             np.linalg.norm(np.diff(generated, axis=1), axis=-1).sum(1).mean()
         ),
         "mean_squared_acceleration": float(np.square(np.diff(generated, n=2, axis=1)).mean()),
     }
+    if conditions is not None:
+        condition_values = np.asarray(
+            conditions.detach().cpu() if hasattr(conditions, "detach") else conditions
+        )
+        result["endpoint_error"] = float(
+            (
+                np.linalg.norm(generated[:, 0] - condition_values[:, :dim], axis=-1)
+                + np.linalg.norm(generated[:, -1] - condition_values[:, dim : 2 * dim], axis=-1)
+            ).mean()
+            / 2
+        )
+    return result

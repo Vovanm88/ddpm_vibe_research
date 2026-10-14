@@ -11,6 +11,56 @@
 [`FlowMatchEulerDiscreteScheduler`](https://huggingface.co/docs/diffusers/api/schedulers/flow_match_euler_discrete).
 Модель и scheduler сохраняются через `save_pretrained`; веса — Safetensors.
 
+## Новый Jupyter / Colab
+
+Откройте [03_standalone_quickstart.ipynb](notebooks/03_standalone_quickstart.ipynb)
+или [04_change_components.ipynb](notebooks/04_change_components.ipynb). Каждый файл
+содержит установочный wheel; первой ячейкой он устанавливается в текущий kernel.
+Нужны Python 3.11+ и интернет для зависимостей, доступ к локальному репозиторию
+не требуется. Подробности — [docs/notebook_quickstart.md](docs/notebook_quickstart.md).
+
+Главный интерфейс — обычные PyTorch / Diffusers компоненты:
+
+```python
+from diffusers import DDIMScheduler
+from torch.utils.data import DataLoader
+import torch
+from diffusion_lab import PointDenoiser, ResearchDiffusionPipeline
+from diffusion_lab.environments import make_environment
+
+dataset = make_environment("rotating_rays", n_samples=1024, n_classes=4, seed=42)
+model = PointDenoiser(sample_shape=dataset.sample_shape, num_classes=dataset.num_classes,
+                     hidden_dim=64, conditioner="embedding")
+scheduler = DDIMScheduler(num_train_timesteps=100, beta_schedule="squaredcos_cap_v2",
+                          prediction_type="v_prediction", clip_sample=False,
+                          timestep_spacing="trailing")
+pipeline = ResearchDiffusionPipeline(model, scheduler)
+loader = DataLoader(dataset, batch_size=128, shuffle=True)
+optimizer = torch.optim.AdamW(model.parameters(), lr=1e-3)
+```
+
+В ноутбуке дальше показан весь `forward → loss → backward → optimizer.step`,
+генерация через `pipeline(...)`, поля и сохранение/продолжение обучения.
+Можно свободно заменить `model`, `loss_fn`, `optimizer`, условия и тело шага.
+В `04` каждый вариант действительно обучается: MLP/Transformer/своя модель,
+MSE/Huber/свой loss, one-hot/embedding/Fourier conditioner, AdamW/Adam,
+epsilon/v prediction, rectified flow и среды разных размерностей.
+
+Для совсем пустого notebook скачайте wheel из `dist/`, загрузите его рядом
+с notebook и выполните `%pip install "./diffusion_lab-0.2.0-py3-none-any.whl[interactive]"`.
+Обычный `DiffusionTrainer` и краткий `create_experiment` доступны как дополнительные
+утилиты; ручной training loop использует непосредственно torch-модель и scheduler.
+
+Пересборка переносимых файлов после изменения пакета:
+
+```bash
+uv build --wheel
+uv run python scripts/build_notebook_bundle.py --wheel dist/diffusion_lab-0.2.0-py3-none-any.whl
+```
+
+Builder сверяет код wheel с `src`, обновляет встроенный пакет в двух ноутбуках
+и создаёт `dist/diffusion-lab-0.2.0-source.zip` с исходниками.
+
 ## Быстрый старт
 
 Нужен Python 3.11+ и [uv](https://docs.astral.sh/uv/). В созданной локальной папке

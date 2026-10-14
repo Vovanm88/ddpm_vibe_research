@@ -1,6 +1,7 @@
 """Config-driven construction and reproducible run artifacts."""
 
 import copy
+import hashlib
 import importlib.metadata
 import json
 import platform
@@ -114,18 +115,27 @@ def save_run(trainer, dataset, config, output):
     output.mkdir(parents=True, exist_ok=True)
     (output / "config.yaml").write_text(yaml.safe_dump(config, sort_keys=False, allow_unicode=True))
     write_json(output / "history.json", trainer.history)
-    try:
-        revision = subprocess.check_output(
-            ["git", "rev-parse", "HEAD"],
-            cwd=Path(__file__).resolve().parents[2],
-            text=True,
-            stderr=subprocess.DEVNULL,
-        ).strip()
-    except (OSError, subprocess.CalledProcessError):
-        revision = None
+    package_dir = Path(__file__).resolve().parent
+    source_root = package_dir.parents[1]
+    revision = None
+    if (source_root / "src/diffusion_lab/experiment.py").resolve() == Path(__file__).resolve():
+        try:
+            revision = subprocess.check_output(
+                ["git", "rev-parse", "HEAD"],
+                cwd=source_root,
+                text=True,
+                stderr=subprocess.DEVNULL,
+            ).strip()
+        except (OSError, subprocess.CalledProcessError):
+            pass
+    source_digest = hashlib.sha256()
+    for source in sorted(package_dir.rglob("*.py")):
+        source_digest.update(source.relative_to(package_dir).as_posix().encode() + b"\0")
+        source_digest.update(source.read_bytes())
     manifest = {
         "created_utc": datetime.now(timezone.utc).isoformat(),
         "git_revision": revision,
+        "package_source_sha256": source_digest.hexdigest(),
         "python": platform.python_version(),
         "platform": platform.platform(),
         "versions": {
