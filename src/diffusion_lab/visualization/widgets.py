@@ -132,6 +132,19 @@ def _show_error(status, state, exception):
     status.value = f'<span style="color:#b91c1c">{escape(str(exception))}</span>'
 
 
+def _cfg_setting(controls, condition):
+    """Preserve the selected scale while disabling guidance when inapplicable."""
+    unconditional = condition is None
+    enabled = not unconditional and controls["cfg_enabled"].value
+    controls["cfg_enabled"].disabled = False
+    controls["guidance_scale"].disabled = not enabled
+    return enabled, controls["guidance_scale"].value if enabled else 1.0
+
+
+def _cfg_label(enabled, scale):
+    return f"CFG={scale:g}" if enabled else "CFG=off (scale=1)"
+
+
 def notebook_field_explorer(
     pipeline,
     dataset=None,
@@ -150,6 +163,9 @@ def notebook_field_explorer(
     Discrete models expose class IDs; continuous models expose representative
     dataset rows, or explicit ``condition_options={"scene": feature_vector}``.
     Flow fields expose velocity and denoising, with sigma=t/T shown explicitly.
+    Unchecking ``Use CFG`` passes guidance_scale=1 and preserves the scale slider.
+    Unconditional queries disable the scale slider; the CFG preference remains editable.
+    ``Log potential colors`` applies symmetric-log colors, preserving U and its gauge.
     The returned widget has ``controls``, ``output``, ``state`` and ``refresh()``
     for further notebook customization. Display it as the last cell expression.
     """
@@ -178,6 +194,7 @@ def notebook_field_explorer(
             description="CFG:",
             continuous_update=False,
         ),
+        "cfg_enabled": widgets.Checkbox(value=True, description="Use CFG"),
         "kind": widgets.Dropdown(
             options=["velocity", "denoising"] if flow else ["score", "epsilon", "denoising"],
             description="Field:",
@@ -187,6 +204,9 @@ def notebook_field_explorer(
             value=dimension == 2, disabled=dimension != 2, description="Streamlines (2D)"
         ),
         "potential": widgets.Checkbox(value=False, description="Recover potential"),
+        "potential_log": widgets.Checkbox(
+            value=False, disabled=True, description="Log potential colors"
+        ),
         "resolution": widgets.IntSlider(
             value=int(resolution), min=4, max=64, description="Grid:", continuous_update=False
         ),
@@ -194,15 +214,23 @@ def notebook_field_explorer(
     output, status, state = widgets.Output(), widgets.HTML(), {}
     explorer = widgets.VBox(
         [
-            widgets.HBox([controls["condition"], controls["kind"]]),
-            widgets.HBox([controls["timestep"], controls["guidance_scale"]]),
+            widgets.HBox(
+                [controls["condition"], controls["kind"]],
+                layout=widgets.Layout(flex_flow="row wrap"),
+            ),
+            widgets.HBox(
+                [controls["timestep"], controls["guidance_scale"], controls["cfg_enabled"]],
+                layout=widgets.Layout(flex_flow="row wrap"),
+            ),
             widgets.HBox(
                 [
                     controls["resolution"],
                     controls["normalize"],
                     controls["streamlines"],
                     controls["potential"],
-                ]
+                    controls["potential_log"],
+                ],
+                layout=widgets.Layout(flex_flow="row wrap"),
             ),
             status,
             output,
@@ -212,8 +240,10 @@ def notebook_field_explorer(
     def refresh(*_):
         figure = None
         try:
+            controls["potential_log"].disabled = not controls["potential"].value
             grid = Grid.from_bounds(bounds, controls["resolution"].value)
             condition = values[controls["condition"].value]
+            cfg_enabled, scale = _cfg_setting(controls, condition)
             time = controls["timestep"].value
             field_kind = controls["kind"].value
             vectors = evaluate_field(
@@ -222,14 +252,14 @@ def notebook_field_explorer(
                     time,
                     conditions=condition,
                     kind=field_kind,
-                    guidance_scale=controls["guidance_scale"].value,
+                    guidance_scale=scale,
                 ),
                 grid,
             )
             title = f"{field_kind.capitalize()} · {controls['condition'].label} · t={time}"
             if flow:
                 title += f" · σ={time / maximum:.3f} (t/T)"
-            title += f" · CFG={controls['guidance_scale'].value:g}"
+            title += f" · {_cfg_label(cfg_enabled, scale)}"
             potential, field_ax = None, None
             if controls["potential"].value:
                 # Recover from raw model vectors, independent of arrow display scaling.
@@ -237,7 +267,12 @@ def notebook_field_explorer(
                 figure = plt.figure(figsize=(15, 6), constrained_layout=True)
                 field_ax = figure.add_subplot(121, projection="3d" if dimension == 3 else None)
                 potential_ax = figure.add_subplot(122)
-                plot_potential(grid, potential, ax=potential_ax)
+                plot_potential(
+                    grid,
+                    potential,
+                    ax=potential_ax,
+                    scale="symlog" if controls["potential_log"].value else "linear",
+                )
             figure, ax = plot_vector_field(
                 grid,
                 vectors,
@@ -264,13 +299,17 @@ def notebook_field_explorer(
                 grid=grid,
                 vectors=vectors,
                 condition=condition,
+                cfg_enabled=cfg_enabled,
+                guidance_scale=scale,
                 timestep=time,
                 figure=figure,
                 potential=potential,
+                potential_scale="symlog" if controls["potential_log"].value else "linear",
                 error=None,
             )
             status.value = (
-                f"{grid.size:,} queried points. Arrow color always shows the original |F|."
+                f"{grid.size:,} queried points. {_cfg_label(cfg_enabled, scale)}. "
+                "Arrow color always shows the original |F|."
             )
             if potential is not None:
                 verdict = (
@@ -282,6 +321,8 @@ def notebook_field_explorer(
                     f" Potential: residual={potential.relative_residual:.2%}, "
                     f"relative curl={potential.relative_curl:.3g}; {verdict}."
                 )
+                if controls["potential_log"].value:
+                    status.value += " Potential colors: symlog (zero and sign preserved)."
             with output:
                 output.clear_output(wait=True)
                 display(figure)
@@ -346,6 +387,8 @@ def notebook_sampling_explorer(
     and real scheduler timesteps. Navigation endpoints are pinned only when the
     supplied dataset explicitly declares the navigation condition contract.
     A local ``torch.Generator`` leaves the notebook's global RNG state intact.
+    ``Use CFG`` off means guidance_scale=1. The selected slider value is retained;
+    unconditional conditions disable only the scale slider until a class is chosen.
     """
     widgets, display = _widget_modules()
     sample_shape = tuple(pipeline.model.sample_shape)
@@ -367,6 +410,7 @@ def notebook_sampling_explorer(
             description="CFG:",
             continuous_update=False,
         ),
+        "cfg_enabled": widgets.Checkbox(value=True, description="Use CFG"),
         "steps": widgets.IntSlider(
             value=int(steps), min=1, max=maximum, description="Steps:", continuous_update=False
         ),
@@ -384,9 +428,18 @@ def notebook_sampling_explorer(
     )
     explorer = widgets.VBox(
         [
-            widgets.HBox([controls["condition"], controls["guidance_scale"]]),
-            widgets.HBox([controls["steps"], controls["seed"], controls["generate"]]),
-            widgets.HBox([controls["play"], controls["frame"]]),
+            widgets.HBox(
+                [controls["condition"], controls["guidance_scale"], controls["cfg_enabled"]],
+                layout=widgets.Layout(flex_flow="row wrap"),
+            ),
+            widgets.HBox(
+                [controls["steps"], controls["seed"], controls["generate"]],
+                layout=widgets.Layout(flex_flow="row wrap"),
+            ),
+            widgets.HBox(
+                [controls["play"], controls["frame"]],
+                layout=widgets.Layout(flex_flow="row wrap"),
+            ),
             status,
             output,
         ]
@@ -409,6 +462,7 @@ def notebook_sampling_explorer(
                 else "final clean sample"
             )
             title = f"{state['condition_label']} · frame {frame}/{total} · {level} · seed={state['seed']}"
+            title += f" · {_cfg_label(state['cfg_enabled'], state['guidance_scale'])}"
             data = state["history"][frame]
             if len(sample_shape) == 1:
                 figure, ax = plot_dataset(data, title=title, size=12, alpha=0.6)
@@ -433,7 +487,8 @@ def notebook_sampling_explorer(
                         getattr(ax, ("set_xlim", "set_ylim", "set_zlim")[coordinate])(low, high)
             state.update(figure=figure, error=None)
             status.value = (
-                f"Cached run: {state['condition_label']}, CFG={state['guidance_scale']:g}, "
+                f"Cached run: {state['condition_label']}, "
+                f"{_cfg_label(state['cfg_enabled'], state['guidance_scale'])}, "
                 f"{total} solver steps. Frame {frame}: {level}. "
                 "Changed settings take effect after Generate."
             )
@@ -452,6 +507,7 @@ def notebook_sampling_explorer(
         controls["generate"].disabled = True
         try:
             condition = values[controls["condition"].value]
+            cfg_enabled, scale = _cfg_setting(controls, condition)
             constraints, walls, starts, goals = _navigation_scene(dataset, condition, sample_shape)
             device = pipeline.model.device
             # torch.Generator does not support MPS; Diffusers transfers its CPU draws.
@@ -461,7 +517,7 @@ def notebook_sampling_explorer(
                 batch_size=int(num_samples),
                 conditions=condition,
                 num_inference_steps=controls["steps"].value,
-                guidance_scale=controls["guidance_scale"].value,
+                guidance_scale=scale,
                 generator=generator,
                 record_history=True,
                 **constraints,
@@ -480,7 +536,8 @@ def notebook_sampling_explorer(
                 condition=condition,
                 condition_label=controls["condition"].label,
                 seed=controls["seed"].value,
-                guidance_scale=controls["guidance_scale"].value,
+                guidance_scale=scale,
+                cfg_enabled=cfg_enabled,
                 walls=walls,
                 starts=starts,
                 goals=goals,
@@ -504,6 +561,13 @@ def notebook_sampling_explorer(
 
     controls["generate"].on_click(generate)
     controls["frame"].observe(refresh, names="value")
+
+    def sync_cfg_controls(*_):
+        _cfg_setting(controls, values[controls["condition"].value])
+
+    controls["condition"].observe(sync_cfg_controls, names="value")
+    controls["cfg_enabled"].observe(sync_cfg_controls, names="value")
+    sync_cfg_controls()
     explorer.controls, explorer.output, explorer.state = controls, output, state
     explorer.refresh, explorer.generate = refresh, generate
     return explorer

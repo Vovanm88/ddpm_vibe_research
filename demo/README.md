@@ -14,9 +14,15 @@ v prediction, cosine schedule с 1000 шагами, AdamW, EMA 0.99. Обуче�
 загружаются из отдельных файлов `demo/`. В notebook нет бинарных вложений.
 
 Поле пересчитывается по модели при изменении condition/timestep/CFG/kind.
+Выбор Unconditional передаёт модели `None`, отдельно от класса 0.
+В HTML доступны все `t=0..999` с шагом 1, **Use CFG** и scale `0..3`.
+CFG OFF означает обычное условное предсказание (scale 1), а scale 0 —
+безусловное. Время и условия не интерполируются: кэш содержит реальные
+предсказания модели на каждом целочисленном шаге.
 Генератор запускается кнопкой Generate; Frame/Play показывают реальные
 сохранённые состояния денойзинга. Recover potential показывает проекцию
 F≈−∇U и численную диагностику residual/curl.
+**Log potential colors** включает symlog для положительных и отрицательных U.
 
 В `pipeline/` лежат EMA-веса и Diffusers configs. `checkpoint.pt` содержит
 live weights, EMA, optimizer и RNG. Для экспериментов из клонированного репозитория:
@@ -38,8 +44,12 @@ pipeline = ResearchDiffusionPipeline.from_pretrained(
 - [Плотности на общей шкале](figures/density.png)
 - [Score на разных t](figures/score_fields.png)
 - [Потенциал и curl](figures/potential_diagnostics.png)
+- [Один U с линейной и symlog-шкалами](figures/potential_scales.png)
 - [Автономный HTML explorer](figures/explorer.html)
 - [Денойзинг GIF](figures/denoising.gif)
+- [Радужные траектории: шум → сэмпл](figures/denoising_trajectories.gif)
+- [Маршрут A→B вокруг стен: reference planner](figures/navigation_trajectory.gif)
+- [Траектории и параметры воспроизведения](figures/trajectory_metadata.json)
 
 Все статические графики имеют SVG-копии. Потенциал при t=349 имеет невязку
 0.78%, но ненулевой curl: это приблизительная проекция, не подтверждённая
@@ -51,4 +61,6 @@ pipeline = ResearchDiffusionPipeline.from_pretrained(
 ```bash
 uv run python examples/train_visual_demo.py --epochs 120 --output outputs/new_visual_demo
 uv run python examples/render_visual_demo.py --run outputs/new_visual_demo
+uv run python examples/interactive_visual_demo.py --run demo --output demo/figures/explorer.html
+uv run python examples/trajectory_visual_demo.py --run demo --output demo/figures
 ```

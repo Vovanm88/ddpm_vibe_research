@@ -5,6 +5,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 import pytest
+from matplotlib.colors import SymLogNorm
 from scipy.integrate import trapezoid
 
 from diffusion_lab.visualization import (
@@ -119,3 +120,69 @@ def test_box_wall_overlay_in_three_dimensions():
     grid = Grid.from_bounds([(-1, 1)] * 3, 4)
     explorer = interactive_field(grid, [-grid.points], walls=walls)
     assert explorer.data[-1].type == "mesh3d"
+
+
+@pytest.mark.parametrize("dimension", [1, 2, 3])
+@pytest.mark.parametrize("direction", [-1, 0, 1])
+def test_symlog_potential_preserves_real_positive_negative_zero_and_gauge(dimension, direction):
+    grid = Grid.from_bounds([(-1, 1)] * dimension, 5)
+    field = np.zeros_like(grid.points)
+    field[:, 0] = direction
+    result = recover_potential(grid, field)
+    original = result.potential.copy()
+    assert result.potential.flat[0] == 0
+    figure, ax = plot_potential(grid, result, scale="symlog")
+    figure.canvas.draw()
+    np.testing.assert_array_equal(result.potential, original)
+    assert "symlog" in ax.get_title()
+    if dimension == 1:
+        assert ax.get_yscale() == "symlog"
+        np.testing.assert_array_equal(ax.lines[0].get_ydata(), original)
+        assert "symlog" in ax.get_ylabel()
+    else:
+        image = ax.collections[0]
+        assert isinstance(image.norm, SymLogNorm)
+        assert image.norm.linthresh > 0
+        assert "symlog" in image.colorbar.ax.get_ylabel()
+        expected = original[len(grid.axes[2]) // 2] if dimension == 3 else original
+        np.testing.assert_array_equal(
+            np.ma.getdata(image.get_array()).reshape(expected.shape), expected
+        )
+        assert np.isfinite(image.norm([float(original.min()), 0, float(original.max())])).all()
+    if direction > 0:
+        assert original.min() < 0
+    elif direction < 0:
+        assert original.max() > 0
+    else:
+        assert np.count_nonzero(original) == 0
+
+
+def test_symlog_potential_explicit_threshold_and_caller_axes_preserve_existing_artists():
+    grid = Grid.from_bounds([(-1, 1)] * 2, 5)
+    result = recover_potential(grid, -grid.points)
+    _, ax = plot_dataset(np.array([[0.0, 0.0]]))
+    scatter = ax.collections[0]
+    figure, ax = plot_potential(grid, result, scale="symlog", linthresh=0.05, ax=ax)
+    assert ax.collections[0] is scatter
+    assert isinstance(ax.collections[1].norm, SymLogNorm)
+    assert ax.collections[1].norm.linthresh == 0.05
+    figure.canvas.draw()
+
+
+@pytest.mark.parametrize("scale", ["linear", "symlog"])
+@pytest.mark.parametrize("linthresh", [0, -1, float("nan"), float("inf")])
+def test_potential_rejects_invalid_threshold(scale, linthresh):
+    grid = Grid.from_bounds([(-1, 1)] * 2, 5)
+    result = recover_potential(grid, -grid.points)
+    with pytest.raises(ValueError, match="linthresh must be finite and positive"):
+        plot_potential(grid, result, scale=scale, linthresh=linthresh)
+
+
+def test_potential_linear_default_and_unknown_scale():
+    grid = Grid.from_bounds([(-1, 1)] * 2, 5)
+    result = recover_potential(grid, -grid.points)
+    _, ax = plot_potential(grid, result)
+    assert not isinstance(ax.collections[0].norm, SymLogNorm)
+    assert ax.collections[0].colorbar.ax.get_ylabel() == "Potential U"
+    with pytest.raises(ValueError, match="'linear' or 'symlog'"):
+        plot_potential(grid, result, scale="log")

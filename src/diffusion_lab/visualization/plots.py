@@ -315,20 +315,60 @@ def plot_potential(
     ax=None,
     slice_index=None,
     title="Recovered potential U (F = −∇U)",
+    scale="linear",
+    linthresh=None,
 ):
+    """Draw U with linear or symmetric-log colors without changing its gauge.
+
+    ``symlog`` retains zero and negative potentials: only the color mapping is
+    logarithmic outside ``±linthresh``. The automatic threshold is 2% of the
+    largest finite |U| (1 for an all-zero field). In 1D the curve uses a symlog
+    ordinate instead. The underlying potential, signs and additive gauge stay
+    unchanged. For 3D the color scale spans the full volume, including when a
+    particular z slice is displayed.
+    """
+    if scale not in ("linear", "symlog"):
+        raise ValueError("Potential scale must be 'linear' or 'symlog'")
+    if linthresh is not None:
+        linthresh = float(linthresh)
+        if not np.isfinite(linthresh) or linthresh <= 0:
+            raise ValueError("linthresh must be finite and positive")
+    values = np.asarray(grid.reshape(result.potential))
+    finite = values[np.isfinite(values)]
+    if scale == "symlog" and linthresh is None:
+        magnitude = float(np.max(np.abs(finite))) if len(finite) else 0.0
+        linthresh = max(magnitude * 0.02, np.finfo(float).tiny) if magnitude else 1.0
     subtitle = (
         f"residual={result.relative_residual:.2%}; curl RMS={result.curl_rms:.3g}; "
         f"{'conservative on grid' if result.is_conservative else 'projection only'}"
     )
-    return _scalar_plot(
+    if scale == "symlog":
+        subtitle += f"; symlog colors, linthresh={linthresh:.3g}"
+    collection_count = len(ax.collections) if ax is not None else 0
+    figure, ax = _scalar_plot(
         grid,
-        result.potential,
+        values,
         f"{title}\n{subtitle}",
-        "Potential U",
+        "Potential U (symlog)" if scale == "symlog" else "Potential U",
         ax=ax,
         slice_index=slice_index,
         cmap="viridis",
     )
+    if scale == "symlog":
+        if grid.ndim == 1:
+            ax.set_yscale("symlog", linthresh=linthresh)
+        else:
+            # The scalar plot appends its QuadMesh before contour collections;
+            # account for any artists already present on caller-supplied axes.
+            image = ax.collections[collection_count]
+            image.set_norm(
+                colors.SymLogNorm(
+                    linthresh=linthresh,
+                    vmin=float(finite.min()) if len(finite) else -1.0,
+                    vmax=float(finite.max()) if len(finite) else 1.0,
+                )
+            )
+    return figure, ax
 
 
 def draw_walls(ax, walls, alpha=0.9, *, one_dimensional_path=False):

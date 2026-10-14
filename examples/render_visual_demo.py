@@ -28,7 +28,7 @@ from diffusion_lab.environments import make_environment
 from diffusion_lab.experiment import switch_scheduler
 from diffusion_lab.metrics import sliced_wasserstein
 from diffusion_lab.pipeline import ResearchDiffusionPipeline
-from diffusion_lab.visualization import Grid, evaluate_field, interactive_field, recover_potential
+from diffusion_lab.visualization import Grid, evaluate_field, recover_potential
 from diffusion_lab.visualization.plots import PALETTE, estimate_density, save_figure
 
 INK = "#14263d"
@@ -378,51 +378,16 @@ def potential(output, grid, vectors, time, reference, labels):
     )
 
 
-def explorer(output, grid, arrays, classes, times, reference):
-    fields = {
-        f"condition {int(c)} · t={int(t)}": arrays[(int(c), int(t))] for c in classes for t in times
-    }
-    fig = interactive_field(
-        grid, fields, stride=3, samples=reference[::4], title="Rotating rays · learned score"
+def explorer(output, pipeline, reference, labels, guidance):
+    from interactive_visual_demo import build_explorer
+
+    return build_explorer(
+        pipeline,
+        reference,
+        labels,
+        output / "explorer.html",
+        guidance_scale=guidance,
     )
-    fig.update_layout(
-        sliders=[], height=650, margin=dict(b=25), font=dict(family="Arial", color=INK)
-    )
-    html = fig.to_html(include_plotlyjs=True, full_html=True, div_id="field-explorer")
-    options = "".join(
-        f'<option value="{i}">Condition {int(c)}</option>' for i, c in enumerate(classes)
-    )
-    controls = f"""
-<div style="font:16px Arial;color:#14263d;max-width:900px;margin:20px auto 0;padding:18px;
-border:1px solid #dbe5ef;border-radius:12px;background:#f8fafc">
- <b>Explore the trained score field</b><br><br>
- <label>Condition <select id="condition-control">{options}</select></label>
- <label style="margin-left:30px">Noise timestep <input id="time-control" type="range"
- min="0" max="{len(times) - 1}" value="0" step="1" style="width:220px;vertical-align:middle">
- <span id="time-label">{int(times[0])}</span></label>
- <p style="font-size:13px;color:#5c6e80;margin-bottom:0">Fixed arrow length shows direction;
- shared colors show original score magnitude. This file works offline.</p>
-</div>
-"""
-    script = f"""
-<script>
-(function() {{
- const times = {json.dumps([int(t) for t in times])};
- const condition = document.getElementById('condition-control');
- const time = document.getElementById('time-control');
- function updateField() {{
-   const index = Number(condition.value) * times.length + Number(time.value);
-   document.getElementById('time-label').textContent = times[Number(time.value)];
-   Plotly.animate('field-explorer', [String(index)], {{mode:'immediate',
-     frame:{{duration:0,redraw:true}}, transition:{{duration:0}}}});
- }}
- condition.addEventListener('change', updateField);
- time.addEventListener('input', updateField);
-}})();
-</script>
-"""
-    html = html.replace("<body>", "<body>" + controls).replace("</body>", script + "</body>")
-    (output / "explorer.html").write_text(html)
 
 
 def main():
@@ -456,7 +421,7 @@ def main():
     arrays = field_arrays(pipeline, grid, classes, times, guidance)
     score_fields(output, pipeline, grid, arrays, times, reference, labels)
     potential(output, grid, arrays[(0, times[1])], times[1], reference, labels)
-    explorer(output, grid, arrays, classes, times, reference)
+    explorer_metadata = explorer(output, pipeline, reference, labels, guidance)
     metrics = [
         {key: value for key, value in record.items() if key not in {"samples", "conditions"}}
         for record in records
@@ -483,6 +448,7 @@ def main():
                     "potential_diagnostics",
                 ],
                 "offline_explorer": "explorer.html",
+                "interactive_controls": explorer_metadata,
             },
             indent=2,
         )

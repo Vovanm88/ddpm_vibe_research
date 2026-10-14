@@ -1,5 +1,6 @@
 """Research visualizers and diagnostics for one, two, or three coordinates."""
 
+from .animation import plot_rainbow_trajectories, save_trajectory_gif
 from .fields import Grid, PotentialResult, evaluate_field, recover_potential
 from .interactive import interactive_field
 from .plots import (
@@ -29,7 +30,9 @@ __all__ = [
     "plot_density",
     "plot_potential",
     "plot_trajectories",
+    "plot_rainbow_trajectories",
     "plot_vector_field",
     "save_denoising_gif",
+    "save_trajectory_gif",
     "save_figure",
 ]

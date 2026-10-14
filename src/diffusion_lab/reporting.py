@@ -21,6 +21,7 @@ from .visualization import (
     recover_potential,
     save_denoising_gif,
     save_figure,
+    save_trajectory_gif,
 )
 
 
@@ -107,6 +108,12 @@ def export_report(
             plt.close(fig)
         if make_gif:
             save_denoising_gif(generated.history[:, :24], output / "denoising.gif", walls=walls)
+            save_trajectory_gif(
+                samples[:12],
+                output / "generated_trajectories.gif",
+                walls=walls,
+                title="Generated navigation paths · A → B",
+            )
         write_json(output / "metrics.json", metrics)
         return metrics
     labels = (
@@ -207,6 +214,13 @@ def export_report(
             generated.history[:, :150],
             output / "denoising.gif",
             labels=labels[:150] if labels is not None else None,
+        )
+        save_trajectory_gif(
+            generated.history[:, :24].permute(1, 0, 2),
+            output / "denoising_trajectories.gif",
+            title="Denoising trajectories · noise → sample",
+            start_label="Noise x_T",
+            end_label="Sample x_0",
         )
     write_json(output / "metrics.json", metrics)
     return metrics

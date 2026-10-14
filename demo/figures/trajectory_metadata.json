@@ -1,0 +1,77 @@
+{
+  "seed": 127,
+  "num_particles": 16,
+  "denoising": {
+    "source": "/Users/vvmelnikov/Documents/thub_eda/diffusion-lab/demo/pipeline",
+    "kind": "actual DDIM noise-to-sample history",
+    "steps": 100,
+    "guidance_scale": 1.5,
+    "history_shape": [
+      101,
+      16,
+      2
+    ],
+    "condition_ids": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      1,
+      2,
+      3,
+      0,
+      1,
+      2,
+      3,
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "navigation": {
+    "kind": "PLANNER REFERENCE, not learned navigation",
+    "planner": "A*",
+    "start": [
+      -0.85,
+      -0.65
+    ],
+    "goal": [
+      0.85,
+      0.65
+    ],
+    "walls": [
+      [
+        [
+          -0.3,
+          -1.0
+        ],
+        [
+          -0.15,
+          0.35
+        ]
+      ],
+      [
+        [
+          0.2,
+          -0.35
+        ],
+        [
+          0.35,
+          1.0
+        ]
+      ]
+    ],
+    "path_length": 64,
+    "grid_resolution": 41,
+    "margin": 0.035,
+    "collision_free": true
+  },
+  "color": "turbo, original normalized waypoint/time index in [0,1]; fixed across frames",
+  "animation": {
+    "fps": 12,
+    "max_frames": 60,
+    "actual_original_waypoints": true
+  }
+}

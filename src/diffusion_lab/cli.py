@@ -23,7 +23,13 @@ from .experiment import (
 )
 from .pipeline import ResearchDiffusionPipeline
 from .reporting import export_report
-from .visualization import plot_dataset, plot_trajectories, save_denoising_gif, save_figure
+from .visualization import (
+    plot_dataset,
+    plot_trajectories,
+    save_denoising_gif,
+    save_figure,
+    save_trajectory_gif,
+)
 
 
 def train(config, output, resume=None, report=True):
@@ -145,6 +151,21 @@ def sample(args):
     save_figure(fig, output / "samples")
     if args.gif:
         save_denoising_gif(result.history[:, :64], output / "denoising.gif", walls=walls)
+        if len(pipeline.model.sample_shape) == 2:
+            save_trajectory_gif(
+                result.samples[:12],
+                output / "generated_trajectories.gif",
+                walls=walls,
+                title="Generated navigation paths · A → B",
+            )
+        else:
+            save_trajectory_gif(
+                result.history[:, :24].permute(1, 0, 2),
+                output / "denoising_trajectories.gif",
+                title="Denoising trajectories · noise → sample",
+                start_label="Noise x_T",
+                end_label="Sample x_0",
+            )
     print(f"Saved samples: {output.resolve()}")
 
 

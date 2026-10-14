@@ -23,7 +23,9 @@ def headless_display(monkeypatch):
     monkeypatch.setattr(IPython.display, "display", lambda *_: None)
 
 
-def pipeline(shape=(2,), kind="ddim", conditioner="one_hot", condition_dim=0):
+def pipeline(
+    shape=(2,), kind="ddim", conditioner="one_hot", condition_dim=0, num_train_timesteps=12
+):
     return ResearchDiffusionPipeline(
         PointDenoiser(
             sample_shape=shape,
@@ -33,7 +35,7 @@ def pipeline(shape=(2,), kind="ddim", conditioner="one_hot", condition_dim=0):
             conditioner=conditioner,
             condition_dim=condition_dim,
         ),
-        make_scheduler(kind, num_train_timesteps=12),
+        make_scheduler(kind, num_train_timesteps=num_train_timesteps),
     )
 
 
@@ -48,6 +50,7 @@ def test_field_controls_query_actual_model_coordinates_and_preserve_model_state(
     assert explorer.state["grid"].shape == (4,) * dimension
     assert explorer.state["vectors"].shape == (4,) * dimension + (dimension,)
     assert explorer.controls["timestep"].max == 11
+    assert explorer.controls["timestep"].step == 1
     assert not explorer.controls["resolution"].continuous_update
     explorer.controls["condition"].value = 2
     explorer.controls["timestep"].value = 7
@@ -64,6 +67,109 @@ def test_field_controls_query_actual_model_coordinates_and_preserve_model_state(
     if dimension == 3:
         assert axis.get_zlabel() == "z"
     assert pipe.model.training
+    explorer.close()
+
+
+def test_field_cfg_can_be_disabled_and_unconditional_is_distinct_from_class_zero(monkeypatch):
+    pipe = pipeline(num_train_timesteps=1000)
+    calls = []
+    original = pipe.vector_field
+
+    def record(*args, **kwargs):
+        calls.append((kwargs["conditions"], kwargs["guidance_scale"]))
+        return original(*args, **kwargs)
+
+    monkeypatch.setattr(pipe, "vector_field", record)
+    before = torch.random.get_rng_state().clone()
+    explorer = notebook_field_explorer(pipe, resolution=4, timestep=349, guidance_scale=2.3)
+    controls = explorer.controls
+    assert controls["condition"].options[0] == ("Unconditional", 0)
+    assert calls[-1] == (None, 1.0)
+    assert explorer.state["condition"] is None
+    assert not controls["cfg_enabled"].disabled and controls["guidance_scale"].disabled
+    assert controls["cfg_enabled"].value
+    assert controls["guidance_scale"].value == 2.3
+    controls["cfg_enabled"].value = False
+    assert calls[-1] == (None, 1.0)
+    assert not controls["cfg_enabled"].value
+    controls["cfg_enabled"].value = True
+    assert (controls["timestep"].min, controls["timestep"].max, controls["timestep"].step) == (
+        0,
+        999,
+        1,
+    )
+    for timestep in (0, 1, 348, 349, 350, 998, 999):
+        controls["timestep"].value = timestep
+        assert explorer.state["error"] is None
+        assert explorer.state["timestep"] == timestep
+
+    controls["condition"].value = 1
+    assert calls[-1] == (0, 2.3)
+    assert not controls["cfg_enabled"].disabled and not controls["guidance_scale"].disabled
+    controls["cfg_enabled"].value = False
+    assert calls[-1] == (0, 1.0)
+    assert explorer.state["guidance_scale"] == 1.0
+    assert not explorer.state["cfg_enabled"]
+    assert controls["guidance_scale"].disabled
+    assert controls["guidance_scale"].value == 2.3
+    assert "CFG=off (scale=1)" in explorer.state["figure"].axes[0].get_title()
+    expected = original(explorer.state["grid"].points, 999, conditions=0, guidance_scale=1.0)
+    np.testing.assert_allclose(explorer.state["vectors"].reshape(-1, 2), expected.numpy())
+    controls["condition"].value = 0
+    assert calls[-1] == (None, 1.0)
+    assert not controls["cfg_enabled"].disabled and controls["guidance_scale"].disabled
+    assert not controls["cfg_enabled"].value
+    controls["condition"].value = 1
+    assert calls[-1] == (0, 1.0)
+    assert not controls["cfg_enabled"].disabled and controls["guidance_scale"].disabled
+    controls["cfg_enabled"].value = True
+    assert calls[-1] == (0, 2.3)
+    assert not controls["guidance_scale"].disabled
+    assert pipe.model.training
+    assert torch.equal(before, torch.random.get_rng_state())
+    explorer.close()
+
+
+def test_sampling_cfg_toggle_uses_plain_conditioned_prediction_and_preserves_selected_scale():
+    class RecordingPipeline(ResearchDiffusionPipeline):
+        def __call__(self, *args, **kwargs):
+            self.last_call = (kwargs["conditions"], kwargs["guidance_scale"])
+            return super().__call__(*args, **kwargs)
+
+    base = pipeline()
+    pipe = RecordingPipeline(base.model, base.scheduler)
+    before = torch.random.get_rng_state().clone()
+    explorer = notebook_sampling_explorer(pipe, num_samples=3, steps=2, guidance_scale=2.3)
+    controls = explorer.controls
+    assert controls["condition"].options[0] == ("Unconditional", 0)
+    assert not controls["cfg_enabled"].disabled and controls["guidance_scale"].disabled
+    assert controls["cfg_enabled"].value and controls["guidance_scale"].value == 2.3
+    controls["cfg_enabled"].value = False
+    assert explorer.generate() is not None
+    assert pipe.last_call == (None, 1.0)
+    assert explorer.state["condition"] is None
+    controls["cfg_enabled"].value = True
+    controls["condition"].value = 1
+    assert not controls["cfg_enabled"].disabled and not controls["guidance_scale"].disabled
+    controls["cfg_enabled"].value = False
+    assert explorer.generate() is not None
+    assert pipe.last_call == (0, 1.0)
+    assert explorer.state["guidance_scale"] == 1.0
+    assert not explorer.state["cfg_enabled"]
+    assert "CFG=off (scale=1)" in explorer.children[-2].value
+    assert "CFG=2.3" not in explorer.children[-2].value
+    assert controls["guidance_scale"].disabled and controls["guidance_scale"].value == 2.3
+    controls["condition"].value = 0
+    assert not controls["cfg_enabled"].disabled and not controls["cfg_enabled"].value
+    controls["condition"].value = 1
+    assert not controls["cfg_enabled"].disabled and controls["guidance_scale"].disabled
+    controls["cfg_enabled"].value = True
+    assert not controls["guidance_scale"].disabled
+    assert explorer.generate() is not None
+    assert pipe.last_call == (0, 2.3)
+    assert explorer.state["cfg_enabled"] and explorer.state["guidance_scale"] == 2.3
+    assert pipe.model.training
+    assert torch.equal(before, torch.random.get_rng_state())
     explorer.close()
 
 
@@ -139,6 +245,39 @@ def test_potential_uses_raw_field_when_arrow_normalization_changes(monkeypatch):
     explorer.controls["normalize"].value = False
     np.testing.assert_allclose(explorer.state["potential"].potential, first.potential)
     assert "Potential:" in explorer.children[-2].value
+    explorer.close()
+
+
+def test_potential_log_control_changes_colors_and_retains_preference(monkeypatch):
+    from matplotlib.colors import SymLogNorm
+
+    pipe = pipeline()
+    monkeypatch.setattr(
+        pipe, "vector_field", lambda points, *args, **kwargs: -torch.as_tensor(points)
+    )
+    explorer = notebook_field_explorer(pipe, resolution=6)
+    controls = explorer.controls
+    assert controls["potential_log"].disabled
+    controls["potential"].value = True
+    assert not controls["potential_log"].disabled
+    original = explorer.state["potential"].potential.copy()
+    controls["potential_log"].value = True
+    assert explorer.state["error"] is None
+    assert explorer.state["potential_scale"] == "symlog"
+    np.testing.assert_array_equal(explorer.state["potential"].potential, original)
+    meshes = [
+        collection for axis in explorer.state["figure"].axes for collection in axis.collections
+    ]
+    assert any(isinstance(collection.norm, SymLogNorm) for collection in meshes)
+    assert "Potential colors: symlog" in explorer.children[-2].value
+    controls["potential"].value = False
+    assert controls["potential_log"].disabled and controls["potential_log"].value
+    controls["potential"].value = True
+    assert not controls["potential_log"].disabled and controls["potential_log"].value
+    assert explorer.state["potential_scale"] == "symlog"
+    controls["potential_log"].value = False
+    assert explorer.state["potential_scale"] == "linear"
+    np.testing.assert_array_equal(explorer.state["potential"].potential, original)
     explorer.close()
 
 

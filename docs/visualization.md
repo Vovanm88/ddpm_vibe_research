@@ -148,13 +148,20 @@ display(sampling)  # генерация начнётся после нажати
 | Condition | Класс / unconditional либо непрерывный вектор условий |
 | t | Индекс DDPM/DDIM `0..T−1`; для flow также доступен `T`, показана `sigma=t/T` |
 | CFG | `guidance_scale` от 0 до 3 |
+| Use CFG | Выключение использует обычное условное предсказание (`scale=1`); scale=0 — unconditional |
 | Field | `score`, `epsilon`, `denoising`; для flow — `velocity`, `denoising` |
 | Grid | Разрешение сетки от 4 до 64 по каждой координате |
 | Normalize arrows | Масштаб отображения стрелок; цвет сохраняет исходную норму |
 | Streamlines (2D) | Линии потока на равномерной двумерной сетке |
 | Recover potential | Второй график U и диагностика residual / relative curl |
+| Log potential colors | Логарифмическая цветовая шкала symlog, включая отрицательные U и ноль |
 
 Потенциал вычисляется по исходным векторам: нормировка стрелок не меняет U.
+`plot_potential(grid, result, scale="symlog")` применяет `SymLogNorm` к цветам.
+Значения U, знак и калибровка остаются прежними. Вблизи нуля шкала линейна;
+автоматический `linthresh` равен 2% от максимального `|U|`.
+Можно явно передать положительный `linthresh=0.1`. По умолчанию `scale="linear"`.
+В 1D, где U показан линией, переключается шкала вертикальной оси.
 Для 3D рядом с объёмным полем показан средний срез U по z. Если поле не проходит
 проверку консервативности, интерфейс явно сообщает о least-squares projection.
 
@@ -190,6 +197,12 @@ sampling.controls["frame"].value = 0
 дополнительно доступна `.generate()`. При ошибке текст отображается рядом с
 графиком, а исключение доступно в `.state["error"]`.
 
+`fields.controls["cfg_enabled"].value = False` отключает CFG;
+`fields.controls["potential_log"].value = True` включает symlog для U.
+В sampling explorer есть тот же `cfg_enabled`. Переключатель остаётся доступен
+при Unconditional, чтобы сохранить настройки для следующего выбранного класса;
+само безусловное предсказание не зависит от CFG.
+
 Нужны зависимости `[interactive]`; ноутбуки устанавливают пакет из GitHub первой
 ячейкой:
 
@@ -210,6 +223,37 @@ output.enable_custom_widget_manager()
 `save_figure` сохраняет PNG и редактируемый SVG; доступен также PDF через
 `formats=("pdf",)`. `save_denoising_gif` принимает истории точек `[steps,N,D]`
 или траекторий `[steps,N,T,D]` и использует Pillow без ffmpeg.
+
+Для радужного следа движения используйте `plot_rainbow_trajectories` и
+`save_trajectory_gif`: они принимают `[N,L,D]` либо одну траекторию `[L,D]`,
+поддерживают 1D/2D/3D, отмечают начало, финиш и текущую частицу.
+Цвет сегмента соответствует его исходному индексу от 0 до 1 и не меняется
+при удлинении следа; границы осей и colorbar также фиксированы. В 1D
+горизонтальная ось — индекс пути, вертикальная — положение x.
+
+```python
+from diffusion_lab.visualization import save_trajectory_gif
+
+# История точек Diffusers: [steps,N,D] → [N,steps,D].
+save_trajectory_gif(
+    generated.history[:, :16].permute(1, 0, 2), "outputs/noise_to_sample.gif",
+    start_label="Noise x_T", end_label="Sample x_0",
+)
+# Физические пути навигации уже имеют форму [N,L,D].
+save_trajectory_gif(paths, "outputs/routes.gif", walls=scene.walls)
+```
+
+CLI `sample --gif` и отчёт с `make_gif=True` сохраняют также этот GIF:
+`denoising_trajectories.gif` для точек, `generated_trajectories.gif` для путей.
+Короткая обученная навигация может пересекать стены: визуализация отображает
+фактический результат, а качество оценивается collision-free метрикой.
+
+```bash
+uv run python examples/trajectory_visual_demo.py --run demo --output demo/figures
+```
+
+Пример сохраняет настоящие траектории обученного DDIM и отдельно подписанный
+эталонный A* маршрут A→B; это разные процессы.
 
 `interactive_field(grid, {"condition=0 t=900": vectors, ...}, path="field.html")`
 делает автономный Plotly HTML со слайдером состояния и общим масштабом цветов.
