@@ -1,0 +1,189 @@
+{
+  "warmup_updates": 20,
+  "measured_updates": 100,
+  "seconds_per_update": {
+    "teacher": 0.0030649966700002553,
+    "mse": 0.0032931716693565248,
+    "sinkhorn_endpoint": 0.029062739168293775
+  },
+  "training_forecast_hours": 0.21995509154577222,
+  "conservative_total_forecast_hours": 1.0359416190095039,
+  "forecast_assumptions": {
+    "training_overhead_multiplier": 1.3,
+    "evaluation_classifier_reserve_seconds": 2700.0,
+    "reserve_is_an_estimate_not_a_guarantee": true,
+    "teacher_budget_is_fixed": true,
+    "student_updates_are_identical_for_all_methods_and_seeds": true,
+    "no_quality_metrics_or_test_data_used": true
+  },
+  "fits_registered_budget": true,
+  "budget_proposal": {
+    "status": "full_budget_fits",
+    "fits_registered_budget": true,
+    "budget_seconds": 21600.0,
+    "already_spent_seconds": 0.0,
+    "remaining_budget_seconds": 21600.0,
+    "teacher_registered_updates": 100000,
+    "teacher_updates_completed": 0,
+    "teacher_updates_remaining": 100000,
+    "teacher_budget_changed": false,
+    "student_run_count": 12,
+    "requested_student_updates": 2500,
+    "proposed_common_student_updates": 2500,
+    "reduction_quantum": 250,
+    "minimum_reduced_updates": 250,
+    "seconds_per_update": {
+      "teacher": 0.0030649966700002553,
+      "mse": 0.0032931716693565248,
+      "sinkhorn_endpoint": 0.029062739168293775
+    },
+    "cohort_seconds_per_common_update": 0.19413546502590182,
+    "full_training_forecast_seconds": 791.83832956478,
+    "full_conservative_remaining_seconds": 3729.389828434214,
+    "full_total_with_spent_seconds": 3729.389828434214,
+    "proposed_training_forecast_seconds": 791.83832956478,
+    "proposed_conservative_remaining_seconds": 3729.389828434214,
+    "proposed_total_with_spent_seconds": 3729.389828434214,
+    "automatic_config_change": false,
+    "registration_required_before_reduced_runs": false,
+    "assumptions": {
+      "training_overhead_multiplier": 1.3,
+      "evaluation_classifier_reserve_seconds": 2700.0,
+      "reserve_is_an_estimate_not_a_guarantee": true,
+      "teacher_budget_is_fixed": true,
+      "student_updates_are_identical_for_all_methods_and_seeds": true,
+      "no_quality_metrics_or_test_data_used": true
+    }
+  },
+  "cache_contract": {
+    "caller_config_sha256": "168c3ce14533b709ab1b8ee146833e29abc1f6b63690aa372bb0b27272d7dc0a",
+    "teacher_sha256": "562b7ebbfc06b6e86478fc42f112c256176c5eaa7f4d1dbc82f2bf05f4140353",
+    "train_data_sha256": "aaf2b48e7a894b4ae0550f632c6eed303d0008579d1ba97a7766cbc2716a3e34",
+    "algorithm_sha256": "e48a315b3dfbaaf1366085800efd8eb4d39ff8007856d0a49a3bdc05a164f8dc",
+    "device": "cpu",
+    "warmup_updates": 20,
+    "measured_updates": 100
+  },
+  "benchmark_teacher_sha256": "562b7ebbfc06b6e86478fc42f112c256176c5eaa7f4d1dbc82f2bf05f4140353",
+  "teacher_source": "untrained_architecture_probe_rebenchmark_after_teacher_is_fixed",
+  "device": "cpu",
+  "final_student_seeds_used": false,
+  "test_or_validation_data_used": false,
+  "benchmark_config": {
+    "schema_version": 1,
+    "protocol_id": "rays16_long_teacher_v1/timing_probe",
+    "scope": "timing_probe_only",
+    "output_dir": "replication/artifacts/rays16_long_teacher_v1/benchmarks/562b7ebbfc06_168c3ce14533_969747ce5542",
+    "device": "cpu",
+    "threads": 4,
+    "data": {
+      "name": "rotating_rays",
+      "n_train": 65536,
+      "n_validation": 8192,
+      "n_test": 8192,
+      "seed": 41,
+      "root": "replication/data",
+      "n_classes": 16
+    },
+    "model": {
+      "kind": "mlp",
+      "hidden_dim": 256,
+      "num_layers": 4,
+      "time_embedding_dim": 32,
+      "base_channels": 32
+    },
+    "teacher": {
+      "seed": 4983434935922045964,
+      "updates": 120,
+      "batch_size": 512,
+      "lr": 0.001,
+      "weight_decay": 0.0001,
+      "warmup": 0,
+      "ema_decay": 0.999,
+      "grad_clip": 1.0,
+      "checkpoint_every": 120
+    },
+    "student": {
+      "updates": 120,
+      "batch_size": 128,
+      "lr": 0.0001,
+      "weight_decay": 0.0001,
+      "warmup": 0,
+      "ema_decay": 0.99,
+      "grad_clip": 1.0,
+      "checkpoint_every": 120
+    },
+    "distillation": {
+      "teacher_steps": 32,
+      "student_steps": 16,
+      "groups": null,
+      "anchor_source": "interpolant",
+      "seeds": [
+        1850520904620004641
+      ],
+      "losses": [
+        "mse",
+        "sinkhorn_endpoint"
+      ],
+      "tube_rhos": [
+        0.0
+      ],
+      "lambda_w": 1.0,
+      "gamma": 1.0,
+      "epsilon_alpha": 0.05,
+      "calibration_size": 256,
+      "swd_train_projections": 128,
+      "ot_backend": "reference",
+      "sinkhorn_scaling": 0.95,
+      "gradient_diagnostics_every": 200,
+      "plan_diagnostics_every": 1000
+    },
+    "evaluation": {
+      "final_seed": 730001,
+      "validation_seed": 730002,
+      "reference_seed": 730003,
+      "samples": 4096,
+      "validation_samples": 2048,
+      "teacher_nfe": [
+        8,
+        16,
+        24,
+        32,
+        64,
+        128
+      ],
+      "batch_size": 128,
+      "swd_projections": 1024,
+      "mmd_block_size": 256,
+      "diagnostic_samples": 128,
+      "gif_particles": 32,
+      "gif_fps": 10,
+      "timing_repeats": 3,
+      "sensitivity_swd_margin": 0.005,
+      "rho_eval": [
+        0.0,
+        0.05,
+        0.1,
+        0.2
+      ]
+    },
+    "evaluator": {
+      "seed": 41,
+      "epochs": 5,
+      "batch_size": 128,
+      "lr": 0.001,
+      "weight_decay": 0.0,
+      "accuracy_threshold": 0.99,
+      "feature_batch_size": 512,
+      "bandwidth_samples": 2000
+    },
+    "resources": {
+      "max_gpu_hours": 6.0,
+      "max_artifact_gib": 8.0,
+      "rays_gate": "replication/reports/rays_gate.json"
+    }
+  },
+  "parent_resource_ledger": "replication/artifacts/rays16_long_teacher_v1/resource_ledger.json",
+  "child_resource_ledger": "replication/artifacts/rays16_long_teacher_v1/benchmarks/562b7ebbfc06_168c3ce14533_969747ce5542/resource_ledger.json",
+  "forecast_reference": "Snapshot after timing; recompute propose_equal_budget after any later spending"
+}
