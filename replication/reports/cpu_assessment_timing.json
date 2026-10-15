@@ -1,0 +1,66 @@
+{
+  "status": "completed",
+  "device": "cpu",
+  "threads": 2,
+  "torch_version": "2.14.1",
+  "feature_dimensions": 128,
+  "generated_count": 10000,
+  "real_count": 10000,
+  "train_count": 55000,
+  "raw_image_shape": [
+    10000,
+    1,
+    28,
+    28
+  ],
+  "mmd_block_size": 256,
+  "ssim_batch_size": 128,
+  "kernel_scales": [
+    0.5,
+    1.0,
+    2.0
+  ],
+  "seeds": {
+    "features_train": 640001,
+    "features_generated": 640002,
+    "features_real": 640003,
+    "raw_images": 640004,
+    "raw_teacher": 640005
+  },
+  "measurements": {
+    "train_reference_fit_once": {
+      "seconds": 0.29194129118695855
+    },
+    "feature_standardization_per_method": {
+      "seconds": 0.06826166715472937
+    },
+    "mmd2_10000_vs_10000": {
+      "seconds": 26.822238958906382
+    },
+    "nearest_train_10000_vs_55000": {
+      "seconds": 40.73018195806071
+    },
+    "ssim_10000_images_chunked128": {
+      "seconds": 0.7012172909453511
+    }
+  },
+  "limitations": [
+    "One full-size synthetic pass, not a confidence interval.",
+    "Synthetic FC128 normal features and raw noise images; no MNIST, test split, saved weights or GPU calls.",
+    "CPU-only work may share host load with the separate MPS process.",
+    "Excludes generator/CNN forwards, dataset loading, feature export, plotting and disk I/O."
+  ],
+  "elapsed_seconds": 69.07301599998027,
+  "synthetic_metric_values_not_quality_results": {
+    "mmd2": 5.214322380542313e-06,
+    "nearest_mean": 12.3753709217903,
+    "ssim": 0.9816323038257578
+  },
+  "forecast": {
+    "quality_methods": 18,
+    "nonself_fidelity_methods": 17,
+    "cpu_metrics_18_quality_plus17_ssim_seconds": 1229.0929804602638,
+    "cpu_metrics_18_quality_plus17_ssim_hours": 0.34141471679451774,
+    "assumption": "Linear repetition with same dimensions and host load; excludes network/CNN and diagnostics."
+  }
+}

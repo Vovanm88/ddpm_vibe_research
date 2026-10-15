@@ -1,0 +1,26 @@
+{
+  "status": "not_completed_user_redirected_to_many_rays",
+  "reason": "User asked to replace the long MNIST experiment with more rotating rays and longer training. No further MNIST stages are active or scheduled.",
+  "evaluator_status": "failed_gate",
+  "evaluator_validation_accuracy": 0.9888,
+  "required_accuracy": 0.99,
+  "official_test_accessed": false,
+  "teacher_status": "interrupted",
+  "last_committed_teacher_updates": 0,
+  "console_teacher_progress_at_interrupt": 600,
+  "no_final_mnist_teacher_or_student_metrics": true,
+  "cumulative_resource_ledger": {
+    "gpu_training_seconds": 362.8375862920657,
+    "prior_mps_checks_conservative_allowance_seconds": 60.0,
+    "allowance_note": "Conservative charge for prior real-Metal model/loss/metric smoke checks, not a measured training duration; full subsequent benchmark/training/evaluation charged cumulatively.",
+    "benchmark_receipts": {
+      "/Users/vvmelnikov/Documents/thub_eda/diffusion-lab/replication/artifacts/mnist_mvp_v1/benchmarks/11f21e0aa304_e5065c77c1a5_d1f788896f8b/resource_ledger.json": {
+        "source_path": "/Users/vvmelnikov/Documents/thub_eda/diffusion-lab/replication/artifacts/mnist_mvp_v1/benchmarks/11f21e0aa304_e5065c77c1a5_d1f788896f8b/resource_ledger.json",
+        "source_sha256": "b5de688834d880e587786ef6a1a6de1db90dca9f8e8383230c86b3113b2eedde",
+        "gpu_training_seconds": 127.78981450013816,
+        "cpu_training_wall_seconds": 0.0
+      }
+    },
+    "cpu_training_wall_seconds": 0.0
+  }
+}

@@ -1,0 +1,102 @@
+schema_version: 1
+protocol_id: rays16_long_teacher_v1
+scope: cpu_pilot
+output_dir: replication/artifacts/rays16_long_teacher_v1
+device: cpu
+threads: 4
+data:
+  name: rotating_rays
+  n_train: 65536
+  n_validation: 8192
+  n_test: 8192
+  seed: 41
+  root: replication/data
+  n_classes: 16
+model:
+  kind: mlp
+  hidden_dim: 256
+  num_layers: 4
+  time_embedding_dim: 32
+  base_channels: 32
+teacher:
+  seed: 41
+  updates: 100000
+  batch_size: 512
+  lr: 0.001
+  weight_decay: 0.0001
+  warmup: 5000
+  ema_decay: 0.999
+  grad_clip: 1.0
+  checkpoint_every: 10000
+student:
+  updates: 2500
+  batch_size: 128
+  lr: 0.0001
+  weight_decay: 0.0001
+  warmup: 250
+  ema_decay: 0.99
+  grad_clip: 1.0
+  checkpoint_every: 250
+distillation:
+  teacher_steps: 32
+  student_steps: 16
+  groups: null
+  anchor_source: interpolant
+  seeds:
+  - 101
+  - 202
+  - 303
+  losses:
+  - mse
+  - sinkhorn_endpoint
+  tube_rhos:
+  - 0.0
+  - 0.1
+  lambda_w: 1.0
+  gamma: 1.0
+  epsilon_alpha: 0.05
+  calibration_size: 256
+  swd_train_projections: 128
+  ot_backend: reference
+  sinkhorn_scaling: 0.95
+  gradient_diagnostics_every: 200
+  plan_diagnostics_every: 1000
+evaluation:
+  final_seed: 730001
+  validation_seed: 730002
+  reference_seed: 730003
+  samples: 4096
+  validation_samples: 2048
+  teacher_nfe:
+  - 8
+  - 16
+  - 24
+  - 32
+  - 64
+  - 128
+  batch_size: 128
+  swd_projections: 1024
+  mmd_block_size: 256
+  diagnostic_samples: 128
+  gif_particles: 32
+  gif_fps: 10
+  timing_repeats: 3
+  sensitivity_swd_margin: 0.005
+  rho_eval:
+  - 0.0
+  - 0.05
+  - 0.1
+  - 0.2
+evaluator:
+  seed: 41
+  epochs: 5
+  batch_size: 128
+  lr: 0.001
+  weight_decay: 0.0
+  accuracy_threshold: 0.99
+  feature_batch_size: 512
+  bandwidth_samples: 2000
+resources:
+  max_gpu_hours: 6.0
+  max_artifact_gib: 8.0
+  rays_gate: replication/reports/rays_gate.json
