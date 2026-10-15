@@ -84,3 +84,13 @@ Gauge-null modes устраняются spectral pseudoinverse; canonical object
 marginal tolerance1e-10 сохранены. Предыдущая попытка invalidated полностью.
 Новый timing100updates после20warmup, seed919192: {"mse": {"warmup_updates": 20, "measured_updates": 100, "seconds_per_update": 0.0013508133310824633}, "sinkhorn_endpoint": {"warmup_updates": 20, "measured_updates": 100, "seconds_per_update": 0.026871752496808766}}
 Бюджет500updates/B128/4threads для всех12finalruns подтверждён без изменений.
+
+## MPS-регистрация MNIST до итоговых updates
+
+Замер сети float32, 20warmup+100updates: {'teacher': 0.19864459916949273, 'mse': 0.3091591850016266, 'sinkhorn_endpoint': 0.43432863416150214}.
+Исходный полный бюджет имеет conservative forecast19.06h и не помещается в6h.
+Общий teacher30k сохранён; ВСЕ12students получают 1750updates/B128.
+Фиксированы прежние warmup500/EMA0.999/optimizer/loss/grid/seed. Это сокращённый
+MNIST-MVP, а не выполненный исходный бюджет10k. Основание — только время,
+качество пробных запусков не сравнивалось, test закрыт. Точные расчёты и
+cumulative ledger: `mnist_budget_registration.json`; новый YAML: `mnist_mps_registered.yaml`.
