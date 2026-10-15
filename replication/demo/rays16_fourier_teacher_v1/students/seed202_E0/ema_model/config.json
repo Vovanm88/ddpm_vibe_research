@@ -1,0 +1,20 @@
+{
+  "_class_name": "FourierFMMLP",
+  "_diffusers_version": "0.39.0",
+  "_name_or_path": "replication/artifacts/rays16_fourier_teacher_v1/teacher/ema_model",
+  "epsilon": 0.001,
+  "hidden_dim": 256,
+  "input_dim": 2,
+  "num_layers": 4,
+  "polar_features": true,
+  "spatial_frequencies": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32
+  ],
+  "time_embedding_dim": 32,
+  "time_scale": 1000.0
+}

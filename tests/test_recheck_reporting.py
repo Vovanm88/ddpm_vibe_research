@@ -228,6 +228,76 @@ def test_mnist_feature_contrasts_and_claims_use_actual_rows_not_ray_placeholder(
     assert h3["effect_mean"] is None
 
 
+def test_mnist_claims_quality_improvement_cannot_establish_tube_robustness(tmp_path):
+    rows = _rows()
+    for row in rows:
+        row["quality"] = {
+            "mmd2_mnist_features_real": row["quality"]["mmd2_real"],
+        }
+    contrasts = compute_contrasts(rows)
+    quality = next(row for row in contrasts if row["contrast"] == "M1_minus_M0")
+    assert quality["paired_t_ci"][1] < 0  # Convincing quality evidence is insufficient.
+    h2 = next(
+        row
+        for row in _mnist_claims(
+            rows, contrasts, "teacher4_student2", tmp_path / "results.json", tmp_path
+        )
+        if row["claim_id"] == "H2"
+    )
+    assert h2["status"] == "not_tested"
+    assert h2["metric"] == "local_rollout_robustness"
+    assert h2["effect_mean"] is None and h2["paired_t_ci"] is None
+    assert h2["student_seed_count"] == 0
+    assert h2["quality_proxy"]["status"] == "supported_on_small_benchmark"
+    assert h2["quality_proxy"]["effect_mean"] == pytest.approx(-0.0001)
+    assert any("cannot establish robustness" in text for text in h2["limitations"])
+    # The measured M1-minus-M0 quality contrast is retained for the CSV producer.
+    assert quality in compute_contrasts(rows)
+
+
+@pytest.mark.parametrize("costs_recorded", [False, True])
+def test_mnist_claims_quality_gain_requires_a_cost_qualification_for_h4(tmp_path, costs_recorded):
+    rows = _rows()
+    for row in rows:
+        row["quality"] = {
+            "mmd2_mnist_features_real": row["quality"]["mmd2_real"],
+        }
+        if not costs_recorded:
+            row.pop("cost")
+        elif row["method"] == "M0":
+            row["cost"] = {"training_seconds": 1_000_000.0, "median_sampling_seconds": 500.0}
+    h4 = next(
+        row
+        for row in _mnist_claims(
+            rows, compute_contrasts(rows), "teacher4_student2", tmp_path / "results.json", tmp_path
+        )
+        if row["claim_id"] == "H4"
+    )
+    assert h4["quality_status"] == "supported_on_small_benchmark"
+    assert h4["paired_t_ci"][1] < 0
+    assert h4["status"] == "inconclusive"
+    assert h4["cost_qualification"]["status"] == "not_assessed"
+    records = h4["cost_qualification"]["recorded_costs"]
+    assert len(records) == 4  # Three independent students and one frozen short-grid original.
+    assert {row["run_id"] for row in records} == {
+        "teacher2",
+        "seed101_M0",
+        "seed202_M0",
+        "seed303_M0",
+    }
+    if costs_recorded:
+        assert all(
+            row["cost"]["training_seconds"] == 1_000_000.0
+            for row in records
+            if row["run_id"].endswith("M0")
+        )
+    else:
+        assert all(row["cost"] == {} for row in records)
+    assert any(
+        "recorded cost columns alone cannot establish H4" in text for text in h4["limitations"]
+    )
+
+
 def test_mnist_preview_uses_actual_nodes_fixed_clamp_and_common_noise(tmp_path):
     initial = torch.full((2, 1, 28, 28), -2.0)
     histories = {

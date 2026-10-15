@@ -26,11 +26,14 @@
 [docs/distillation.md](docs/distillation.md).
 
 Новая исследовательская ветка добавляет [Wasserstein/tube-протокол](replication/README.md),
-[ноутбук с обучением четырёх методов на лучах](notebooks/10_wasserstein_tube_rays.ipynb)
+[ноутбук с обучением четырёх методов на лучах](notebooks/10_wasserstein_tube_rays.ipynb),
 [MNIST-ноутбук](notebooks/11_mnist_wasserstein_tube.ipynb)
 и [16 лучей с длинным обучением](notebooks/12_many_rays_wasserstein_tube.ipynb).
 Teacher targets, Sinkhorn, tube и весь Torch training loop видны в ячейках;
 конфиги, численные проверки, отчёты и GIF находятся в `replication/`.
+В notebook 12 выбран `FourierFMMLP`, обученный на 16 лучах за 100 000 шагов.
+[Открыть notebook 12 в Colab](https://colab.research.google.com/github/Vovanm88/ddpm_vibe_research/blob/research/wasserstein-tube-replication/notebooks/12_many_rays_wasserstein_tube.ipynb).
+[Результаты 24 запусков и анимации](replication/reports/many_rays/REPORT.md).
 
 Установка из пустого Jupyter:
 

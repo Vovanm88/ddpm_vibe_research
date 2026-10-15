@@ -1,0 +1,15 @@
+{
+  "source_root": "replication/artifacts/rays16_fourier_teacher_v1",
+  "teacher_sha256": "495ff88057d8a5dccbc1581d887404332e9f24ba4dfad658f730de389323b93a",
+  "teacher_training_runs": 1,
+  "new_teacher_updates": 0,
+  "copied_files": {
+    "training.pt": "da25e52b8665d6c8b36e19e1f34455e02e57ad785a75717b6e43be80e6a68e3e",
+    "history.json": "a368659fd7d814d2ec3d940a1b6ae31d87969f09e3cf9653d22a6854ea425870",
+    "manifest.json": "a7f096e594ca2252056685559ca98fdd0cb5314b04c689757ac61709ee35eabf",
+    "live_model/config.json": "b5e7bf2d2cb16eb3d95e70092a396c0f5584b4a3797085120b15c5b512ea9385",
+    "live_model/diffusion_pytorch_model.safetensors": "5049565d84e6658307e73298c8b75af1e2077af5694a81f2c3935d558016b23b",
+    "ema_model/config.json": "b5e7bf2d2cb16eb3d95e70092a396c0f5584b4a3797085120b15c5b512ea9385",
+    "ema_model/diffusion_pytorch_model.safetensors": "c8b354486870c3e64bf973bca71902713799949d76077d315967977c62ccb1f1"
+  }
+}

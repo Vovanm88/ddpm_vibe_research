@@ -1,0 +1,303 @@
+{
+  "config_sha256": "050282ec564a7a368b26fa236b34ffc6ac555b7113a25c24fe27a14a3c57c42b",
+  "core_evaluation_sha256": "5dd0030c78c6dfd493a5b4c7b5fc410cb3476f9d4fafc1970970d19757d4ad1e",
+  "datasets_scope": "opaque byte-identical registered train/validation/test export; never deserialized by publisher",
+  "exact_resume_available": false,
+  "excluded": [
+    "training.pt",
+    "optimizer/RNG state",
+    "live_model",
+    "benchmarks/children"
+  ],
+  "files": {
+    "benchmark.json": {
+      "bytes": 6169,
+      "sha256": "6c685ae7338a1417449f3493a62dbe619806f5fadf1d0ef27d3984c72a159daa"
+    },
+    "calibration.json": {
+      "bytes": 34765,
+      "sha256": "a51121dfec4a9eb04363e1fc178745ea2d264fb581faab89dd7494924d22dbe6"
+    },
+    "datasets.pt": {
+      "bytes": 657514,
+      "sha256": "2582532080238e1666470a41bca6d8410d4b09f73f9c8173ac8415d2880af98f"
+    },
+    "evaluation/diagnostics.json": {
+      "bytes": 275832,
+      "sha256": "3a950fbf25cb39944020c92b62a2a1467be6dc0cca34e9cfe0759eb6446d068a"
+    },
+    "evaluation/results.json": {
+      "bytes": 76599,
+      "sha256": "21121655544c007608dc700adb105e7675d5d3d9cbb4f29616107e7c43f2a55b"
+    },
+    "evaluation/trajectories.pt": {
+      "bytes": 33169,
+      "sha256": "5ab90527cb0e9b7bc436f2f6d2ddf709282ce8d17291ca8341681aee57784cbb"
+    },
+    "orchestration_status.json": {
+      "bytes": 163,
+      "sha256": "f29b5f8799ea1068b8c3679d08abc1b81fa5e195e89a60ec906478b6da0011d9"
+    },
+    "resource_ledger.json": {
+      "bytes": 1233,
+      "sha256": "6112e7517d396fa116059df084542f49952c90ed2966e395963ba911c1d909ee"
+    },
+    "snapshots/teacher_50000/ema_model/config.json": {
+      "bytes": 301,
+      "sha256": "b5e7bf2d2cb16eb3d95e70092a396c0f5584b4a3797085120b15c5b512ea9385"
+    },
+    "snapshots/teacher_50000/ema_model/diffusion_pytorch_model.safetensors": {
+      "bytes": 867224,
+      "sha256": "afed4fab9d6ee183dabf8f2071108e0e41f8c34f7bf053f8e1de94815a3eba16"
+    },
+    "snapshots/teacher_50000/history.json": {
+      "bytes": 8826725,
+      "sha256": "b18dfffc184bacf344d4a5b0c1bcace5b19b0cc52344bf4171757fd3cd7696e4"
+    },
+    "snapshots/teacher_50000/manifest.json": {
+      "bytes": 5325,
+      "sha256": "0c1c6715fc6cceae7171bc84a75a548e14fe54c37c9f7c76fbd33a295251eaac"
+    },
+    "students/seed101_E0/ema_model/config.json": {
+      "bytes": 389,
+      "sha256": "11b4203beb4ca7df088de20c33604fd099cc09561cef480b2c1e1f0068c77626"
+    },
+    "students/seed101_E0/ema_model/diffusion_pytorch_model.safetensors": {
+      "bytes": 867224,
+      "sha256": "ea3e6330c7ce32883641d2905b031303b0cd204dacdbc6e83c9f23ff89eb106a"
+    },
+    "students/seed101_E0/history.json": {
+      "bytes": 1170304,
+      "sha256": "6ddee61c4ce9b74bd61844026aa01ddef7940ed4ac382a99a69f6b72ca6d7f58"
+    },
+    "students/seed101_E0/manifest.json": {
+      "bytes": 42600,
+      "sha256": "606d3399ea2d1a30cf9356a0174e02835f9bb36087f4e77d94df7e39bba21340"
+    },
+    "students/seed101_E1/ema_model/config.json": {
+      "bytes": 389,
+      "sha256": "11b4203beb4ca7df088de20c33604fd099cc09561cef480b2c1e1f0068c77626"
+    },
+    "students/seed101_E1/ema_model/diffusion_pytorch_model.safetensors": {
+      "bytes": 867224,
+      "sha256": "5824025db34f7cd4a4053c171cb539579ddca53e465d7a339d9a2989e1043803"
+    },
+    "students/seed101_E1/history.json": {
+      "bytes": 1170086,
+      "sha256": "cdbeb759c31f0d9cbbc457119f02cbccbb34aa9f41ca1b63125a64ca74655169"
+    },
+    "students/seed101_E1/manifest.json": {
+      "bytes": 42601,
+      "sha256": "f089ab6f2a536cf9a38737bcba402b976d070b18253b62290f7279e40a583ecd"
+    },
+    "students/seed101_M0/ema_model/config.json": {
+      "bytes": 389,
+      "sha256": "11b4203beb4ca7df088de20c33604fd099cc09561cef480b2c1e1f0068c77626"
+    },
+    "students/seed101_M0/ema_model/diffusion_pytorch_model.safetensors": {
+      "bytes": 867224,
+      "sha256": "fc4a9ce26d847189922662b14c2bf8c4333b98e3211061350bde6fba13225e24"
+    },
+    "students/seed101_M0/history.json": {
+      "bytes": 1122609,
+      "sha256": "5f421a9e665e2d5ccfd9a0adefad974d1c436501e886fa61abc62922aa16d3cf"
+    },
+    "students/seed101_M0/manifest.json": {
+      "bytes": 42590,
+      "sha256": "d7a40a103123f29e6b9116c5c374a89bd92084c6ecc8ff8c93d54208b940615f"
+    },
+    "students/seed101_M1/ema_model/config.json": {
+      "bytes": 389,
+      "sha256": "11b4203beb4ca7df088de20c33604fd099cc09561cef480b2c1e1f0068c77626"
+    },
+    "students/seed101_M1/ema_model/diffusion_pytorch_model.safetensors": {
+      "bytes": 867224,
+      "sha256": "b283f91459c7a4dcd8dcc889795369fa0ae38393fbd8f56cd920a1c8caf4924f"
+    },
+    "students/seed101_M1/history.json": {
+      "bytes": 1122575,
+      "sha256": "31b511590289fb60f982bfa329ea9cfef99c00d2303be0242c7bcc1a207c2586"
+    },
+    "students/seed101_M1/manifest.json": {
+      "bytes": 42591,
+      "sha256": "62309cf7cbfec84b0b81330bc7245491a6e0404de4fb4ab92e8d2eff82e67187"
+    },
+    "students/seed202_E0/ema_model/config.json": {
+      "bytes": 389,
+      "sha256": "11b4203beb4ca7df088de20c33604fd099cc09561cef480b2c1e1f0068c77626"
+    },
+    "students/seed202_E0/ema_model/diffusion_pytorch_model.safetensors": {
+      "bytes": 867224,
+      "sha256": "7624cf466370467cd619639ae32cd04c17127f59e0b962d37eeb17a5a4811a1c"
+    },
+    "students/seed202_E0/history.json": {
+      "bytes": 1169932,
+      "sha256": "d34062c805e040d0d613f7836edab06fc41f97e178b1436a5caa264a53ab9ed8"
+    },
+    "students/seed202_E0/manifest.json": {
+      "bytes": 42601,
+      "sha256": "271a7e4c966b16a4a0e51b4dc5680ce02713ac3205820c32286b1409d3783784"
+    },
+    "students/seed202_E1/ema_model/config.json": {
+      "bytes": 389,
+      "sha256": "11b4203beb4ca7df088de20c33604fd099cc09561cef480b2c1e1f0068c77626"
+    },
+    "students/seed202_E1/ema_model/diffusion_pytorch_model.safetensors": {
+      "bytes": 867224,
+      "sha256": "0e16ff402162cc152387116dff58063832c7b06068016d2aaa4aa41bd24fe0aa"
+    },
+    "students/seed202_E1/history.json": {
+      "bytes": 1169681,
+      "sha256": "6953d1601b9778daa80fb840d7a44b4f9726a8cfded85226debe5ba941a8b55a"
+    },
+    "students/seed202_E1/manifest.json": {
+      "bytes": 42600,
+      "sha256": "b4e1e9a0c6bdf6d378747b07d7f4a05cc47137ac833e2a76a238628213a652d8"
+    },
+    "students/seed202_M0/ema_model/config.json": {
+      "bytes": 389,
+      "sha256": "11b4203beb4ca7df088de20c33604fd099cc09561cef480b2c1e1f0068c77626"
+    },
+    "students/seed202_M0/ema_model/diffusion_pytorch_model.safetensors": {
+      "bytes": 867224,
+      "sha256": "ec1d6fcc734936883361da00d258d86fe922503468faf9796c1253b7d53a1050"
+    },
+    "students/seed202_M0/history.json": {
+      "bytes": 1122514,
+      "sha256": "71688cc760be6ac9ae0ff2a1bbb6d04ae8f2170422997a8da9238274dbec501d"
+    },
+    "students/seed202_M0/manifest.json": {
+      "bytes": 42591,
+      "sha256": "8a150ad7f5a09a669262c740bf0783cd4f2860fd1fe35ca9b2574072373217a9"
+    },
+    "students/seed202_M1/ema_model/config.json": {
+      "bytes": 389,
+      "sha256": "11b4203beb4ca7df088de20c33604fd099cc09561cef480b2c1e1f0068c77626"
+    },
+    "students/seed202_M1/ema_model/diffusion_pytorch_model.safetensors": {
+      "bytes": 867224,
+      "sha256": "bd212503ac258d67faa32c81579b4b0a9ce93f829c26f06e570f1cef89bf5be0"
+    },
+    "students/seed202_M1/history.json": {
+      "bytes": 1122425,
+      "sha256": "bb732549e5709093495acbed9de5a6769bfc1f7b7e0c853b5c1097ead2f4b8a2"
+    },
+    "students/seed202_M1/manifest.json": {
+      "bytes": 42591,
+      "sha256": "9b10de91f484b6fbec4aacc034db27f5606bd862d7b9f82054c2bd4c3e3fcf00"
+    },
+    "students/seed303_E0/ema_model/config.json": {
+      "bytes": 389,
+      "sha256": "11b4203beb4ca7df088de20c33604fd099cc09561cef480b2c1e1f0068c77626"
+    },
+    "students/seed303_E0/ema_model/diffusion_pytorch_model.safetensors": {
+      "bytes": 867224,
+      "sha256": "3bb81f7faa1dbd528a19fa63f286bf484dce65dd1a139b758a7e3c94f8dc16df"
+    },
+    "students/seed303_E0/history.json": {
+      "bytes": 1170016,
+      "sha256": "ea6ed8d02a32dea57fd24ad412093127795b257e3a7159582f9c9631ccf35867"
+    },
+    "students/seed303_E0/manifest.json": {
+      "bytes": 42601,
+      "sha256": "edf752a6d8621ad71fddf0103c41037032c6c93c01a443202fdd16175435cea1"
+    },
+    "students/seed303_E1/ema_model/config.json": {
+      "bytes": 389,
+      "sha256": "11b4203beb4ca7df088de20c33604fd099cc09561cef480b2c1e1f0068c77626"
+    },
+    "students/seed303_E1/ema_model/diffusion_pytorch_model.safetensors": {
+      "bytes": 867224,
+      "sha256": "109472ef7adf21c8cb8f44cf894440c9f122f70402c76a0af1eeb70905bf0885"
+    },
+    "students/seed303_E1/history.json": {
+      "bytes": 1169704,
+      "sha256": "f2e925883d07d2acfeb4a7295fedd8ba7894ba4435f128b649594f12236f8228"
+    },
+    "students/seed303_E1/manifest.json": {
+      "bytes": 42602,
+      "sha256": "96b43f287ffa372c90025f12469e1916eae0b547df0374366f26c552e30b95b2"
+    },
+    "students/seed303_M0/ema_model/config.json": {
+      "bytes": 389,
+      "sha256": "11b4203beb4ca7df088de20c33604fd099cc09561cef480b2c1e1f0068c77626"
+    },
+    "students/seed303_M0/ema_model/diffusion_pytorch_model.safetensors": {
+      "bytes": 867224,
+      "sha256": "9bbb584830bf105c754f47128647ed4a35374c3fa730c308a93913d9918c1475"
+    },
+    "students/seed303_M0/history.json": {
+      "bytes": 1122516,
+      "sha256": "52dcb646bc0410c51a4f92fe472e1e6ddead78dcefd256697a9778df7aab4f2b"
+    },
+    "students/seed303_M0/manifest.json": {
+      "bytes": 42590,
+      "sha256": "e28aed9183bc9b48a3e9235ac66962a925abbd13fdbd8cd83a158f587ac979ed"
+    },
+    "students/seed303_M1/ema_model/config.json": {
+      "bytes": 389,
+      "sha256": "11b4203beb4ca7df088de20c33604fd099cc09561cef480b2c1e1f0068c77626"
+    },
+    "students/seed303_M1/ema_model/diffusion_pytorch_model.safetensors": {
+      "bytes": 867224,
+      "sha256": "98bed6eb5a26d66a20abae2ddde44ab4c84c0ecc37a92fe972de76fbeafd3538"
+    },
+    "students/seed303_M1/history.json": {
+      "bytes": 1122482,
+      "sha256": "fa1165ef4ddca818d7cbc00cc97eaafb11c51454d42206c12884181e05cb217b"
+    },
+    "students/seed303_M1/manifest.json": {
+      "bytes": 42591,
+      "sha256": "171b0146a31e9b8f284af46283da5c7199737e20dadea9ad8c4f16ad8a56db74"
+    },
+    "suite_status.json": {
+      "bytes": 596200,
+      "sha256": "574953b3e08b47501aae72751b97811d5169c058a65f45bcb3436591751f7243"
+    },
+    "teacher/ema_model/config.json": {
+      "bytes": 301,
+      "sha256": "b5e7bf2d2cb16eb3d95e70092a396c0f5584b4a3797085120b15c5b512ea9385"
+    },
+    "teacher/ema_model/diffusion_pytorch_model.safetensors": {
+      "bytes": 867224,
+      "sha256": "c8b354486870c3e64bf973bca71902713799949d76077d315967977c62ccb1f1"
+    },
+    "teacher/history.json": {
+      "bytes": 17743363,
+      "sha256": "a368659fd7d814d2ec3d940a1b6ae31d87969f09e3cf9653d22a6854ea425870"
+    },
+    "teacher/manifest.json": {
+      "bytes": 5323,
+      "sha256": "a7f096e594ca2252056685559ca98fdd0cb5314b04c689757ac61709ee35eabf"
+    },
+    "teacher_gate.json": {
+      "bytes": 34552,
+      "sha256": "8ff2d00b4b9806d8c59dbdd58c492cafe65a5c420d09216ada4be6a1c9bbe6fd"
+    }
+  },
+  "preflight_sha256": "f5f15321ad98c301c622ca945100f5989bc20d4b445798af5047031f6ee52c41",
+  "protocol_id": "rays16_fourier_teacher_v1",
+  "publication_kind": "selected_native_ema_only",
+  "publisher_sha256": "43d37eb14017ac671b28c6b77f799607fc9be778508d1766c2694fcbbcb4fc8d",
+  "schema_version": 1,
+  "shared_teacher_sha256": "495ff88057d8a5dccbc1581d887404332e9f24ba4dfad658f730de389323b93a",
+  "snapshot_scope": "main root only: diagnostic 50000-update EMA with unchanged interrupted manifest",
+  "source_root": "/Users/vvmelnikov/Documents/thub_eda/diffusion-lab/replication/artifacts/rays16_fourier_teacher_v1",
+  "status": "completed",
+  "student_runs": [
+    "seed101_E0",
+    "seed101_E1",
+    "seed101_M0",
+    "seed101_M1",
+    "seed202_E0",
+    "seed202_E1",
+    "seed202_M0",
+    "seed202_M1",
+    "seed303_E0",
+    "seed303_E1",
+    "seed303_M0",
+    "seed303_M1"
+  ],
+  "student_updates": 2500,
+  "teacher_updates": 100000
+}

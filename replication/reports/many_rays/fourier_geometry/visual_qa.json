@@ -1,0 +1,29 @@
+{
+  "status": "inspected",
+  "scope": "completed_final_test_geometry_sidecar_after_both_core_evaluations",
+  "inspected_images": [
+    "geometry_vs_nfe.png",
+    "32_to_16_geometry_comparison.png",
+    "32_to_8_geometry_comparison.png",
+    "32_to_8_E0_seed101.png",
+    "32_to_16_M0_seed101.png"
+  ],
+  "layout": "titles, axes and legends are readable without clipping; phase uses identical40bins and commonaxes; all15PNGexports exist",
+  "observed_geometry": "All16arms remain visible. Students at8/16NFE improve sharply over OriginalN8/N16. Coarse8-stepstudents retain more inter-arm points than16-stepstudents and OriginalN32; the best-resolved teacherN128 remains cleaner. E0/M0 differences are too small to infer reliably from the cloud alone; numeric paired phaseW1 favorsM0, especiallyN8. Occupancy covers all16arms; radialCDF shows residual inward bias relative toreal.",
+  "seed_selection": "first preregistered training seed101; no best-looking selection",
+  "counts": {
+    "result_rows": 36,
+    "paired_contrasts": 30,
+    "per_row_geometry_json": 36,
+    "raw_endpoint_exports": 30,
+    "png_exports": 15
+  },
+  "verified": {
+    "source_sha_matches_frozen": true,
+    "all_input_file_hashes_match": true,
+    "all_report_file_hashes_match": true
+  },
+  "teacher_sha256": "495ff88057d8a5dccbc1581d887404332e9f24ba4dfad658f730de389323b93a",
+  "geometry_study_sha256": "3c237543bdf5dcb1d9a374ea3601c151b08663ee1a8e78cdc64d2be798d4c4a7",
+  "limitations": "Three paired training seeds, conditional on one fixedteacher and one shared test/noise bank; no claim of an OT mechanism or universal superiority."
+}

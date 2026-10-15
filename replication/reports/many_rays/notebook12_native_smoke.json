@@ -1,0 +1,245 @@
+{
+  "status": "completed",
+  "scope": "additional_post_final_test_notebook_validation; official study untouched",
+  "notebook": "notebooks/12_many_rays_wasserstein_tube.ipynb",
+  "notebook_sha256": "f09068bd8defa8a881eeec1d387682a2083501badf23f433427a32be67ce84be",
+  "executed_code_cells": 15,
+  "cells": [
+    {
+      "cell_index": 1,
+      "tags": [
+        "install"
+      ],
+      "status": "completed",
+      "seconds": 0.0005935421213507652
+    },
+    {
+      "cell_index": 2,
+      "tags": [
+        "imports"
+      ],
+      "status": "completed",
+      "seconds": 1.6297888751141727
+    },
+    {
+      "cell_index": 3,
+      "tags": [
+        "parameters"
+      ],
+      "status": "completed",
+      "seconds": 0.0001582079567015171
+    },
+    {
+      "cell_index": 4,
+      "tags": [
+        "teacher_locator"
+      ],
+      "status": "completed",
+      "seconds": 0.0004849168471992016
+    },
+    {
+      "cell_index": 5,
+      "tags": [
+        "setup"
+      ],
+      "status": "completed",
+      "seconds": 0.06320450035855174
+    },
+    {
+      "cell_index": 7,
+      "tags": [
+        "teacher_geometry_qc"
+      ],
+      "status": "completed",
+      "seconds": 1.0213109166361392
+    },
+    {
+      "cell_index": 9,
+      "tags": [
+        "transition"
+      ],
+      "status": "completed",
+      "seconds": 0.0002649999223649502
+    },
+    {
+      "cell_index": 11,
+      "tags": [
+        "calibration"
+      ],
+      "status": "completed",
+      "seconds": 0.07608729088678956
+    },
+    {
+      "cell_index": 13,
+      "tags": [
+        "training"
+      ],
+      "status": "completed",
+      "seconds": 12.701001834124327
+    },
+    {
+      "cell_index": 15,
+      "tags": [
+        "evaluation"
+      ],
+      "status": "completed",
+      "seconds": 17.905034374911338
+    },
+    {
+      "cell_index": 16,
+      "tags": [
+        "geometry_comparison"
+      ],
+      "status": "completed",
+      "seconds": 0.14194004191085696
+    },
+    {
+      "cell_index": 17,
+      "tags": [
+        "plots"
+      ],
+      "status": "completed",
+      "seconds": 1.5126722920686007
+    },
+    {
+      "cell_index": 19,
+      "tags": [
+        "animations"
+      ],
+      "status": "completed",
+      "seconds": 14.982622207608074
+    },
+    {
+      "cell_index": 21,
+      "tags": [
+        "reload"
+      ],
+      "status": "completed",
+      "seconds": 0.23141729179769754
+    },
+    {
+      "cell_index": 22,
+      "tags": [
+        "prepare_stress_parent"
+      ],
+      "status": "completed",
+      "seconds": 0.00027741584926843643
+    }
+  ],
+  "harness_overrides": {
+    "skip_redundant_pip_install": true,
+    "output_dir": "/private/tmp/recheck_nb12_final_native_smoke",
+    "teacher_candidate": "published demo only"
+  },
+  "native_parent_path": "/Users/vvmelnikov/Documents/thub_eda/diffusion-lab/replication/demo/rays16_fourier_teacher_v1/teacher/ema_model",
+  "native_parent_class": "FourierFMMLP",
+  "parent_updates": 100000,
+  "parent_sha256": "495ff88057d8a5dccbc1581d887404332e9f24ba4dfad658f730de389323b93a",
+  "parent_frozen": true,
+  "device": "cpu",
+  "torch_threads": 4,
+  "student_updates": 200,
+  "micro_batch": 128,
+  "student_seed": 101,
+  "methods": {
+    "M0": {
+      "status": "completed",
+      "updates_completed": 200,
+      "ema_sha256": "c6ba1c2690ff0066edf4c92e20a8ef630c8fdcb589a3150e6f5486d0ee02fefb",
+      "native_reload_hash_matches": true
+    },
+    "M1": {
+      "status": "completed",
+      "updates_completed": 200,
+      "ema_sha256": "864b8afd36c9214939ed6adca871b71f96d1ed3dcfa3eb429371332740fcc6bb",
+      "native_reload_hash_matches": true
+    },
+    "E0": {
+      "status": "completed",
+      "updates_completed": 200,
+      "ema_sha256": "3db5000fca456c5d79525a10d9d447142da58c257ec185f38a3cf17f9c607fe6",
+      "native_reload_hash_matches": true
+    },
+    "E1": {
+      "status": "completed",
+      "updates_completed": 200,
+      "ema_sha256": "4450d3fe1d0ec78930d1551151b7863c93a4727c2383fcfce56b9c1b2a918720",
+      "native_reload_hash_matches": true
+    }
+  },
+  "paired_data_interval_noise_tube_traces_match": true,
+  "paired_trace_length": 200,
+  "all_native_ema_reload_hashes_match": true,
+  "first_native_reload_samples_exactly_equal": true,
+  "common_evaluation_initial_noise": true,
+  "evaluation_samples": 1024,
+  "interactive_widgets_executed": true,
+  "gifs": [
+    {
+      "path": "/private/tmp/recheck_nb12_final_native_smoke/Original_N32_trajectories.gif",
+      "frames": 33,
+      "size": [
+        630,
+        513
+      ],
+      "bytes": 462562
+    },
+    {
+      "path": "/private/tmp/recheck_nb12_final_native_smoke/Original_N16_trajectories.gif",
+      "frames": 17,
+      "size": [
+        630,
+        513
+      ],
+      "bytes": 255987
+    },
+    {
+      "path": "/private/tmp/recheck_nb12_final_native_smoke/M0_N16_trajectories.gif",
+      "frames": 17,
+      "size": [
+        630,
+        513
+      ],
+      "bytes": 250248
+    },
+    {
+      "path": "/private/tmp/recheck_nb12_final_native_smoke/M1_N16_trajectories.gif",
+      "frames": 17,
+      "size": [
+        630,
+        513
+      ],
+      "bytes": 260731
+    },
+    {
+      "path": "/private/tmp/recheck_nb12_final_native_smoke/E0_N16_trajectories.gif",
+      "frames": 17,
+      "size": [
+        630,
+        513
+      ],
+      "bytes": 248644
+    },
+    {
+      "path": "/private/tmp/recheck_nb12_final_native_smoke/E1_N16_trajectories.gif",
+      "frames": 17,
+      "size": [
+        630,
+        513
+      ],
+      "bytes": 245933
+    }
+  ],
+  "figures": [
+    "generation_comparison.png",
+    "generation_comparison.svg",
+    "losses_and_quality.png",
+    "losses_and_quality.svg",
+    "teacher_geometry_validation.png",
+    "teacher_geometry_validation.svg"
+  ],
+  "official_artifact_files_unchanged": 256,
+  "source_notebook_unchanged": true,
+  "embedded_notebook_outputs": false,
+  "seconds": 50.91753587499261
+}

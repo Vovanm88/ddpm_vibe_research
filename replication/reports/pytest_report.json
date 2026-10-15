@@ -1,7 +1,7 @@
 {
-  "passed": 511,
+  "passed": 551,
   "skipped": 3,
   "failed": 0,
-  "seconds": 36.79,
-  "note": "Full suite including native Fourier model/geometry/notebook tests; original real-MPS sidecar reports retained."
+  "seconds": 45.73,
+  "note": "Full final tree including Fourier model, coordinate geometry sidecar, notebook 12 and report claims. Real MPS smoke/parity sidecars retained."
 }

@@ -1,0 +1,31 @@
+{
+  "registered_utc": "2026-10-15T04:25:51Z",
+  "teacher_sha256": "495ff88057d8a5dccbc1581d887404332e9f24ba4dfad658f730de389323b93a",
+  "teacher_updates": 100000,
+  "main_config_sha256": "050282ec564a7a368b26fa236b34ffc6ac555b7113a25c24fe27a14a3c57c42b",
+  "stress_config_sha256": "550dd6465087c72d6885226fa6ec83d9349486eba3bdc273951ac82478f837d7",
+  "updates_per_student": 2500,
+  "methods": [
+    "M0",
+    "M1",
+    "E0",
+    "E1"
+  ],
+  "student_seeds": [
+    101,
+    202,
+    303
+  ],
+  "total_students": 24,
+  "cpu_workers": 2,
+  "torch_threads_per_worker": 4,
+  "gpu_processes": 0,
+  "parallel_execution_reason": "Independent fixed protocols on a14CPUcore host; no change to data/initialization/loss/RNG streams.",
+  "training_cost_note": "Per-run wall times reflect two concurrent CPU cohorts; isolated warmed per-update timings recorded separately for comparable resource costs.",
+  "final_test_rule": "No final test context before all24models completed and frozen.",
+  "fixed_teacher_seconds_per_update": {
+    "teacher": 0.0032842045789584517,
+    "mse": 0.003894963343627751,
+    "sinkhorn_endpoint": 0.02882694167084992
+  }
+}

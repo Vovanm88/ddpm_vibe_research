@@ -1,0 +1,599 @@
+{
+  "main32_16": {
+    "rows": 18,
+    "evaluation_sha256": "5dd0030c78c6dfd493a5b4c7b5fc410cb3476f9d4fafc1970970d19757d4ad1e",
+    "initial_noise_sha256": "85a93e7069e4befd116281d4acd527de796a642bde2f14ae572fb14437c1c4d5",
+    "teacher_sha256": "495ff88057d8a5dccbc1581d887404332e9f24ba4dfad658f730de389323b93a",
+    "method_means": {
+      "Original N8": {
+        "n": 1,
+        "nfe": 8,
+        "mmd2_real_mean": 0.005000318234267498,
+        "sliced_wasserstein_mean": 0.05264371121103685,
+        "paired_endpoint_mse_mean": 0.003535661990997467,
+        "training_seconds_mean": 341.6979249152355,
+        "median_sampling_seconds_mean": 0.0038489578291773796
+      },
+      "Original N16": {
+        "n": 1,
+        "nfe": 16,
+        "mmd2_real_mean": 0.0011278606036519978,
+        "sliced_wasserstein_mean": 0.026620399534774693,
+        "paired_endpoint_mse_mean": 0.0007485817248800566,
+        "training_seconds_mean": 341.6979249152355,
+        "median_sampling_seconds_mean": 0.007903458084911108
+      },
+      "Original N24": {
+        "n": 1,
+        "nfe": 24,
+        "mmd2_real_mean": 0.00041305098887534086,
+        "sliced_wasserstein_mean": 0.017539332980255173,
+        "paired_endpoint_mse_mean": 0.00010153968089886403,
+        "training_seconds_mean": 341.6979249152355,
+        "median_sampling_seconds_mean": 0.010954417288303375
+      },
+      "Original N32": {
+        "n": 1,
+        "nfe": 32,
+        "mmd2_real_mean": 0.00017498915790636893,
+        "sliced_wasserstein_mean": 0.013492156483563455,
+        "paired_endpoint_mse_mean": 0.0,
+        "training_seconds_mean": 341.6979249152355,
+        "median_sampling_seconds_mean": 0.014793124981224537
+      },
+      "Original N64": {
+        "n": 1,
+        "nfe": 64,
+        "mmd2_real_mean": -3.966662935783738e-05,
+        "sliced_wasserstein_mean": 0.008888640061046085,
+        "paired_endpoint_mse_mean": 0.00023687783243441817,
+        "training_seconds_mean": 341.6979249152355,
+        "median_sampling_seconds_mean": 0.029497042298316956
+      },
+      "Original N128": {
+        "n": 1,
+        "nfe": 128,
+        "mmd2_real_mean": -8.553538242805914e-05,
+        "sliced_wasserstein_mean": 0.007607027528069139,
+        "paired_endpoint_mse_mean": 0.0004200984944380683,
+        "training_seconds_mean": 341.6979249152355,
+        "median_sampling_seconds_mean": 0.05980487493798137
+      },
+      "M0": {
+        "n": 3,
+        "nfe": 16,
+        "mmd2_real_mean": 0.00018851759082894048,
+        "sliced_wasserstein_mean": 0.01378165827211275,
+        "paired_endpoint_mse_mean": 3.462363167251067e-05,
+        "training_seconds_mean": 11.107174819956223,
+        "median_sampling_seconds_mean": 0.007646861175696055
+      },
+      "M1": {
+        "n": 3,
+        "nfe": 16,
+        "mmd2_real_mean": 0.00018849875110900824,
+        "sliced_wasserstein_mean": 0.013779558734271617,
+        "paired_endpoint_mse_mean": 3.465855673682838e-05,
+        "training_seconds_mean": 10.811192930831263,
+        "median_sampling_seconds_mean": 0.00765174999833107
+      },
+      "E0": {
+        "n": 3,
+        "nfe": 16,
+        "mmd2_real_mean": 0.00018579251460693058,
+        "sliced_wasserstein_mean": 0.01373397622279403,
+        "paired_endpoint_mse_mean": 3.4687894215509137e-05,
+        "training_seconds_mean": 80.7139184307307,
+        "median_sampling_seconds_mean": 0.00768551401173075
+      },
+      "E1": {
+        "n": 3,
+        "nfe": 16,
+        "mmd2_real_mean": 0.00018622261655817005,
+        "sliced_wasserstein_mean": 0.013737758946806908,
+        "paired_endpoint_mse_mean": 3.4637501837788366e-05,
+        "training_seconds_mean": 90.62360586117332,
+        "median_sampling_seconds_mean": 0.007734944267819325
+      }
+    },
+    "paired_contrasts": [
+      {
+        "contrast": "E0_minus_M0",
+        "metric": "mmd2_real",
+        "student_seeds": [
+          101,
+          202,
+          303
+        ],
+        "first": "E0",
+        "second": "M0",
+        "n_student_seeds": 3,
+        "values": [
+          -2.590234102095579e-06,
+          -2.3331257414938023e-06,
+          -3.251868822440329e-06
+        ],
+        "mean": -2.7250762220099034e-06,
+        "sample_std": 4.7398207790381796e-07,
+        "confidence": 0.95,
+        "paired_t_ci": [
+          -3.90251297642456e-06,
+          -1.5476394675952464e-06
+        ],
+        "limitations": "Approximate t interval assumes independent training seeds and approximately normal paired effects; n=3 is a pilot. Conditional on the fixed teacher and shared reference/noise."
+      },
+      {
+        "contrast": "M1_minus_M0",
+        "metric": "mmd2_real",
+        "student_seeds": [
+          101,
+          202,
+          303
+        ],
+        "first": "M1",
+        "second": "M0",
+        "n_student_seeds": 3,
+        "values": [
+          -2.0574959544994442e-06,
+          1.2431995826123199e-06,
+          7.577772120903603e-07
+        ],
+        "mean": -1.8839719932254677e-08,
+        "sample_std": 1.782133034177175e-06,
+        "confidence": 0.95,
+        "paired_t_ci": [
+          -4.445903597487815e-06,
+          4.408224157623305e-06
+        ],
+        "limitations": "Approximate t interval assumes independent training seeds and approximately normal paired effects; n=3 is a pilot. Conditional on the fixed teacher and shared reference/noise."
+      },
+      {
+        "contrast": "E1_minus_M1",
+        "metric": "mmd2_real",
+        "student_seeds": [
+          101,
+          202,
+          303
+        ],
+        "first": "E1",
+        "second": "M1",
+        "n_student_seeds": 3,
+        "values": [
+          -1.4940686690056992e-06,
+          -2.1179919551528315e-06,
+          -3.21634302835605e-06
+        ],
+        "mean": -2.2761345508381936e-06,
+        "sample_std": 8.719598916501225e-07,
+        "confidence": 0.95,
+        "paired_t_ci": [
+          -4.442203000819995e-06,
+          -1.1006610085639252e-07
+        ],
+        "limitations": "Approximate t interval assumes independent training seeds and approximately normal paired effects; n=3 is a pilot. Conditional on the fixed teacher and shared reference/noise."
+      },
+      {
+        "contrast": "OT_x_tube_interaction",
+        "metric": "mmd2_real",
+        "student_seeds": [
+          101,
+          202,
+          303
+        ],
+        "n_student_seeds": 3,
+        "values": [
+          1.0961654330898796e-06,
+          2.151337863409708e-07,
+          3.552579408427903e-08
+        ],
+        "mean": 4.489416711717098e-07,
+        "sample_std": 5.67660731611982e-07,
+        "confidence": 0.95,
+        "paired_t_ci": [
+          -9.612057597053972e-07,
+          1.8590891020488168e-06
+        ],
+        "limitations": "Approximate t interval assumes independent training seeds and approximately normal paired effects; n=3 is a pilot. Conditional on the fixed teacher and shared reference/noise."
+      },
+      {
+        "contrast": "E0_minus_M0",
+        "metric": "sliced_wasserstein",
+        "student_seeds": [
+          101,
+          202,
+          303
+        ],
+        "first": "E0",
+        "second": "M0",
+        "n_student_seeds": 3,
+        "values": [
+          -4.124813799425385e-05,
+          -4.706498896180772e-05,
+          -5.473302100009528e-05
+        ],
+        "mean": -4.768204931871895e-05,
+        "sample_std": 6.76358559000781e-06,
+        "confidence": 0.95,
+        "paired_t_ci": [
+          -6.448372734950846e-05,
+          -3.088037128792944e-05
+        ],
+        "limitations": "Approximate t interval assumes independent training seeds and approximately normal paired effects; n=3 is a pilot. Conditional on the fixed teacher and shared reference/noise."
+      },
+      {
+        "contrast": "M1_minus_M0",
+        "metric": "sliced_wasserstein",
+        "student_seeds": [
+          101,
+          202,
+          303
+        ],
+        "first": "M1",
+        "second": "M0",
+        "n_student_seeds": 3,
+        "values": [
+          -3.862259032579897e-05,
+          5.9332234302461595e-06,
+          2.6390753372152256e-05
+        ],
+        "mean": -2.0995378411335177e-06,
+        "sample_std": 3.324270829714716e-05,
+        "confidence": 0.95,
+        "paired_t_ci": [
+          -8.467900316279238e-05,
+          8.047992748052534e-05
+        ],
+        "limitations": "Approximate t interval assumes independent training seeds and approximately normal paired effects; n=3 is a pilot. Conditional on the fixed teacher and shared reference/noise."
+      },
+      {
+        "contrast": "E1_minus_M1",
+        "metric": "sliced_wasserstein",
+        "student_seeds": [
+          101,
+          202,
+          303
+        ],
+        "first": "E1",
+        "second": "M1",
+        "n_student_seeds": 3,
+        "values": [
+          -2.6504459202535482e-05,
+          -4.313496588163532e-05,
+          -5.575993730995085e-05
+        ],
+        "mean": -4.1799787464707215e-05,
+        "sample_std": 1.4673369615638324e-05,
+        "confidence": 0.95,
+        "paired_t_ci": [
+          -7.825045828536582e-05,
+          -5.349116644048606e-06
+        ],
+        "limitations": "Approximate t interval assumes independent training seeds and approximately normal paired effects; n=3 is a pilot. Conditional on the fixed teacher and shared reference/noise."
+      },
+      {
+        "contrast": "OT_x_tube_interaction",
+        "metric": "sliced_wasserstein",
+        "student_seeds": [
+          101,
+          202,
+          303
+        ],
+        "n_student_seeds": 3,
+        "values": [
+          1.4743678791718368e-05,
+          3.930023080172401e-06,
+          -1.0269163098555745e-06
+        ],
+        "mean": 5.882261854011732e-06,
+        "sample_std": 8.064511432009274e-06,
+        "confidence": 0.95,
+        "paired_t_ci": [
+          -1.4151095121084163e-05,
+          2.591561882910763e-05
+        ],
+        "limitations": "Approximate t interval assumes independent training seeds and approximately normal paired effects; n=3 is a pilot. Conditional on the fixed teacher and shared reference/noise."
+      }
+    ]
+  },
+  "stress32_8": {
+    "rows": 18,
+    "evaluation_sha256": "c778f1e78de2b81fec15fbaf0214c67a1f236d0bd95f0c25cdf2f94f39e42603",
+    "initial_noise_sha256": "85a93e7069e4befd116281d4acd527de796a642bde2f14ae572fb14437c1c4d5",
+    "teacher_sha256": "495ff88057d8a5dccbc1581d887404332e9f24ba4dfad658f730de389323b93a",
+    "method_means": {
+      "Original N8": {
+        "n": 1,
+        "nfe": 8,
+        "mmd2_real_mean": 0.005000318234267498,
+        "sliced_wasserstein_mean": 0.05264371121103685,
+        "paired_endpoint_mse_mean": 0.003535661990997467,
+        "training_seconds_mean": 341.6979249152355,
+        "median_sampling_seconds_mean": 0.00412212498486042
+      },
+      "Original N16": {
+        "n": 1,
+        "nfe": 16,
+        "mmd2_real_mean": 0.0011278606036519978,
+        "sliced_wasserstein_mean": 0.026620399534774693,
+        "paired_endpoint_mse_mean": 0.0007485817248800566,
+        "training_seconds_mean": 341.6979249152355,
+        "median_sampling_seconds_mean": 0.007325999904423952
+      },
+      "Original N24": {
+        "n": 1,
+        "nfe": 24,
+        "mmd2_real_mean": 0.00041305098887534086,
+        "sliced_wasserstein_mean": 0.017539332980255173,
+        "paired_endpoint_mse_mean": 0.00010153968089886403,
+        "training_seconds_mean": 341.6979249152355,
+        "median_sampling_seconds_mean": 0.010852874722331762
+      },
+      "Original N32": {
+        "n": 1,
+        "nfe": 32,
+        "mmd2_real_mean": 0.00017498915790636893,
+        "sliced_wasserstein_mean": 0.013492156483563455,
+        "paired_endpoint_mse_mean": 0.0,
+        "training_seconds_mean": 341.6979249152355,
+        "median_sampling_seconds_mean": 0.01477258326485753
+      },
+      "Original N64": {
+        "n": 1,
+        "nfe": 64,
+        "mmd2_real_mean": -3.966662935783738e-05,
+        "sliced_wasserstein_mean": 0.008888640061046085,
+        "paired_endpoint_mse_mean": 0.00023687783243441817,
+        "training_seconds_mean": 341.6979249152355,
+        "median_sampling_seconds_mean": 0.029730417300015688
+      },
+      "Original N128": {
+        "n": 1,
+        "nfe": 128,
+        "mmd2_real_mean": -8.553538242805914e-05,
+        "sliced_wasserstein_mean": 0.007607027528069139,
+        "paired_endpoint_mse_mean": 0.0004200984944380683,
+        "training_seconds_mean": 341.6979249152355,
+        "median_sampling_seconds_mean": 0.06032320810481906
+      },
+      "M0": {
+        "n": 3,
+        "nfe": 8,
+        "mmd2_real_mean": 0.00018863490282646408,
+        "sliced_wasserstein_mean": 0.013888911691481634,
+        "paired_endpoint_mse_mean": 0.00012736956100992372,
+        "training_seconds_mean": 13.259025999965766,
+        "median_sampling_seconds_mean": 0.0037967640285690627
+      },
+      "M1": {
+        "n": 3,
+        "nfe": 8,
+        "mmd2_real_mean": 0.0001886441461915004,
+        "sliced_wasserstein_mean": 0.013913919892791168,
+        "paired_endpoint_mse_mean": 0.00012954692965477872,
+        "training_seconds_mean": 13.278935874657085,
+        "median_sampling_seconds_mean": 0.004016152427842219
+      },
+      "E0": {
+        "n": 3,
+        "nfe": 8,
+        "mmd2_real_mean": 0.00018586584109869797,
+        "sliced_wasserstein_mean": 0.013854336332462166,
+        "paired_endpoint_mse_mean": 0.00014050381228343482,
+        "training_seconds_mean": 84.52977688874428,
+        "median_sampling_seconds_mean": 0.003955736135443051
+      },
+      "E1": {
+        "n": 3,
+        "nfe": 8,
+        "mmd2_real_mean": 0.00018637110269067078,
+        "sliced_wasserstein_mean": 0.013892557874327863,
+        "paired_endpoint_mse_mean": 0.00014251150531125766,
+        "training_seconds_mean": 91.07162011104326,
+        "median_sampling_seconds_mean": 0.0037770280614495277
+      }
+    },
+    "paired_contrasts": [
+      {
+        "contrast": "E0_minus_M0",
+        "metric": "mmd2_real",
+        "student_seeds": [
+          101,
+          202,
+          303
+        ],
+        "first": "E0",
+        "second": "M0",
+        "n_student_seeds": 3,
+        "values": [
+          -2.894530635844106e-06,
+          -3.3991480732353807e-06,
+          -2.013506474218829e-06
+        ],
+        "mean": -2.7690617277661054e-06,
+        "sample_std": 7.01289879723072e-07,
+        "confidence": 0.95,
+        "paired_t_ci": [
+          -4.511162364855042e-06,
+          -1.0269610906771691e-06
+        ],
+        "limitations": "Approximate t interval assumes independent training seeds and approximately normal paired effects; n=3 is a pilot. Conditional on the fixed teacher and shared reference/noise."
+      },
+      {
+        "contrast": "M1_minus_M0",
+        "metric": "mmd2_real",
+        "student_seeds": [
+          101,
+          202,
+          303
+        ],
+        "first": "M1",
+        "second": "M0",
+        "n_student_seeds": 3,
+        "values": [
+          -2.8252889008317794e-06,
+          1.9260083059524646e-06,
+          9.270106899883501e-07
+        ],
+        "mean": 9.243365036345116e-09,
+        "sample_std": 2.5050806242237213e-06,
+        "confidence": 0.95,
+        "paired_t_ci": [
+          -6.213721884572858e-06,
+          6.232208614645548e-06
+        ],
+        "limitations": "Approximate t interval assumes independent training seeds and approximately normal paired effects; n=3 is a pilot. Conditional on the fixed teacher and shared reference/noise."
+      },
+      {
+        "contrast": "E1_minus_M1",
+        "metric": "mmd2_real",
+        "student_seeds": [
+          101,
+          202,
+          303
+        ],
+        "first": "E1",
+        "second": "M1",
+        "n_student_seeds": 3,
+        "values": [
+          -2.420781671785832e-06,
+          -2.5002130656925914e-06,
+          -1.8981357650105224e-06
+        ],
+        "mean": -2.2730435008296488e-06,
+        "sample_std": 3.27099670386964e-07,
+        "confidence": 0.95,
+        "paired_t_ci": [
+          -3.0856041275390086e-06,
+          -1.4604828741202888e-06
+        ],
+        "limitations": "Approximate t interval assumes independent training seeds and approximately normal paired effects; n=3 is a pilot. Conditional on the fixed teacher and shared reference/noise."
+      },
+      {
+        "contrast": "OT_x_tube_interaction",
+        "metric": "mmd2_real",
+        "student_seeds": [
+          101,
+          202,
+          303
+        ],
+        "n_student_seeds": 3,
+        "values": [
+          4.737489640582737e-07,
+          8.989350075427893e-07,
+          1.1537070920830672e-07
+        ],
+        "mean": 4.960182269364566e-07,
+        "sample_std": 3.9225653908884135e-07,
+        "confidence": 0.95,
+        "paired_t_ci": [
+          -4.784010344948016e-07,
+          1.4704374883677148e-06
+        ],
+        "limitations": "Approximate t interval assumes independent training seeds and approximately normal paired effects; n=3 is a pilot. Conditional on the fixed teacher and shared reference/noise."
+      },
+      {
+        "contrast": "E0_minus_M0",
+        "metric": "sliced_wasserstein",
+        "student_seeds": [
+          101,
+          202,
+          303
+        ],
+        "first": "E0",
+        "second": "M0",
+        "n_student_seeds": 3,
+        "values": [
+          -3.578002230078363e-05,
+          -5.064114154683039e-05,
+          -1.7304913210794415e-05
+        ],
+        "mean": -3.4575359019469475e-05,
+        "sample_std": 1.670073172451111e-05,
+        "confidence": 0.95,
+        "paired_t_ci": [
+          -7.606227651015264e-05,
+          6.9115584712137e-06
+        ],
+        "limitations": "Approximate t interval assumes independent training seeds and approximately normal paired effects; n=3 is a pilot. Conditional on the fixed teacher and shared reference/noise."
+      },
+      {
+        "contrast": "M1_minus_M0",
+        "metric": "sliced_wasserstein",
+        "student_seeds": [
+          101,
+          202,
+          303
+        ],
+        "first": "M1",
+        "second": "M0",
+        "n_student_seeds": 3,
+        "values": [
+          -1.4998912857196525e-05,
+          6.359750980492948e-05,
+          2.642600698086507e-05
+        ],
+        "mean": 2.5008201309532675e-05,
+        "sample_std": 3.931738856424896e-05,
+        "confidence": 0.95,
+        "paired_t_ci": [
+          -7.266160635045935e-05,
+          0.0001226780089695247
+        ],
+        "limitations": "Approximate t interval assumes independent training seeds and approximately normal paired effects; n=3 is a pilot. Conditional on the fixed teacher and shared reference/noise."
+      },
+      {
+        "contrast": "E1_minus_M1",
+        "metric": "sliced_wasserstein",
+        "student_seeds": [
+          101,
+          202,
+          303
+        ],
+        "first": "E1",
+        "second": "M1",
+        "n_student_seeds": 3,
+        "values": [
+          -2.7259818596213348e-05,
+          -2.5382625843036258e-05,
+          -1.1443610950663194e-05
+        ],
+        "mean": -2.1362018463304266e-05,
+        "sample_std": 8.64072154673765e-06,
+        "confidence": 0.95,
+        "paired_t_ci": [
+          -4.282676071428891e-05,
+          1.0272378768037401e-07
+        ],
+        "limitations": "Approximate t interval assumes independent training seeds and approximately normal paired effects; n=3 is a pilot. Conditional on the fixed teacher and shared reference/noise."
+      },
+      {
+        "contrast": "OT_x_tube_interaction",
+        "metric": "sliced_wasserstein",
+        "student_seeds": [
+          101,
+          202,
+          303
+        ],
+        "n_student_seeds": 3,
+        "values": [
+          8.520203704570281e-06,
+          2.525851570379413e-05,
+          5.861302260131221e-06
+        ],
+        "mean": 1.321334055616521e-05,
+        "sample_std": 1.0515803463150262e-05,
+        "confidence": 0.95,
+        "paired_t_ci": [
+          -1.2909363396001078e-05,
+          3.93360445083315e-05
+        ],
+        "limitations": "Approximate t interval assumes independent training seeds and approximately normal paired effects; n=3 is a pilot. Conditional on the fixed teacher and shared reference/noise."
+      }
+    ]
+  },
+  "cost_interpretation": {
+    "frozen_original_training_seconds": "Shared common-teacher training cost, not an additional cost for running a shorter frozen grid. Additional frozen-baseline training is0.",
+    "student_training_seconds": "Additional student training wall time. Two cohorts ran concurrently during training; isolated warmed update timings are recorded separately in timing_fourier_fixed_teacher.json.",
+    "quality_fidelity_cost": "Read independently; lower MMD does not imply lower paired teacher MSE or justify added OT training cost."
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "status": "inspected",
+  "comparison_last_frame_inspected": true,
+  "plots_inspected": [
+    "quality_vs_nfe.png"
+  ],
+  "layout": "All comparison titles, actual-state counters, axes, start/finish legend and rainbow colorbar are visible; no clipping.",
+  "colors": "red start to violet finish",
+  "student_seed": 101,
+  "particles": 32,
+  "common_bounds_across_models_and_both_grids": true,
+  "common_preview_noise_across_both_grids": true,
+  "interpolation": false,
+  "files": {
+    "trajectories_comparison.gif": {
+      "frames": 33,
+      "size": [
+        1242,
+        882
+      ]
+    },
+    "trajectory_original_n32.gif": {
+      "frames": 33,
+      "size": [
+        558,
+        603
+      ]
+    },
+    "trajectory_original_n16.gif": {
+      "frames": 17,
+      "size": [
+        558,
+        603
+      ]
+    },
+    "trajectory_m0.gif": {
+      "frames": 17,
+      "size": [
+        558,
+        603
+      ]
+    },
+    "trajectory_m1.gif": {
+      "frames": 17,
+      "size": [
+        558,
+        603
+      ]
+    },
+    "trajectory_e0.gif": {
+      "frames": 17,
+      "size": [
+        558,
+        603
+      ]
+    },
+    "trajectory_e1.gif": {
+      "frames": 17,
+      "size": [
+        558,
+        603
+      ]
+    }
+  },
+  "comparison_sha256": "037fffda7870b5d831406e95bb52e42d4fc9372a3f88658fdad00461557301a4",
+  "sample_preview_scope": "Static fixed_sample_grids uses the same32 retained trajectory previews; independent quality metrics use all4096 generated samples and8192 real samples."
+}

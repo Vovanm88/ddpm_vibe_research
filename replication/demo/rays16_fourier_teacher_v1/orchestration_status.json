@@ -1,0 +1,6 @@
+{
+  "stage": "teacher_100000",
+  "status": "completed",
+  "wall_seconds": 345.4802723750472,
+  "next": "validation geometry QC and teacher gate before students"
+}

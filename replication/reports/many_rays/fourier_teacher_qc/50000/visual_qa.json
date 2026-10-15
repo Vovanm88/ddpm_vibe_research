@@ -1,0 +1,18 @@
+{
+  "status": "inspected",
+  "images": [
+    "fixed_pointcloud_vs_plain.png",
+    "geometry_n32.png",
+    "trajectory_n32.gif final frame"
+  ],
+  "layout": "titles, axes, colorbar and start/finish legend are visible; no clipping",
+  "observed_geometry": "Fourier N32 and N128 visibly recover all16 curved arms, unlike the paired plain50k model. N32 retains scattered points between arms; N128 is substantially cleaner.",
+  "interpretation": "Spatial feature model fixes the major thin-mode underfit at50k. N32 discretization retains measurable excess phase tails, so quality is not exact.",
+  "frame_count": 33,
+  "gif_size": [
+    558,
+    603
+  ],
+  "colors": "red start to violet finish; actual N32 solver states",
+  "snapshot_selection": "none;50k is progress diagnostic; fixed100k remains final teacher"
+}

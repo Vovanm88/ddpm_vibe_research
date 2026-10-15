@@ -1,24 +1,29 @@
 {
   "passed": true,
-  "algorithm_sha256": "fa9f69c8ab6de7269c78e5d73513dc0ada1e92b81b93327e30569b3405fcca10",
-  "teacher_sha256": "5fcbe5ceee197bf2a257b1347586335d7feb8a15789ba406f918a077cf3e6930",
-  "config_sha256": "44b7f97e1bbcfe01696cd4f7191b7826605d31008760e1ac99bcb9ad2244462b",
+  "algorithm_sha256": "ac296cb09412f60a0e56fa2cb0c5c72af2cf25c5ab6408fb9d891bac76048acb",
+  "teacher_sha256": "495ff88057d8a5dccbc1581d887404332e9f24ba4dfad658f730de389323b93a",
+  "config_sha256": "050282ec564a7a368b26fa236b34ffc6ac555b7113a25c24fe27a14a3c57c42b",
   "all_mvp_methods_completed": true,
   "mvp_runs": 12,
   "stress_runs": 12,
   "mps_mechanism_runs": 14,
   "animations": [
-    "replication/reports/trajectories_comparison.gif",
-    "replication/reports/rays_stress_32_8/trajectories_comparison.gif"
+    "replication/reports/many_rays/main32_16/trajectories_comparison.gif",
+    "replication/reports/many_rays/stress32_8/trajectories_comparison.gif"
   ],
   "animations_presented_to_user": true,
   "pytest": {
-    "passed": 453,
+    "passed": 551,
     "skipped": 3,
     "failed": 0,
-    "seconds": 39.3,
+    "seconds": 45.73,
     "gpu_skips_covered_by_actual_mps_reports": true
   },
   "numeric_tests_sha256": "3234e6ef072ddd4cb64b2b74661d40e3a3f5c1c983047e31dc55e982d08320d4",
-  "scope": "rotating_rays_before_MNIST"
+  "scope": "completed_rotating_rays16_before_any_MNIST_final_series",
+  "previous_four_ray_runs": 24,
+  "current_n_rays": 16,
+  "teacher_updates": 100000,
+  "student_updates": 2500,
+  "report": "replication/reports/many_rays/REPORT.md"
 }

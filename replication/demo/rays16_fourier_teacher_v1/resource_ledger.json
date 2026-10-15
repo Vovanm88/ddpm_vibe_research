@@ -1,0 +1,18 @@
+{
+  "benchmark_receipts": {
+    "/Users/vvmelnikov/Documents/thub_eda/diffusion-lab/replication/artifacts/rays16_fourier_teacher_v1/benchmarks/d03bde11394a_050282ec564a_01714bc4aa8f/resource_ledger.json": {
+      "source_path": "/Users/vvmelnikov/Documents/thub_eda/diffusion-lab/replication/artifacts/rays16_fourier_teacher_v1/benchmarks/d03bde11394a_050282ec564a_01714bc4aa8f/resource_ledger.json",
+      "source_sha256": "c6f8d012f0e9f12081700a162d8f093c64aebef90ddd169c2a00308a4d5ccc83",
+      "gpu_training_seconds": 0.0,
+      "cpu_training_wall_seconds": 6.135468875057995
+    },
+    "/Users/vvmelnikov/Documents/thub_eda/diffusion-lab/replication/artifacts/rays16_fourier_teacher_v1/benchmarks/495ff88057d8_050282ec564a_4b284e032fe0/resource_ledger.json": {
+      "source_path": "/Users/vvmelnikov/Documents/thub_eda/diffusion-lab/replication/artifacts/rays16_fourier_teacher_v1/benchmarks/495ff88057d8_050282ec564a_4b284e032fe0/resource_ledger.json",
+      "source_sha256": "1cfec2eed10c269da3874f85e4cd1c5d2674389ce185311898d868c058d7e063",
+      "gpu_training_seconds": 0.0,
+      "cpu_training_wall_seconds": 4.872286666650325
+    }
+  },
+  "gpu_training_seconds": 0.0,
+  "cpu_training_wall_seconds": 1041.4083532504737
+}

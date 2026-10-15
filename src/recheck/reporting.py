@@ -960,6 +960,7 @@ def _contrast_status(contrast):
 
 
 def _mnist_claims(rows, contrasts, schedule, source, report_dir):
+    """Keep quality contrasts separate from robustness and practical utility."""
     selected = {
         row["contrast"]: row for row in contrasts if row["metric"] == "mmd2_mnist_features_real"
     }
@@ -1004,25 +1005,67 @@ def _mnist_claims(rows, contrasts, schedule, source, report_dir):
         evidence_ids = [row["run_id"] for row in rows if row["method"] in methods]
         if baseline is not None:
             evidence_ids.append(baseline["run_id"])
-        result.append(
-            {
-                "claim_id": claim,
-                "status": _contrast_status(contrast) if contrast is not None else "not_tested",
+        entry = {
+            "claim_id": claim,
+            "status": _contrast_status(contrast) if contrast is not None else "not_tested",
+            "comparison": comparison,
+            "metric": "mmd2_mnist_features_real",
+            "schedule": schedule,
+            "teacher_count": 1,
+            "student_seed_count": contrast["n_student_seeds"] if contrast else 0,
+            "effect_mean": contrast["mean"] if contrast else None,
+            "paired_t_ci": contrast["paired_t_ci"] if contrast else None,
+            "run_ids": evidence_ids,
+            "evidence_files": [str(source), str(report_dir / "paired_comparisons.csv")],
+            "scope": "unconditional_pixel_MNIST",
+            "limitations": [
+                "Conditional on one frozen teacher and shared real reference/noise; three training seeds are a pilot. Quality, fidelity and cost must be read separately. H3 requires the separate extended representation matrix."
+            ],
+        }
+        if claim == "H2":
+            entry["quality_proxy"] = {
                 "comparison": comparison,
                 "metric": "mmd2_mnist_features_real",
-                "schedule": schedule,
-                "teacher_count": 1,
-                "student_seed_count": contrast["n_student_seeds"] if contrast else 0,
-                "effect_mean": contrast["mean"] if contrast else None,
-                "paired_t_ci": contrast["paired_t_ci"] if contrast else None,
-                "run_ids": evidence_ids,
-                "evidence_files": [str(source), str(report_dir / "paired_comparisons.csv")],
-                "scope": "unconditional_pixel_MNIST",
-                "limitations": [
-                    "Conditional on one frozen teacher and shared real reference/noise; three training seeds are a pilot. Quality, fidelity and cost must be read separately. H3 requires the separate extended representation matrix."
+                "status": entry["status"],
+                "student_seed_count": entry["student_seed_count"],
+                "effect_mean": entry["effect_mean"],
+                "paired_t_ci": entry["paired_t_ci"],
+            }
+            entry.update(
+                status="not_tested",
+                metric="local_rollout_robustness",
+                student_seed_count=0,
+                effect_mean=None,
+                paired_t_ci=None,
+            )
+            entry["limitations"].append(
+                "H2 concerns local/rollout robustness and perturbation sweeps. "
+                "The M1-minus-M0 feature-MMD contrast is a quality proxy and cannot "
+                "establish robustness. It remains in paired_comparisons.csv; no "
+                "paired robustness assessment is supplied to this claim builder."
+            )
+        if claim == "H4":
+            entry["quality_status"] = entry["status"]
+            entry["cost_qualification"] = {
+                "status": "not_assessed",
+                "recorded_costs": [
+                    {"run_id": row["run_id"], "cost": dict(row.get("cost", {}))}
+                    for row in rows
+                    if row["method"] == "M0" or row is baseline
                 ],
             }
-        )
+            if contrast is not None:
+                entry["status"] = "inconclusive"
+            entry["limitations"].append(
+                "The same-grid feature-MMD contrast measures quality relative to the "
+                "frozen original. Practical usefulness additionally requires a "
+                "quality-versus-cost assessment of added student training/OT cost "
+                "and measured sampling latency/memory, separating shared teacher "
+                "cost. No preregistered cost tradeoff criterion or per-cost "
+                "assessment is supplied; recorded cost columns alone cannot "
+                "establish H4."
+            )
+        result.append(entry)
     return result
 
 

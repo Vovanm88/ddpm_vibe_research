@@ -1,0 +1,205 @@
+{
+  "run_id": "rays16_fourier_teacher_v1/teacher",
+  "role": "teacher",
+  "created_utc": "2026-10-15T04:20:53Z",
+  "status": "completed",
+  "config": {
+    "schema_version": 1,
+    "protocol_id": "rays16_fourier_teacher_v1",
+    "scope": "rotating_rays16_fourier_research_pilot",
+    "output_dir": "replication/artifacts/rays16_fourier_teacher_v1",
+    "device": "cpu",
+    "threads": 4,
+    "data": {
+      "name": "rotating_rays",
+      "n_train": 65536,
+      "n_validation": 8192,
+      "n_test": 8192,
+      "seed": 41,
+      "root": "replication/data",
+      "n_classes": 16
+    },
+    "model": {
+      "kind": "fourier_mlp",
+      "hidden_dim": 256,
+      "num_layers": 4,
+      "time_embedding_dim": 32,
+      "base_channels": 32,
+      "spatial_frequencies": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "polar_features": true,
+      "spatial_epsilon": 0.001
+    },
+    "teacher": {
+      "seed": 41,
+      "updates": 100000,
+      "batch_size": 512,
+      "lr": 0.001,
+      "weight_decay": 0.0001,
+      "warmup": 5000,
+      "ema_decay": 0.999,
+      "grad_clip": 1.0,
+      "checkpoint_every": 10000
+    },
+    "student": {
+      "updates": 2500,
+      "batch_size": 128,
+      "lr": 0.0001,
+      "weight_decay": 0.0001,
+      "warmup": 250,
+      "ema_decay": 0.99,
+      "grad_clip": 1.0,
+      "checkpoint_every": 250
+    },
+    "distillation": {
+      "teacher_steps": 32,
+      "student_steps": 16,
+      "groups": null,
+      "anchor_source": "interpolant",
+      "seeds": [
+        101,
+        202,
+        303
+      ],
+      "losses": [
+        "mse",
+        "sinkhorn_endpoint"
+      ],
+      "tube_rhos": [
+        0.0,
+        0.1
+      ],
+      "lambda_w": 1.0,
+      "gamma": 1.0,
+      "epsilon_alpha": 0.05,
+      "calibration_size": 256,
+      "swd_train_projections": 128,
+      "ot_backend": "reference",
+      "sinkhorn_scaling": 0.95,
+      "gradient_diagnostics_every": 200,
+      "plan_diagnostics_every": 1000
+    },
+    "evaluation": {
+      "final_seed": 730001,
+      "validation_seed": 730002,
+      "reference_seed": 730003,
+      "samples": 4096,
+      "validation_samples": 2048,
+      "teacher_nfe": [
+        8,
+        16,
+        24,
+        32,
+        64,
+        128
+      ],
+      "batch_size": 128,
+      "swd_projections": 1024,
+      "mmd_block_size": 256,
+      "diagnostic_samples": 128,
+      "gif_particles": 32,
+      "gif_fps": 10,
+      "timing_repeats": 3,
+      "sensitivity_swd_margin": 0.005,
+      "rho_eval": [
+        0.0,
+        0.05,
+        0.1,
+        0.2
+      ]
+    },
+    "evaluator": {
+      "seed": 41,
+      "epochs": 5,
+      "batch_size": 128,
+      "lr": 0.001,
+      "weight_decay": 0.0,
+      "accuracy_threshold": 0.99,
+      "feature_batch_size": 512,
+      "bandwidth_samples": 2000
+    },
+    "resources": {
+      "max_gpu_hours": 6.0,
+      "max_artifact_gib": 8.0,
+      "rays_gate": "replication/reports/rays_gate.json"
+    }
+  },
+  "config_sha256": "050282ec564a7a368b26fa236b34ffc6ac555b7113a25c24fe27a14a3c57c42b",
+  "algorithm_sha256": "17cf5a087af949dcc9cca78250a997e2036cfb8284437bcf3cc34214ae4b6f91",
+  "environment": {
+    "python": "3.11.16",
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "versions": {
+      "torch": "2.14.1",
+      "diffusers": "0.39.0",
+      "geomloss": "0.3.1",
+      "torchvision": "0.29.1",
+      "numpy": "2.4.6",
+      "scipy": "1.17.1",
+      "diffusion-lab": "0.4.2"
+    },
+    "git_commit": "0fc868ca4c982ecf1d0fc2e4a135bbb5b4d8ab98",
+    "cuda": false,
+    "mps": false,
+    "mps_built": true,
+    "cuda_version": null,
+    "deterministic_algorithms": false,
+    "cpu_count": 14,
+    "torch_threads": 4
+  },
+  "sources": {
+    "spec_sha256": "1a6dbc26265423f45348d8b67f1d749314769d522e8791faf4767960697631cb",
+    "pdf_sha256": "850da2d317567e30373f3615a86bdf98fee24a7157ad7b3abf0b7990f1e4e65c",
+    "pdf_pages": 97,
+    "pdf_path_at_audit": "/Users/vvmelnikov/Downloads/bachelors_thesis.pdf",
+    "audit": "PDF fingerprint verified; independent protocol P implementation, not author-code replication"
+  },
+  "precision": "float32_network",
+  "model": {
+    "class": "FourierFMMLP",
+    "config": {
+      "input_dim": 2,
+      "hidden_dim": 256,
+      "num_layers": 4,
+      "time_embedding_dim": 32,
+      "time_scale": 1000.0,
+      "spatial_frequencies": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "polar_features": true,
+      "epsilon": 0.001,
+      "_use_default_values": [
+        "time_scale"
+      ]
+    },
+    "parameter_count": 216578,
+    "trainable_parameter_count": 216578,
+    "flops_estimate": null,
+    "flops_note": "not measured; no FLOP counter is installed by the experiment"
+  },
+  "data_sha256": "aaf2b48e7a894b4ae0550f632c6eed303d0008579d1ba97a7766cbc2716a3e34",
+  "rng_seeds": {
+    "data": 3691910247752436115,
+    "interval": 4696581279375760446,
+    "noise": 4295108470594346505,
+    "tube": 2850969678758207294,
+    "swd": 6902670156903764936,
+    "preview": 1617554227105555100,
+    "bootstrap": 7280313028501559465
+  },
+  "updates_completed": 100000,
+  "teacher_sha256": "495ff88057d8a5dccbc1581d887404332e9f24ba4dfad658f730de389323b93a",
+  "checkpoint_sha256": "da25e52b8665d6c8b36e19e1f34455e02e57ad785a75717b6e43be80e6a68e3e",
+  "training_seconds": 341.6979249152355
+}

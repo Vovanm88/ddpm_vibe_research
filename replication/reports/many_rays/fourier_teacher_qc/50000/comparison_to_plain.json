@@ -1,0 +1,28 @@
+{
+  "scope": "paired_validation_same_data_noise_teacher_update_count",
+  "plain_source": "replication/reports/many_rays/teacher_qc/50000",
+  "plain_teacher_sha256": "97e54bf170defb9e90287a439685cd8759419b736891f66fa366e1378fe6c4a8",
+  "real_and_initial_noise_exactly_equal": true,
+  "noise_sha256": "52b3ce82f6801070311855ba4db1788bd0436af869d96554d392eb48fd184e8d",
+  "real_sha256": "5470c58a86a8c45f665344b963d2d022dd6a9d79aa683972032de22349d1b729",
+  "nfe": {
+    "32": {
+      "paired_endpoint_mse_fourier_vs_plain": 0.0016809150019142043,
+      "fourier_minus_plain_mmd2_real": 2.0389126101694188e-05,
+      "fourier_minus_plain_sliced_wasserstein": -0.001878498908029002,
+      "fourier_minus_plain_phase_mean_absolute_sector_fraction": -0.20578276644825066,
+      "fourier_minus_plain_phase_w1_sector_fraction": -0.1980359173349964
+    },
+    "128": {
+      "paired_endpoint_mse_fourier_vs_plain": 0.001975260237683677,
+      "fourier_minus_plain_mmd2_real": -1.986324863345601e-05,
+      "fourier_minus_plain_sliced_wasserstein": -0.0024942117128494926,
+      "fourier_minus_plain_phase_mean_absolute_sector_fraction": -0.23134313588039784,
+      "fourier_minus_plain_phase_w1_sector_fraction": -0.2249224915479289
+    }
+  },
+  "limitations": [
+    "Two fixed model architectures; this comparison is descriptive validation QC, not a student-loss comparison.",
+    "Paired endpoint displacement from plain MLP is not fidelity to the true data-generating trajectory."
+  ]
+}

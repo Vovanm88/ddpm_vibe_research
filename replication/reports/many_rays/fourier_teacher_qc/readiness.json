@@ -1,0 +1,119 @@
+{
+  "status": "completed",
+  "scope": "validation_only_fixed_fourier_teacher_progress_qc",
+  "protocol_id": "rays16_fourier_teacher_v1",
+  "final_teacher_sha256": "495ff88057d8a5dccbc1581d887404332e9f24ba4dfad658f730de389323b93a",
+  "teacher_updates": [
+    50000,
+    100000
+  ],
+  "real_count": 8192,
+  "generated_count_per_snapshot_nfe": 2048,
+  "n_rays": 16,
+  "labels_used": false,
+  "test_accessed": false,
+  "noise_seed": 730002,
+  "common_noise_and_real_reference_assertion": true,
+  "controlled_plain_pair_assertion": "Exact real/noise hash and tensor equality for each corresponding plain snapshot PASS",
+  "rows": [
+    {
+      "teacher_updates": 50000,
+      "nfe": 32,
+      "mmd2_real": 0.00014960305986244649,
+      "sliced_wasserstein": 0.016369929468317005,
+      "phase_mean_absolute_sector_fraction": 0.045096745059498955,
+      "real_phase_mean_absolute_sector_fraction": 0.01944016636970628,
+      "phase_mean_ratio_to_real": 2.3197715596597703,
+      "phase_distance_w1_sector_fraction": 0.033403427803046976,
+      "nearest_arm_occupancy_tv_outer": 0.028175049605636042,
+      "radial_w1_raw": 0.016154020119758382,
+      "phase_tail_gt_010_excess_over_real": 0.1174934725848564,
+      "paired_plain_comparison": {
+        "paired_endpoint_mse_fourier_vs_plain": 0.0016809150019142043,
+        "fourier_minus_plain_mmd2_real": 2.0389126101694188e-05,
+        "fourier_minus_plain_sliced_wasserstein": -0.001878498908029002,
+        "fourier_minus_plain_phase_mean_absolute_sector_fraction": -0.20578276644825066,
+        "fourier_minus_plain_phase_w1_sector_fraction": -0.1980359173349964
+      }
+    },
+    {
+      "teacher_updates": 50000,
+      "nfe": 128,
+      "mmd2_real": -2.3778984459488228e-05,
+      "sliced_wasserstein": 0.01343158705576211,
+      "phase_mean_absolute_sector_fraction": 0.019457585588094337,
+      "real_phase_mean_absolute_sector_fraction": 0.01944016636970628,
+      "phase_mean_ratio_to_real": 1.0008960426601698,
+      "phase_distance_w1_sector_fraction": 0.00643806355085702,
+      "nearest_arm_occupancy_tv_outer": 0.03049187571096306,
+      "radial_w1_raw": 0.005427184020514687,
+      "phase_tail_gt_010_excess_over_real": 0.017634854771784232,
+      "paired_plain_comparison": {
+        "paired_endpoint_mse_fourier_vs_plain": 0.001975260237683677,
+        "fourier_minus_plain_mmd2_real": -1.986324863345601e-05,
+        "fourier_minus_plain_sliced_wasserstein": -0.0024942117128494926,
+        "fourier_minus_plain_phase_mean_absolute_sector_fraction": -0.23134313588039784,
+        "fourier_minus_plain_phase_w1_sector_fraction": -0.2249224915479289
+      }
+    },
+    {
+      "teacher_updates": 100000,
+      "nfe": 32,
+      "mmd2_real": 9.889744574698156e-05,
+      "sliced_wasserstein": 0.015355035716925692,
+      "phase_mean_absolute_sector_fraction": 0.03904666767842464,
+      "real_phase_mean_absolute_sector_fraction": 0.01944016636970628,
+      "phase_mean_ratio_to_real": 2.0085562507978985,
+      "phase_distance_w1_sector_fraction": 0.03209968853197165,
+      "nearest_arm_occupancy_tv_outer": 0.03234933141134211,
+      "radial_w1_raw": 0.013811222811142637,
+      "phase_tail_gt_010_excess_over_real": 0.11058946270213876,
+      "paired_plain_comparison": {
+        "paired_endpoint_mse_fourier_vs_plain": 0.0012648685396779804,
+        "fourier_minus_plain_mmd2_real": -1.1258824542448309e-05,
+        "fourier_minus_plain_sliced_wasserstein": -0.0015629336042419714,
+        "fourier_minus_plain_phase_mean_absolute_sector_fraction": -0.15873881980606902,
+        "fourier_minus_plain_phase_w1_sector_fraction": -0.14624563258281578
+      }
+    },
+    {
+      "teacher_updates": 100000,
+      "nfe": 128,
+      "mmd2_real": 1.1608714101107864e-07,
+      "sliced_wasserstein": 0.013793318279289899,
+      "phase_mean_absolute_sector_fraction": 0.013882939851593043,
+      "real_phase_mean_absolute_sector_fraction": 0.01944016636970628,
+      "phase_mean_ratio_to_real": 0.7141368848173494,
+      "phase_distance_w1_sector_fraction": 0.0077151864039166,
+      "nearest_arm_occupancy_tv_outer": 0.034832463883346425,
+      "radial_w1_raw": 0.005458464442680333,
+      "phase_tail_gt_010_excess_over_real": 0.005186721991701245,
+      "paired_plain_comparison": {
+        "paired_endpoint_mse_fourier_vs_plain": 0.0014994343071063998,
+        "fourier_minus_plain_mmd2_real": -2.687834524506272e-06,
+        "fourier_minus_plain_sliced_wasserstein": -0.0007262763877586322,
+        "fourier_minus_plain_phase_mean_absolute_sector_fraction": -0.1787405268542322,
+        "fourier_minus_plain_phase_w1_sector_fraction": -0.16546811393220237
+      }
+    }
+  ],
+  "qualitative_readiness": "suitable_fixed_parent_with_measurable_n32_discretization_error",
+  "formal_new_gate_defined": false,
+  "interpretation": "Both Fourier snapshots visibly recover all16 arms. Fixed100k is suitable for the registered distillation comparison, while N32 retains off-arm outliers. N128 is much cleaner but its phase core is narrower than real; full distribution matching is not established.",
+  "recommendation": "Use the already registered final100k parent and show its Original N32/N128 quality and geometry alongside students. Preserve measured N32 defects and distinguish fidelity to this parent from independent real-data quality.",
+  "checkpoint_selection": "none; fixed100k final parent and50k progress diagnostic",
+  "qc_seconds_total": 30.830258625093848,
+  "source_files_sha256": {
+    "src/recheck/fourier_model.py": "922c8b80812dd7373d13d10db800a4abb3cf05672a86ecd7b0db131ea0948b6b",
+    "src/recheck/rays_analysis.py": "55317d529f83bf59e6c1ce4d917f4f9ec5543a32280e3e83c6d872536c8d1fe3",
+    "src/recheck/evaluate.py": "f29a7506d25b5b73634348fe4150138705a609d92de3217602c54f974b1e4055",
+    "src/recheck/fm.py": "91b910adce5ad99ed087eddbb8128ed1dea3a9fd20c92c944884e1fb347143d9",
+    "src/recheck/reporting.py": "502cd189e724fd7e5a3c9ab06e3cb65449c60162fd4e02f81553ab92e57043e4"
+  },
+  "limitations": [
+    "Descriptive geometry QC, not a newly fitted pass threshold or proof of a distillation-loss advantage.",
+    "One fixed teacher seed and validation noise bank.",
+    "Longer training does not improve every metric: N128 phase W1 is0.00644 at50k and0.00772 at100k; the final snapshot was fixed in advance.",
+    "A smaller mean phase residual than real can reflect overconcentration rather than better distributional matching."
+  ]
+}
