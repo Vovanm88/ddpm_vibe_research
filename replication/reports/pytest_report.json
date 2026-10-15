@@ -1,7 +1,7 @@
 {
-  "passed": 453,
+  "passed": 511,
   "skipped": 3,
   "failed": 0,
-  "seconds": 39.3,
-  "gpu_skips_covered_by_actual_mps_reports": true
+  "seconds": 36.79,
+  "note": "Full suite including native Fourier model/geometry/notebook tests; original real-MPS sidecar reports retained."
 }

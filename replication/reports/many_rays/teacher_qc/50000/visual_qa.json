@@ -1,0 +1,18 @@
+{
+  "status": "inspected",
+  "images": [
+    "geometry_n32.png",
+    "fixed_pointcloud.png",
+    "trajectory_n32.gif final frame"
+  ],
+  "layout": "titles, axes, colorbar and start/finish legend are visible; no clipping",
+  "observed_geometry": "Real validation has 16 thin curved arms. Teacher N32 and N128 both visibly fill a near-uniform disk; distinct arms are absent.",
+  "interpretation": "Underfit thin-arm angular geometry despite small global MMD and SWD; increasing Euler NFE to 128 does not recover arms.",
+  "frame_count": 33,
+  "gif_size": [
+    558,
+    603
+  ],
+  "colors": "red start to violet finish; actual N32 solver nodes",
+  "decision": "progress diagnostic only; fixed100k teacher remains the preregistered final teacher"
+}

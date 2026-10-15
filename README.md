@@ -27,7 +27,8 @@
 
 Новая исследовательская ветка добавляет [Wasserstein/tube-протокол](replication/README.md),
 [ноутбук с обучением четырёх методов на лучах](notebooks/10_wasserstein_tube_rays.ipynb)
-и [MNIST-ноутбук](notebooks/11_mnist_wasserstein_tube.ipynb).
+[MNIST-ноутбук](notebooks/11_mnist_wasserstein_tube.ipynb)
+и [16 лучей с длинным обучением](notebooks/12_many_rays_wasserstein_tube.ipynb).
 Teacher targets, Sinkhorn, tube и весь Torch training loop видны в ячейках;
 конфиги, численные проверки, отчёты и GIF находятся в `replication/`.
 

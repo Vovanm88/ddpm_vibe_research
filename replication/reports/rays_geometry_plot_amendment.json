@@ -1,0 +1,15 @@
+{
+  "registered_utc": "2026-10-15T04:06:54Z",
+  "module": "src/recheck/rays_analysis.py",
+  "old_sha256": "e48d6093f7414822f4a9424d54da53f564db40b8851be43872fbbc5b229a9b91",
+  "new_sha256": "55317d529f83bf59e6c1ce4d917f4f9ec5543a32280e3e83c6d872536c8d1fe3",
+  "change": "plot_rays_diagnostics outer occupancy x-axis fixed to (-0.5,n_rays-0.5)",
+  "diff": "--- rays_analysis.py (before)\n+++ rays_analysis.py (after)\n@@ -358,6 +358,7 @@\n             transform=ax.transAxes,\n         )\n     ax.set(\n+        xlim=(-0.5, n_rays - 0.5),\n         xticks=arm_ids,\n         xlabel=\"Nearest geometric arm (no labels used)\",\n         ylabel=\"Outer occupancy\",\n",
+  "functional_learning_change": false,
+  "geometry_metric_change": false,
+  "other_module_changes": false,
+  "reason": "Matplotlib automatic occupancy x-limits depended on whether generated bars existed; fixed axes must match even for center-collapsed generation.",
+  "teacher_imports_or_calls_module": false,
+  "teacher_continuation_policy": "Keep the earlier source hash in the initial/50k snapshot manifest; a later resume/final evaluation records the current hash. This amendment changes plot layout only and does not require replaying teacher training.",
+  "authorization": "Explicit parent approval during the CPU teacher run; no GPU calls."
+}

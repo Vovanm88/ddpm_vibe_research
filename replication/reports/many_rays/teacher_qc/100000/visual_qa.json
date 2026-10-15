@@ -1,0 +1,18 @@
+{
+  "status": "inspected",
+  "images": [
+    "geometry_n32.png",
+    "fixed_pointcloud.png",
+    "trajectory_n32.gif final frame"
+  ],
+  "layout": "titles, axes, colorbar and start/finish legend are visible; no clipping",
+  "observed_geometry": "Independent real validation has16 thin curved arms. Teacher at100k develops a few arms in upper/lower sectors, while many generated points fill angular gaps. N128 does not restore all16 thin arms.",
+  "interpretation": "Large thin-arm angular underfit remains despite small global MMD/SWD and reasonable nearest-arm occupancy/radial distribution.",
+  "frame_count": 33,
+  "gif_size": [
+    558,
+    603
+  ],
+  "colors": "red start to violet finish; actual N32 solver nodes",
+  "decision": "fixed100k final teacher is the registered parent; QC does not choose50k or alter weights"
+}

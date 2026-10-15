@@ -130,6 +130,16 @@ def _merge(base, supplied, prefix=""):
 
 def resolve_config(supplied=None):
     config = copy.deepcopy(DEFAULTS)
+    if (
+        isinstance(supplied, dict)
+        and isinstance(supplied.get("model"), dict)
+        and supplied["model"].get("kind") == "fourier_mlp"
+    ):
+        config["model"].update(
+            spatial_frequencies=[1, 2, 4, 8, 16, 32],
+            polar_features=True,
+            spatial_epsilon=0.001,
+        )
     _merge(config, supplied or {})
 
     def finite_tree(value):
@@ -172,6 +182,18 @@ def resolve_config(supplied=None):
         raise ValueError("Invalid thread/calibration count")
     if config["data"]["name"] == "mnist" and config["model"]["kind"] != "unet":
         raise ValueError("MNIST requires the registered unconditional UNet")
+    if config["model"]["kind"] == "fourier_mlp":
+        m = config["model"]
+        frequencies = m["spatial_frequencies"]
+        if (
+            not isinstance(frequencies, list)
+            or not frequencies
+            or any(isinstance(f, bool) or not isinstance(f, int) or f < 1 for f in frequencies)
+            or len(set(frequencies)) != len(frequencies)
+        ):
+            raise ValueError("Spatial frequencies must be distinct positive integers")
+        if not isinstance(m["polar_features"], bool) or m["spatial_epsilon"] <= 0:
+            raise ValueError("Invalid polar feature settings")
     return config
 
 

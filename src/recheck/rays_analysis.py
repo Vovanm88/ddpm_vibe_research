@@ -358,6 +358,7 @@ def plot_rays_diagnostics(
             transform=ax.transAxes,
         )
     ax.set(
+        xlim=(-0.5, n_rays - 0.5),
         xticks=arm_ids,
         xlabel="Nearest geometric arm (no labels used)",
         ylabel="Outer occupancy",

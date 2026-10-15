@@ -52,13 +52,30 @@ def build_model(config):
         return SmallUNetModel(
             base_channels=m["base_channels"], time_embedding_dim=m["time_embedding_dim"]
         )
+    if m["kind"] == "fourier_mlp":
+        from .fourier_model import FourierFMMLP
+
+        return FourierFMMLP(
+            input_dim=2,
+            hidden_dim=m["hidden_dim"],
+            num_layers=m["num_layers"],
+            time_embedding_dim=m["time_embedding_dim"],
+            spatial_frequencies=m["spatial_frequencies"],
+            polar_features=m["polar_features"],
+            epsilon=m["spatial_epsilon"],
+        )
     raise ValueError("Unknown model kind")
 
 
 def load_model(path, device="cpu"):
     path = Path(path)
     config = json.loads((path / "config.json").read_text())
-    cls = {"FMMLP": FMMLP, "SmallUNetModel": SmallUNetModel}[config["_class_name"]]
+    if config["_class_name"] == "FourierFMMLP":
+        from .fourier_model import FourierFMMLP
+
+        cls = FourierFMMLP
+    else:
+        cls = {"FMMLP": FMMLP, "SmallUNetModel": SmallUNetModel}[config["_class_name"]]
     return cls.from_pretrained(path, local_files_only=True, low_cpu_mem_usage=False).to(device)
 
 

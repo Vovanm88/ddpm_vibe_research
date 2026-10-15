@@ -1,0 +1,86 @@
+{
+  "status": "completed",
+  "scope": "validation_only_preregistered_teacher_progress_qc",
+  "teacher_updates": [
+    50000,
+    100000
+  ],
+  "real_count": 8192,
+  "generated_count_per_snapshot_nfe": 2048,
+  "n_rays": 16,
+  "labels_used": false,
+  "test_accessed": false,
+  "noise_seed": 730002,
+  "common_noise_and_real_reference_assertion": true,
+  "rows": [
+    {
+      "teacher_updates": 50000,
+      "nfe": 32,
+      "mmd2_real": 0.0001292139337607523,
+      "sliced_wasserstein": 0.018248428376346007,
+      "phase_mean_absolute_sector_fraction": 0.2508795115077496,
+      "real_phase_mean_absolute_sector_fraction": 0.01944016636970628,
+      "phase_mean_ratio_to_real": 12.905214221761835,
+      "phase_distance_w1_sector_fraction": 0.23143934513804337,
+      "nearest_arm_occupancy_tv_outer": 0.036784332759551244,
+      "radial_w1_raw": 0.014268057165636384,
+      "phase_tail_gt_010_excess_over_real": 0.7964509394572025
+    },
+    {
+      "teacher_updates": 50000,
+      "nfe": 128,
+      "mmd2_real": -3.915735826032218e-06,
+      "sliced_wasserstein": 0.015925798768611603,
+      "phase_mean_absolute_sector_fraction": 0.2508007214684922,
+      "real_phase_mean_absolute_sector_fraction": 0.01944016636970628,
+      "phase_mean_ratio_to_real": 12.901161270888933,
+      "phase_distance_w1_sector_fraction": 0.23136055509878592,
+      "nearest_arm_occupancy_tv_outer": 0.035220806270012214,
+      "radial_w1_raw": 0.004584385484585811,
+      "phase_tail_gt_010_excess_over_real": 0.7984415584415584
+    },
+    {
+      "teacher_updates": 100000,
+      "nfe": 32,
+      "mmd2_real": 0.00011015627028942987,
+      "sliced_wasserstein": 0.016917969321167663,
+      "phase_mean_absolute_sector_fraction": 0.19778548748449368,
+      "real_phase_mean_absolute_sector_fraction": 0.01944016636970628,
+      "phase_mean_ratio_to_real": 10.174063519986326,
+      "phase_distance_w1_sector_fraction": 0.17834532111478743,
+      "nearest_arm_occupancy_tv_outer": 0.03290568571042324,
+      "radial_w1_raw": 0.013450508563830283,
+      "phase_tail_gt_010_excess_over_real": 0.6368366285119667
+    },
+    {
+      "teacher_updates": 100000,
+      "nfe": 128,
+      "mmd2_real": 2.8039216655173504e-06,
+      "sliced_wasserstein": 0.014519594667048531,
+      "phase_mean_absolute_sector_fraction": 0.19262346670582525,
+      "real_phase_mean_absolute_sector_fraction": 0.01944016636970628,
+      "phase_mean_ratio_to_real": 9.90852974416883,
+      "phase_distance_w1_sector_fraction": 0.17318330033611898,
+      "nearest_arm_occupancy_tv_outer": 0.033311016430066065,
+      "radial_w1_raw": 0.005866820613108163,
+      "phase_tail_gt_010_excess_over_real": 0.6198132780082988
+    }
+  ],
+  "qualitative_readiness": "underfit_thin_16_arm_geometry",
+  "formal_new_gate_defined": false,
+  "interpretation": "100k improves angular structure relative to50k but mean phase distance remains about10x real; N128 does not recover all16 thin arms. Global MMD/SWD and occupancy alone obscure this failure.",
+  "recommendation": "Do not claim the teacher learned16 thin rays. A student cohort from this frozen parent can only establish distillation behavior for this underfit teacher; repairing teacher quality requires a separately documented validation-only development protocol, preserving these results.",
+  "checkpoint_selection": "none;100k is the fixed final parent and50k only a preregistered progress diagnostic",
+  "qc_seconds_total": 30.297556709032506,
+  "source_files_sha256": {
+    "src/recheck/rays_analysis.py": "55317d529f83bf59e6c1ce4d917f4f9ec5543a32280e3e83c6d872536c8d1fe3",
+    "src/recheck/evaluate.py": "f29a7506d25b5b73634348fe4150138705a609d92de3217602c54f974b1e4055",
+    "src/recheck/fm.py": "c0463104ccb1cf13981028424e8c176888579eb8f4bb7c47559b3803ab78089e",
+    "src/recheck/reporting.py": "502cd189e724fd7e5a3c9ab06e3cb65449c60162fd4e02f81553ab92e57043e4"
+  },
+  "limitations": [
+    "Single fixed validation noise bank, descriptive geometry diagnostics; no new statistical pass threshold was defined after results.",
+    "One teacher seed; no universal claim about architecture or objective.",
+    "MMD/SWD independent quality, geometry residuals, and paired trajectories answer different questions."
+  ]
+}

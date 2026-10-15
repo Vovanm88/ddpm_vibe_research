@@ -96,8 +96,8 @@ epsilon-калибровку 32→16 переносить нельзя. Tube/no-
 
 Для teacher validation QC генерируется 2 048 точек против всех 8 192 реальных
 validation. Финальная quality: **4 096 generated против 8 192 real test**.
-Финальная оценка открывается после фиксации всех 12 учеников соответствующей
-сетки, их updates и teacher SHA. Final seed 730001, validation 730002,
+Финальная оценка открывается после фиксации всех 24 учеников обеих
+заранее заданных сеток, их updates и teacher SHA. Final seed 730001, validation 730002,
 reference 730003; один общий initial noise между методами и NFE. Калибровка
 MMD bandwidth использует только train. Final seed и параметры метрик по
 результатам не меняются.
