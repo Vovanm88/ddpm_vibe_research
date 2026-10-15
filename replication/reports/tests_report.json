@@ -1,0 +1,593 @@
+{
+  "loss_contracts": {
+    "passed": true,
+    "dtype": "float64",
+    "production_solver": "converged_logdomain_sinkhorn_newton_envelope",
+    "tests": [
+      {
+        "name": "grid_coverage_32_to_16",
+        "dtype": "float64",
+        "error": 0.0,
+        "tolerance": 1e-14,
+        "passed": true,
+        "teacher_nfe": 32,
+        "student_nfe": 16,
+        "groups": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "name": "grid_coverage_32_to_8",
+        "dtype": "float64",
+        "error": 0.0,
+        "tolerance": 1e-14,
+        "passed": true,
+        "teacher_nfe": 32,
+        "student_nfe": 8,
+        "groups": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ]
+      },
+      {
+        "name": "grid_coverage_24_to_16",
+        "dtype": "float64",
+        "error": 0.0,
+        "tolerance": 1e-14,
+        "passed": true,
+        "teacher_nfe": 24,
+        "student_nfe": 16,
+        "groups": [
+          2,
+          1,
+          2,
+          1,
+          2,
+          1,
+          2,
+          1,
+          2,
+          1,
+          2,
+          1,
+          2,
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "name": "signed_time_constant_field",
+        "dtype": "float64",
+        "error": 2.220446049250313e-16,
+        "tolerance": 1e-12,
+        "passed": true
+      },
+      {
+        "name": "teacher_copy_one_microstep",
+        "dtype": "float64",
+        "error": 0.0,
+        "tolerance": 1e-12,
+        "passed": true
+      },
+      {
+        "name": "teacher_target_detached",
+        "dtype": "float64",
+        "error": 0.0,
+        "tolerance": 0,
+        "passed": true
+      },
+      {
+        "name": "endpoint_displacement_value",
+        "dtype": "float64",
+        "error": 0.0,
+        "tolerance": 1e-12,
+        "passed": true
+      },
+      {
+        "name": "endpoint_displacement_gradient",
+        "dtype": "float64",
+        "error": 8.673617379884035e-18,
+        "tolerance": 1e-12,
+        "passed": true
+      },
+      {
+        "name": "sinkhorn_identity",
+        "dtype": "float64",
+        "error": 0.0,
+        "tolerance": 1e-10,
+        "passed": true
+      },
+      {
+        "name": "sinkhorn_permutation",
+        "dtype": "float64",
+        "error": 1.942890293094024e-16,
+        "tolerance": 1e-10,
+        "passed": true
+      },
+      {
+        "name": "swd_identity",
+        "dtype": "float64",
+        "error": 0.0,
+        "tolerance": 1e-12,
+        "passed": true
+      },
+      {
+        "name": "swd_permutation",
+        "dtype": "float64",
+        "error": 3.900806004174773e-34,
+        "tolerance": 1e-12,
+        "passed": true
+      },
+      {
+        "name": "paired_permutation_detected",
+        "dtype": "float64",
+        "error": 0.0,
+        "tolerance": 0,
+        "passed": true
+      },
+      {
+        "name": "sinkhorn_single_point",
+        "dtype": "float64",
+        "error": 0.0,
+        "tolerance": 1e-12,
+        "passed": true
+      },
+      {
+        "name": "swd_single_point_finite_bank",
+        "dtype": "float64",
+        "error": 1.1102230246251565e-16,
+        "tolerance": 1e-12,
+        "passed": true
+      },
+      {
+        "name": "exact_ot_translation",
+        "dtype": "float64",
+        "error": 2.7755575615628914e-17,
+        "tolerance": 1e-12,
+        "passed": true
+      },
+      {
+        "name": "sinkhorn_translation",
+        "dtype": "float64",
+        "error": 6.888406511862399e-12,
+        "tolerance": 1e-09,
+        "passed": true
+      },
+      {
+        "name": "swd_translation_orthogonal_bank",
+        "dtype": "float64",
+        "error": 5.551115123125783e-17,
+        "tolerance": 1e-12,
+        "passed": true
+      },
+      {
+        "name": "exact_ot_paired_upper_bound",
+        "dtype": "float64",
+        "error": 0.0,
+        "tolerance": 1e-12,
+        "passed": true,
+        "assignment_cost": 0.35186226001774407,
+        "paired_ground_cost": 1.0114289252637272
+      },
+      {
+        "name": "both_student_self_arguments_finite_difference",
+        "dtype": "float64",
+        "error": 1.4357418032240332e-11,
+        "tolerance": 1e-07,
+        "passed": true,
+        "finite_difference_step": 1e-05
+      },
+      {
+        "name": "student_gradient_finite_nonzero",
+        "dtype": "float64",
+        "error": 0.0,
+        "tolerance": 0,
+        "passed": true,
+        "gradient_norm": 0.4886099437723427
+      },
+      {
+        "name": "teacher_features_detached",
+        "dtype": "float64",
+        "error": 0.0,
+        "tolerance": 0,
+        "passed": true
+      },
+      {
+        "name": "solver_marginals",
+        "dtype": "float64",
+        "error": 2.7755575615628914e-16,
+        "tolerance": 1e-12,
+        "passed": true,
+        "components": {
+          "dtype": "float64",
+          "compute_device": "cpu",
+          "student_device": "cpu",
+          "output_dtype": "torch.float64",
+          "differentiable_cpu_bridge": false,
+          "cost": "squared_euclidean",
+          "epsilon": 0.3,
+          "regularization": "KL(plan || uniform_product)",
+          "cross": {
+            "iterations": 30,
+            "newton_corrections": 2,
+            "max_numerical_dual_nullity": 1,
+            "converged": true,
+            "row_marginal_error": 8.326672684688674e-17,
+            "column_marginal_error": 2.7755575615628914e-17,
+            "diagonal_mass": 0.1427361294337543,
+            "plan_entropy": 2.8037128744269437,
+            "regularized_objective": 0.5603274316892144,
+            "transport_cost": 0.4357785465568371,
+            "kl_to_product": 0.4151629504412574
+          },
+          "student_self": {
+            "iterations": 40,
+            "newton_corrections": 3,
+            "max_numerical_dual_nullity": 1,
+            "converged": true,
+            "row_marginal_error": 8.326672684688674e-17,
+            "column_marginal_error": 8.326672684688674e-17,
+            "diagonal_mass": 0.6447018988608155,
+            "plan_entropy": 2.4347709367322707,
+            "regularized_objective": 0.3391111845532859,
+            "transport_cost": 0.10387971811250679,
+            "kl_to_product": 0.7841048881359304
+          },
+          "teacher_self": {
+            "iterations": 20,
+            "newton_corrections": 1,
+            "max_numerical_dual_nullity": 1,
+            "converged": true,
+            "row_marginal_error": 2.7755575615628914e-16,
+            "column_marginal_error": 5.551115123125783e-17,
+            "diagonal_mass": 0.4112897857159939,
+            "plan_entropy": 2.9963053422359103,
+            "regularized_objective": 0.20718448490700903,
+            "transport_cost": 0.14041334011732193,
+            "kl_to_product": 0.22257048263229037
+          }
+        }
+      },
+      {
+        "name": "solver_doubled_iterations_value",
+        "dtype": "float64",
+        "error": 0.0,
+        "tolerance": 1e-10,
+        "passed": true
+      },
+      {
+        "name": "solver_doubled_iterations_gradient",
+        "dtype": "float64",
+        "error": 0.0,
+        "tolerance": 1e-09,
+        "passed": true
+      },
+      {
+        "name": "disconnected_support_marginals",
+        "dtype": "float64",
+        "error": 8.326672684688674e-17,
+        "tolerance": 1e-12,
+        "passed": true,
+        "dual_nullity": 2
+      },
+      {
+        "name": "disconnected_support_doubled_value",
+        "dtype": "float64",
+        "error": 0.0,
+        "tolerance": 1e-12,
+        "passed": true
+      },
+      {
+        "name": "disconnected_support_doubled_gradient",
+        "dtype": "float64",
+        "error": 0.0,
+        "tolerance": 1e-10,
+        "passed": true
+      },
+      {
+        "name": "disconnected_support_directional_gradient",
+        "dtype": "float64",
+        "error": 5.456147618670797e-13,
+        "tolerance": 1e-08,
+        "passed": true
+      },
+      {
+        "name": "displacement_permutation_blindness",
+        "dtype": "float64",
+        "error": 2.7755575615628914e-17,
+        "tolerance": 1e-10,
+        "passed": true
+      },
+      {
+        "name": "joint_association_detected",
+        "dtype": "float64",
+        "error": 0.0,
+        "tolerance": 0,
+        "passed": true,
+        "joint_divergence": 1.3329971233321058
+      },
+      {
+        "name": "geomloss_cost_epsilon_value_parity",
+        "dtype": "float64",
+        "error": 1.346849404226802e-08,
+        "tolerance": 2e-07,
+        "passed": true,
+        "scaling": 0.9999
+      },
+      {
+        "name": "geomloss_gradient_parity",
+        "dtype": "float64",
+        "error": 2.0733519637550213e-05,
+        "tolerance": 3e-05,
+        "passed": true,
+        "scaling": 0.9999
+      },
+      {
+        "name": "swd_independent_rng",
+        "dtype": "float64",
+        "error": 0.0,
+        "tolerance": 0,
+        "passed": true
+      }
+    ],
+    "geomloss_annealing_diagnostics": [
+      {
+        "scaling": 0.95,
+        "value_error": 0.0007976152348079246,
+        "gradient_max_error": 0.005777505380365644,
+        "gradient_relative_l2_error": 0.028699384007614948
+      },
+      {
+        "scaling": 0.99,
+        "value_error": 8.389247995249649e-05,
+        "gradient_max_error": 0.0016431750760065311,
+        "gradient_relative_l2_error": 0.008622958197472105
+      },
+      {
+        "scaling": 0.9999,
+        "value_error": 1.346849404226802e-08,
+        "gradient_max_error": 2.0733519637550213e-05,
+        "gradient_relative_l2_error": 0.00010934550615606126
+      }
+    ],
+    "library_policy": "Independent comparison only; registered training checks marginals with converged reference solver"
+  },
+  "evaluation": {
+    "dtype": "torch.float64",
+    "mmd_blockwise_dense_abs_error": 0.0,
+    "mmd_permutation_abs_error": 1.1102230246251565e-16,
+    "mmd_biased_identity_abs_error": 0.0,
+    "mmd_dependent_identity_u_statistic": -0.999998757782276,
+    "assignment_translation_abs_error": 0.0,
+    "ssim_identity_max_abs_error": 0.0,
+    "evaluation_leaves_global_rng_unchanged": true
+  },
+  "diagnostics": {
+    "dtype": "torch.float64",
+    "signed_constant_step_max_abs_error": 0.0,
+    "zero_tube_max_abs_error": 0.0,
+    "perturbed_teacher_target_change_mse": 0.00047574249365425487,
+    "linear_jacobian_action_max_abs_error": 6.850076061937216e-14,
+    "linear_jacobian_zeta_halving_mse": 2.311122096240505e-27
+  },
+  "oracle": {
+    "dtype": "torch.float64",
+    "seed": 2525,
+    "samples": 64,
+    "endpoint_t0_max_abs_error": 2.220446049250313e-16,
+    "endpoint_t1_max_abs_error": 4.440892098500626e-16,
+    "rk4_solver_steps": [
+      32,
+      64,
+      128
+    ],
+    "rk4_actual_nfe": [
+      128,
+      256,
+      512
+    ],
+    "rk4_step_doubling_mse": [
+      3.2890289510926285e-11,
+      1.5591235672079742e-13
+    ],
+    "rk4_fine_to_coarse_error_ratio": 0.004740376537853299,
+    "rk4_converging": true,
+    "scope": "analytic_GMM_only"
+  },
+  "passed": true,
+  "actual_mps_checks": {
+    "mps_numerical_parity": {
+      "device": "mps",
+      "network_dtype": "float32",
+      "ot_device_dtype": "cpu_float64_differentiable_bridge",
+      "loss_abs_error": 2.5543522852444767e-09,
+      "gradient_max_abs_error": 0.0,
+      "gradient_norm": 1.4077205657958984,
+      "teacher_grad_is_none": true,
+      "metrics": {
+        "device": "mps",
+        "source_dtype": "torch.float32",
+        "metric_dtype": "torch.float64_cpu",
+        "transport_max_abs_error": 0.0,
+        "mmd2_abs_error": 0.0,
+        "train_feature_mean_max_abs_error": 0.0,
+        "train_feature_std_max_abs_error": 0.0,
+        "train_bandwidth_abs_error": 0.0,
+        "paired_mse_abs_error": 0.0,
+        "ssim_abs_error": 0.0,
+        "passed": true
+      },
+      "passed": true,
+      "wall_seconds": 0.8687880407087505
+    },
+    "mps_models_smoke": {
+      "device": "mps",
+      "batch_size": 2,
+      "full_mnist_training": false,
+      "output_dir": "/var/folders/3m/89w4nv_10cz44ph0ywr153mrfj17hk/T/recheck-mps-model-smoke-4ddild3m",
+      "torch": "2.14.1",
+      "unet": {
+        "loss": 2.2889060974121094,
+        "grad_norm": 13.646122932434082,
+        "teacher_unchanged": true,
+        "copy_init_sha256": "29a7dd24df07d5a459b723aa8ce05d0bacbae92421016208431fb5f6844619cd",
+        "trained_sha256": "4263199dc5482314103826be587d269e3d1ed1f090025163934f7cfdda98bd51",
+        "reload_max_absolute_error": 0.0,
+        "parameters": 1307489
+      },
+      "evaluator": {
+        "loss": 2.3645052909851074,
+        "grad_norm": 3.919271469116211,
+        "feature_shape": [
+          2,
+          128
+        ],
+        "reload_max_absolute_error": 0.0,
+        "parameters": 421642
+      },
+      "seconds": 8.031533459201455
+    },
+    "mps_mechanisms": {
+      "device": "mps",
+      "passed": true,
+      "runs": [
+        {
+          "loss": "mse",
+          "rho": 0.0,
+          "status": "completed",
+          "updates": 3,
+          "training_seconds": 0.3988947500474751,
+          "teacher_unchanged": true
+        },
+        {
+          "loss": "mse",
+          "rho": 0.1,
+          "status": "completed",
+          "updates": 3,
+          "training_seconds": 0.044432458002120256,
+          "teacher_unchanged": true
+        },
+        {
+          "loss": "sinkhorn_displacement",
+          "rho": 0.0,
+          "status": "completed",
+          "updates": 3,
+          "training_seconds": 0.22334312461316586,
+          "teacher_unchanged": true
+        },
+        {
+          "loss": "sinkhorn_displacement",
+          "rho": 0.1,
+          "status": "completed",
+          "updates": 3,
+          "training_seconds": 0.05537179205566645,
+          "teacher_unchanged": true
+        },
+        {
+          "loss": "sinkhorn_endpoint",
+          "rho": 0.0,
+          "status": "completed",
+          "updates": 3,
+          "training_seconds": 0.05604620883241296,
+          "teacher_unchanged": true
+        },
+        {
+          "loss": "sinkhorn_endpoint",
+          "rho": 0.1,
+          "status": "completed",
+          "updates": 3,
+          "training_seconds": 0.05462258402258158,
+          "teacher_unchanged": true
+        },
+        {
+          "loss": "sinkhorn_joint",
+          "rho": 0.0,
+          "status": "completed",
+          "updates": 3,
+          "training_seconds": 0.06570675037801266,
+          "teacher_unchanged": true
+        },
+        {
+          "loss": "sinkhorn_joint",
+          "rho": 0.1,
+          "status": "completed",
+          "updates": 3,
+          "training_seconds": 0.05544220842421055,
+          "teacher_unchanged": true
+        },
+        {
+          "loss": "swd_displacement",
+          "rho": 0.0,
+          "status": "completed",
+          "updates": 3,
+          "training_seconds": 0.21471954230219126,
+          "teacher_unchanged": true
+        },
+        {
+          "loss": "swd_displacement",
+          "rho": 0.1,
+          "status": "completed",
+          "updates": 3,
+          "training_seconds": 0.052089957986027,
+          "teacher_unchanged": true
+        },
+        {
+          "loss": "swd_endpoint",
+          "rho": 0.0,
+          "status": "completed",
+          "updates": 3,
+          "training_seconds": 0.046223958022892475,
+          "teacher_unchanged": true
+        },
+        {
+          "loss": "swd_endpoint",
+          "rho": 0.1,
+          "status": "completed",
+          "updates": 3,
+          "training_seconds": 0.05375850014388561,
+          "teacher_unchanged": true
+        },
+        {
+          "loss": "swd_joint",
+          "rho": 0.0,
+          "status": "completed",
+          "updates": 3,
+          "training_seconds": 0.19799637515097857,
+          "teacher_unchanged": true
+        },
+        {
+          "loss": "swd_joint",
+          "rho": 0.1,
+          "status": "completed",
+          "updates": 3,
+          "training_seconds": 0.05426783300936222,
+          "teacher_unchanged": true
+        }
+      ],
+      "network_dtype": "float32",
+      "sinkhorn_device_dtype": "cpu_float64_differentiable_bridge"
+    }
+  }
+}

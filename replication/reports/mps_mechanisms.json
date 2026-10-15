@@ -1,0 +1,120 @@
+{
+  "device": "mps",
+  "passed": true,
+  "runs": [
+    {
+      "loss": "mse",
+      "rho": 0.0,
+      "status": "completed",
+      "updates": 3,
+      "training_seconds": 0.3988947500474751,
+      "teacher_unchanged": true
+    },
+    {
+      "loss": "mse",
+      "rho": 0.1,
+      "status": "completed",
+      "updates": 3,
+      "training_seconds": 0.044432458002120256,
+      "teacher_unchanged": true
+    },
+    {
+      "loss": "sinkhorn_displacement",
+      "rho": 0.0,
+      "status": "completed",
+      "updates": 3,
+      "training_seconds": 0.22334312461316586,
+      "teacher_unchanged": true
+    },
+    {
+      "loss": "sinkhorn_displacement",
+      "rho": 0.1,
+      "status": "completed",
+      "updates": 3,
+      "training_seconds": 0.05537179205566645,
+      "teacher_unchanged": true
+    },
+    {
+      "loss": "sinkhorn_endpoint",
+      "rho": 0.0,
+      "status": "completed",
+      "updates": 3,
+      "training_seconds": 0.05604620883241296,
+      "teacher_unchanged": true
+    },
+    {
+      "loss": "sinkhorn_endpoint",
+      "rho": 0.1,
+      "status": "completed",
+      "updates": 3,
+      "training_seconds": 0.05462258402258158,
+      "teacher_unchanged": true
+    },
+    {
+      "loss": "sinkhorn_joint",
+      "rho": 0.0,
+      "status": "completed",
+      "updates": 3,
+      "training_seconds": 0.06570675037801266,
+      "teacher_unchanged": true
+    },
+    {
+      "loss": "sinkhorn_joint",
+      "rho": 0.1,
+      "status": "completed",
+      "updates": 3,
+      "training_seconds": 0.05544220842421055,
+      "teacher_unchanged": true
+    },
+    {
+      "loss": "swd_displacement",
+      "rho": 0.0,
+      "status": "completed",
+      "updates": 3,
+      "training_seconds": 0.21471954230219126,
+      "teacher_unchanged": true
+    },
+    {
+      "loss": "swd_displacement",
+      "rho": 0.1,
+      "status": "completed",
+      "updates": 3,
+      "training_seconds": 0.052089957986027,
+      "teacher_unchanged": true
+    },
+    {
+      "loss": "swd_endpoint",
+      "rho": 0.0,
+      "status": "completed",
+      "updates": 3,
+      "training_seconds": 0.046223958022892475,
+      "teacher_unchanged": true
+    },
+    {
+      "loss": "swd_endpoint",
+      "rho": 0.1,
+      "status": "completed",
+      "updates": 3,
+      "training_seconds": 0.05375850014388561,
+      "teacher_unchanged": true
+    },
+    {
+      "loss": "swd_joint",
+      "rho": 0.0,
+      "status": "completed",
+      "updates": 3,
+      "training_seconds": 0.19799637515097857,
+      "teacher_unchanged": true
+    },
+    {
+      "loss": "swd_joint",
+      "rho": 0.1,
+      "status": "completed",
+      "updates": 3,
+      "training_seconds": 0.05426783300936222,
+      "teacher_unchanged": true
+    }
+  ],
+  "network_dtype": "float32",
+  "sinkhorn_device_dtype": "cpu_float64_differentiable_bridge"
+}

@@ -1,0 +1,7 @@
+{
+  "spec_sha256": "1a6dbc26265423f45348d8b67f1d749314769d522e8791faf4767960697631cb",
+  "pdf_sha256": "850da2d317567e30373f3615a86bdf98fee24a7157ad7b3abf0b7990f1e4e65c",
+  "pdf_pages": 97,
+  "pdf_path_at_audit": "/Users/vvmelnikov/Downloads/bachelors_thesis.pdf",
+  "audit": "PDF fingerprint verified; independent protocol P implementation, not author-code replication"
+}

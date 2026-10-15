@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "algorithm_sha256": "fa9f69c8ab6de7269c78e5d73513dc0ada1e92b81b93327e30569b3405fcca10",
+  "teacher_sha256": "5fcbe5ceee197bf2a257b1347586335d7feb8a15789ba406f918a077cf3e6930",
+  "config_sha256": "44b7f97e1bbcfe01696cd4f7191b7826605d31008760e1ac99bcb9ad2244462b",
+  "all_mvp_methods_completed": true,
+  "mvp_runs": 12,
+  "stress_runs": 12,
+  "mps_mechanism_runs": 14,
+  "animations": [
+    "replication/reports/trajectories_comparison.gif",
+    "replication/reports/rays_stress_32_8/trajectories_comparison.gif"
+  ],
+  "animations_presented_to_user": true,
+  "pytest": {
+    "passed": 453,
+    "skipped": 3,
+    "failed": 0,
+    "seconds": 39.3,
+    "gpu_skips_covered_by_actual_mps_reports": true
+  },
+  "numeric_tests_sha256": "3234e6ef072ddd4cb64b2b74661d40e3a3f5c1c983047e31dc55e982d08320d4",
+  "scope": "rotating_rays_before_MNIST"
+}

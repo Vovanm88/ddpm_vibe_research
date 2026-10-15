@@ -1,0 +1,4730 @@
+[
+  {
+    "method": "M0",
+    "student_seed": 101,
+    "local_error": [
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.0,
+        "local_mse": 1.2420125585776987e-06,
+        "teacher_displacement_energy": 0.014439046382904053,
+        "relative_local_mse": 8.60176306413318e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.05,
+        "local_mse": 1.2438299563655164e-06,
+        "teacher_displacement_energy": 0.014445878565311432,
+        "relative_local_mse": 8.610275593429794e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.1,
+        "local_mse": 1.2458252740543685e-06,
+        "teacher_displacement_energy": 0.014453964307904243,
+        "relative_local_mse": 8.619263528782073e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.2,
+        "local_mse": 1.2504840469773626e-06,
+        "teacher_displacement_energy": 0.01447390764951706,
+        "relative_local_mse": 8.639574586611975e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 1.2420125585776987e-06,
+        "teacher_displacement_energy": 0.014439046382904053,
+        "relative_local_mse": 8.60176306413318e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 1.2438299563655164e-06,
+        "teacher_displacement_energy": 0.014445878565311432,
+        "relative_local_mse": 8.610275593429794e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 1.2458252740543685e-06,
+        "teacher_displacement_energy": 0.014453964307904243,
+        "relative_local_mse": 8.619263528782073e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 1.2504840469773626e-06,
+        "teacher_displacement_energy": 0.01447390764951706,
+        "relative_local_mse": 8.639574586611975e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 1.2420125585776987e-06,
+        "teacher_displacement_energy": 0.014439046382904053,
+        "relative_local_mse": 8.60176306413318e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 1.2438299563655164e-06,
+        "teacher_displacement_energy": 0.014445878565311432,
+        "relative_local_mse": 8.610275593429794e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 1.2458252740543685e-06,
+        "teacher_displacement_energy": 0.014453964307904243,
+        "relative_local_mse": 8.619263528782073e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 1.2504840469773626e-06,
+        "teacher_displacement_energy": 0.01447390764951706,
+        "relative_local_mse": 8.639574586611975e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.0,
+        "local_mse": 1.2140263834226062e-06,
+        "teacher_displacement_energy": 0.012824688106775284,
+        "relative_local_mse": 9.466322871284768e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.05,
+        "local_mse": 1.2142156720074126e-06,
+        "teacher_displacement_energy": 0.012822304852306843,
+        "relative_local_mse": 9.469558601150907e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.1,
+        "local_mse": 1.2146423387093819e-06,
+        "teacher_displacement_energy": 0.012821437790989876,
+        "relative_local_mse": 9.473526748793793e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.2,
+        "local_mse": 1.2167118939032662e-06,
+        "teacher_displacement_energy": 0.012824233621358871,
+        "relative_local_mse": 9.487599257992478e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 1.2156970115029253e-06,
+        "teacher_displacement_energy": 0.012886473909020424,
+        "relative_local_mse": 9.433899607339037e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 1.2156835964560742e-06,
+        "teacher_displacement_energy": 0.012883642688393593,
+        "relative_local_mse": 9.435868611532044e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 1.2160073765699053e-06,
+        "teacher_displacement_energy": 0.012882322072982788,
+        "relative_local_mse": 9.439349285639693e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 1.2178049928479595e-06,
+        "teacher_displacement_energy": 0.012884197756648064,
+        "relative_local_mse": 9.451927204544725e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 1.2157770470366813e-06,
+        "teacher_displacement_energy": 0.012886658310890198,
+        "relative_local_mse": 9.43438568561454e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 1.2157844366811332e-06,
+        "teacher_displacement_energy": 0.012883848510682583,
+        "relative_local_mse": 9.436500558610816e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 1.2161913218733389e-06,
+        "teacher_displacement_energy": 0.012882541865110397,
+        "relative_local_mse": 9.440616103621075e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 1.218037596117938e-06,
+        "teacher_displacement_energy": 0.012884454801678658,
+        "relative_local_mse": 9.453543940091632e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.0,
+        "local_mse": 5.836996024299879e-06,
+        "teacher_displacement_energy": 0.01123189926147461,
+        "relative_local_mse": 0.0005196802329166861,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.05,
+        "local_mse": 5.836893251398578e-06,
+        "teacher_displacement_energy": 0.01121966727077961,
+        "relative_local_mse": 0.000520237642572532,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.1,
+        "local_mse": 5.837359822180588e-06,
+        "teacher_displacement_energy": 0.01120910607278347,
+        "relative_local_mse": 0.0005207694337333576,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.2,
+        "local_mse": 5.8397799875820056e-06,
+        "teacher_displacement_energy": 0.01119300164282322,
+        "relative_local_mse": 0.0005217349352688055,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 6.058769031369593e-06,
+        "teacher_displacement_energy": 0.011418779380619526,
+        "relative_local_mse": 0.0005305969079018037,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 6.056580787117127e-06,
+        "teacher_displacement_energy": 0.011407090350985527,
+        "relative_local_mse": 0.0005309487871807611,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 6.055016001482727e-06,
+        "teacher_displacement_energy": 0.011397089809179306,
+        "relative_local_mse": 0.0005312773789503676,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 6.053058768884512e-06,
+        "teacher_displacement_energy": 0.011382155120372772,
+        "relative_local_mse": 0.0005318025193708897,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 6.030133590684272e-06,
+        "teacher_displacement_energy": 0.011402733623981476,
+        "relative_local_mse": 0.0005288322773761981,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 6.0280540310486685e-06,
+        "teacher_displacement_energy": 0.011391008272767067,
+        "relative_local_mse": 0.0005291940701562105,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 6.026379196555354e-06,
+        "teacher_displacement_energy": 0.011380968615412712,
+        "relative_local_mse": 0.0005295137347443443,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 6.024483809596859e-06,
+        "teacher_displacement_energy": 0.01136595755815506,
+        "relative_local_mse": 0.0005300463052736195,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.0,
+        "local_mse": 4.792947947862558e-06,
+        "teacher_displacement_energy": 0.008979937061667442,
+        "relative_local_mse": 0.0005337395924880322,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.05,
+        "local_mse": 4.791523679159582e-06,
+        "teacher_displacement_energy": 0.008987669833004475,
+        "relative_local_mse": 0.0005331219068110594,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.1,
+        "local_mse": 4.791290848515928e-06,
+        "teacher_displacement_energy": 0.008997220546007156,
+        "relative_local_mse": 0.0005325301101618807,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.2,
+        "local_mse": 4.7944722609827295e-06,
+        "teacher_displacement_energy": 0.009021775797009468,
+        "relative_local_mse": 0.0005314333196544297,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 5.17513672093628e-06,
+        "teacher_displacement_energy": 0.009253202006220818,
+        "relative_local_mse": 0.0005592806379302102,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 5.176596914679976e-06,
+        "teacher_displacement_energy": 0.009261365979909897,
+        "relative_local_mse": 0.0005589452922937334,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 5.1786505537165795e-06,
+        "teacher_displacement_energy": 0.009271355345845222,
+        "relative_local_mse": 0.000558564563706135,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 5.184440851735417e-06,
+        "teacher_displacement_energy": 0.009296824224293232,
+        "relative_local_mse": 0.0005576571877295606,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 5.21591937285848e-06,
+        "teacher_displacement_energy": 0.009268207475543022,
+        "relative_local_mse": 0.0005627754219596687,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 5.217278612690279e-06,
+        "teacher_displacement_energy": 0.009276362136006355,
+        "relative_local_mse": 0.0005624272248319548,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 5.2192481234669685e-06,
+        "teacher_displacement_energy": 0.009286340326070786,
+        "relative_local_mse": 0.0005620349825877343,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 5.224883352639154e-06,
+        "teacher_displacement_energy": 0.009311787784099579,
+        "relative_local_mse": 0.0005611042126154279,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.0,
+        "local_mse": 5.943007863606908e-07,
+        "teacher_displacement_energy": 0.0056425887160003185,
+        "relative_local_mse": 0.00010532413689402367,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.05,
+        "local_mse": 5.90873185046803e-07,
+        "teacher_displacement_energy": 0.005629619583487511,
+        "relative_local_mse": 0.00010495792411620842,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.1,
+        "local_mse": 5.876771069779352e-07,
+        "teacher_displacement_energy": 0.005618574563413858,
+        "relative_local_mse": 0.00010459540944863091,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.2,
+        "local_mse": 5.819312036692281e-07,
+        "teacher_displacement_energy": 0.00560226384550333,
+        "relative_local_mse": 0.00010387429434197686,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 7.146667826418707e-07,
+        "teacher_displacement_energy": 0.0058880941942334175,
+        "relative_local_mse": 0.00012137488957662888,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 7.15847704668704e-07,
+        "teacher_displacement_energy": 0.005876895040273666,
+        "relative_local_mse": 0.00012180712770316371,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 7.172566256485879e-07,
+        "teacher_displacement_energy": 0.005867557134479284,
+        "relative_local_mse": 0.00012224109782140892,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 7.206981536000967e-07,
+        "teacher_displacement_energy": 0.005854466930031776,
+        "relative_local_mse": 0.00012310226741620435,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 7.109690614015562e-07,
+        "teacher_displacement_energy": 0.005879351869225502,
+        "relative_local_mse": 0.00012092643495671804,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 7.120833060980658e-07,
+        "teacher_displacement_energy": 0.005868160165846348,
+        "relative_local_mse": 0.00012134694452317561,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 7.134183306334307e-07,
+        "teacher_displacement_energy": 0.005858831573277712,
+        "relative_local_mse": 0.00012176802178225278,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 7.167475928326894e-07,
+        "teacher_displacement_energy": 0.005845766514539719,
+        "relative_local_mse": 0.00012260968532526556,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.0,
+        "local_mse": 3.3458907182648545e-06,
+        "teacher_displacement_energy": 0.0026248940266668797,
+        "relative_local_mse": 0.0012746764952311254,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.05,
+        "local_mse": 3.3322180570394266e-06,
+        "teacher_displacement_energy": 0.002610284835100174,
+        "relative_local_mse": 0.0012765725840458125,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.1,
+        "local_mse": 3.3197734410350677e-06,
+        "teacher_displacement_energy": 0.002598231192678213,
+        "relative_local_mse": 0.0012777051751168844,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.2,
+        "local_mse": 3.2990542422339786e-06,
+        "teacher_displacement_energy": 0.0025817151181399822,
+        "relative_local_mse": 0.0012778537101377821,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 3.393423639863613e-06,
+        "teacher_displacement_energy": 0.002901355968788266,
+        "relative_local_mse": 0.0011695992068428804,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 3.3977489692915697e-06,
+        "teacher_displacement_energy": 0.002890720497816801,
+        "relative_local_mse": 0.001175398649526199,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 3.4053196031891275e-06,
+        "teacher_displacement_energy": 0.00288247293792665,
+        "relative_local_mse": 0.001181388230357007,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 3.4292065720364917e-06,
+        "teacher_displacement_energy": 0.002873107325285673,
+        "relative_local_mse": 0.0011935532452465993,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 3.369316118551069e-06,
+        "teacher_displacement_energy": 0.002882295288145542,
+        "relative_local_mse": 0.00116896979029476,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 3.373371328052599e-06,
+        "teacher_displacement_energy": 0.0028716730885207653,
+        "relative_local_mse": 0.001174705902819274,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 3.3807600630098023e-06,
+        "teacher_displacement_energy": 0.0028634420596063137,
+        "relative_local_mse": 0.0011806629897287368,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 3.4045342545141466e-06,
+        "teacher_displacement_energy": 0.002854116726666689,
+        "relative_local_mse": 0.001192850391402978,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.0,
+        "local_mse": 6.094238415244035e-06,
+        "teacher_displacement_energy": 0.0019033863209187984,
+        "relative_local_mse": 0.0032017874397154635,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.05,
+        "local_mse": 6.102325187384849e-06,
+        "teacher_displacement_energy": 0.0018970505334436893,
+        "relative_local_mse": 0.0032167436132064355,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.1,
+        "local_mse": 6.124642823124304e-06,
+        "teacher_displacement_energy": 0.001892062253318727,
+        "relative_local_mse": 0.003237019718765342,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.2,
+        "local_mse": 6.2074004745227285e-06,
+        "teacher_displacement_energy": 0.00188668561168015,
+        "relative_local_mse": 0.0032901085565574715,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 6.924442004674347e-06,
+        "teacher_displacement_energy": 0.001980906818062067,
+        "relative_local_mse": 0.0034955919892529675,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 6.934707926120609e-06,
+        "teacher_displacement_energy": 0.001971290446817875,
+        "relative_local_mse": 0.0035178519417647736,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 6.950203896849416e-06,
+        "teacher_displacement_energy": 0.0019630230963230133,
+        "relative_local_mse": 0.003540561448241752,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 6.99035263096448e-06,
+        "teacher_displacement_energy": 0.0019500614143908024,
+        "relative_local_mse": 0.003584683322985631,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 6.859088898636401e-06,
+        "teacher_displacement_energy": 0.0019740459974855185,
+        "relative_local_mse": 0.003474634789348022,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 6.8708295657415874e-06,
+        "teacher_displacement_energy": 0.0019644920248538256,
+        "relative_local_mse": 0.0034975095234875456,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 6.888439202157315e-06,
+        "teacher_displacement_energy": 0.001956317573785782,
+        "relative_local_mse": 0.003521125247996982,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 6.934325938345864e-06,
+        "teacher_displacement_energy": 0.001943620154634118,
+        "relative_local_mse": 0.0035677372051388483,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.0,
+        "local_mse": 1.4400886357179843e-05,
+        "teacher_displacement_energy": 0.0026563394349068403,
+        "relative_local_mse": 0.005421327623999563,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.05,
+        "local_mse": 1.4259326235332992e-05,
+        "teacher_displacement_energy": 0.0026561145205050707,
+        "relative_local_mse": 0.005368490750399394,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.1,
+        "local_mse": 1.4128121620160528e-05,
+        "teacher_displacement_energy": 0.0026548607274889946,
+        "relative_local_mse": 0.0053216055644181035,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.2,
+        "local_mse": 1.3929724445915781e-05,
+        "teacher_displacement_energy": 0.0026492534670978785,
+        "relative_local_mse": 0.005257981019526637,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 1.5897454431978986e-05,
+        "teacher_displacement_energy": 0.002620765706524253,
+        "relative_local_mse": 0.006065957896351872,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 1.6125133697642013e-05,
+        "teacher_displacement_energy": 0.002631208160892129,
+        "relative_local_mse": 0.006128414291697346,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 1.6433712517027743e-05,
+        "teacher_displacement_energy": 0.0026425013784319162,
+        "relative_local_mse": 0.006218998654517128,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 1.728519782773219e-05,
+        "teacher_displacement_energy": 0.002667058724910021,
+        "relative_local_mse": 0.006480996337384864,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 1.598110975464806e-05,
+        "teacher_displacement_energy": 0.0025840583257377148,
+        "relative_local_mse": 0.00618450040212837,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 1.6202640836127102e-05,
+        "teacher_displacement_energy": 0.002594818826764822,
+        "relative_local_mse": 0.006244228178476835,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 1.650671947572846e-05,
+        "teacher_displacement_energy": 0.0026065907441079617,
+        "relative_local_mse": 0.006332685525351797,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 1.7353633666061796e-05,
+        "teacher_displacement_energy": 0.0026325639337301254,
+        "relative_local_mse": 0.006591913474053081,
+        "denominator_floor": 1e-12
+      }
+    ],
+    "rollout_error": [
+      {
+        "t": 1.0,
+        "rollout_mse": 0.0
+      },
+      {
+        "t": 0.875,
+        "rollout_mse": 1.2420125585776987e-06
+      },
+      {
+        "t": 0.75,
+        "rollout_mse": 1.6138486671479768e-06
+      },
+      {
+        "t": 0.625,
+        "rollout_mse": 3.94234984923969e-06
+      },
+      {
+        "t": 0.5,
+        "rollout_mse": 2.2689591787639074e-06
+      },
+      {
+        "t": 0.375,
+        "rollout_mse": 2.497523837519111e-06
+      },
+      {
+        "t": 0.25,
+        "rollout_mse": 4.672650902648456e-06
+      },
+      {
+        "t": 0.125,
+        "rollout_mse": 1.516970860393485e-05
+      },
+      {
+        "t": 0.0,
+        "rollout_mse": 4.3042004108428955e-05
+      }
+    ],
+    "final_rollout_mse": 4.3042004108428955e-05,
+    "rhos": [
+      0.0,
+      0.05,
+      0.1,
+      0.2
+    ],
+    "seed": 730003,
+    "n_states": 128,
+    "noise_definition": "independent coordinate Gaussian eta; delta=rho_eval*H",
+    "teacher_targets_recomputed_from_perturbed_anchor": true,
+    "student_rollout_states_are_method_dependent": true,
+    "teacher_rollout_nfe": 32,
+    "student_rollout_nfe": 8,
+    "jacobian": {
+      "rows": [
+        {
+          "zeta": 0.001,
+          "direction": 0,
+          "jacobian_action_mse": 3.23577251037932e-06,
+          "teacher_jacobian_action_energy": 0.3621673882007599,
+          "relative_jacobian_action_mse": 8.93446681230624e-06
+        },
+        {
+          "zeta": 0.001,
+          "direction": 1,
+          "jacobian_action_mse": 3.218008714611642e-06,
+          "teacher_jacobian_action_energy": 0.36220425367355347,
+          "relative_jacobian_action_mse": 8.884513867448837e-06
+        },
+        {
+          "zeta": 0.001,
+          "direction": 2,
+          "jacobian_action_mse": 3.0941232580516953e-06,
+          "teacher_jacobian_action_energy": 0.3630717992782593,
+          "relative_jacobian_action_mse": 8.522069916205059e-06
+        },
+        {
+          "zeta": 0.001,
+          "direction": 3,
+          "jacobian_action_mse": 3.260618086642353e-06,
+          "teacher_jacobian_action_energy": 0.3624029755592346,
+          "relative_jacobian_action_mse": 8.997216652569691e-06
+        },
+        {
+          "zeta": 0.0005,
+          "direction": 0,
+          "jacobian_action_mse": 3.2348350487154676e-06,
+          "teacher_jacobian_action_energy": 0.36216339468955994,
+          "relative_jacobian_action_mse": 8.931976826339148e-06
+        },
+        {
+          "zeta": 0.0005,
+          "direction": 1,
+          "jacobian_action_mse": 3.207756662959582e-06,
+          "teacher_jacobian_action_energy": 0.36220264434814453,
+          "relative_jacobian_action_mse": 8.856248602857597e-06
+        },
+        {
+          "zeta": 0.0005,
+          "direction": 2,
+          "jacobian_action_mse": 3.0952310225984547e-06,
+          "teacher_jacobian_action_energy": 0.36306077241897583,
+          "relative_jacobian_action_mse": 8.525379930130614e-06
+        },
+        {
+          "zeta": 0.0005,
+          "direction": 3,
+          "jacobian_action_mse": 3.2692535114620114e-06,
+          "teacher_jacobian_action_energy": 0.3623918890953064,
+          "relative_jacobian_action_mse": 9.021320867924342e-06
+        }
+      ],
+      "seed": 730003,
+      "zeta": 0.001,
+      "n_directions": 4,
+      "teacher_zeta_halving_mse": 1.719360431806649e-09,
+      "student_zeta_halving_mse": 1.5677831255445085e-09,
+      "map_evaluations_per_model": 16,
+      "n_states": 64,
+      "direction_norm": "unit L2 per complete state"
+    }
+  },
+  {
+    "method": "M1",
+    "student_seed": 101,
+    "local_error": [
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.0,
+        "local_mse": 1.2423006410244852e-06,
+        "teacher_displacement_energy": 0.014439046382904053,
+        "relative_local_mse": 8.603758226688566e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.05,
+        "local_mse": 1.2441115586625529e-06,
+        "teacher_displacement_energy": 0.014445878565311432,
+        "relative_local_mse": 8.612224954251037e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.1,
+        "local_mse": 1.2461111964512384e-06,
+        "teacher_displacement_energy": 0.014453964307904243,
+        "relative_local_mse": 8.62124168778938e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.2,
+        "local_mse": 1.25075712276157e-06,
+        "teacher_displacement_energy": 0.01447390764951706,
+        "relative_local_mse": 8.641461262904376e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 1.2423006410244852e-06,
+        "teacher_displacement_energy": 0.014439046382904053,
+        "relative_local_mse": 8.603758226688566e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 1.2441115586625529e-06,
+        "teacher_displacement_energy": 0.014445878565311432,
+        "relative_local_mse": 8.612224954251037e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 1.2461111964512384e-06,
+        "teacher_displacement_energy": 0.014453964307904243,
+        "relative_local_mse": 8.62124168778938e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 1.25075712276157e-06,
+        "teacher_displacement_energy": 0.01447390764951706,
+        "relative_local_mse": 8.641461262904376e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 1.2423006410244852e-06,
+        "teacher_displacement_energy": 0.014439046382904053,
+        "relative_local_mse": 8.603758226688566e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 1.2441115586625529e-06,
+        "teacher_displacement_energy": 0.014445878565311432,
+        "relative_local_mse": 8.612224954251037e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 1.2461111964512384e-06,
+        "teacher_displacement_energy": 0.014453964307904243,
+        "relative_local_mse": 8.62124168778938e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 1.25075712276157e-06,
+        "teacher_displacement_energy": 0.01447390764951706,
+        "relative_local_mse": 8.641461262904376e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.0,
+        "local_mse": 1.2105476798751624e-06,
+        "teacher_displacement_energy": 0.012824688106775284,
+        "relative_local_mse": 9.439197817494134e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.05,
+        "local_mse": 1.2107548172934912e-06,
+        "teacher_displacement_energy": 0.012822304852306843,
+        "relative_local_mse": 9.442567707128458e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.1,
+        "local_mse": 1.2111844398532412e-06,
+        "teacher_displacement_energy": 0.012821437790989876,
+        "relative_local_mse": 9.44655708351514e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.2,
+        "local_mse": 1.2132622941862792e-06,
+        "teacher_displacement_energy": 0.012824233621358871,
+        "relative_local_mse": 9.460700186914721e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 1.2122968655603472e-06,
+        "teacher_displacement_energy": 0.012886473909020424,
+        "relative_local_mse": 9.407514220874258e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 1.2122935686420533e-06,
+        "teacher_displacement_energy": 0.012883642688393593,
+        "relative_local_mse": 9.409555961484128e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 1.212616325574345e-06,
+        "teacher_displacement_energy": 0.012882322072982788,
+        "relative_local_mse": 9.413025995658671e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 1.2144571428507334e-06,
+        "teacher_displacement_energy": 0.012884197756648064,
+        "relative_local_mse": 9.425943048911142e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 1.2124160093662795e-06,
+        "teacher_displacement_energy": 0.01288667693734169,
+        "relative_local_mse": 9.408290556683893e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 1.2124343129471526e-06,
+        "teacher_displacement_energy": 0.012883863411843777,
+        "relative_local_mse": 9.410487166703394e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 1.212786969517765e-06,
+        "teacher_displacement_energy": 0.012882563285529613,
+        "relative_local_mse": 9.414174358297409e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 1.2146658718847902e-06,
+        "teacher_displacement_energy": 0.012884471565485,
+        "relative_local_mse": 9.427362742129405e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.0,
+        "local_mse": 5.835958290845156e-06,
+        "teacher_displacement_energy": 0.01123189926147461,
+        "relative_local_mse": 0.0005195878412890045,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.05,
+        "local_mse": 5.8358550631965045e-06,
+        "teacher_displacement_energy": 0.01121966727077961,
+        "relative_local_mse": 0.000520145109685681,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.1,
+        "local_mse": 5.836296622874215e-06,
+        "teacher_displacement_energy": 0.01120910607278347,
+        "relative_local_mse": 0.0005206745823420452,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.2,
+        "local_mse": 5.838739980390528e-06,
+        "teacher_displacement_energy": 0.01119300164282322,
+        "relative_local_mse": 0.0005216420194250787,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 6.056978691049153e-06,
+        "teacher_displacement_energy": 0.011418779380619526,
+        "relative_local_mse": 0.000530440118786193,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 6.054820460121846e-06,
+        "teacher_displacement_energy": 0.011407090350985527,
+        "relative_local_mse": 0.0005307944685121858,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 6.053204742784146e-06,
+        "teacher_displacement_energy": 0.011397089809179306,
+        "relative_local_mse": 0.0005311184560385624,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 6.0513289099617396e-06,
+        "teacher_displacement_energy": 0.011382155120372772,
+        "relative_local_mse": 0.0005316505394598379,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 6.028528332535643e-06,
+        "teacher_displacement_energy": 0.011402776464819908,
+        "relative_local_mse": 0.0005286895126932452,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 6.026367373124231e-06,
+        "teacher_displacement_energy": 0.011391048319637775,
+        "relative_local_mse": 0.0005290441409799817,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 6.024702543072635e-06,
+        "teacher_displacement_energy": 0.011381007730960846,
+        "relative_local_mse": 0.0005293645945501873,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 6.0227794165257365e-06,
+        "teacher_displacement_energy": 0.011365997605025768,
+        "relative_local_mse": 0.0005298944822813098,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.0,
+        "local_mse": 4.783255917573115e-06,
+        "teacher_displacement_energy": 0.008979937061667442,
+        "relative_local_mse": 0.0005326602942454181,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.05,
+        "local_mse": 4.781805273523787e-06,
+        "teacher_displacement_energy": 0.008987669833004475,
+        "relative_local_mse": 0.0005320406025557443,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.1,
+        "local_mse": 4.781486495630816e-06,
+        "teacher_displacement_energy": 0.008997220546007156,
+        "relative_local_mse": 0.0005314404010861748,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.2,
+        "local_mse": 4.784547400049632e-06,
+        "teacher_displacement_energy": 0.009021775797009468,
+        "relative_local_mse": 0.000530333219058227,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 5.164756657904945e-06,
+        "teacher_displacement_energy": 0.009253202006220818,
+        "relative_local_mse": 0.000558158857272622,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 5.166225491848309e-06,
+        "teacher_displacement_energy": 0.009261365979909897,
+        "relative_local_mse": 0.0005578254334247323,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 5.168200004845858e-06,
+        "teacher_displacement_energy": 0.009271355345845222,
+        "relative_local_mse": 0.0005574373769593338,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 5.1739598347921856e-06,
+        "teacher_displacement_energy": 0.009296824224293232,
+        "relative_local_mse": 0.0005565298116826042,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 5.205360594118247e-06,
+        "teacher_displacement_energy": 0.009268245659768581,
+        "relative_local_mse": 0.0005616338609488496,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 5.206746209296398e-06,
+        "teacher_displacement_energy": 0.00927639938890934,
+        "relative_local_mse": 0.0005612895683988628,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 5.208720722293947e-06,
+        "teacher_displacement_energy": 0.009286376647651196,
+        "relative_local_mse": 0.000560899145051519,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 5.214340490056202e-06,
+        "teacher_displacement_energy": 0.009311825968325138,
+        "relative_local_mse": 0.0005599697103224614,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.0,
+        "local_mse": 5.939259608567227e-07,
+        "teacher_displacement_energy": 0.0056425887160003185,
+        "relative_local_mse": 0.00010525770896123721,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.05,
+        "local_mse": 5.905022248953173e-07,
+        "teacher_displacement_energy": 0.005629619583487511,
+        "relative_local_mse": 0.0001048920297611842,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.1,
+        "local_mse": 5.87302281473967e-07,
+        "teacher_displacement_energy": 0.005618574563413858,
+        "relative_local_mse": 0.0001045286975985455,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.2,
+        "local_mse": 5.815585950585955e-07,
+        "teacher_displacement_energy": 0.00560226384550333,
+        "relative_local_mse": 0.00010380778397743349,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 7.141524065445992e-07,
+        "teacher_displacement_energy": 0.0058880941942334175,
+        "relative_local_mse": 0.00012128753090329529,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 7.153340675358777e-07,
+        "teacher_displacement_energy": 0.005876895040273666,
+        "relative_local_mse": 0.00012171972829764323,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 7.167299145294237e-07,
+        "teacher_displacement_energy": 0.005867557134479284,
+        "relative_local_mse": 0.00012215133114217724,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 7.201659855127218e-07,
+        "teacher_displacement_energy": 0.005854466930031776,
+        "relative_local_mse": 0.00012301136792121448,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 7.104854375938885e-07,
+        "teacher_displacement_energy": 0.005879462696611881,
+        "relative_local_mse": 0.00012084189904007984,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 7.115998528206546e-07,
+        "teacher_displacement_energy": 0.005868271924555302,
+        "relative_local_mse": 0.0001212622492565526,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 7.129418690965394e-07,
+        "teacher_displacement_energy": 0.005858942866325378,
+        "relative_local_mse": 0.00012168438664835172,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 7.162628890000633e-07,
+        "teacher_displacement_energy": 0.005845875479280949,
+        "relative_local_mse": 0.00012252448611652,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.0,
+        "local_mse": 3.337403995828936e-06,
+        "teacher_displacement_energy": 0.0026248940266668797,
+        "relative_local_mse": 0.0012714433275871368,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.05,
+        "local_mse": 3.32374770550814e-06,
+        "teacher_displacement_energy": 0.002610284835100174,
+        "relative_local_mse": 0.0012733275927646363,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.1,
+        "local_mse": 3.311329692223808e-06,
+        "teacher_displacement_energy": 0.002598231192678213,
+        "relative_local_mse": 0.0012744553685426834,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.2,
+        "local_mse": 3.290621862106491e-06,
+        "teacher_displacement_energy": 0.0025817151181399822,
+        "relative_local_mse": 0.0012745875170290851,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 3.383563353054342e-06,
+        "teacher_displacement_energy": 0.002901355968788266,
+        "relative_local_mse": 0.00116620069700288,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 3.3879532566061243e-06,
+        "teacher_displacement_energy": 0.002890720497816801,
+        "relative_local_mse": 0.0011720099743869584,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 3.395568455744069e-06,
+        "teacher_displacement_energy": 0.00288247293792665,
+        "relative_local_mse": 0.0011780053200383161,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 3.4195627449662425e-06,
+        "teacher_displacement_energy": 0.002873107325285673,
+        "relative_local_mse": 0.001190196660901359,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 3.359545644343598e-06,
+        "teacher_displacement_energy": 0.0028823944739997387,
+        "relative_local_mse": 0.001165539857451136,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 3.3636790703894803e-06,
+        "teacher_displacement_energy": 0.002871772041544318,
+        "relative_local_mse": 0.0011712904164150283,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 3.371092589077307e-06,
+        "teacher_displacement_energy": 0.0028635403141379356,
+        "relative_local_mse": 0.0011772464220019788,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 3.394967734493548e-06,
+        "teacher_displacement_energy": 0.0028542145155370235,
+        "relative_local_mse": 0.0011894578056459717,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.0,
+        "local_mse": 6.097332061472116e-06,
+        "teacher_displacement_energy": 0.0019033863209187984,
+        "relative_local_mse": 0.003203412777774312,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.05,
+        "local_mse": 6.105460670369212e-06,
+        "teacher_displacement_energy": 0.0018970505334436893,
+        "relative_local_mse": 0.0032183964331651484,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.1,
+        "local_mse": 6.127860615379177e-06,
+        "teacher_displacement_energy": 0.001892062253318727,
+        "relative_local_mse": 0.0032387203986712107,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.2,
+        "local_mse": 6.210792435012991e-06,
+        "teacher_displacement_energy": 0.00188668561168015,
+        "relative_local_mse": 0.003291906397421505,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 6.926848527655238e-06,
+        "teacher_displacement_energy": 0.001980906818062067,
+        "relative_local_mse": 0.003496806848507804,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 6.937030320841586e-06,
+        "teacher_displacement_energy": 0.001971290446817875,
+        "relative_local_mse": 0.0035190300506146013,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 6.952378498681355e-06,
+        "teacher_displacement_energy": 0.0019630230963230133,
+        "relative_local_mse": 0.0035416692303335737,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 6.992273938521976e-06,
+        "teacher_displacement_energy": 0.0019500614143908024,
+        "relative_local_mse": 0.0035856685778823823,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 6.861886959086405e-06,
+        "teacher_displacement_energy": 0.0019740904681384563,
+        "relative_local_mse": 0.003475973907901537,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 6.873523489048239e-06,
+        "teacher_displacement_energy": 0.0019645369611680508,
+        "relative_local_mse": 0.003498800798821042,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 6.891016710142139e-06,
+        "teacher_displacement_energy": 0.001956362510100007,
+        "relative_local_mse": 0.0035223618703416467,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 6.936559202586068e-06,
+        "teacher_displacement_energy": 0.0019436641596257687,
+        "relative_local_mse": 0.003568805427745103,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.0,
+        "local_mse": 1.4343054317578208e-05,
+        "teacher_displacement_energy": 0.0026563394349068403,
+        "relative_local_mse": 0.005399556295064087,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.05,
+        "local_mse": 1.4200728401192464e-05,
+        "teacher_displacement_energy": 0.0026561145205050707,
+        "relative_local_mse": 0.00534642926408615,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.1,
+        "local_mse": 1.4068627933738753e-05,
+        "teacher_displacement_energy": 0.0026548607274889946,
+        "relative_local_mse": 0.005299196220754323,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.2,
+        "local_mse": 1.386788335366873e-05,
+        "teacher_displacement_energy": 0.0026492534670978785,
+        "relative_local_mse": 0.005234638182378331,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 1.586511280038394e-05,
+        "teacher_displacement_energy": 0.002620765706524253,
+        "relative_local_mse": 0.006053617368728769,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 1.6088526535895653e-05,
+        "teacher_displacement_energy": 0.002631208160892129,
+        "relative_local_mse": 0.006114501609952718,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 1.6392299585277215e-05,
+        "teacher_displacement_energy": 0.0026425013784319162,
+        "relative_local_mse": 0.00620332678691148,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 1.7232454410986975e-05,
+        "teacher_displacement_energy": 0.002667058724910021,
+        "relative_local_mse": 0.006461220463590786,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 1.59473238454666e-05,
+        "teacher_displacement_energy": 0.00258406950160861,
+        "relative_local_mse": 0.006171398964129728,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 1.616469853615854e-05,
+        "teacher_displacement_energy": 0.002594830933958292,
+        "relative_local_mse": 0.0062295767807500485,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 1.6464065993204713e-05,
+        "teacher_displacement_energy": 0.0026066037826240063,
+        "relative_local_mse": 0.0063162902252181675,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 1.7299744285992347e-05,
+        "teacher_displacement_energy": 0.0026325765065848827,
+        "relative_local_mse": 0.0065714117871675795,
+        "denominator_floor": 1e-12
+      }
+    ],
+    "rollout_error": [
+      {
+        "t": 1.0,
+        "rollout_mse": 0.0
+      },
+      {
+        "t": 0.875,
+        "rollout_mse": 1.2423006410244852e-06
+      },
+      {
+        "t": 0.75,
+        "rollout_mse": 1.606441401236225e-06
+      },
+      {
+        "t": 0.625,
+        "rollout_mse": 3.94083645005594e-06
+      },
+      {
+        "t": 0.5,
+        "rollout_mse": 2.255502749903826e-06
+      },
+      {
+        "t": 0.375,
+        "rollout_mse": 2.4839755496941507e-06
+      },
+      {
+        "t": 0.25,
+        "rollout_mse": 4.651442850445164e-06
+      },
+      {
+        "t": 0.125,
+        "rollout_mse": 1.5139305105549283e-05
+      },
+      {
+        "t": 0.0,
+        "rollout_mse": 4.297355189919472e-05
+      }
+    ],
+    "final_rollout_mse": 4.297355189919472e-05,
+    "rhos": [
+      0.0,
+      0.05,
+      0.1,
+      0.2
+    ],
+    "seed": 730003,
+    "n_states": 128,
+    "noise_definition": "independent coordinate Gaussian eta; delta=rho_eval*H",
+    "teacher_targets_recomputed_from_perturbed_anchor": true,
+    "student_rollout_states_are_method_dependent": true,
+    "teacher_rollout_nfe": 32,
+    "student_rollout_nfe": 8,
+    "jacobian": {
+      "rows": [
+        {
+          "zeta": 0.001,
+          "direction": 0,
+          "jacobian_action_mse": 3.2442992505821167e-06,
+          "teacher_jacobian_action_energy": 0.3621673882007599,
+          "relative_jacobian_action_mse": 8.958010456710994e-06
+        },
+        {
+          "zeta": 0.001,
+          "direction": 1,
+          "jacobian_action_mse": 3.21837705996586e-06,
+          "teacher_jacobian_action_energy": 0.36220425367355347,
+          "relative_jacobian_action_mse": 8.885530822248462e-06
+        },
+        {
+          "zeta": 0.001,
+          "direction": 2,
+          "jacobian_action_mse": 3.092340875809896e-06,
+          "teacher_jacobian_action_energy": 0.3630717992782593,
+          "relative_jacobian_action_mse": 8.517160743293964e-06
+        },
+        {
+          "zeta": 0.001,
+          "direction": 3,
+          "jacobian_action_mse": 3.2602401915937662e-06,
+          "teacher_jacobian_action_energy": 0.3624029755592346,
+          "relative_jacobian_action_mse": 8.996173904374804e-06
+        },
+        {
+          "zeta": 0.0005,
+          "direction": 0,
+          "jacobian_action_mse": 3.236131533412845e-06,
+          "teacher_jacobian_action_energy": 0.36216339468955994,
+          "relative_jacobian_action_mse": 8.93555665996228e-06
+        },
+        {
+          "zeta": 0.0005,
+          "direction": 1,
+          "jacobian_action_mse": 3.2159873626369517e-06,
+          "teacher_jacobian_action_energy": 0.36220264434814453,
+          "relative_jacobian_action_mse": 8.878972621596285e-06
+        },
+        {
+          "zeta": 0.0005,
+          "direction": 2,
+          "jacobian_action_mse": 3.0710007195011713e-06,
+          "teacher_jacobian_action_energy": 0.36306077241897583,
+          "relative_jacobian_action_mse": 8.458640957104572e-06
+        },
+        {
+          "zeta": 0.0005,
+          "direction": 3,
+          "jacobian_action_mse": 3.261048505009967e-06,
+          "teacher_jacobian_action_energy": 0.3623918890953064,
+          "relative_jacobian_action_mse": 8.99867961490809e-06
+        }
+      ],
+      "seed": 730003,
+      "zeta": 0.001,
+      "n_directions": 4,
+      "teacher_zeta_halving_mse": 1.719360431806649e-09,
+      "student_zeta_halving_mse": 1.584703923640518e-09,
+      "map_evaluations_per_model": 16,
+      "n_states": 64,
+      "direction_norm": "unit L2 per complete state"
+    }
+  },
+  {
+    "method": "E0",
+    "student_seed": 101,
+    "local_error": [
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.0,
+        "local_mse": 1.2518121366156265e-06,
+        "teacher_displacement_energy": 0.014439046382904053,
+        "relative_local_mse": 8.669631660008947e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.05,
+        "local_mse": 1.253513687515806e-06,
+        "teacher_displacement_energy": 0.014445878565311432,
+        "relative_local_mse": 8.677310153539851e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.1,
+        "local_mse": 1.2554305612866301e-06,
+        "teacher_displacement_energy": 0.014453964307904243,
+        "relative_local_mse": 8.685717873262561e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.2,
+        "local_mse": 1.2598879948200192e-06,
+        "teacher_displacement_energy": 0.01447390764951706,
+        "relative_local_mse": 8.704546314153504e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 1.2518121366156265e-06,
+        "teacher_displacement_energy": 0.014439046382904053,
+        "relative_local_mse": 8.669631660008947e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 1.253513687515806e-06,
+        "teacher_displacement_energy": 0.014445878565311432,
+        "relative_local_mse": 8.677310153539851e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 1.2554305612866301e-06,
+        "teacher_displacement_energy": 0.014453964307904243,
+        "relative_local_mse": 8.685717873262561e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 1.2598879948200192e-06,
+        "teacher_displacement_energy": 0.01447390764951706,
+        "relative_local_mse": 8.704546314153504e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 1.2518121366156265e-06,
+        "teacher_displacement_energy": 0.014439046382904053,
+        "relative_local_mse": 8.669631660008947e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 1.253513687515806e-06,
+        "teacher_displacement_energy": 0.014445878565311432,
+        "relative_local_mse": 8.677310153539851e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 1.2554305612866301e-06,
+        "teacher_displacement_energy": 0.014453964307904243,
+        "relative_local_mse": 8.685717873262561e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 1.2598879948200192e-06,
+        "teacher_displacement_energy": 0.01447390764951706,
+        "relative_local_mse": 8.704546314153504e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.0,
+        "local_mse": 1.2537575457827188e-06,
+        "teacher_displacement_energy": 0.012824688106775284,
+        "relative_local_mse": 9.776125043698791e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.05,
+        "local_mse": 1.253892264685419e-06,
+        "teacher_displacement_energy": 0.012822304852306843,
+        "relative_local_mse": 9.778992771801342e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.1,
+        "local_mse": 1.2543572438517003e-06,
+        "teacher_displacement_energy": 0.012821437790989876,
+        "relative_local_mse": 9.783280660872418e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.2,
+        "local_mse": 1.2564097460199264e-06,
+        "teacher_displacement_energy": 0.012824233621358871,
+        "relative_local_mse": 9.797152665149246e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 1.256290261153481e-06,
+        "teacher_displacement_energy": 0.012886473909020424,
+        "relative_local_mse": 9.74890625645925e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 1.2562716165120946e-06,
+        "teacher_displacement_energy": 0.012883642688393593,
+        "relative_local_mse": 9.750903893382764e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 1.2565759561766754e-06,
+        "teacher_displacement_energy": 0.012882322072982788,
+        "relative_local_mse": 9.754265954986532e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 1.258452243746433e-06,
+        "teacher_displacement_energy": 0.012884197756648064,
+        "relative_local_mse": 9.767408631221058e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 1.2561406492750393e-06,
+        "teacher_displacement_energy": 0.012886306270956993,
+        "relative_local_mse": 9.74787206560591e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 1.2561596349769388e-06,
+        "teacher_displacement_energy": 0.012883495539426804,
+        "relative_local_mse": 9.75014607745831e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 1.2565251381602138e-06,
+        "teacher_displacement_energy": 0.012882191687822342,
+        "relative_local_mse": 9.75397019862714e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 1.2584266642079456e-06,
+        "teacher_displacement_energy": 0.012884102761745453,
+        "relative_local_mse": 9.767282110977686e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.0,
+        "local_mse": 5.815618351334706e-06,
+        "teacher_displacement_energy": 0.01123189926147461,
+        "relative_local_mse": 0.000517776932996743,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.05,
+        "local_mse": 5.815219083160628e-06,
+        "teacher_displacement_energy": 0.01121966727077961,
+        "relative_local_mse": 0.0005183058412352143,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.1,
+        "local_mse": 5.815445547341369e-06,
+        "teacher_displacement_energy": 0.01120910607278347,
+        "relative_local_mse": 0.0005188143915830806,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.2,
+        "local_mse": 5.8172663557343185e-06,
+        "teacher_displacement_energy": 0.01119300164282322,
+        "relative_local_mse": 0.0005197235327365703,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 6.03364105700166e-06,
+        "teacher_displacement_energy": 0.011418779380619526,
+        "relative_local_mse": 0.0005283963246756682,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 6.031331395206507e-06,
+        "teacher_displacement_energy": 0.011407090350985527,
+        "relative_local_mse": 0.0005287353049400038,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 6.02951695327647e-06,
+        "teacher_displacement_energy": 0.011397089809179306,
+        "relative_local_mse": 0.000529040049190474,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 6.027238669048529e-06,
+        "teacher_displacement_energy": 0.011382155120372772,
+        "relative_local_mse": 0.000529534047402012,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 6.004604983900208e-06,
+        "teacher_displacement_energy": 0.011402210220694542,
+        "relative_local_mse": 0.0005266176353249563,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 6.002293048368301e-06,
+        "teacher_displacement_energy": 0.011390481144189835,
+        "relative_local_mse": 0.0005269569364442527,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 6.00047133048065e-06,
+        "teacher_displacement_energy": 0.01138044148683548,
+        "relative_local_mse": 0.0005272617356208718,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 5.998201231705025e-06,
+        "teacher_displacement_energy": 0.011365432292222977,
+        "relative_local_mse": 0.0005277583005627875,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.0,
+        "local_mse": 4.863260073761921e-06,
+        "teacher_displacement_energy": 0.008979937061667442,
+        "relative_local_mse": 0.0005415695054836928,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.05,
+        "local_mse": 4.8614970182825346e-06,
+        "teacher_displacement_energy": 0.008987669833004475,
+        "relative_local_mse": 0.0005409073885235715,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.1,
+        "local_mse": 4.8609522309561726e-06,
+        "teacher_displacement_energy": 0.008997220546007156,
+        "relative_local_mse": 0.0005402726548826678,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.2,
+        "local_mse": 4.863598405790981e-06,
+        "teacher_displacement_energy": 0.009021775797009468,
+        "relative_local_mse": 0.000539095463600765,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 5.2628620323957875e-06,
+        "teacher_displacement_energy": 0.009253202006220818,
+        "relative_local_mse": 0.0005687611735761986,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 5.263900675345212e-06,
+        "teacher_displacement_energy": 0.009261365979909897,
+        "relative_local_mse": 0.0005683719536366302,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 5.265574600343825e-06,
+        "teacher_displacement_energy": 0.009271355345845222,
+        "relative_local_mse": 0.0005679401127369678,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 5.270661858958192e-06,
+        "teacher_displacement_energy": 0.009296824224293232,
+        "relative_local_mse": 0.000566931430755203,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 5.302879799273796e-06,
+        "teacher_displacement_energy": 0.009267715737223625,
+        "relative_local_mse": 0.0005721884388377245,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 5.303896159603028e-06,
+        "teacher_displacement_energy": 0.009275870397686958,
+        "relative_local_mse": 0.0005717949833500923,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 5.305500963004306e-06,
+        "teacher_displacement_energy": 0.009285850450396538,
+        "relative_local_mse": 0.0005713532639089339,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 5.310452252160758e-06,
+        "teacher_displacement_energy": 0.00931129977107048,
+        "relative_local_mse": 0.0005703234116315254,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.0,
+        "local_mse": 5.944660870227381e-07,
+        "teacher_displacement_energy": 0.0056425887160003185,
+        "relative_local_mse": 0.00010535343207578634,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.05,
+        "local_mse": 5.909395213166135e-07,
+        "teacher_displacement_energy": 0.005629619583487511,
+        "relative_local_mse": 0.00010496970755358403,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.1,
+        "local_mse": 5.876356112821668e-07,
+        "teacher_displacement_energy": 0.005618574563413858,
+        "relative_local_mse": 0.0001045880239996527,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.2,
+        "local_mse": 5.816648354084464e-07,
+        "teacher_displacement_energy": 0.00560226384550333,
+        "relative_local_mse": 0.00010382674780219803,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 7.138905289139075e-07,
+        "teacher_displacement_energy": 0.0058880941942334175,
+        "relative_local_mse": 0.00012124305511502611,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 7.150921419452061e-07,
+        "teacher_displacement_energy": 0.005876895040273666,
+        "relative_local_mse": 0.00012167856275205943,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 7.16499471309362e-07,
+        "teacher_displacement_energy": 0.005867557134479284,
+        "relative_local_mse": 0.00012211205700904482,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 7.199186029538396e-07,
+        "teacher_displacement_energy": 0.005854466930031776,
+        "relative_local_mse": 0.00012296911256955926,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 7.099711751834548e-07,
+        "teacher_displacement_energy": 0.005878771655261517,
+        "relative_local_mse": 0.00012076862596764217,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 7.111125910341798e-07,
+        "teacher_displacement_energy": 0.005867581814527512,
+        "relative_local_mse": 0.00012119346836775932,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 7.124535272851062e-07,
+        "teacher_displacement_energy": 0.005858253687620163,
+        "relative_local_mse": 0.00012161534226328989,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 7.157414074754342e-07,
+        "teacher_displacement_energy": 0.005845189094543457,
+        "relative_local_mse": 0.00012244965832561107,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.0,
+        "local_mse": 3.2444193038827507e-06,
+        "teacher_displacement_energy": 0.0026248940266668797,
+        "relative_local_mse": 0.0012360191576962637,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.05,
+        "local_mse": 3.231607479392551e-06,
+        "teacher_displacement_energy": 0.002610284835100174,
+        "relative_local_mse": 0.0012380286763871624,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.1,
+        "local_mse": 3.2199584438785678e-06,
+        "teacher_displacement_energy": 0.002598231192678213,
+        "relative_local_mse": 0.0012392886564337982,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.2,
+        "local_mse": 3.2006396395445336e-06,
+        "teacher_displacement_energy": 0.0025817151181399822,
+        "relative_local_mse": 0.0012397338564025843,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 3.3195628930116072e-06,
+        "teacher_displacement_energy": 0.002901355968788266,
+        "relative_local_mse": 0.0011441418870080952,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 3.3239361982850824e-06,
+        "teacher_displacement_energy": 0.002890720497816801,
+        "relative_local_mse": 0.001149864264219064,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 3.331350853841286e-06,
+        "teacher_displacement_energy": 0.00288247293792665,
+        "relative_local_mse": 0.001155726671362095,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 3.3545290989422938e-06,
+        "teacher_displacement_energy": 0.002873107325285673,
+        "relative_local_mse": 0.0011675613609765702,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 3.295202986919321e-06,
+        "teacher_displacement_energy": 0.0028818196151405573,
+        "relative_local_mse": 0.0011434452627107272,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 3.299292529845843e-06,
+        "teacher_displacement_energy": 0.0028711878694593906,
+        "relative_local_mse": 0.001149103674106515,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 3.3064848139474634e-06,
+        "teacher_displacement_energy": 0.002862948924303055,
+        "relative_local_mse": 0.001154922739235518,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 3.329476385260932e-06,
+        "teacher_displacement_energy": 0.002853606129065156,
+        "relative_local_mse": 0.001166761015596666,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.0,
+        "local_mse": 6.000358098390279e-06,
+        "teacher_displacement_energy": 0.0019033863209187984,
+        "relative_local_mse": 0.0031524646533625396,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.05,
+        "local_mse": 6.009118806105107e-06,
+        "teacher_displacement_energy": 0.0018970505334436893,
+        "relative_local_mse": 0.0031676113525541346,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.1,
+        "local_mse": 6.031858902133536e-06,
+        "teacher_displacement_energy": 0.001892062253318727,
+        "relative_local_mse": 0.0031879812049278484,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.2,
+        "local_mse": 6.114772986620665e-06,
+        "teacher_displacement_energy": 0.00188668561168015,
+        "relative_local_mse": 0.0032410132079055166,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 6.800685696362052e-06,
+        "teacher_displacement_energy": 0.001980906818062067,
+        "relative_local_mse": 0.0034331174158990494,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 6.8141262090648524e-06,
+        "teacher_displacement_energy": 0.001971290446817875,
+        "relative_local_mse": 0.0034566830169874005,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 6.832339295215206e-06,
+        "teacher_displacement_energy": 0.0019630230963230133,
+        "relative_local_mse": 0.003480519056557729,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 6.8766853473789524e-06,
+        "teacher_displacement_energy": 0.0019500614143908024,
+        "relative_local_mse": 0.0035263942441152414,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 6.735937859048136e-06,
+        "teacher_displacement_energy": 0.001973076956346631,
+        "relative_local_mse": 0.0034139255630051377,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 6.750950888090301e-06,
+        "teacher_displacement_energy": 0.001963531132787466,
+        "relative_local_mse": 0.00343816849927229,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 6.771421794837806e-06,
+        "teacher_displacement_energy": 0.001955364365130663,
+        "relative_local_mse": 0.0034629974421086073,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 6.821626811870374e-06,
+        "teacher_displacement_energy": 0.0019426841754466295,
+        "relative_local_mse": 0.0035114440618234095,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.0,
+        "local_mse": 1.5042412087495904e-05,
+        "teacher_displacement_energy": 0.0026563394349068403,
+        "relative_local_mse": 0.005662835061598011,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.05,
+        "local_mse": 1.4897255823598243e-05,
+        "teacher_displacement_energy": 0.0026561145205050707,
+        "relative_local_mse": 0.005608664727590688,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.1,
+        "local_mse": 1.4764658772037365e-05,
+        "teacher_displacement_energy": 0.0026548607274889946,
+        "relative_local_mse": 0.005561368481276979,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.2,
+        "local_mse": 1.456962309021037e-05,
+        "teacher_displacement_energy": 0.0026492534670978785,
+        "relative_local_mse": 0.005499520250197369,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 1.6662645066389814e-05,
+        "teacher_displacement_energy": 0.002620765706524253,
+        "relative_local_mse": 0.006357930060252647,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 1.6902273273444735e-05,
+        "teacher_displacement_energy": 0.002631208160892129,
+        "relative_local_mse": 0.0064237689456367085,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 1.722689557936974e-05,
+        "teacher_displacement_energy": 0.0026425013784319162,
+        "relative_local_mse": 0.006519162381513054,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 1.8122160327038728e-05,
+        "teacher_displacement_energy": 0.002667058724910021,
+        "relative_local_mse": 0.006794811136995163,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 1.6713574950699694e-05,
+        "teacher_displacement_energy": 0.0025836199056357145,
+        "relative_local_mse": 0.006469053328719893,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 1.694750608294271e-05,
+        "teacher_displacement_energy": 0.0025943820364773273,
+        "relative_local_mse": 0.006532386458377644,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 1.7268252122448757e-05,
+        "teacher_displacement_energy": 0.002606154652312398,
+        "relative_local_mse": 0.0066259506538213,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 1.8160259060095996e-05,
+        "teacher_displacement_energy": 0.0026321252807974815,
+        "relative_local_mse": 0.0068994660674334615,
+        "denominator_floor": 1e-12
+      }
+    ],
+    "rollout_error": [
+      {
+        "t": 1.0,
+        "rollout_mse": 0.0
+      },
+      {
+        "t": 0.875,
+        "rollout_mse": 1.2518121366156265e-06
+      },
+      {
+        "t": 0.75,
+        "rollout_mse": 1.692375803941104e-06
+      },
+      {
+        "t": 0.625,
+        "rollout_mse": 3.866530278173741e-06
+      },
+      {
+        "t": 0.5,
+        "rollout_mse": 2.4034486614255e-06
+      },
+      {
+        "t": 0.375,
+        "rollout_mse": 2.593250883364817e-06
+      },
+      {
+        "t": 0.25,
+        "rollout_mse": 4.784590601047967e-06
+      },
+      {
+        "t": 0.125,
+        "rollout_mse": 1.4801969882682897e-05
+      },
+      {
+        "t": 0.0,
+        "rollout_mse": 4.315672777011059e-05
+      }
+    ],
+    "final_rollout_mse": 4.315672777011059e-05,
+    "rhos": [
+      0.0,
+      0.05,
+      0.1,
+      0.2
+    ],
+    "seed": 730003,
+    "n_states": 128,
+    "noise_definition": "independent coordinate Gaussian eta; delta=rho_eval*H",
+    "teacher_targets_recomputed_from_perturbed_anchor": true,
+    "student_rollout_states_are_method_dependent": true,
+    "teacher_rollout_nfe": 32,
+    "student_rollout_nfe": 8,
+    "jacobian": {
+      "rows": [
+        {
+          "zeta": 0.001,
+          "direction": 0,
+          "jacobian_action_mse": 3.180988187523326e-06,
+          "teacher_jacobian_action_energy": 0.3621673882007599,
+          "relative_jacobian_action_mse": 8.783198849919673e-06
+        },
+        {
+          "zeta": 0.001,
+          "direction": 1,
+          "jacobian_action_mse": 3.1529639272775967e-06,
+          "teacher_jacobian_action_energy": 0.36220425367355347,
+          "relative_jacobian_action_mse": 8.70493346033228e-06
+        },
+        {
+          "zeta": 0.001,
+          "direction": 2,
+          "jacobian_action_mse": 3.064965767407557e-06,
+          "teacher_jacobian_action_energy": 0.3630717992782593,
+          "relative_jacobian_action_mse": 8.441762134928464e-06
+        },
+        {
+          "zeta": 0.001,
+          "direction": 3,
+          "jacobian_action_mse": 3.2146217563422397e-06,
+          "teacher_jacobian_action_energy": 0.3624029755592346,
+          "relative_jacobian_action_mse": 8.87029625345008e-06
+        },
+        {
+          "zeta": 0.0005,
+          "direction": 0,
+          "jacobian_action_mse": 3.1697159101895522e-06,
+          "teacher_jacobian_action_energy": 0.36216339468955994,
+          "relative_jacobian_action_mse": 8.752170861736528e-06
+        },
+        {
+          "zeta": 0.0005,
+          "direction": 1,
+          "jacobian_action_mse": 3.142825335089583e-06,
+          "teacher_jacobian_action_energy": 0.36220264434814453,
+          "relative_jacobian_action_mse": 8.676980646416098e-06
+        },
+        {
+          "zeta": 0.0005,
+          "direction": 2,
+          "jacobian_action_mse": 3.0428043373831315e-06,
+          "teacher_jacobian_action_energy": 0.36306077241897583,
+          "relative_jacobian_action_mse": 8.380977975421989e-06
+        },
+        {
+          "zeta": 0.0005,
+          "direction": 3,
+          "jacobian_action_mse": 3.2306711545970757e-06,
+          "teacher_jacobian_action_energy": 0.3623918890953064,
+          "relative_jacobian_action_mse": 8.914855027970653e-06
+        }
+      ],
+      "seed": 730003,
+      "zeta": 0.001,
+      "n_directions": 4,
+      "teacher_zeta_halving_mse": 1.719360431806649e-09,
+      "student_zeta_halving_mse": 1.5307357603688843e-09,
+      "map_evaluations_per_model": 16,
+      "n_states": 64,
+      "direction_norm": "unit L2 per complete state"
+    }
+  },
+  {
+    "method": "E1",
+    "student_seed": 101,
+    "local_error": [
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.0,
+        "local_mse": 1.2517785989984986e-06,
+        "teacher_displacement_energy": 0.014439046382904053,
+        "relative_local_mse": 8.669399389703565e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.05,
+        "local_mse": 1.253447521776252e-06,
+        "teacher_displacement_energy": 0.014445878565311432,
+        "relative_local_mse": 8.676852128510396e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.1,
+        "local_mse": 1.2553578017104883e-06,
+        "teacher_displacement_energy": 0.014453964307904243,
+        "relative_local_mse": 8.685214484886945e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.2,
+        "local_mse": 1.2598300145327812e-06,
+        "teacher_displacement_energy": 0.01447390764951706,
+        "relative_local_mse": 8.704145729262111e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 1.2517785989984986e-06,
+        "teacher_displacement_energy": 0.014439046382904053,
+        "relative_local_mse": 8.669399389703565e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 1.253447521776252e-06,
+        "teacher_displacement_energy": 0.014445878565311432,
+        "relative_local_mse": 8.676852128510396e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 1.2553578017104883e-06,
+        "teacher_displacement_energy": 0.014453964307904243,
+        "relative_local_mse": 8.685214484886945e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 1.2598300145327812e-06,
+        "teacher_displacement_energy": 0.01447390764951706,
+        "relative_local_mse": 8.704145729262111e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 1.2517785989984986e-06,
+        "teacher_displacement_energy": 0.014439046382904053,
+        "relative_local_mse": 8.669399389703565e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 1.253447521776252e-06,
+        "teacher_displacement_energy": 0.014445878565311432,
+        "relative_local_mse": 8.676852128510396e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 1.2553578017104883e-06,
+        "teacher_displacement_energy": 0.014453964307904243,
+        "relative_local_mse": 8.685214484886945e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 0,
+        "t": 1.0,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 1.2598300145327812e-06,
+        "teacher_displacement_energy": 0.01447390764951706,
+        "relative_local_mse": 8.704145729262111e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.0,
+        "local_mse": 1.2500790944613982e-06,
+        "teacher_displacement_energy": 0.012824688106775284,
+        "relative_local_mse": 9.747442464514839e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.05,
+        "local_mse": 1.2502464414865244e-06,
+        "teacher_displacement_energy": 0.012822304852306843,
+        "relative_local_mse": 9.750559325233905e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.1,
+        "local_mse": 1.2506701523307129e-06,
+        "teacher_displacement_energy": 0.012821437790989876,
+        "relative_local_mse": 9.754523421777295e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.2,
+        "local_mse": 1.2527804074125015e-06,
+        "teacher_displacement_energy": 0.012824233621358871,
+        "relative_local_mse": 9.768852037489281e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 1.2527060562206316e-06,
+        "teacher_displacement_energy": 0.012886473909020424,
+        "relative_local_mse": 9.721092558482952e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 1.2526886621344602e-06,
+        "teacher_displacement_energy": 0.012883642688393593,
+        "relative_local_mse": 9.723093789794109e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 1.2530335880001076e-06,
+        "teacher_displacement_energy": 0.012882322072982788,
+        "relative_local_mse": 9.726768053936557e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 1.254900553249172e-06,
+        "teacher_displacement_energy": 0.012884197756648064,
+        "relative_local_mse": 9.739842378635185e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 1.2525561032816768e-06,
+        "teacher_displacement_energy": 0.012886324897408485,
+        "relative_local_mse": 9.72004130932298e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 1.2526039654403576e-06,
+        "teacher_displacement_energy": 0.012883514165878296,
+        "relative_local_mse": 9.722533381131769e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 1.2529965260910103e-06,
+        "teacher_displacement_energy": 0.012882208451628685,
+        "relative_local_mse": 9.726566145827234e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 1,
+        "t": 0.875,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 1.2549187431432074e-06,
+        "teacher_displacement_energy": 0.012884119525551796,
+        "relative_local_mse": 9.740042698722652e-05,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.0,
+        "local_mse": 5.814780706714373e-06,
+        "teacher_displacement_energy": 0.01123189926147461,
+        "relative_local_mse": 0.0005177023557056871,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.05,
+        "local_mse": 5.814401902171085e-06,
+        "teacher_displacement_energy": 0.01121966727077961,
+        "relative_local_mse": 0.0005182330065450386,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.1,
+        "local_mse": 5.814596988784615e-06,
+        "teacher_displacement_energy": 0.01120910607278347,
+        "relative_local_mse": 0.000518738688975643,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.2,
+        "local_mse": 5.816462362417951e-06,
+        "teacher_displacement_energy": 0.01119300164282322,
+        "relative_local_mse": 0.0005196517027358231,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 6.032120836607646e-06,
+        "teacher_displacement_energy": 0.011418779380619526,
+        "relative_local_mse": 0.0005282631913219759,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 6.029809810570441e-06,
+        "teacher_displacement_energy": 0.011407090350985527,
+        "relative_local_mse": 0.0005286019155664433,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 6.028007192071527e-06,
+        "teacher_displacement_energy": 0.011397089809179306,
+        "relative_local_mse": 0.0005289075801803828,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 6.025766197126359e-06,
+        "teacher_displacement_energy": 0.011382155120372772,
+        "relative_local_mse": 0.0005294046806953911,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 6.003227099427022e-06,
+        "teacher_displacement_energy": 0.011402251198887825,
+        "relative_local_mse": 0.0005264948995346267,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 6.000858775223605e-06,
+        "teacher_displacement_energy": 0.011390522122383118,
+        "relative_local_mse": 0.0005268291225589675,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 5.9990115914843045e-06,
+        "teacher_displacement_energy": 0.011380483396351337,
+        "relative_local_mse": 0.0005271315270674381,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 2,
+        "t": 0.75,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 5.996809704811312e-06,
+        "teacher_displacement_energy": 0.011365472339093685,
+        "relative_local_mse": 0.0005276340063918114,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.0,
+        "local_mse": 4.85271721117897e-06,
+        "teacher_displacement_energy": 0.008979937061667442,
+        "relative_local_mse": 0.0005403954591055777,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.05,
+        "local_mse": 4.8508832151128445e-06,
+        "teacher_displacement_energy": 0.008987669833004475,
+        "relative_local_mse": 0.0005397264591651393,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.1,
+        "local_mse": 4.850291588809341e-06,
+        "teacher_displacement_energy": 0.008997220546007156,
+        "relative_local_mse": 0.0005390877731636616,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.2,
+        "local_mse": 4.85279451822862e-06,
+        "teacher_displacement_energy": 0.009021775797009468,
+        "relative_local_mse": 0.0005378979291235791,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 5.251627953839488e-06,
+        "teacher_displacement_energy": 0.009253202006220818,
+        "relative_local_mse": 0.0005675470988646829,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 5.252677055977983e-06,
+        "teacher_displacement_energy": 0.009261365979909897,
+        "relative_local_mse": 0.0005671600784778712,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 5.254341431282228e-06,
+        "teacher_displacement_energy": 0.009271355345845222,
+        "relative_local_mse": 0.000566728513284399,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 5.259339559415821e-06,
+        "teacher_displacement_energy": 0.009296824224293232,
+        "relative_local_mse": 0.0005657135633125998,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 5.291599791235058e-06,
+        "teacher_displacement_energy": 0.00926775299012661,
+        "relative_local_mse": 0.0005709690144819848,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 5.2925615818821825e-06,
+        "teacher_displacement_energy": 0.009275909513235092,
+        "relative_local_mse": 0.000570570635076876,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 5.294149559631478e-06,
+        "teacher_displacement_energy": 0.009285889565944672,
+        "relative_local_mse": 0.0005701284214112764,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 3,
+        "t": 0.625,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 5.298990799929015e-06,
+        "teacher_displacement_energy": 0.009311340749263763,
+        "relative_local_mse": 0.0005690899885011727,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.0,
+        "local_mse": 5.940448772889795e-07,
+        "teacher_displacement_energy": 0.0056425887160003185,
+        "relative_local_mse": 0.00010527878376187253,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.05,
+        "local_mse": 5.905169473408023e-07,
+        "teacher_displacement_energy": 0.005629619583487511,
+        "relative_local_mse": 0.00010489464493708846,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.1,
+        "local_mse": 5.872085466762655e-07,
+        "teacher_displacement_energy": 0.005618574563413858,
+        "relative_local_mse": 0.00010451201457749744,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.2,
+        "local_mse": 5.81236577090749e-07,
+        "teacher_displacement_energy": 0.00560226384550333,
+        "relative_local_mse": 0.00010375030400563513,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 7.132960035960423e-07,
+        "teacher_displacement_energy": 0.0058880941942334175,
+        "relative_local_mse": 0.00012114208435976077,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 7.144950018300733e-07,
+        "teacher_displacement_energy": 0.005876895040273666,
+        "relative_local_mse": 0.00012157695465611069,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 7.158997163969616e-07,
+        "teacher_displacement_energy": 0.005867557134479284,
+        "relative_local_mse": 0.00012200984157276451,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 7.193051487774937e-07,
+        "teacher_displacement_energy": 0.005854466930031776,
+        "relative_local_mse": 0.00012286432861848782,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 7.094142802088754e-07,
+        "teacher_displacement_energy": 0.005878887139260769,
+        "relative_local_mse": 0.00012067152564831846,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 7.105600161594339e-07,
+        "teacher_displacement_energy": 0.005867694970220327,
+        "relative_local_mse": 0.0001210969588169906,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 7.118978828657418e-07,
+        "teacher_displacement_energy": 0.005858367774635553,
+        "relative_local_mse": 0.0001215181276170441,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 4,
+        "t": 0.5,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 7.151762702051201e-07,
+        "teacher_displacement_energy": 0.00584530271589756,
+        "relative_local_mse": 0.00012235059584853392,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.0,
+        "local_mse": 3.235469876017305e-06,
+        "teacher_displacement_energy": 0.0026248940266668797,
+        "relative_local_mse": 0.001232609714200821,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.05,
+        "local_mse": 3.222684654247132e-06,
+        "teacher_displacement_energy": 0.002610284835100174,
+        "relative_local_mse": 0.0012346103424852699,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.1,
+        "local_mse": 3.2110697247844655e-06,
+        "teacher_displacement_energy": 0.002598231192678213,
+        "relative_local_mse": 0.0012358675909338725,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.2,
+        "local_mse": 3.191786163370125e-06,
+        "teacher_displacement_energy": 0.0025817151181399822,
+        "relative_local_mse": 0.0012363045562012564,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 3.3093731417466188e-06,
+        "teacher_displacement_energy": 0.002901355968788266,
+        "relative_local_mse": 0.0011406298218307762,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 3.313831030027359e-06,
+        "teacher_displacement_energy": 0.002890720497816801,
+        "relative_local_mse": 0.001146368537715808,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 3.3213195820280816e-06,
+        "teacher_displacement_energy": 0.00288247293792665,
+        "relative_local_mse": 0.0011522465790839626,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 3.3446581255702768e-06,
+        "teacher_displacement_energy": 0.002873107325285673,
+        "relative_local_mse": 0.0011641257171754685,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 3.2851260129973525e-06,
+        "teacher_displacement_energy": 0.0028819215949624777,
+        "relative_local_mse": 0.0011399081844348804,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 3.2892658055061474e-06,
+        "teacher_displacement_energy": 0.002871289849281311,
+        "relative_local_mse": 0.0011455707985487625,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 3.2965122045425232e-06,
+        "teacher_displacement_energy": 0.002863051136955619,
+        "relative_local_mse": 0.0011513982974288815,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 5,
+        "t": 0.375,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 3.319684310554294e-06,
+        "teacher_displacement_energy": 0.0028537085745483637,
+        "relative_local_mse": 0.0011632877793345373,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.0,
+        "local_mse": 6.004419446981046e-06,
+        "teacher_displacement_energy": 0.0019033863209187984,
+        "relative_local_mse": 0.0031545984023267576,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.05,
+        "local_mse": 6.0132183534733485e-06,
+        "teacher_displacement_energy": 0.0018970505334436893,
+        "relative_local_mse": 0.003169772363711175,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.1,
+        "local_mse": 6.036012109689182e-06,
+        "teacher_displacement_energy": 0.001892062253318727,
+        "relative_local_mse": 0.0031901762741166984,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.2,
+        "local_mse": 6.1190553424239624e-06,
+        "teacher_displacement_energy": 0.00188668561168015,
+        "relative_local_mse": 0.00324328298500923,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 6.804355052736355e-06,
+        "teacher_displacement_energy": 0.001980906818062067,
+        "relative_local_mse": 0.003434969777827862,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 6.817667781433556e-06,
+        "teacher_displacement_energy": 0.001971290446817875,
+        "relative_local_mse": 0.003458479592613494,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 6.835760359535925e-06,
+        "teacher_displacement_energy": 0.0019630230963230133,
+        "relative_local_mse": 0.003482261809522341,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 6.87981855662656e-06,
+        "teacher_displacement_energy": 0.0019500614143908024,
+        "relative_local_mse": 0.003528000967485329,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 6.7399473664409015e-06,
+        "teacher_displacement_energy": 0.0019731204956769943,
+        "relative_local_mse": 0.0034158822946737315,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 6.754829882993363e-06,
+        "teacher_displacement_energy": 0.001963574904948473,
+        "relative_local_mse": 0.0034400673312590634,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 6.775169822503813e-06,
+        "teacher_displacement_energy": 0.00195540813729167,
+        "relative_local_mse": 0.0034648366718406593,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 6,
+        "t": 0.25,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 6.824988759035477e-06,
+        "teacher_displacement_energy": 0.001942727598361671,
+        "relative_local_mse": 0.0035130961050798292,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.0,
+        "local_mse": 1.497728044341784e-05,
+        "teacher_displacement_energy": 0.0026563394349068403,
+        "relative_local_mse": 0.005638315738795295,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.05,
+        "local_mse": 1.4831379303359427e-05,
+        "teacher_displacement_energy": 0.0026561145205050707,
+        "relative_local_mse": 0.005583862890271456,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.1,
+        "local_mse": 1.469781363994116e-05,
+        "teacher_displacement_energy": 0.0026548607274889946,
+        "relative_local_mse": 0.005536190086265867,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "interpolant",
+        "rho_eval": 0.2,
+        "local_mse": 1.4500183169730008e-05,
+        "teacher_displacement_energy": 0.0026492534670978785,
+        "relative_local_mse": 0.005473309122669269,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 1.662434806348756e-05,
+        "teacher_displacement_energy": 0.002620765706524253,
+        "relative_local_mse": 0.00634331715425845,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 1.6859539755387232e-05,
+        "teacher_displacement_energy": 0.002631208160892129,
+        "relative_local_mse": 0.006407527920432905,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 1.7179056158056483e-05,
+        "teacher_displacement_energy": 0.0026425013784319162,
+        "relative_local_mse": 0.006501058541831561,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "teacher_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 1.8062293747789226e-05,
+        "teacher_displacement_energy": 0.002667058724910021,
+        "relative_local_mse": 0.006772364469926922,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.0,
+        "local_mse": 1.6674011931172572e-05,
+        "teacher_displacement_energy": 0.0025836294516921043,
+        "relative_local_mse": 0.006453716464740023,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.05,
+        "local_mse": 1.6903662981349044e-05,
+        "teacher_displacement_energy": 0.002594392281025648,
+        "relative_local_mse": 0.006515461483976691,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.1,
+        "local_mse": 1.721920125419274e-05,
+        "teacher_displacement_energy": 0.0026061655953526497,
+        "relative_local_mse": 0.006607101745529239,
+        "denominator_floor": 1e-12
+      },
+      {
+        "interval": 7,
+        "t": 0.125,
+        "H": 0.125,
+        "source": "student_rollout",
+        "rho_eval": 0.2,
+        "local_mse": 1.8099239241564646e-05,
+        "teacher_displacement_energy": 0.0026321373879909515,
+        "relative_local_mse": 0.006876251720043903,
+        "denominator_floor": 1e-12
+      }
+    ],
+    "rollout_error": [
+      {
+        "t": 1.0,
+        "rollout_mse": 0.0
+      },
+      {
+        "t": 0.875,
+        "rollout_mse": 1.2517785989984986e-06
+      },
+      {
+        "t": 0.75,
+        "rollout_mse": 1.6838844203448389e-06
+      },
+      {
+        "t": 0.625,
+        "rollout_mse": 3.865668986691162e-06
+      },
+      {
+        "t": 0.5,
+        "rollout_mse": 2.3889988369774073e-06
+      },
+      {
+        "t": 0.375,
+        "rollout_mse": 2.5781423573789652e-06
+      },
+      {
+        "t": 0.25,
+        "rollout_mse": 4.763455763168167e-06
+      },
+      {
+        "t": 0.125,
+        "rollout_mse": 1.4773522707400844e-05
+      },
+      {
+        "t": 0.0,
+        "rollout_mse": 4.309318683226593e-05
+      }
+    ],
+    "final_rollout_mse": 4.309318683226593e-05,
+    "rhos": [
+      0.0,
+      0.05,
+      0.1,
+      0.2
+    ],
+    "seed": 730003,
+    "n_states": 128,
+    "noise_definition": "independent coordinate Gaussian eta; delta=rho_eval*H",
+    "teacher_targets_recomputed_from_perturbed_anchor": true,
+    "student_rollout_states_are_method_dependent": true,
+    "teacher_rollout_nfe": 32,
+    "student_rollout_nfe": 8,
+    "jacobian": {
+      "rows": [
+        {
+          "zeta": 0.001,
+          "direction": 0,
+          "jacobian_action_mse": 3.1770994155522203e-06,
+          "teacher_jacobian_action_energy": 0.3621673882007599,
+          "relative_jacobian_action_mse": 8.77246135091286e-06
+        },
+        {
+          "zeta": 0.001,
+          "direction": 1,
+          "jacobian_action_mse": 3.1559673061565263e-06,
+          "teacher_jacobian_action_energy": 0.36220425367355347,
+          "relative_jacobian_action_mse": 8.713225408448484e-06
+        },
+        {
+          "zeta": 0.001,
+          "direction": 2,
+          "jacobian_action_mse": 3.069823378609726e-06,
+          "teacher_jacobian_action_energy": 0.3630717992782593,
+          "relative_jacobian_action_mse": 8.455141337642158e-06
+        },
+        {
+          "zeta": 0.001,
+          "direction": 3,
+          "jacobian_action_mse": 3.212531055396539e-06,
+          "teacher_jacobian_action_energy": 0.3624029755592346,
+          "relative_jacobian_action_mse": 8.864527258472943e-06
+        },
+        {
+          "zeta": 0.0005,
+          "direction": 0,
+          "jacobian_action_mse": 3.1521908567810897e-06,
+          "teacher_jacobian_action_energy": 0.36216339468955994,
+          "relative_jacobian_action_mse": 8.70378095357509e-06
+        },
+        {
+          "zeta": 0.0005,
+          "direction": 1,
+          "jacobian_action_mse": 3.154044406983303e-06,
+          "teacher_jacobian_action_energy": 0.36220264434814453,
+          "relative_jacobian_action_mse": 8.707955218437544e-06
+        },
+        {
+          "zeta": 0.0005,
+          "direction": 2,
+          "jacobian_action_mse": 3.044989853151492e-06,
+          "teacher_jacobian_action_energy": 0.36306077241897583,
+          "relative_jacobian_action_mse": 8.386997672217649e-06
+        },
+        {
+          "zeta": 0.0005,
+          "direction": 3,
+          "jacobian_action_mse": 3.2221237233898137e-06,
+          "teacher_jacobian_action_energy": 0.3623918890953064,
+          "relative_jacobian_action_mse": 8.891268873135345e-06
+        }
+      ],
+      "seed": 730003,
+      "zeta": 0.001,
+      "n_directions": 4,
+      "teacher_zeta_halving_mse": 1.719360431806649e-09,
+      "student_zeta_halving_mse": 1.6778952671714364e-09,
+      "map_evaluations_per_model": 16,
+      "n_states": 64,
+      "direction_norm": "unit L2 per complete state"
+    }
+  }
+]

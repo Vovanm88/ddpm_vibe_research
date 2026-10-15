@@ -1,0 +1,37 @@
+{
+  "status": "prepared_not_started",
+  "protocol_id": "rays_stress_32_8_v1",
+  "prepared_utc": "2026-10-15T03:39:35.350784+00:00",
+  "source_teacher_directory": "replication/artifacts/rays_cpu_pilot_v1/teacher",
+  "snapshot_teacher_directory": "replication/artifacts/rays_stress_32_8_v1/teacher",
+  "source_teacher_run_id": "rays_cpu_pilot_v1/teacher",
+  "teacher_sha256": "5fcbe5ceee197bf2a257b1347586335d7feb8a15789ba406f918a077cf3e6930",
+  "teacher_is_reused": true,
+  "new_teacher_updates": 0,
+  "student_runs_started": 0,
+  "source_config_path": "replication/configs/rays_cpu.yaml",
+  "source_config_file_sha256": "7d2dabf0fe8b6130c72b1d26b352139ead52f726d92443930e9de26d1f016806",
+  "derived_config_path": "replication/configs/rays_stress_32_8.yaml",
+  "derived_config_sha256": "4727422be6c58b193a43c4a38866b36bcfd5b6f457c1906dd7f0851537fa62d6",
+  "copied_teacher_files_sha256": {
+    "ema_model/config.json": "e4a11e67cfc37ee2de4cb207177bca84645f8fedf63a93c397fc42e2cab10806",
+    "ema_model/diffusion_pytorch_model.safetensors": "90e80bea285daa19ca425c5c1f957c4c24485c9604a91ae2e0e58133f2b158fa",
+    "history.json": "9a971b712021b294ea862ed20cdc3b6253c0339b31126894ca9f7148141ecf5a",
+    "live_model/config.json": "e4a11e67cfc37ee2de4cb207177bca84645f8fedf63a93c397fc42e2cab10806",
+    "live_model/diffusion_pytorch_model.safetensors": "ba90294475ee75b3b91d8301873ac5c20796c62b85dd844316f94454d8adef5f",
+    "manifest.json": "1dadd87c5799b3e7f17c702be7dbd24c6e3697e29f3f852e6c64745d87d97433",
+    "training.pt": "276df3ac7453737c864ee37441bf29dddfa36a39a78f37270792639f867b3d17"
+  },
+  "changes_from_main": {
+    "protocol_id": "rays_stress_32_8_v1",
+    "scope": "cpu_stress_pilot",
+    "output_dir": "replication/artifacts/rays_stress_32_8_v1",
+    "distillation.student_steps": 8
+  },
+  "execution": {
+    "status": "completed",
+    "student_runs_completed": 12,
+    "new_teacher_updates": 0,
+    "pipeline_timings": "pipeline_timings.json"
+  }
+}

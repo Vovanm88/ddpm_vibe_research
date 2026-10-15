@@ -1,0 +1,24 @@
+{
+  "device": "mps",
+  "network_dtype": "float32",
+  "ot_device_dtype": "cpu_float64_differentiable_bridge",
+  "loss_abs_error": 2.5543522852444767e-09,
+  "gradient_max_abs_error": 0.0,
+  "gradient_norm": 1.4077205657958984,
+  "teacher_grad_is_none": true,
+  "metrics": {
+    "device": "mps",
+    "source_dtype": "torch.float32",
+    "metric_dtype": "torch.float64_cpu",
+    "transport_max_abs_error": 0.0,
+    "mmd2_abs_error": 0.0,
+    "train_feature_mean_max_abs_error": 0.0,
+    "train_feature_std_max_abs_error": 0.0,
+    "train_bandwidth_abs_error": 0.0,
+    "paired_mse_abs_error": 0.0,
+    "ssim_abs_error": 0.0,
+    "passed": true
+  },
+  "passed": true,
+  "wall_seconds": 0.8687880407087505
+}

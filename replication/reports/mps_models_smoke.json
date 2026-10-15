@@ -1,0 +1,27 @@
+{
+  "device": "mps",
+  "batch_size": 2,
+  "full_mnist_training": false,
+  "output_dir": "/var/folders/3m/89w4nv_10cz44ph0ywr153mrfj17hk/T/recheck-mps-model-smoke-4ddild3m",
+  "torch": "2.14.1",
+  "unet": {
+    "loss": 2.2889060974121094,
+    "grad_norm": 13.646122932434082,
+    "teacher_unchanged": true,
+    "copy_init_sha256": "29a7dd24df07d5a459b723aa8ce05d0bacbae92421016208431fb5f6844619cd",
+    "trained_sha256": "4263199dc5482314103826be587d269e3d1ed1f090025163934f7cfdda98bd51",
+    "reload_max_absolute_error": 0.0,
+    "parameters": 1307489
+  },
+  "evaluator": {
+    "loss": 2.3645052909851074,
+    "grad_norm": 3.919271469116211,
+    "feature_shape": [
+      2,
+      128
+    ],
+    "reload_max_absolute_error": 0.0,
+    "parameters": 421642
+  },
+  "seconds": 8.031533459201455
+}

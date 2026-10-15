@@ -1,0 +1,23 @@
+{
+  "python": "3.11.16",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "versions": {
+    "torch": "2.14.1",
+    "diffusers": "0.39.0",
+    "geomloss": "0.3.1",
+    "torchvision": "0.29.1",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "diffusion-lab": "0.4.0"
+  },
+  "git_commit": "78917a5cf79dcaec77494f60aa5a7e3ce4f2dc7b",
+  "cuda": false,
+  "mps": true,
+  "mps_built": true,
+  "cuda_version": null,
+  "deterministic_algorithms": false,
+  "cpu_count": 14,
+  "torch_threads": 10,
+  "mps_access_note": "macOS sandbox may hide Metal; check the same Python outside the sandbox",
+  "recommended_device": "mps"
+}

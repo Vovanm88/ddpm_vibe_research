@@ -1,0 +1,318 @@
+[
+  {
+    "claim_id": "H1",
+    "status": "not_tested",
+    "comparison": "E0_minus_M0",
+    "metric": "mmd2_mnist_features_real",
+    "schedule": "teacher32_student8_euler",
+    "teacher_count": 0,
+    "student_seed_count": 0,
+    "effect_mean": null,
+    "run_ids": [],
+    "evidence_files": [],
+    "scope": "unconditional_pixel_MNIST",
+    "limitations": [
+      "CPU rotating-rays pilot is a separate diagnostic benchmark; full MNIST series has not been executed."
+    ]
+  },
+  {
+    "claim_id": "H2",
+    "status": "not_tested",
+    "comparison": "M1_minus_M0",
+    "metric": "mmd2_mnist_features_real",
+    "schedule": "teacher32_student8_euler",
+    "teacher_count": 0,
+    "student_seed_count": 0,
+    "effect_mean": null,
+    "run_ids": [],
+    "evidence_files": [],
+    "scope": "unconditional_pixel_MNIST",
+    "limitations": [
+      "CPU rotating-rays pilot is a separate diagnostic benchmark; full MNIST series has not been executed."
+    ]
+  },
+  {
+    "claim_id": "H3",
+    "status": "not_tested",
+    "comparison": "representations_extended_matrix",
+    "metric": "mmd2_mnist_features_real",
+    "schedule": "teacher32_student8_euler",
+    "teacher_count": 0,
+    "student_seed_count": 0,
+    "effect_mean": null,
+    "run_ids": [],
+    "evidence_files": [],
+    "scope": "unconditional_pixel_MNIST",
+    "limitations": [
+      "CPU rotating-rays pilot is a separate diagnostic benchmark; full MNIST series has not been executed."
+    ]
+  },
+  {
+    "claim_id": "H4",
+    "status": "not_tested",
+    "comparison": "student_vs_original_same_grid",
+    "metric": "mmd2_mnist_features_real",
+    "schedule": "teacher32_student8_euler",
+    "teacher_count": 0,
+    "student_seed_count": 0,
+    "effect_mean": null,
+    "run_ids": [],
+    "evidence_files": [],
+    "scope": "unconditional_pixel_MNIST",
+    "limitations": [
+      "CPU rotating-rays pilot is a separate diagnostic benchmark; full MNIST series has not been executed."
+    ]
+  },
+  {
+    "claim_id": "rays_pilot_E0_minus_M0",
+    "status": "inconclusive",
+    "comparison": "E0_minus_M0",
+    "metric": "mmd2_real",
+    "schedule": "teacher32_student8_euler",
+    "teacher_count": 1,
+    "student_seed_count": 3,
+    "effect_mean": -8.722419947796803e-07,
+    "paired_t_ci": [
+      -1.2531923075501984e-06,
+      -4.912916820091623e-07
+    ],
+    "run_ids": [
+      "rays_stress_32_8_v1/seed101_M0",
+      "rays_stress_32_8_v1/seed101_E0",
+      "rays_stress_32_8_v1/seed202_M0",
+      "rays_stress_32_8_v1/seed202_E0",
+      "rays_stress_32_8_v1/seed303_M0",
+      "rays_stress_32_8_v1/seed303_E0"
+    ],
+    "evidence_files": [
+      "replication/artifacts/rays_stress_32_8_v1/evaluation/results.json",
+      "replication/reports/rays_stress_32_8/paired_comparisons.csv"
+    ],
+    "scope": "rotating_rays_CPU_diagnostic_pilot",
+    "limitations": [
+      "Exploratory diagnostic pilot conditional on one teacher, not the preregistered MNIST contrast; no universal ranking."
+    ]
+  },
+  {
+    "claim_id": "rays_pilot_M1_minus_M0",
+    "status": "inconclusive",
+    "comparison": "M1_minus_M0",
+    "metric": "mmd2_real",
+    "schedule": "teacher32_student8_euler",
+    "teacher_count": 1,
+    "student_seed_count": 3,
+    "effect_mean": -8.08984430185807e-07,
+    "paired_t_ci": [
+      -1.7474191607979798e-06,
+      1.294503004263658e-07
+    ],
+    "run_ids": [
+      "rays_stress_32_8_v1/seed101_M0",
+      "rays_stress_32_8_v1/seed101_M1",
+      "rays_stress_32_8_v1/seed202_M0",
+      "rays_stress_32_8_v1/seed202_M1",
+      "rays_stress_32_8_v1/seed303_M0",
+      "rays_stress_32_8_v1/seed303_M1"
+    ],
+    "evidence_files": [
+      "replication/artifacts/rays_stress_32_8_v1/evaluation/results.json",
+      "replication/reports/rays_stress_32_8/paired_comparisons.csv"
+    ],
+    "scope": "rotating_rays_CPU_diagnostic_pilot",
+    "limitations": [
+      "Exploratory diagnostic pilot conditional on one teacher, not the preregistered MNIST contrast; no universal ranking."
+    ]
+  },
+  {
+    "claim_id": "rays_pilot_E1_minus_M1",
+    "status": "inconclusive",
+    "comparison": "E1_minus_M1",
+    "metric": "mmd2_real",
+    "schedule": "teacher32_student8_euler",
+    "teacher_count": 1,
+    "student_seed_count": 3,
+    "effect_mean": -9.176134995551403e-07,
+    "paired_t_ci": [
+      -1.316987748717654e-06,
+      -5.182392503926265e-07
+    ],
+    "run_ids": [
+      "rays_stress_32_8_v1/seed101_M1",
+      "rays_stress_32_8_v1/seed101_E1",
+      "rays_stress_32_8_v1/seed202_M1",
+      "rays_stress_32_8_v1/seed202_E1",
+      "rays_stress_32_8_v1/seed303_M1",
+      "rays_stress_32_8_v1/seed303_E1"
+    ],
+    "evidence_files": [
+      "replication/artifacts/rays_stress_32_8_v1/evaluation/results.json",
+      "replication/reports/rays_stress_32_8/paired_comparisons.csv"
+    ],
+    "scope": "rotating_rays_CPU_diagnostic_pilot",
+    "limitations": [
+      "Exploratory diagnostic pilot conditional on one teacher, not the preregistered MNIST contrast; no universal ranking."
+    ]
+  },
+  {
+    "claim_id": "rays_pilot_OT_x_tube_interaction",
+    "status": "inconclusive",
+    "comparison": "OT_x_tube_interaction",
+    "metric": "mmd2_real",
+    "schedule": "teacher32_student8_euler",
+    "teacher_count": 1,
+    "student_seed_count": 3,
+    "effect_mean": -4.5371504775459925e-08,
+    "paired_t_ci": [
+      -1.39888239825491e-07,
+      4.914523027457115e-08
+    ],
+    "run_ids": [
+      "rays_stress_32_8_v1/seed101_M0",
+      "rays_stress_32_8_v1/seed101_M1",
+      "rays_stress_32_8_v1/seed101_E0",
+      "rays_stress_32_8_v1/seed101_E1",
+      "rays_stress_32_8_v1/seed202_M0",
+      "rays_stress_32_8_v1/seed202_M1",
+      "rays_stress_32_8_v1/seed202_E0",
+      "rays_stress_32_8_v1/seed202_E1",
+      "rays_stress_32_8_v1/seed303_M0",
+      "rays_stress_32_8_v1/seed303_M1",
+      "rays_stress_32_8_v1/seed303_E0",
+      "rays_stress_32_8_v1/seed303_E1"
+    ],
+    "evidence_files": [
+      "replication/artifacts/rays_stress_32_8_v1/evaluation/results.json",
+      "replication/reports/rays_stress_32_8/paired_comparisons.csv"
+    ],
+    "scope": "rotating_rays_CPU_diagnostic_pilot",
+    "limitations": [
+      "Exploratory diagnostic pilot conditional on one teacher, not the preregistered MNIST contrast; no universal ranking."
+    ]
+  },
+  {
+    "claim_id": "rays_pilot_E0_minus_M0",
+    "status": "inconclusive",
+    "comparison": "E0_minus_M0",
+    "metric": "sliced_wasserstein",
+    "schedule": "teacher32_student8_euler",
+    "teacher_count": 1,
+    "student_seed_count": 3,
+    "effect_mean": -2.3129107317688507e-05,
+    "paired_t_ci": [
+      -2.8838329678838398e-05,
+      -1.7419884956538615e-05
+    ],
+    "run_ids": [
+      "rays_stress_32_8_v1/seed101_M0",
+      "rays_stress_32_8_v1/seed101_E0",
+      "rays_stress_32_8_v1/seed202_M0",
+      "rays_stress_32_8_v1/seed202_E0",
+      "rays_stress_32_8_v1/seed303_M0",
+      "rays_stress_32_8_v1/seed303_E0"
+    ],
+    "evidence_files": [
+      "replication/artifacts/rays_stress_32_8_v1/evaluation/results.json",
+      "replication/reports/rays_stress_32_8/paired_comparisons.csv"
+    ],
+    "scope": "rotating_rays_CPU_diagnostic_pilot",
+    "limitations": [
+      "Exploratory diagnostic pilot conditional on one teacher, not the preregistered MNIST contrast; no universal ranking."
+    ]
+  },
+  {
+    "claim_id": "rays_pilot_M1_minus_M0",
+    "status": "inconclusive",
+    "comparison": "M1_minus_M0",
+    "metric": "sliced_wasserstein",
+    "schedule": "teacher32_student8_euler",
+    "teacher_count": 1,
+    "student_seed_count": 3,
+    "effect_mean": -4.50605372041372e-06,
+    "paired_t_ci": [
+      -8.53967376520132e-06,
+      -4.7243367562612103e-07
+    ],
+    "run_ids": [
+      "rays_stress_32_8_v1/seed101_M0",
+      "rays_stress_32_8_v1/seed101_M1",
+      "rays_stress_32_8_v1/seed202_M0",
+      "rays_stress_32_8_v1/seed202_M1",
+      "rays_stress_32_8_v1/seed303_M0",
+      "rays_stress_32_8_v1/seed303_M1"
+    ],
+    "evidence_files": [
+      "replication/artifacts/rays_stress_32_8_v1/evaluation/results.json",
+      "replication/reports/rays_stress_32_8/paired_comparisons.csv"
+    ],
+    "scope": "rotating_rays_CPU_diagnostic_pilot",
+    "limitations": [
+      "Exploratory diagnostic pilot conditional on one teacher, not the preregistered MNIST contrast; no universal ranking."
+    ]
+  },
+  {
+    "claim_id": "rays_pilot_E1_minus_M1",
+    "status": "inconclusive",
+    "comparison": "E1_minus_M1",
+    "metric": "sliced_wasserstein",
+    "schedule": "teacher32_student8_euler",
+    "teacher_count": 1,
+    "student_seed_count": 3,
+    "effect_mean": -2.348552852412163e-05,
+    "paired_t_ci": [
+      -2.9799019370069446e-05,
+      -1.7172037678173814e-05
+    ],
+    "run_ids": [
+      "rays_stress_32_8_v1/seed101_M1",
+      "rays_stress_32_8_v1/seed101_E1",
+      "rays_stress_32_8_v1/seed202_M1",
+      "rays_stress_32_8_v1/seed202_E1",
+      "rays_stress_32_8_v1/seed303_M1",
+      "rays_stress_32_8_v1/seed303_E1"
+    ],
+    "evidence_files": [
+      "replication/artifacts/rays_stress_32_8_v1/evaluation/results.json",
+      "replication/reports/rays_stress_32_8/paired_comparisons.csv"
+    ],
+    "scope": "rotating_rays_CPU_diagnostic_pilot",
+    "limitations": [
+      "Exploratory diagnostic pilot conditional on one teacher, not the preregistered MNIST contrast; no universal ranking."
+    ]
+  },
+  {
+    "claim_id": "rays_pilot_OT_x_tube_interaction",
+    "status": "inconclusive",
+    "comparison": "OT_x_tube_interaction",
+    "metric": "sliced_wasserstein",
+    "schedule": "teacher32_student8_euler",
+    "teacher_count": 1,
+    "student_seed_count": 3,
+    "effect_mean": -3.564212064331255e-07,
+    "paired_t_ci": [
+      -1.1330520543629974e-06,
+      4.202096414967464e-07
+    ],
+    "run_ids": [
+      "rays_stress_32_8_v1/seed101_M0",
+      "rays_stress_32_8_v1/seed101_M1",
+      "rays_stress_32_8_v1/seed101_E0",
+      "rays_stress_32_8_v1/seed101_E1",
+      "rays_stress_32_8_v1/seed202_M0",
+      "rays_stress_32_8_v1/seed202_M1",
+      "rays_stress_32_8_v1/seed202_E0",
+      "rays_stress_32_8_v1/seed202_E1",
+      "rays_stress_32_8_v1/seed303_M0",
+      "rays_stress_32_8_v1/seed303_M1",
+      "rays_stress_32_8_v1/seed303_E0",
+      "rays_stress_32_8_v1/seed303_E1"
+    ],
+    "evidence_files": [
+      "replication/artifacts/rays_stress_32_8_v1/evaluation/results.json",
+      "replication/reports/rays_stress_32_8/paired_comparisons.csv"
+    ],
+    "scope": "rotating_rays_CPU_diagnostic_pilot",
+    "limitations": [
+      "Exploratory diagnostic pilot conditional on one teacher, not the preregistered MNIST contrast; no universal ranking."
+    ]
+  }
+]

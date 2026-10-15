@@ -1,0 +1,181 @@
+{
+  "run_id": "rays_cpu_pilot_v1/teacher",
+  "role": "teacher",
+  "created_utc": "2026-10-15T03:02:17Z",
+  "status": "completed",
+  "config": {
+    "schema_version": 1,
+    "protocol_id": "rays_cpu_pilot_v1",
+    "scope": "cpu_pilot",
+    "output_dir": "replication/artifacts/rays_cpu_pilot_v1",
+    "device": "cpu",
+    "threads": 4,
+    "data": {
+      "name": "rotating_rays",
+      "n_train": 8192,
+      "n_validation": 4096,
+      "n_test": 4096,
+      "seed": 41,
+      "root": "replication/data",
+      "n_classes": 4
+    },
+    "model": {
+      "kind": "mlp",
+      "hidden_dim": 128,
+      "num_layers": 3,
+      "time_embedding_dim": 32,
+      "base_channels": 32
+    },
+    "teacher": {
+      "seed": 41,
+      "updates": 6000,
+      "batch_size": 512,
+      "lr": 0.001,
+      "weight_decay": 0.0001,
+      "warmup": 500,
+      "ema_decay": 0.999,
+      "grad_clip": 1.0,
+      "checkpoint_every": 1000
+    },
+    "student": {
+      "updates": 500,
+      "batch_size": 128,
+      "lr": 0.0001,
+      "weight_decay": 0.0001,
+      "warmup": 50,
+      "ema_decay": 0.99,
+      "grad_clip": 1.0,
+      "checkpoint_every": 250
+    },
+    "distillation": {
+      "teacher_steps": 32,
+      "student_steps": 16,
+      "groups": null,
+      "anchor_source": "interpolant",
+      "seeds": [
+        101,
+        202,
+        303
+      ],
+      "losses": [
+        "mse",
+        "sinkhorn_endpoint"
+      ],
+      "tube_rhos": [
+        0.0,
+        0.1
+      ],
+      "lambda_w": 1.0,
+      "gamma": 1.0,
+      "epsilon_alpha": 0.05,
+      "calibration_size": 256,
+      "swd_train_projections": 128,
+      "ot_backend": "reference",
+      "sinkhorn_scaling": 0.95,
+      "gradient_diagnostics_every": 200,
+      "plan_diagnostics_every": 1000
+    },
+    "evaluation": {
+      "final_seed": 730001,
+      "validation_seed": 730002,
+      "reference_seed": 730003,
+      "samples": 1024,
+      "validation_samples": 512,
+      "teacher_nfe": [
+        8,
+        16,
+        24,
+        32,
+        64,
+        128
+      ],
+      "batch_size": 128,
+      "swd_projections": 1024,
+      "mmd_block_size": 256,
+      "diagnostic_samples": 128,
+      "gif_particles": 16,
+      "gif_fps": 10,
+      "timing_repeats": 3,
+      "sensitivity_swd_margin": 0.005,
+      "rho_eval": [
+        0.0,
+        0.05,
+        0.1,
+        0.2
+      ]
+    },
+    "evaluator": {
+      "seed": 41,
+      "epochs": 5,
+      "batch_size": 128,
+      "lr": 0.001,
+      "weight_decay": 0.0,
+      "accuracy_threshold": 0.99,
+      "feature_batch_size": 512,
+      "bandwidth_samples": 2000
+    },
+    "resources": {
+      "max_gpu_hours": 6.0,
+      "max_artifact_gib": 8.0,
+      "rays_gate": "replication/reports/rays_gate.json"
+    }
+  },
+  "config_sha256": "44b7f97e1bbcfe01696cd4f7191b7826605d31008760e1ac99bcb9ad2244462b",
+  "environment": {
+    "python": "3.11.16",
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "versions": {
+      "torch": "2.14.1",
+      "diffusers": "0.39.0",
+      "geomloss": "0.3.1",
+      "numpy": "2.4.6",
+      "scipy": "1.17.1",
+      "diffusion-lab": "0.3.2"
+    },
+    "git_commit": "78917a5cf79dcaec77494f60aa5a7e3ce4f2dc7b",
+    "cuda": false,
+    "mps": false,
+    "cuda_version": null,
+    "deterministic_algorithms": false,
+    "cpu_count": 14
+  },
+  "sources": {
+    "spec_sha256": "1a6dbc26265423f45348d8b67f1d749314769d522e8791faf4767960697631cb",
+    "pdf_sha256": "850da2d317567e30373f3615a86bdf98fee24a7157ad7b3abf0b7990f1e4e65c",
+    "pdf_pages": 97,
+    "pdf_path_at_audit": "/Users/vvmelnikov/Downloads/bachelors_thesis.pdf",
+    "audit": "PDF fingerprint verified; independent protocol P implementation, not author-code replication"
+  },
+  "precision": "float32_network",
+  "model": {
+    "class": "FMMLP",
+    "config": {
+      "input_dim": 2,
+      "hidden_dim": 128,
+      "num_layers": 3,
+      "time_embedding_dim": 32,
+      "time_scale": 1000.0,
+      "_use_default_values": [
+        "time_scale"
+      ]
+    },
+    "parameter_count": 37762,
+    "trainable_parameter_count": 37762,
+    "flops_estimate": null,
+    "flops_note": "not measured; no FLOP counter is installed by the experiment"
+  },
+  "data_sha256": "f009c26d90a83974a213bf1cbda03e87dc9f6af19bb38ec139b4ce8b981ad279",
+  "rng_seeds": {
+    "data": 3691910247752436115,
+    "interval": 4696581279375760446,
+    "noise": 4295108470594346505,
+    "tube": 2850969678758207294,
+    "swd": 6902670156903764936,
+    "preview": 1617554227105555100,
+    "bootstrap": 7280313028501559465
+  },
+  "updates_completed": 6000,
+  "teacher_sha256": "5fcbe5ceee197bf2a257b1347586335d7feb8a15789ba406f918a077cf3e6930",
+  "checkpoint_sha256": "276df3ac7453737c864ee37441bf29dddfa36a39a78f37270792639f867b3d17",
+  "training_seconds": 13.192054959014058
+}

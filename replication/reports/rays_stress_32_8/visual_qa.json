@@ -1,0 +1,36 @@
+{
+  "status": "visually_checked",
+  "checked_final_frames": [
+    {
+      "file": "trajectories_comparison.gif",
+      "sha256": "e0188e87c211ee8fec0390de0e62cfe0d988e7d0b67bd79ac539d7c23580166e",
+      "frames": 33,
+      "size": [
+        1242,
+        882
+      ]
+    },
+    {
+      "file": "trajectory_m0.gif",
+      "sha256": "1d8c0845270f6e8bb39dd0883ecadef49017a08672267a491b4cd5b37cf4c613",
+      "frames": 9,
+      "size": [
+        558,
+        603
+      ]
+    },
+    {
+      "file": "trajectory_original_n8.gif",
+      "sha256": "6fef4f5f330d28bf851c55f8cc1929c01ca06cb0003a1b4ea49102178c4ca86f",
+      "frames": 9,
+      "size": [
+        558,
+        603
+      ]
+    }
+  ],
+  "assessment": "Final comparison and individual GIF frames have fully visible titles, axes, legends and colorbar. Red start, violet finish, fixed common bounds.",
+  "new_teacher_updates": 0,
+  "core_source_changes_by_stress_worker": false,
+  "static_report_refreshed_after_root_layout_and_cost_axis_update": true
+}

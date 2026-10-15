@@ -1,0 +1,881 @@
+{
+  "report": "replication/reports/REPORT.md",
+  "source_results": "replication/artifacts/rays_cpu_pilot_v1/evaluation/results.json",
+  "source_results_sha256": "aebfdcd232dc253ef063b7d2fb521552926fc504933ec9e4ab0f01c7dd97be1f",
+  "rows": 18,
+  "student_seed_count": 3,
+  "contrasts": [
+    {
+      "contrast": "E0_minus_M0",
+      "metric": "mmd2_real",
+      "student_seeds": [
+        101,
+        202,
+        303
+      ],
+      "first": "E0",
+      "second": "M0",
+      "n_student_seeds": 3,
+      "values": [
+        -4.6003967724139727e-07,
+        -9.020381575020053e-08,
+        -1.8717753946795312e-07
+      ],
+      "mean": -2.458070108198503e-07,
+      "sample_std": 1.917620981698055e-07,
+      "confidence": 0.95,
+      "paired_t_ci": [
+        -7.221704705678331e-07,
+        2.305564489281325e-07
+      ],
+      "limitations": "Approximate t interval assumes independent training seeds and approximately normal paired effects; n=3 is a pilot. Conditional on the fixed teacher and shared reference/noise."
+    },
+    {
+      "contrast": "M1_minus_M0",
+      "metric": "mmd2_real",
+      "student_seeds": [
+        101,
+        202,
+        303
+      ],
+      "first": "M1",
+      "second": "M0",
+      "n_student_seeds": 3,
+      "values": [
+        -1.0828524388273308e-07,
+        -1.8734627627026157e-08,
+        -5.976387806860828e-08
+      ],
+      "mean": -6.226124985945584e-08,
+      "sample_std": 4.4827512392954743e-08,
+      "confidence": 0.95,
+      "paired_t_ci": [
+        -1.7361896391875e-07,
+        4.909646419983832e-08
+      ],
+      "limitations": "Approximate t interval assumes independent training seeds and approximately normal paired effects; n=3 is a pilot. Conditional on the fixed teacher and shared reference/noise."
+    },
+    {
+      "contrast": "E1_minus_M1",
+      "metric": "mmd2_real",
+      "student_seeds": [
+        101,
+        202,
+        303
+      ],
+      "first": "E1",
+      "second": "M1",
+      "n_student_seeds": 3,
+      "values": [
+        -4.5557815386843004e-07,
+        -1.0247611470504125e-07,
+        -1.9140090445901592e-07
+      ],
+      "mean": -2.498183910108291e-07,
+      "sample_std": 1.8365651245357266e-07,
+      "confidence": 0.95,
+      "paired_t_ci": [
+        -7.060464596052931e-07,
+        2.0640967758363492e-07
+      ],
+      "limitations": "Approximate t interval assumes independent training seeds and approximately normal paired effects; n=3 is a pilot. Conditional on the fixed teacher and shared reference/noise."
+    },
+    {
+      "contrast": "OT_x_tube_interaction",
+      "metric": "mmd2_real",
+      "student_seeds": [
+        101,
+        202,
+        303
+      ],
+      "n_student_seeds": 3,
+      "values": [
+        4.4615233729672354e-09,
+        -1.2272298954840721e-08,
+        -4.223364991062795e-09
+      ],
+      "mean": -4.01138019097876e-09,
+      "sample_std": 8.368924996154586e-09,
+      "confidence": 0.95,
+      "paired_t_ci": [
+        -2.480094238073635e-08,
+        1.677818199877883e-08
+      ],
+      "limitations": "Approximate t interval assumes independent training seeds and approximately normal paired effects; n=3 is a pilot. Conditional on the fixed teacher and shared reference/noise."
+    },
+    {
+      "contrast": "E0_minus_M0",
+      "metric": "sliced_wasserstein",
+      "student_seeds": [
+        101,
+        202,
+        303
+      ],
+      "first": "E0",
+      "second": "M0",
+      "n_student_seeds": 3,
+      "values": [
+        -7.85801338429315e-06,
+        -7.119108496794757e-06,
+        -5.916692876438423e-06
+      ],
+      "mean": -6.964604919175443e-06,
+      "sample_std": 9.79839193529841e-07,
+      "confidence": 0.95,
+      "paired_t_ci": [
+        -9.398660411273952e-06,
+        -4.530549427076935e-06
+      ],
+      "limitations": "Approximate t interval assumes independent training seeds and approximately normal paired effects; n=3 is a pilot. Conditional on the fixed teacher and shared reference/noise."
+    },
+    {
+      "contrast": "M1_minus_M0",
+      "metric": "sliced_wasserstein",
+      "student_seeds": [
+        101,
+        202,
+        303
+      ],
+      "first": "M1",
+      "second": "M0",
+      "n_student_seeds": 3,
+      "values": [
+        -5.07631128493502e-07,
+        -1.410696132131406e-08,
+        -4.944466279882542e-07
+      ],
+      "mean": -3.387282392676901e-07,
+      "sample_std": 2.8120755383710263e-07,
+      "confidence": 0.95,
+      "paired_t_ci": [
+        -1.037286528583498e-06,
+        3.5983005004811786e-07
+      ],
+      "limitations": "Approximate t interval assumes independent training seeds and approximately normal paired effects; n=3 is a pilot. Conditional on the fixed teacher and shared reference/noise."
+    },
+    {
+      "contrast": "E1_minus_M1",
+      "metric": "sliced_wasserstein",
+      "student_seeds": [
+        101,
+        202,
+        303
+      ],
+      "first": "E1",
+      "second": "M1",
+      "n_student_seeds": 3,
+      "values": [
+        -7.816077526187626e-06,
+        -7.170080893965924e-06,
+        -5.95079677066096e-06
+      ],
+      "mean": -6.978985063604837e-06,
+      "sample_std": 9.4720973734468e-07,
+      "confidence": 0.95,
+      "paired_t_ci": [
+        -9.331984493079882e-06,
+        -4.625985634129792e-06
+      ],
+      "limitations": "Approximate t interval assumes independent training seeds and approximately normal paired effects; n=3 is a pilot. Conditional on the fixed teacher and shared reference/noise."
+    },
+    {
+      "contrast": "OT_x_tube_interaction",
+      "metric": "sliced_wasserstein",
+      "student_seeds": [
+        101,
+        202,
+        303
+      ],
+      "n_student_seeds": 3,
+      "values": [
+        4.1935858105524026e-08,
+        -5.0972397171167305e-08,
+        -3.41038942225369e-08
+      ],
+      "mean": -1.4380144429393393e-08,
+      "sample_std": 4.94950068599511e-08,
+      "confidence": 0.95,
+      "paired_t_ci": [
+        -1.3733255751353923e-07,
+        1.0857226865475244e-07
+      ],
+      "limitations": "Approximate t interval assumes independent training seeds and approximately normal paired effects; n=3 is a pilot. Conditional on the fixed teacher and shared reference/noise."
+    }
+  ],
+  "animations": [
+    {
+      "file": "replication/reports/trajectories_comparison.gif",
+      "frames": 33,
+      "fractions": [
+        0.0,
+        0.03125,
+        0.0625,
+        0.09375,
+        0.125,
+        0.15625,
+        0.1875,
+        0.21875,
+        0.25,
+        0.28125,
+        0.3125,
+        0.34375,
+        0.375,
+        0.40625,
+        0.4375,
+        0.46875,
+        0.5,
+        0.53125,
+        0.5625,
+        0.59375,
+        0.625,
+        0.65625,
+        0.6875,
+        0.71875,
+        0.75,
+        0.78125,
+        0.8125,
+        0.84375,
+        0.875,
+        0.90625,
+        0.9375,
+        0.96875,
+        1.0
+      ],
+      "actual_node_indices": {
+        "Original N32": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "Original N16": [
+          0,
+          0,
+          1,
+          1,
+          2,
+          2,
+          3,
+          3,
+          4,
+          4,
+          5,
+          5,
+          6,
+          6,
+          7,
+          7,
+          8,
+          8,
+          9,
+          9,
+          10,
+          10,
+          11,
+          11,
+          12,
+          12,
+          13,
+          13,
+          14,
+          14,
+          15,
+          15,
+          16
+        ],
+        "M0": [
+          0,
+          0,
+          1,
+          1,
+          2,
+          2,
+          3,
+          3,
+          4,
+          4,
+          5,
+          5,
+          6,
+          6,
+          7,
+          7,
+          8,
+          8,
+          9,
+          9,
+          10,
+          10,
+          11,
+          11,
+          12,
+          12,
+          13,
+          13,
+          14,
+          14,
+          15,
+          15,
+          16
+        ],
+        "M1": [
+          0,
+          0,
+          1,
+          1,
+          2,
+          2,
+          3,
+          3,
+          4,
+          4,
+          5,
+          5,
+          6,
+          6,
+          7,
+          7,
+          8,
+          8,
+          9,
+          9,
+          10,
+          10,
+          11,
+          11,
+          12,
+          12,
+          13,
+          13,
+          14,
+          14,
+          15,
+          15,
+          16
+        ],
+        "E0": [
+          0,
+          0,
+          1,
+          1,
+          2,
+          2,
+          3,
+          3,
+          4,
+          4,
+          5,
+          5,
+          6,
+          6,
+          7,
+          7,
+          8,
+          8,
+          9,
+          9,
+          10,
+          10,
+          11,
+          11,
+          12,
+          12,
+          13,
+          13,
+          14,
+          14,
+          15,
+          15,
+          16
+        ],
+        "E1": [
+          0,
+          0,
+          1,
+          1,
+          2,
+          2,
+          3,
+          3,
+          4,
+          4,
+          5,
+          5,
+          6,
+          6,
+          7,
+          7,
+          8,
+          8,
+          9,
+          9,
+          10,
+          10,
+          11,
+          11,
+          12,
+          12,
+          13,
+          13,
+          14,
+          14,
+          15,
+          15,
+          16
+        ]
+      },
+      "particles": 16,
+      "fps": 10,
+      "initial_noise_sha256": "de5260c9bade2a56d92c9afccddbcf4b5dafa797dd0b7e0bca5942f5d776824c",
+      "common_bounds": [
+        [
+          -2.824629068374634,
+          -1.7571672201156616
+        ],
+        [
+          1.5240263938903809,
+          2.4115254878997803
+        ]
+      ],
+      "interpolation": false,
+      "colors": "red start \u2192 orange \u2192 yellow \u2192 green \u2192 blue \u2192 violet finish"
+    },
+    {
+      "file": "replication/reports/trajectory_original_n32.gif",
+      "frames": 33,
+      "fractions": [
+        0.0,
+        0.03125,
+        0.0625,
+        0.09375,
+        0.125,
+        0.15625,
+        0.1875,
+        0.21875,
+        0.25,
+        0.28125,
+        0.3125,
+        0.34375,
+        0.375,
+        0.40625,
+        0.4375,
+        0.46875,
+        0.5,
+        0.53125,
+        0.5625,
+        0.59375,
+        0.625,
+        0.65625,
+        0.6875,
+        0.71875,
+        0.75,
+        0.78125,
+        0.8125,
+        0.84375,
+        0.875,
+        0.90625,
+        0.9375,
+        0.96875,
+        1.0
+      ],
+      "actual_node_indices": {
+        "Original N32": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ]
+      },
+      "particles": 16,
+      "fps": 10,
+      "initial_noise_sha256": "de5260c9bade2a56d92c9afccddbcf4b5dafa797dd0b7e0bca5942f5d776824c",
+      "common_bounds": [
+        [
+          -2.824629068374634,
+          -1.7571672201156616
+        ],
+        [
+          1.5240263938903809,
+          2.4115254878997803
+        ]
+      ],
+      "interpolation": false,
+      "colors": "red start \u2192 orange \u2192 yellow \u2192 green \u2192 blue \u2192 violet finish"
+    },
+    {
+      "file": "replication/reports/trajectory_original_n16.gif",
+      "frames": 17,
+      "fractions": [
+        0.0,
+        0.0625,
+        0.125,
+        0.1875,
+        0.25,
+        0.3125,
+        0.375,
+        0.4375,
+        0.5,
+        0.5625,
+        0.625,
+        0.6875,
+        0.75,
+        0.8125,
+        0.875,
+        0.9375,
+        1.0
+      ],
+      "actual_node_indices": {
+        "Original N16": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      },
+      "particles": 16,
+      "fps": 10,
+      "initial_noise_sha256": "de5260c9bade2a56d92c9afccddbcf4b5dafa797dd0b7e0bca5942f5d776824c",
+      "common_bounds": [
+        [
+          -2.824629068374634,
+          -1.7571672201156616
+        ],
+        [
+          1.5240263938903809,
+          2.4115254878997803
+        ]
+      ],
+      "interpolation": false,
+      "colors": "red start \u2192 orange \u2192 yellow \u2192 green \u2192 blue \u2192 violet finish"
+    },
+    {
+      "file": "replication/reports/trajectory_m0.gif",
+      "frames": 17,
+      "fractions": [
+        0.0,
+        0.0625,
+        0.125,
+        0.1875,
+        0.25,
+        0.3125,
+        0.375,
+        0.4375,
+        0.5,
+        0.5625,
+        0.625,
+        0.6875,
+        0.75,
+        0.8125,
+        0.875,
+        0.9375,
+        1.0
+      ],
+      "actual_node_indices": {
+        "M0": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      },
+      "particles": 16,
+      "fps": 10,
+      "initial_noise_sha256": "de5260c9bade2a56d92c9afccddbcf4b5dafa797dd0b7e0bca5942f5d776824c",
+      "common_bounds": [
+        [
+          -2.824629068374634,
+          -1.7571672201156616
+        ],
+        [
+          1.5240263938903809,
+          2.4115254878997803
+        ]
+      ],
+      "interpolation": false,
+      "colors": "red start \u2192 orange \u2192 yellow \u2192 green \u2192 blue \u2192 violet finish"
+    },
+    {
+      "file": "replication/reports/trajectory_m1.gif",
+      "frames": 17,
+      "fractions": [
+        0.0,
+        0.0625,
+        0.125,
+        0.1875,
+        0.25,
+        0.3125,
+        0.375,
+        0.4375,
+        0.5,
+        0.5625,
+        0.625,
+        0.6875,
+        0.75,
+        0.8125,
+        0.875,
+        0.9375,
+        1.0
+      ],
+      "actual_node_indices": {
+        "M1": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      },
+      "particles": 16,
+      "fps": 10,
+      "initial_noise_sha256": "de5260c9bade2a56d92c9afccddbcf4b5dafa797dd0b7e0bca5942f5d776824c",
+      "common_bounds": [
+        [
+          -2.824629068374634,
+          -1.7571672201156616
+        ],
+        [
+          1.5240263938903809,
+          2.4115254878997803
+        ]
+      ],
+      "interpolation": false,
+      "colors": "red start \u2192 orange \u2192 yellow \u2192 green \u2192 blue \u2192 violet finish"
+    },
+    {
+      "file": "replication/reports/trajectory_e0.gif",
+      "frames": 17,
+      "fractions": [
+        0.0,
+        0.0625,
+        0.125,
+        0.1875,
+        0.25,
+        0.3125,
+        0.375,
+        0.4375,
+        0.5,
+        0.5625,
+        0.625,
+        0.6875,
+        0.75,
+        0.8125,
+        0.875,
+        0.9375,
+        1.0
+      ],
+      "actual_node_indices": {
+        "E0": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      },
+      "particles": 16,
+      "fps": 10,
+      "initial_noise_sha256": "de5260c9bade2a56d92c9afccddbcf4b5dafa797dd0b7e0bca5942f5d776824c",
+      "common_bounds": [
+        [
+          -2.824629068374634,
+          -1.7571672201156616
+        ],
+        [
+          1.5240263938903809,
+          2.4115254878997803
+        ]
+      ],
+      "interpolation": false,
+      "colors": "red start \u2192 orange \u2192 yellow \u2192 green \u2192 blue \u2192 violet finish"
+    },
+    {
+      "file": "replication/reports/trajectory_e1.gif",
+      "frames": 17,
+      "fractions": [
+        0.0,
+        0.0625,
+        0.125,
+        0.1875,
+        0.25,
+        0.3125,
+        0.375,
+        0.4375,
+        0.5,
+        0.5625,
+        0.625,
+        0.6875,
+        0.75,
+        0.8125,
+        0.875,
+        0.9375,
+        1.0
+      ],
+      "actual_node_indices": {
+        "E1": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      },
+      "particles": 16,
+      "fps": 10,
+      "initial_noise_sha256": "de5260c9bade2a56d92c9afccddbcf4b5dafa797dd0b7e0bca5942f5d776824c",
+      "common_bounds": [
+        [
+          -2.824629068374634,
+          -1.7571672201156616
+        ],
+        [
+          1.5240263938903809,
+          2.4115254878997803
+        ]
+      ],
+      "interpolation": false,
+      "colors": "red start \u2192 orange \u2192 yellow \u2192 green \u2192 blue \u2192 violet finish"
+    }
+  ],
+  "figures": [
+    "replication/reports/quality_vs_nfe.png",
+    "replication/reports/quality_vs_nfe.svg",
+    "replication/reports/quality_vs_training_time.png",
+    "replication/reports/quality_vs_training_time.svg",
+    "replication/reports/paired_seed_differences.png",
+    "replication/reports/paired_seed_differences.svg",
+    "replication/reports/training_loss_curves.png",
+    "replication/reports/training_loss_curves.svg",
+    "replication/reports/local_error_vs_t.png",
+    "replication/reports/local_error_vs_t.svg",
+    "replication/reports/rollout_error_vs_t.png",
+    "replication/reports/rollout_error_vs_t.svg",
+    "replication/reports/robustness_vs_rho.png",
+    "replication/reports/robustness_vs_rho.svg",
+    "replication/reports/trajectories_comparison.png",
+    "replication/reports/trajectories_comparison.svg",
+    "replication/reports/fixed_sample_grids.png",
+    "replication/reports/fixed_sample_grids.svg"
+  ],
+  "mnist_status": "not_tested",
+  "teacher_count": 1
+}

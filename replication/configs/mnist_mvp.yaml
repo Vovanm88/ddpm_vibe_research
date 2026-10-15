@@ -1,0 +1,102 @@
+schema_version: 1
+protocol_id: mnist_mvp_v1
+scope: mnist_mvp
+output_dir: replication/artifacts/mnist_mvp_v1
+device: auto
+threads: 4
+data:
+  name: mnist
+  n_train: 55000
+  n_validation: 5000
+  n_test: 10000
+  seed: 41
+  root: replication/data
+  n_classes: 10
+model:
+  kind: unet
+  hidden_dim: 128
+  num_layers: 3
+  time_embedding_dim: 128
+  base_channels: 32
+teacher:
+  seed: 41
+  updates: 30000
+  batch_size: 128
+  lr: 0.0002
+  weight_decay: 0.0001
+  warmup: 1000
+  ema_decay: 0.999
+  grad_clip: 1.0
+  checkpoint_every: 1000
+student:
+  updates: 10000
+  batch_size: 128
+  lr: 0.0001
+  weight_decay: 0.0001
+  warmup: 500
+  ema_decay: 0.999
+  grad_clip: 1.0
+  checkpoint_every: 250
+distillation:
+  teacher_steps: 32
+  student_steps: 16
+  groups: null
+  anchor_source: interpolant
+  seeds:
+  - 101
+  - 202
+  - 303
+  losses:
+  - mse
+  - sinkhorn_endpoint
+  tube_rhos:
+  - 0.0
+  - 0.1
+  lambda_w: 1.0
+  gamma: 1.0
+  epsilon_alpha: 0.05
+  calibration_size: 256
+  swd_train_projections: 128
+  ot_backend: reference
+  sinkhorn_scaling: 0.95
+  gradient_diagnostics_every: 200
+  plan_diagnostics_every: 1000
+evaluation:
+  final_seed: 730001
+  validation_seed: 730002
+  reference_seed: 730003
+  samples: 10000
+  validation_samples: 2000
+  teacher_nfe:
+  - 8
+  - 16
+  - 24
+  - 32
+  - 64
+  - 128
+  batch_size: 128
+  swd_projections: 1024
+  mmd_block_size: 256
+  diagnostic_samples: 128
+  gif_particles: 16
+  gif_fps: 10
+  timing_repeats: 3
+  sensitivity_swd_margin: 0.005
+  rho_eval:
+  - 0.0
+  - 0.05
+  - 0.1
+  - 0.2
+evaluator:
+  seed: 41
+  epochs: 5
+  batch_size: 128
+  lr: 0.001
+  weight_decay: 0.0
+  accuracy_threshold: 0.99
+  feature_batch_size: 512
+  bandwidth_samples: 2000
+resources:
+  max_gpu_hours: 6.0
+  max_artifact_gib: 8.0
+  rays_gate: replication/reports/rays_gate.json

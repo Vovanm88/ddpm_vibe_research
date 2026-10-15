@@ -1,0 +1,43 @@
+{
+  "protocol_id": "rays_stress_32_8_v1",
+  "teacher_reused": true,
+  "new_teacher_updates": 0,
+  "status": "completed",
+  "threads": 4,
+  "stages": {
+    "teacher_gate": {
+      "seconds": 7.452568875160068,
+      "status": "completed"
+    },
+    "calibrate": {
+      "seconds": 0.06203629123046994,
+      "status": "completed"
+    },
+    "distill_suite": {
+      "seconds": 87.00458058295771,
+      "status": "completed"
+    },
+    "evaluate_suite": {
+      "seconds": 23.39373799972236,
+      "status": "completed"
+    },
+    "report": {
+      "seconds": 22.71123466687277,
+      "status": "completed"
+    }
+  },
+  "elapsed_seconds": 140.63118499983102,
+  "report": "replication/reports/rays_stress_32_8/REPORT.md",
+  "animations": [
+    "replication/reports/rays_stress_32_8/trajectories_comparison.gif",
+    "replication/reports/rays_stress_32_8/trajectory_original_n32.gif",
+    "replication/reports/rays_stress_32_8/trajectory_m0.gif",
+    "replication/reports/rays_stress_32_8/trajectory_m1.gif",
+    "replication/reports/rays_stress_32_8/trajectory_e0.gif",
+    "replication/reports/rays_stress_32_8/trajectory_e1.gif",
+    "replication/reports/rays_stress_32_8/trajectory_original_n8.gif"
+  ],
+  "static_report_refresh_seconds": 22.044546583201736,
+  "static_report_refresh_reason": "Latest layout and consistent incremental-cost axis; no training, generation, or metric recomputation",
+  "elapsed_seconds_including_report_refresh": 162.67573158303276
+}

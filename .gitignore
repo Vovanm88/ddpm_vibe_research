@@ -11,3 +11,6 @@ artifacts/
 build/
 dist/
 .DS_Store
+replication/artifacts/
+replication/data/
+replication/reports/.source-page-*.txt
