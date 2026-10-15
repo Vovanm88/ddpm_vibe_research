@@ -1,7 +1,7 @@
 {
-  "passed": 551,
+  "passed": 595,
   "skipped": 3,
   "failed": 0,
-  "seconds": 45.73,
-  "note": "Full final tree including Fourier model, coordinate geometry sidecar, notebook 12 and report claims. Real MPS smoke/parity sidecars retained."
+  "seconds": 49.17,
+  "note": "Full tree including conditional routing metrics, paired visualization and visible conditional notebook13 tests. Original recheck algorithm unchanged."
 }

@@ -35,6 +35,13 @@ Teacher targets, Sinkhorn, tube и весь Torch training loop видны в я
 [Открыть notebook 12 в Colab](https://colab.research.google.com/github/Vovanm88/ddpm_vibe_research/blob/research/wasserstein-tube-replication/notebooks/12_many_rays_wasserstein_tube.ipynb).
 [Результаты 24 запусков и анимации](replication/reports/many_rays/REPORT.md).
 
+В notebook 12 режим **unconditional**: модель получает только `x,t`.
+Для управления целевым лучом есть [conditional notebook 13](notebooks/13_conditional_rays_distillation.ipynb):
+номер луча передаётся при обучении, расчёте teacher target и генерации.
+Один начальный шум проверяется со всеми 16 условиями, целевой луч выделен на графике.
+[Открыть conditional notebook в Colab](https://colab.research.google.com/github/Vovanm88/ddpm_vibe_research/blob/research/wasserstein-tube-replication/notebooks/13_conditional_rays_distillation.ipynb)
+· [Проверка condition и GIF](replication/reports/conditional_rays/REPORT.md).
+
 Установка из пустого Jupyter:
 
 ```python

@@ -1,0 +1,62 @@
+{
+  "status": "completed",
+  "updates_completed": 20000,
+  "config": {
+    "protocol_id": "rays16_conditional_v1",
+    "scope": "condition_routing_demonstration_not_unconditional_replication",
+    "data": {
+      "name": "rotating_rays",
+      "n_classes": 16,
+      "n_train": 65536,
+      "seed": 47
+    },
+    "model": {
+      "sample_shape": [
+        2
+      ],
+      "hidden_dim": 128,
+      "num_layers": 3,
+      "backbone": "mlp",
+      "conditioner": "embedding",
+      "num_classes": 16
+    },
+    "teacher": {
+      "seed": 47,
+      "updates": 20000,
+      "batch_size": 512,
+      "lr": 0.001,
+      "weight_decay": 0.0001,
+      "warmup": 1000,
+      "ema_decay": 0.999,
+      "grad_clip": 1.0,
+      "condition_dropout": 0.1
+    }
+  },
+  "data_sha256": "723b7a3f2d9072d13014da0d4509712334f813cdf771a0e4ff7a47127256b7b0",
+  "environment": {
+    "python": "3.11.16",
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "versions": {
+      "torch": "2.14.1",
+      "diffusers": "0.39.0",
+      "geomloss": "0.3.1",
+      "torchvision": "0.29.1",
+      "numpy": "2.4.6",
+      "scipy": "1.17.1",
+      "diffusion-lab": "0.4.2"
+    },
+    "git_commit": "929cce8e42a162fabfa151177b0b08e23c6cba36",
+    "cuda": false,
+    "mps": false,
+    "mps_built": true,
+    "cuda_version": null,
+    "deterministic_algorithms": false,
+    "cpu_count": 14,
+    "torch_threads": 4
+  },
+  "conditional": true,
+  "time_convention": "data0,noise1;model timestep=t*1000",
+  "condition_dropout": 0.1,
+  "teacher_sha256": "9bc0dbe39c4cb24c4d9b893bac084c89be66fdd7b29d6879fca786b4020d6ce1",
+  "training_seconds": 168.12548237480223
+}

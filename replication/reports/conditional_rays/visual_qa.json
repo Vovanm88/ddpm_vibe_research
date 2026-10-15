@@ -1,0 +1,101 @@
+{
+  "status": "inspected",
+  "source": "cached teacher_routing_payload.pt only; no model or sampler calls",
+  "payload_sha256": "4d63277fd949895c61346983d413d4a1b35bcd3709af76b85d84a5a11595a01a",
+  "source_module_sha256": "792318b461d1e0553e30eb1b9d75f4b9956a0937968f769d9a51f7383624cab5",
+  "tests": "8 passed, including ignored-condition failure, exact initial noise, actual nodes and cached null widget",
+  "target_labels": [
+    0,
+    4,
+    8,
+    12
+  ],
+  "noise_index": 0,
+  "same_noise_all_conditions_assertion": true,
+  "initial_point": [
+    1.2192462682724,
+    -0.7895344495773315
+  ],
+  "final_points": [
+    [
+      -0.019908316433429718,
+      0.3675231635570526
+    ],
+    [
+      -0.400890976190567,
+      -0.030490268021821976
+    ],
+    [
+      0.2661028802394867,
+      -0.8163497447967529
+    ],
+    [
+      0.7376437187194824,
+      0.18150962889194489
+    ]
+  ],
+  "final_nearest_geometric_proxy": [
+    0,
+    4,
+    8,
+    12
+  ],
+  "n_real": 8192,
+  "history_shape": [
+    33,
+    256,
+    2
+  ],
+  "gif_frames": 33,
+  "gif_size": [
+    972,
+    954
+  ],
+  "fps": 10,
+  "actual_node_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32
+  ],
+  "interpolation": false,
+  "changed_rgb_fraction_first_to_last": 0.04120726246861817,
+  "bounds_scope": "All real/ideal geometry and all conditions/frames for the single selected noise_index; common panels/frames.",
+  "visual_qa": "Personally inspected overview PNG and GIF first/final frames: titles, requested labels, geometric proxy labels, axes, legend, colorbar and footnote readable; no clipping.",
+  "colors": "red start to violet finish; requested ideal ray charcoal dashed, requested real data teal, others grey",
+  "files": {
+    "condition_routing.png": "327d9f64c79645ac78ede1b5b0b46b0a0e5a4f8e2a2e21b3a546d47301916214",
+    "condition_routing.svg": "d6c2532e8c18db09860997dd4eb7ebdd73098d45529ebe492ba5fe2de9c6650a",
+    "condition_routing.gif": "d99bc90d2e27f3de8e8b41f88de7f3ccb795a67a95923c88de65e5d5f750d331"
+  },
+  "interactive": "condition_routing_widget supports cached target0..15/null, noise0..255, Play/Slider exact node step1; requires a Jupyter kernel for callbacks."
+}

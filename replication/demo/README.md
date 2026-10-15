@@ -79,3 +79,38 @@ result = sample_euler(teacher, noise, steps=32)
 в строгий checkpoint contract. Для нового исследования задайте новый output_dir.
 Отчёт можно пересобрать непосредственно из demo через `python -m recheck.cli report
 --runs replication/demo/rays_cpu_pilot_v1 --output <report_dir>/REPORT.md`.
+
+## Conditional-пример: выбор одного из 16 лучей
+
+`rays16_conditional_v1/` содержит отдельный обученный conditional teacher:
+native `PointDenoiser`, `conditioner="embedding"`, 16 labels, hidden 128 × 3,
+333 698 параметров, **20 000 CFM updates**. Модель получает категориальный target
+при каждом вызове; время передаётся как `t * 1000`. Это демонстрация управления
+генерацией через condition, отдельная от unconditional SPEC-серии выше.
+
+В проверке **тот же набор из 256 initial noises повторён для всех 16 targets**.
+При 32 Euler-шагах, **без CFG** (`guidance_scale=1`), правильный луч получен
+в 4095/4096 случаев; вне центральной области `r > 0.25R` — в 3903/3903 случаев
+при coverage 95.29%. Null-контроль даёт 6.25%. Для одного и того же initial noise
+conditional-выходы попадают в среднем на 15.9961 различных лучей из 16,
+а null-выход остаётся одним и тем же при смене target.
+
+Открытый пример обучения и дистилляции:
+[notebook13](../../notebooks/13_conditional_rays_distillation.ipynb).
+[Метрики и ограничения проверки](../reports/conditional_rays/REPORT.md),
+[GIF с общим стартом и разными targets](../reports/conditional_rays/condition_routing.gif).
+Принадлежность измеряется геометрическим phase proxy, с отдельной проверкой
+coverage у центра; это не learned classifier и не евклидов nearest finite curve.
+
+В [каталоге публикации](rays16_conditional_v1) находятся выбранные финальные
+native EMA weights/config, registration и manifest/history. **Веса не встроены
+в notebook**. Optimizer, RNG и `training.pt` исключены: **точный resume из demo
+невозможен**; опубликованный EMA подходит для inference и нового обучения
+с новым optimizer и каталогом артефактов. Состав и SHA256 указаны в
+`PUBLICATION_MANIFEST.json`.
+
+В `rays16_conditional_v1/students/` также опубликованы M0/M1/E0/E1 из полного
+запуска notebook 13: по 200 updates, один paired seed 101. Это короткий пример,
+а не официальное сравнение методов. На общем наборе 128 шумов × 16 targets
+каждый ученик получил правильный запрошенный луч в 2048/2048 случаев.
+Калибровка и validation-метрики сохранены рядом с весами; optimizer/RNG исключены.

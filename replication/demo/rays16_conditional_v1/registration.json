@@ -1,0 +1,39 @@
+{
+  "status": "registered_before_training",
+  "config": {
+    "protocol_id": "rays16_conditional_v1",
+    "scope": "condition_routing_demonstration_not_unconditional_replication",
+    "data": {
+      "name": "rotating_rays",
+      "n_classes": 16,
+      "n_train": 65536,
+      "seed": 47
+    },
+    "model": {
+      "sample_shape": [
+        2
+      ],
+      "hidden_dim": 128,
+      "num_layers": 3,
+      "backbone": "mlp",
+      "conditioner": "embedding",
+      "num_classes": 16
+    },
+    "teacher": {
+      "seed": 47,
+      "updates": 20000,
+      "batch_size": 512,
+      "lr": 0.001,
+      "weight_decay": 0.0001,
+      "warmup": 1000,
+      "ema_decay": 0.999,
+      "grad_clip": 1.0,
+      "condition_dropout": 0.1
+    }
+  },
+  "fixed_final_updates": 20000,
+  "no_checkpoint_selection": true,
+  "training_device": "cpu",
+  "torch_threads": 4,
+  "note": "Every conditional teacher call receives matching labels and all samplers keep target IDs fixed. Dropout explicitly trains null mode."
+}

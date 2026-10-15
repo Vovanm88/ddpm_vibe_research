@@ -1,0 +1,49 @@
+{
+  "status": "completed",
+  "scope": "conditional_rays_demonstration",
+  "teacher_sha256": "9bc0dbe39c4cb24c4d9b893bac084c89be66fdd7b29d6879fca786b4020d6ce1",
+  "updates": 20000,
+  "native_class": "PointDenoiser",
+  "conditioner": "embedding",
+  "num_classes": 16,
+  "exact_resume_available": false,
+  "files_sha256": {
+    "registration.json": "094200fcd0bce18d70a52b3159e978606b5775bcc017f1ba690c6663f38db6bb",
+    "notebook_validation.json": "eb160f5b596e700912eb78e16343d4eaffa3be699b49072f5940c2dc44c5745e",
+    "forced_null_control.json": "13a9e8e2a88e32542c73c99f1b249622d75389d5f39ad01ec30cf51f4f8b773d",
+    "notebook_calibration.json": "ebcbe64ed9140956410225b677c0513cb40ae32f187a1d5ef6a56b9f9b31ad97",
+    "students/M1/history.json": "95f7a37f422382efae24324b705c821a5ef4098bbef101c893aa41ea2e9dd484",
+    "students/M1/manifest.json": "1c7f8643576b61538f79991b96c4d9624b2d470922a92ae5723aaa1255ba5279",
+    "students/M1/ema_model/config.json": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+    "students/M1/ema_model/diffusion_pytorch_model.safetensors": "eb47a99f2337e1435297cea516f4b11db6697291986da55aceb657506fa6f8b5",
+    "students/M0/history.json": "0b4e2c2052401997182953e4ad404a93c6a90fe195dae6bf63655d7371036cef",
+    "students/M0/manifest.json": "ea233b4b1bbe007d719d418ea267e00c8f72e9508e8700d941c33f6ae0f4622c",
+    "students/M0/ema_model/config.json": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+    "students/M0/ema_model/diffusion_pytorch_model.safetensors": "c82c254beb147c17d539b95bb5d38dda17a1e1981f4004291a613257cd4b4359",
+    "students/E1/history.json": "509aaa09bcb20a25620dce9175f77421605ea29b9b01ec833c19e04b33e590b2",
+    "students/E1/manifest.json": "bb10d7f8ee45bbc5fabcf3a90932f669cc5850169b0400702025e53efd49645e",
+    "students/E1/ema_model/config.json": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+    "students/E1/ema_model/diffusion_pytorch_model.safetensors": "4f7891c28035d759916b3aa26fb60ea57ee3a33e7226fd1543b32a941855c108",
+    "students/E0/history.json": "d1079967e6612809112e96d843aaf03db36c5a139e2c236eb5d7740cda2b82e1",
+    "students/E0/manifest.json": "abee1b33110b8edbe64f6328ae3752b278359367adf0c4db6e5ecac337b662a8",
+    "students/E0/ema_model/config.json": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+    "students/E0/ema_model/diffusion_pytorch_model.safetensors": "4b441fe54391e34004398ebabd78f23fbc334ae5dd53a5e4536e75bb1adb8588",
+    "teacher/history.json": "5988dfb2dc1f4936b9634fa44effc5da75d9812b23d176ac45e585b46ed5e094",
+    "teacher/manifest.json": "ef99d43558809b225542e54d6adeeec7c2106745607a83c11f1a8499e414fd08",
+    "teacher/ema_model/config.json": "a7fbca2c7c801a4371784e2fca8740f2b89c5b1005875c43e9c616f0816e7672",
+    "teacher/ema_model/diffusion_pytorch_model.safetensors": "9fe15863642974b19778c102a2073085746f47cb7630496b862f7375ab9dd837"
+  },
+  "excluded": [
+    "training.pt",
+    "optimizer/RNG",
+    "live_model"
+  ],
+  "student_updates": 200,
+  "student_scope": "one exploratory paired seed101; no loss superiority claim",
+  "student_ema_sha256": {
+    "M0": "1e42eab0704f8c9d9feab2a12d3ddba0e16f397e675d12644c1db78fb33c0a35",
+    "M1": "4f519a7048ef3caad7eaa3ba9d7389d5636adaea407073978f2eb2460acee6ad",
+    "E0": "dc8457ea8f23661a7d68d1a161b305748fb66eaea00081f40bdcd99a95a80066",
+    "E1": "9b7db7ddeafd5769f30ff8afe1a08085fa0bf03384b4a699ae8c14ff82c35c7c"
+  }
+}

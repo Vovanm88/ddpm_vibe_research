@@ -13,10 +13,11 @@
   ],
   "animations_presented_to_user": true,
   "pytest": {
-    "passed": 551,
+    "passed": 595,
     "skipped": 3,
     "failed": 0,
-    "seconds": 45.73,
+    "seconds": 49.17,
+    "note": "Full tree including conditional routing metrics, paired visualization and visible conditional notebook13 tests. Original recheck algorithm unchanged.",
     "gpu_skips_covered_by_actual_mps_reports": true
   },
   "numeric_tests_sha256": "3234e6ef072ddd4cb64b2b74661d40e3a3f5c1c983047e31dc55e982d08320d4",

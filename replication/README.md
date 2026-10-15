@@ -45,6 +45,12 @@ Torch-циклы и геометрическую диагностику. Доб�
 не объявляется выполненным: [фактический статус](reports/mnist_deferred_by_user.json).
 Test MNIST не открывался. Полный код и notebook 11 сохранены для отдельного запуска.
 
+Весь зарегистрированный протокол выше — **unconditional**, без номера луча на входе.
+Для условной генерации добавлен отдельный [notebook 13](../notebooks/13_conditional_rays_distillation.ipynb)
+с `PointDenoiser(conditioner="embedding", num_classes=16)`. Он сохраняет condition
+при teacher microsteps, tube retargeting и student sampling; OT support состоит
+из одного условия. Это отдельный эксперимент с проверкой попадания в заданный луч.
+
 ## Запуск из корня репозитория
 
 ```bash

@@ -80,7 +80,7 @@ uv run python examples/evaluate_ray_geometry.py \
 
 Опубликованные native EMA пригодны для генерации и новых экспериментов. Они не содержат optimizer/RNG state, поэтому точный resume официального обучения из demo невозможен; полные локальные training checkpoints оставлены в ignored artifacts. Полный код MNIST сохранён, но длительный запуск остановлен по уточнению пользователя, Test MNIST не открывался. Apple MPS доступен и отдельно проверен на forward/backward/native reload и OT gradient parity; этот небольшой стенд выполнен на CPU.
 
-Проверка текущего дерева: **551 passed, 3 skipped**, 45.73 s. GPU-dependent skips дополнены фактическими MPS smoke/parity reports; Ruff для src/tests/examples и новых notebooks проходит.
+Проверка реализации при завершении этой серии: **551 passed, 3 skipped**, 45.73 s. GPU-dependent skips дополнены фактическими MPS smoke/parity reports; Ruff для src/tests/examples и новых notebooks проходит.
 
 Дополнительно [notebook 12 выполнен целиком](notebook12_native_smoke.json) с опубликованным
 100k teacher: все 15 code cells, четыре новых ученика по 200 updates, интерактивные

@@ -1,0 +1,532 @@
+{
+  "status": "completed",
+  "scope": "separate_conditional_demo_not_unconditional_replication",
+  "notebook": "notebooks/13_conditional_rays_distillation.ipynb",
+  "notebook_sha256": "888dee663051544a1571e53466c7aadcff9e208a18379a17e1c8ac14eb51f963",
+  "executed_code_cells": 13,
+  "cells": [
+    {
+      "index": 1,
+      "tags": [
+        "install"
+      ],
+      "status": "completed",
+      "seconds": 0.0007496247999370098
+    },
+    {
+      "index": 2,
+      "tags": [
+        "imports"
+      ],
+      "status": "completed",
+      "seconds": 0.4258165000937879
+    },
+    {
+      "index": 3,
+      "tags": [
+        "parameters"
+      ],
+      "status": "completed",
+      "seconds": 0.0001709158532321453
+    },
+    {
+      "index": 4,
+      "tags": [
+        "native_parent_guard"
+      ],
+      "status": "completed",
+      "seconds": 0.00026683323085308075
+    },
+    {
+      "index": 5,
+      "tags": [
+        "setup"
+      ],
+      "status": "completed",
+      "seconds": 0.009939666837453842
+    },
+    {
+      "index": 7,
+      "tags": [
+        "teacher_training"
+      ],
+      "status": "completed",
+      "seconds": 0.006859582848846912
+    },
+    {
+      "index": 9,
+      "tags": [
+        "transition_and_sampling"
+      ],
+      "status": "completed",
+      "seconds": 0.0004169582389295101
+    },
+    {
+      "index": 11,
+      "tags": [
+        "calibration"
+      ],
+      "status": "completed",
+      "seconds": 0.9027456669136882
+    },
+    {
+      "index": 13,
+      "tags": [
+        "student_training"
+      ],
+      "status": "completed",
+      "seconds": 14.866970041301101
+    },
+    {
+      "index": 15,
+      "tags": [
+        "evaluation"
+      ],
+      "status": "completed",
+      "seconds": 1.1490315003320575
+    },
+    {
+      "index": 16,
+      "tags": [
+        "plots_and_gifs"
+      ],
+      "status": "completed",
+      "seconds": 17.450404250063002
+    },
+    {
+      "index": 18,
+      "tags": [
+        "interactive"
+      ],
+      "status": "completed",
+      "seconds": 0.04248337494209409
+    },
+    {
+      "index": 20,
+      "tags": [
+        "reload"
+      ],
+      "status": "completed",
+      "seconds": 0.02656450029462576
+    }
+  ],
+  "harness_overrides": {
+    "skip_redundant_pip_install": true,
+    "output_dir": "/private/tmp/recheck_nb13_actual_smoke",
+    "teacher_candidate": "published conditional native EMA only"
+  },
+  "native_parent_path": "/Users/vvmelnikov/Documents/thub_eda/diffusion-lab/replication/demo/rays16_conditional_v1/teacher/ema_model",
+  "parent_sha256": "9bc0dbe39c4cb24c4d9b893bac084c89be66fdd7b29d6879fca786b4020d6ce1",
+  "parent_updates": 20000,
+  "parent_frozen": true,
+  "device": "cpu",
+  "torch_threads": 4,
+  "student_updates": 200,
+  "micro_batch": 128,
+  "student_seed": 101,
+  "methods": {
+    "M0": {
+      "status": "completed",
+      "updates_completed": 200,
+      "ema_sha256": "1e42eab0704f8c9d9feab2a12d3ddba0e16f397e675d12644c1db78fb33c0a35",
+      "native_reload_matches": true,
+      "null_updates": 16,
+      "observed_target_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    "M1": {
+      "status": "completed",
+      "updates_completed": 200,
+      "ema_sha256": "4f519a7048ef3caad7eaa3ba9d7389d5636adaea407073978f2eb2460acee6ad",
+      "native_reload_matches": true,
+      "null_updates": 16,
+      "observed_target_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    "E0": {
+      "status": "completed",
+      "updates_completed": 200,
+      "ema_sha256": "dc8457ea8f23661a7d68d1a161b305748fb66eaea00081f40bdcd99a95a80066",
+      "native_reload_matches": true,
+      "null_updates": 16,
+      "observed_target_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    "E1": {
+      "status": "completed",
+      "updates_completed": 200,
+      "ema_sha256": "9b7db7ddeafd5769f30ff8afe1a08085fa0bf03384b4a699ae8c14ff82c35c7c",
+      "native_reload_matches": true,
+      "null_updates": 16,
+      "observed_target_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    }
+  },
+  "single_condition_per_ot_support": true,
+  "calibration_condition_count_including_null": 17,
+  "calibration_intervals_per_condition": 16,
+  "paired_condition_null_data_time_noise_tube_traces_match": true,
+  "same_initial_noise_for_every_requested_target_and_null": true,
+  "all_native_ema_reload_hashes_match": true,
+  "first_native_reload_samples_exactly_equal": true,
+  "requested_target_routing": {
+    "Teacher N32": {
+      "accuracy_all": 1.0,
+      "accuracy_outer": 1.0,
+      "outer_coverage": 0.93115234375,
+      "requested_phase_error": {
+        "definition": "wrap_pi(atan2(y,x)-pi/2-1.6*pi*(r/R)^2/(.9*C)-2*pi*requested_id/C)",
+        "defined_count_all": 2048,
+        "mean_signed_radians_all": 0.0008450772544719778,
+        "mean_absolute_radians_all": 0.00271649792627596,
+        "mean_absolute_sector_fraction_all": 0.006917505165851234,
+        "p95_absolute_sector_fraction_all": 0.018187286620188706,
+        "defined_count_outer": 1907,
+        "mean_signed_radians_outer": 0.0009309740612864679,
+        "mean_absolute_radians_outer": 0.0023899854618623746,
+        "mean_absolute_sector_fraction_outer": 0.006086048002770615,
+        "p95_absolute_sector_fraction_outer": 0.014903664233089593
+      },
+      "initial_routing": {
+        "proxy_caveat": "unwound-phase ID; outside nominal R it extends the curves, not Euclidean nearest finite curve",
+        "initial_unassigned_count": 0,
+        "initial_outside_nominal_radius_fraction": 0.7265625,
+        "target_matches_initial_fraction": 0.0625,
+        "output_matches_initial_fraction": 0.0625,
+        "output_changes_arm_fraction": 0.9375,
+        "target_differs_from_initial_count": 1920,
+        "output_matches_target_when_target_differs_from_initial": 1.0,
+        "output_changes_arm_when_target_differs_from_initial": 1.0,
+        "output_stays_initial_when_target_differs_from_initial": 0.0,
+        "correct_outer_fraction_when_target_differs_from_initial": 0.9322916666666666
+      },
+      "counterfactual_same_noise": {
+        "unique_noise_vectors": 128,
+        "complete_noise_groups": 128,
+        "definition": "complete group contains the EXACT same initial vector once for every requested class",
+        "mean_distinct_output_arms_per_complete_noise": 16.0,
+        "fraction_complete_groups_all_targets_correct": 1.0,
+        "fraction_complete_groups_all_outputs_outer": 0.65625
+      }
+    },
+    "M0 N16": {
+      "accuracy_all": 1.0,
+      "accuracy_outer": 1.0,
+      "outer_coverage": 0.935546875,
+      "requested_phase_error": {
+        "definition": "wrap_pi(atan2(y,x)-pi/2-1.6*pi*(r/R)^2/(.9*C)-2*pi*requested_id/C)",
+        "defined_count_all": 2048,
+        "mean_signed_radians_all": 0.0009411940524654378,
+        "mean_absolute_radians_all": 0.0059706822783084906,
+        "mean_absolute_sector_fraction_all": 0.015204217571583613,
+        "p95_absolute_sector_fraction_all": 0.043166291821268306,
+        "defined_count_outer": 1916,
+        "mean_signed_radians_outer": 0.0017506260398318142,
+        "mean_absolute_radians_outer": 0.004993162075178414,
+        "mean_absolute_sector_fraction_outer": 0.012714982814778087,
+        "p95_absolute_sector_fraction_outer": 0.03649787604961146
+      },
+      "initial_routing": {
+        "proxy_caveat": "unwound-phase ID; outside nominal R it extends the curves, not Euclidean nearest finite curve",
+        "initial_unassigned_count": 0,
+        "initial_outside_nominal_radius_fraction": 0.7265625,
+        "target_matches_initial_fraction": 0.0625,
+        "output_matches_initial_fraction": 0.0625,
+        "output_changes_arm_fraction": 0.9375,
+        "target_differs_from_initial_count": 1920,
+        "output_matches_target_when_target_differs_from_initial": 1.0,
+        "output_changes_arm_when_target_differs_from_initial": 1.0,
+        "output_stays_initial_when_target_differs_from_initial": 0.0,
+        "correct_outer_fraction_when_target_differs_from_initial": 0.9369791666666667
+      },
+      "counterfactual_same_noise": {
+        "unique_noise_vectors": 128,
+        "complete_noise_groups": 128,
+        "definition": "complete group contains the EXACT same initial vector once for every requested class",
+        "mean_distinct_output_arms_per_complete_noise": 16.0,
+        "fraction_complete_groups_all_targets_correct": 1.0,
+        "fraction_complete_groups_all_outputs_outer": 0.6640625
+      }
+    },
+    "M1 N16": {
+      "accuracy_all": 1.0,
+      "accuracy_outer": 1.0,
+      "outer_coverage": 0.935546875,
+      "requested_phase_error": {
+        "definition": "wrap_pi(atan2(y,x)-pi/2-1.6*pi*(r/R)^2/(.9*C)-2*pi*requested_id/C)",
+        "defined_count_all": 2048,
+        "mean_signed_radians_all": 0.0009129278847527093,
+        "mean_absolute_radians_all": 0.00596079255516088,
+        "mean_absolute_sector_fraction_all": 0.015179033598387574,
+        "p95_absolute_sector_fraction_all": 0.04342271736264114,
+        "defined_count_outer": 1916,
+        "mean_signed_radians_outer": 0.0017381078317486858,
+        "mean_absolute_radians_outer": 0.004985573345179974,
+        "mean_absolute_sector_fraction_outer": 0.012695658272521426,
+        "p95_absolute_sector_fraction_outer": 0.03622966362085446
+      },
+      "initial_routing": {
+        "proxy_caveat": "unwound-phase ID; outside nominal R it extends the curves, not Euclidean nearest finite curve",
+        "initial_unassigned_count": 0,
+        "initial_outside_nominal_radius_fraction": 0.7265625,
+        "target_matches_initial_fraction": 0.0625,
+        "output_matches_initial_fraction": 0.0625,
+        "output_changes_arm_fraction": 0.9375,
+        "target_differs_from_initial_count": 1920,
+        "output_matches_target_when_target_differs_from_initial": 1.0,
+        "output_changes_arm_when_target_differs_from_initial": 1.0,
+        "output_stays_initial_when_target_differs_from_initial": 0.0,
+        "correct_outer_fraction_when_target_differs_from_initial": 0.9369791666666667
+      },
+      "counterfactual_same_noise": {
+        "unique_noise_vectors": 128,
+        "complete_noise_groups": 128,
+        "definition": "complete group contains the EXACT same initial vector once for every requested class",
+        "mean_distinct_output_arms_per_complete_noise": 16.0,
+        "fraction_complete_groups_all_targets_correct": 1.0,
+        "fraction_complete_groups_all_outputs_outer": 0.6640625
+      }
+    },
+    "E0 N16": {
+      "accuracy_all": 1.0,
+      "accuracy_outer": 1.0,
+      "outer_coverage": 0.935546875,
+      "requested_phase_error": {
+        "definition": "wrap_pi(atan2(y,x)-pi/2-1.6*pi*(r/R)^2/(.9*C)-2*pi*requested_id/C)",
+        "defined_count_all": 2048,
+        "mean_signed_radians_all": 0.000719320518756857,
+        "mean_absolute_radians_all": 0.00593332190031144,
+        "mean_absolute_sector_fraction_all": 0.015109080150239417,
+        "p95_absolute_sector_fraction_all": 0.041628426453126845,
+        "defined_count_outer": 1916,
+        "mean_signed_radians_outer": 0.0015714031883949469,
+        "mean_absolute_radians_outer": 0.004903949938997871,
+        "mean_absolute_sector_fraction_outer": 0.012487805975467357,
+        "p95_absolute_sector_fraction_outer": 0.035559472790726285
+      },
+      "initial_routing": {
+        "proxy_caveat": "unwound-phase ID; outside nominal R it extends the curves, not Euclidean nearest finite curve",
+        "initial_unassigned_count": 0,
+        "initial_outside_nominal_radius_fraction": 0.7265625,
+        "target_matches_initial_fraction": 0.0625,
+        "output_matches_initial_fraction": 0.0625,
+        "output_changes_arm_fraction": 0.9375,
+        "target_differs_from_initial_count": 1920,
+        "output_matches_target_when_target_differs_from_initial": 1.0,
+        "output_changes_arm_when_target_differs_from_initial": 1.0,
+        "output_stays_initial_when_target_differs_from_initial": 0.0,
+        "correct_outer_fraction_when_target_differs_from_initial": 0.9369791666666667
+      },
+      "counterfactual_same_noise": {
+        "unique_noise_vectors": 128,
+        "complete_noise_groups": 128,
+        "definition": "complete group contains the EXACT same initial vector once for every requested class",
+        "mean_distinct_output_arms_per_complete_noise": 16.0,
+        "fraction_complete_groups_all_targets_correct": 1.0,
+        "fraction_complete_groups_all_outputs_outer": 0.6640625
+      }
+    },
+    "E1 N16": {
+      "accuracy_all": 1.0,
+      "accuracy_outer": 1.0,
+      "outer_coverage": 0.935546875,
+      "requested_phase_error": {
+        "definition": "wrap_pi(atan2(y,x)-pi/2-1.6*pi*(r/R)^2/(.9*C)-2*pi*requested_id/C)",
+        "defined_count_all": 2048,
+        "mean_signed_radians_all": 0.0006914289326182042,
+        "mean_absolute_radians_all": 0.005929453495547369,
+        "mean_absolute_sector_fraction_all": 0.015099229338398103,
+        "p95_absolute_sector_fraction_all": 0.041221302850996414,
+        "defined_count_outer": 1916,
+        "mean_signed_radians_outer": 0.0015606304095098923,
+        "mean_absolute_radians_outer": 0.004898735851952969,
+        "mean_absolute_sector_fraction_outer": 0.012474528411836834,
+        "p95_absolute_sector_fraction_outer": 0.035699524636014626
+      },
+      "initial_routing": {
+        "proxy_caveat": "unwound-phase ID; outside nominal R it extends the curves, not Euclidean nearest finite curve",
+        "initial_unassigned_count": 0,
+        "initial_outside_nominal_radius_fraction": 0.7265625,
+        "target_matches_initial_fraction": 0.0625,
+        "output_matches_initial_fraction": 0.0625,
+        "output_changes_arm_fraction": 0.9375,
+        "target_differs_from_initial_count": 1920,
+        "output_matches_target_when_target_differs_from_initial": 1.0,
+        "output_changes_arm_when_target_differs_from_initial": 1.0,
+        "output_stays_initial_when_target_differs_from_initial": 0.0,
+        "correct_outer_fraction_when_target_differs_from_initial": 0.9369791666666667
+      },
+      "counterfactual_same_noise": {
+        "unique_noise_vectors": 128,
+        "complete_noise_groups": 128,
+        "definition": "complete group contains the EXACT same initial vector once for every requested class",
+        "mean_distinct_output_arms_per_complete_noise": 16.0,
+        "fraction_complete_groups_all_targets_correct": 1.0,
+        "fraction_complete_groups_all_outputs_outer": 0.6640625
+      }
+    }
+  },
+  "samples_per_requested_target": 128,
+  "interactive_cfg_default_off": true,
+  "interactive_target_7_and_null_callbacks_passed": true,
+  "interactive_play_frame_steps": 1,
+  "gifs": [
+    {
+      "path": "/private/tmp/recheck_nb13_actual_smoke/Teacher_N32_target_routing.gif",
+      "frames": 33,
+      "size": [
+        972,
+        954
+      ],
+      "bytes": 681822
+    },
+    {
+      "path": "/private/tmp/recheck_nb13_actual_smoke/E1_N16_target_routing.gif",
+      "frames": 17,
+      "size": [
+        972,
+        954
+      ],
+      "bytes": 427751
+    }
+  ],
+  "figures": [
+    "E1_N16_condition_routing.png",
+    "E1_N16_condition_routing.svg",
+    "Teacher_N32_condition_routing.png",
+    "Teacher_N32_condition_routing.svg",
+    "conditional_losses.png",
+    "conditional_losses.svg"
+  ],
+  "official_and_parent_files_unchanged": 260,
+  "source_notebook_unchanged": true,
+  "embedded_notebook_outputs": false,
+  "seconds": 35.606527583207935,
+  "forced_null_control": {
+    "Teacher N32": {
+      "accuracy_all": 0.0625,
+      "accuracy_outer": 0.0625,
+      "counterfactual_same_noise": {
+        "unique_noise_vectors": 128,
+        "complete_noise_groups": 128,
+        "definition": "complete group contains the EXACT same initial vector once for every requested class",
+        "mean_distinct_output_arms_per_complete_noise": 1.0,
+        "fraction_complete_groups_all_targets_correct": 0.0,
+        "fraction_complete_groups_all_outputs_outer": 0.9375
+      }
+    },
+    "M0 N16": {
+      "accuracy_all": 0.0625,
+      "accuracy_outer": 0.0625,
+      "counterfactual_same_noise": {
+        "unique_noise_vectors": 128,
+        "complete_noise_groups": 128,
+        "definition": "complete group contains the EXACT same initial vector once for every requested class",
+        "mean_distinct_output_arms_per_complete_noise": 1.0,
+        "fraction_complete_groups_all_targets_correct": 0.0,
+        "fraction_complete_groups_all_outputs_outer": 0.9296875
+      }
+    },
+    "M1 N16": {
+      "accuracy_all": 0.0625,
+      "accuracy_outer": 0.0625,
+      "counterfactual_same_noise": {
+        "unique_noise_vectors": 128,
+        "complete_noise_groups": 128,
+        "definition": "complete group contains the EXACT same initial vector once for every requested class",
+        "mean_distinct_output_arms_per_complete_noise": 1.0,
+        "fraction_complete_groups_all_targets_correct": 0.0,
+        "fraction_complete_groups_all_outputs_outer": 0.9296875
+      }
+    },
+    "E0 N16": {
+      "accuracy_all": 0.0625,
+      "accuracy_outer": 0.0625,
+      "counterfactual_same_noise": {
+        "unique_noise_vectors": 128,
+        "complete_noise_groups": 128,
+        "definition": "complete group contains the EXACT same initial vector once for every requested class",
+        "mean_distinct_output_arms_per_complete_noise": 1.0,
+        "fraction_complete_groups_all_targets_correct": 0.0,
+        "fraction_complete_groups_all_outputs_outer": 0.9296875
+      }
+    },
+    "E1 N16": {
+      "accuracy_all": 0.0625,
+      "accuracy_outer": 0.0625,
+      "counterfactual_same_noise": {
+        "unique_noise_vectors": 128,
+        "complete_noise_groups": 128,
+        "definition": "complete group contains the EXACT same initial vector once for every requested class",
+        "mean_distinct_output_arms_per_complete_noise": 1.0,
+        "fraction_complete_groups_all_targets_correct": 0.0,
+        "fraction_complete_groups_all_outputs_outer": 0.9296875
+      }
+    }
+  },
+  "forced_null_control_file": "/private/tmp/recheck_nb13_actual_smoke/forced_null_control.json"
+}
