@@ -1,0 +1,46 @@
+{
+  "status": "registered_before_student_training",
+  "registered_utc": "2026-10-15T13:56:30.488234+00:00",
+  "teacher_sha256": "9bc0dbe39c4cb24c4d9b893bac084c89be66fdd7b29d6879fca786b4020d6ce1",
+  "teacher_updates": 20000,
+  "grids": [
+    {
+      "teacher_steps": 32,
+      "student_steps": 4
+    },
+    {
+      "teacher_steps": 32,
+      "student_steps": 2
+    }
+  ],
+  "methods": [
+    "M0",
+    "M1",
+    "E0",
+    "E1"
+  ],
+  "student_seeds": [
+    101,
+    202,
+    303
+  ],
+  "student_updates": 1000,
+  "student_batch_size": 128,
+  "student_lr": 0.0001,
+  "student_warmup": 100,
+  "student_ema": 0.99,
+  "tube_rho": 0.1,
+  "lambda_w": 1.0,
+  "student_null_probability": 0.1,
+  "ot_support": "whole batch one condition or trained null",
+  "total_models": 24,
+  "final_assessment_rule": "All24 model exports completed and frozen before new final reference/noise generation",
+  "final_noise_seed": 940001,
+  "final_reference_seed": 20047,
+  "previous_830001_noise_and_10047_reference_scope": "validation/posthoc diagnostic used to motivate new budgets, not this final assessment",
+  "samples_per_target": 256,
+  "test_points_per_condition": 512,
+  "notebook_sha256": "888dee663051544a1571e53466c7aadcff9e208a18379a17e1c8ac14eb51f963",
+  "runner_sha256": "797de0f89713eb5117d4a51044accf46b70e4eda40cee86d05bd89651923ea95",
+  "execution": "Two independentCPUcohorts,4torchthreads each; walltimes under concurrentload, no isolated cost superiority claim"
+}

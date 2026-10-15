@@ -1,0 +1,10 @@
+{
+  "scope": "publication_storage_only_no_assessment_change",
+  "private_full_histories": "replication/artifacts/wall_navigation_conditional_v1/validation_cache/teacher_validation_bank.pt",
+  "full_histories_sha256": "1a8ce2f1e3ae697bccc731f63391be87c4f6aaf3ca38b6326387fa920b7e5c4d",
+  "published_endpoints": "teacher_validation_endpoints.pt",
+  "published_endpoints_sha256": "5266f8d6057fcf4533c7c60d449bdca38172315065a7be2ee1069a6796034faa",
+  "full_bank_bytes": 142709394,
+  "endpoints_bytes": 9540263,
+  "reproduction": "examples/evaluate_wall_navigation.py regenerates all histories; scene0_histories.pt retains full preview states"
+}

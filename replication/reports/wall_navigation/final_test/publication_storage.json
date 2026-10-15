@@ -1,0 +1,6 @@
+{
+  "scope": "redundant_intermediate_progress_not_a_final_assessment",
+  "private_path": "replication/artifacts/wall_navigation_conditional_v1/final_evaluation_cache/progress.json",
+  "sha256": "ed760f2e1a3c114e5de7fb3a4db7838c0baf114e8f35e2d83abcba00e6077751",
+  "published_final_results": "metrics.json"
+}

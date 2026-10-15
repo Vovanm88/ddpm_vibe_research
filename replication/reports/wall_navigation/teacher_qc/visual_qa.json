@@ -1,0 +1,89 @@
+{
+  "status": "visually_verified",
+  "scope": "validation_only",
+  "test_accessed": false,
+  "scene_index": 0,
+  "selected_path_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31
+  ],
+  "particle_path_indices": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "quality_selection": false,
+  "source_sha256": {
+    "src/diffusion_lab/navigation_visualization.py": "27425227b9f0f2141e82af06dd3a1f70a84a0a47047f3889a3ab2a46a03f3ea0",
+    "examples/evaluate_wall_navigation.py": "6d86aebe1a3ec0a6a39d0ca6a18e2a6c033906c81c39a140a22853cb56803278"
+  },
+  "teacher_sha256": "71d77760c37e6a053f324f2c810adb323439ed76ef51f09a57db43a5d2da9e79",
+  "noise_sha256": "0ce85111c7e74a68949b81962fd6f042891021b22cad80b9ffc7d46f2566d9b6",
+  "conditions_sha256": "edad0a7e245f3ecd32542397d01bf64e4ea436e6ca6fbfac5e679a15e7e612cf",
+  "reference_paths_sha256": "52b8e3a14872a4a43234558c1fd9a45fc73a0b5f376640464740a2a22c5a68ed",
+  "gifs": {
+    "teacher_n64_fm_denoising.gif": {
+      "n_frames": 33,
+      "size": [
+        423,
+        468
+      ],
+      "sha256": "92f3987642da82d8b6df8d610a5c802e10803e201b6685ffcc10d416db5634a1",
+      "first_last_differ": true,
+      "duration_ms": 100
+    },
+    "teacher_n64_spatial_particle.gif": {
+      "n_frames": 32,
+      "size": [
+        666,
+        639
+      ],
+      "sha256": "c561a7b381bdf124055fd27861e65401cd450914f6b9b10bd1083d8ec5b0b5f2",
+      "first_last_differ": true,
+      "duration_ms": 100
+    }
+  },
+  "inspection": [
+    "Inspected reference and generated N64 scene0 paths: both route modes visible, all legends and A/B labels fit.",
+    "Inspected first and final FM GIF frames: whole path states change, exact actual nodes0/64 and64/64 are labeled, initial raw out-of-view count456points32paths is visible; no FM interpolation.",
+    "Inspected final spatial GIF frame: red A to violet B rainbow, actual waypoint31/31, caption explicitly distinguishes particle playback from FM time.",
+    "Inspected N2 and N4 scene0 static paths: invalid gray routes visibly cross wall; generated paths are not filtered, clipped or repaired."
+  ],
+  "limitations": [
+    "N64 has90/4096 unsuccessful validation paths; first32scene0preview does not establish global safety.",
+    "A/B endpoints are reconstructed by contract, not learned.",
+    "One teacher seed; route sample count is not a number of training repeats.",
+    "QC inference used a shared CPU host; timings are not isolated latency evidence."
+  ]
+}

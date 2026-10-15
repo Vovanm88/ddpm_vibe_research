@@ -1,0 +1,75 @@
+{
+  "registered_utc": "2026-10-15T14:38:25.985961+00:00",
+  "scope": "one_seed_exploratory_harder_wall_benchmark_not_formal_three_seed_study",
+  "teacher_sha256": "71d77760c37e6a053f324f2c810adb323439ed76ef51f09a57db43a5d2da9e79",
+  "original_registration": {
+    "path": "replication/artifacts/wall_navigation_conditional_v1/child_study_registration.json",
+    "sha256": "4d116bb3c6f3b96a66ee1dcc6dc5698ea76854cb05b6ae82c5cc817c61ffe9f4"
+  },
+  "amendment": {
+    "path": "replication/artifacts/wall_navigation_conditional_v1/solver_amendment_v1.json",
+    "sha256": "2e7d10359e9f046a5a439e335e769ebc0f6786460b363fc7636e8c67bf3c60a0"
+  },
+  "notebook": {
+    "path": "notebooks/14_wall_navigation_distillation.ipynb",
+    "sha256": "ee29a0f5c34bff09d37c5142c0c7e2b9efcd48cb6414fd8b79f0fb521c36a55c"
+  },
+  "solver_backend": {
+    "path": "src/diffusion_lab/transport.py",
+    "sha256": "2c7a98f52d2d166227e7b283f90f882e4553c8e2b1ce493a4ffa4d9cac684df3",
+    "name": "epsilon_continuation_log_newton_v1",
+    "tolerance": 1e-10,
+    "dtype": "float64",
+    "epsilon_scaling": 0.5,
+    "iterations_per_stage": 2000,
+    "final_epsilon_unchanged": true
+  },
+  "children": [
+    {
+      "name": "M0 N4",
+      "student_nfe": 4,
+      "method": "M0",
+      "directory": "students_continuation_nfe4/M0"
+    },
+    {
+      "name": "E0 N4",
+      "student_nfe": 4,
+      "method": "E0",
+      "directory": "students_continuation_nfe4/E0"
+    },
+    {
+      "name": "M0 N2",
+      "student_nfe": 2,
+      "method": "M0",
+      "directory": "students_continuation_nfe2/M0"
+    },
+    {
+      "name": "E0 N2",
+      "student_nfe": 2,
+      "method": "E0",
+      "directory": "students_continuation_nfe2/E0"
+    }
+  ],
+  "expected_trace_contract": {
+    "updates": 1000,
+    "seed": 161,
+    "batch_size": 128,
+    "paired_keys": [
+      "scene",
+      "interval",
+      "data_indices",
+      "noise"
+    ],
+    "equal_within_nfe": true
+  },
+  "test": {
+    "n_scenes": 32,
+    "samples_per_scene": 128,
+    "path_length": 32,
+    "seed": 20061,
+    "split": "test",
+    "noise_seed": 614001
+  },
+  "test_gate": "All four registered child manifests completed1000/native hashes fixed, paired checkpoint traces exactly match within NFE, before Test factory call.",
+  "test_accessed_at_registration": false
+}

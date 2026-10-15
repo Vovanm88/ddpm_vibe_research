@@ -1,0 +1,21 @@
+{
+  "status": "preserved_failed_numerical_attempt",
+  "original_notebook_sha256": "bfa8066679d48d912e12cbd8ff0f7a236d6f55ab86bb4382f1072bf7d3e423d3",
+  "failed_method": "E0",
+  "student_nfe": 2,
+  "actual_failing_update": 17,
+  "last_saved_checkpoint_update": 1,
+  "scene_id": 70,
+  "interval": 1,
+  "epsilon": 3.9490028438387424e-05,
+  "tolerance": 1e-10,
+  "dtype": "float64",
+  "backend": "recheck_reference_log_newton",
+  "original_directories": [
+    "students_nfe2",
+    "students_nfe4"
+  ],
+  "failure_payload_sha256": "aa5c3fded796396898e0308b91f4f89ddf627818dac550212e7b49a9786107e2",
+  "interpretation": "NFE2 failed exact solver convergence; NFE4 completed is numerical-path control only, neither is the final common-backend cohort. All original checkpoints, calibration and manifests remain unchanged.",
+  "test_accessed": false
+}

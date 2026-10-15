@@ -114,3 +114,50 @@ native EMA weights/config, registration и manifest/history. **Веса не в�
 а не официальное сравнение методов. На общем наборе 128 шумов × 16 targets
 каждый ученик получил правильный запрошенный луч в 2048/2048 случаев.
 Калибровка и validation-метрики сохранены рядом с весами; optimizer/RNG исключены.
+
+## Conditional-дистилляция на 2 и 4 шага
+
+`rays16_conditional_low_nfe_v1/` содержит ещё **24 финальных student EMA**:
+M0/M1/E0/E1 × seeds 101/202/303 × NFE 2/4, по 1000 updates. Родитель — тот же
+`rays16_conditional_v1/teacher/ema_model`, SHA `9bc0dbe39c4cb24c4d9b893bac084c89be66fdd7b29d6879fca786b4020d6ce1`.
+Сохраняются native Safetensors/config, manifests, histories, train-only calibration,
+registration и suite status. Optimizer/RNG исключены, точного resume нет.
+
+[Таблица, ограничения и обе GIF](../reports/low_nfe_conditional_rays/REPORT.md).
+В [notebook13](../../notebooks/13_conditional_rays_distillation.ipynb) меняются
+`STUDENT_STEPS=2/4`, `UPDATES=1000`, `STUDENT_SEED=101/202/303`; всё обучение видно.
+В `PUBLICATION_MANIFEST.json` указаны размеры и SHA256 каждого файла.
+
+## Два обхода стены с непрерывным условием
+
+`wall_navigation_conditional_v1/teacher/ema_model` — native `PointDenoiser`
+с `conditioner="mlp"`, входом `[Axy, Bxy, wall_low_xy, wall_high_xy]` и 20 000
+conditional CFM updates. Для одного условия представлены оба обхода;
+route ID используется только при оценке. Teacher SHA:
+`71d77760c37e6a053f324f2c810adb323439ed76ef51f09a57db43a5d2da9e79`.
+
+Сеть предсказывает `[30,2]` внутренних координат пути. A/B добавляются из условия
+на каждом шаге; точность концов задана конструкцией. Никакого исправления маршрутов
+после генерации нет. Допустимость проверяется по всем сегментам с margin 0.035.
+Сам teacher допускает столкновения: на validation успешны 97.39% путей при NFE32.
+
+[Notebook14](../../notebooks/14_wall_navigation_distillation.ipynb) показывает
+обучение teacher и M0/E0-учеников, native reload, интерактивный выбор сцен и две
+разные анимации: FM-денойзинг всего пути и движение частицы по готовому пути.
+Веса, wheel и outputs в notebook не встроены; selected EMA и история лежат отдельно.
+Optimizer/RNG исключены из публикации, точный resume недоступен.
+
+В `students_continuation_nfe4/` и `students_continuation_nfe2/` опубликованы M0/E0
+по 1000 updates, один paired seed 161. `final_cohort_registration.json` перечисляет
+точный состав, `solver_amendment_v1.json` фиксирует численное дополнение перед
+повторным обучением обоих E0. Новая реализация Sinkhorn использует continuation
+с теми же финальными epsilon, float64 и tolerance 1e−10; исходный `recheck` сохранён.
+В `solver_attempt_v0/` оставлены исходный notebook, сбойный batch update 17 и
+manifests прежних попыток. Они не входят в итоговую таблицу моделей.
+
+`pairing_trace.json` содержит все 1000 сохранённых digest сцены/интервала/данных/шума;
+они точно совпадают между M0/E0 внутри каждого NFE. Это метаданные для аудита,
+без optimizer и состояний RNG. Строгий первичный evaluator требует исходные
+training checkpoints; опубликованные EMA доступны для inference, notebook-оценки
+и нового обучения. [Итоговые метрики и анимации](../reports/wall_navigation/REPORT.md).
+Файлы и их SHA256 перечислены в `PUBLICATION_MANIFEST.json`.

@@ -1,0 +1,225 @@
+{
+  "scope": "selected_final_native_EMA_only_with_evaluation_traces",
+  "teacher_sha256": "71d77760c37e6a053f324f2c810adb323439ed76ef51f09a57db43a5d2da9e79",
+  "student_models": 4,
+  "teacher_updates": 20000,
+  "student_updates": 1000,
+  "student_seed": 161,
+  "exact_training_resume_available": false,
+  "excluded": [
+    "training.pt",
+    "optimizer",
+    "RNG",
+    "live_model"
+  ],
+  "paired_traces_verified_1000_updates_each_nfe": true,
+  "final_cohort_registration_sha256": "4fee41d5ae5df654cd7b47c3289096dff7b34926656e9ce325bec0c4ef0b68e9",
+  "frozen_recheck_algorithm_unchanged": true,
+  "notes": [
+    "pairing_trace.json is evaluation metadata, not optimizer/RNG state",
+    "Original E0 N2 failure and E0 N4 control manifests are retained separately and not final models",
+    "The native teacher and students contain only interior [30,2] states; A/B are reconstructed from condition8"
+  ],
+  "files": [
+    {
+      "path": "benchmark_cpu.json",
+      "sha256": "80130431ea8f62befbd13c290aa537f540dc33c2864fac7849d99d82304fb98c",
+      "bytes": 2374
+    },
+    {
+      "path": "benchmark_mps.json",
+      "sha256": "ba33b7f38a7bf30d22c571a18a61eff48e92528295d6bf8e4c825dc86c9f1986",
+      "bytes": 2374
+    },
+    {
+      "path": "child_study_registration.json",
+      "sha256": "4d116bb3c6f3b96a66ee1dcc6dc5698ea76854cb05b6ae82c5cc817c61ffe9f4",
+      "bytes": 1584
+    },
+    {
+      "path": "final_cohort_registration.json",
+      "sha256": "4fee41d5ae5df654cd7b47c3289096dff7b34926656e9ce325bec0c4ef0b68e9",
+      "bytes": 2295
+    },
+    {
+      "path": "registration.json",
+      "sha256": "2b5952a4cd7aaefea28ebebbadeeddbf74e0016aceebea14a404631ce5a4d50a",
+      "bytes": 1854
+    },
+    {
+      "path": "solver_amendment_v1.json",
+      "sha256": "2e7d10359e9f046a5a439e335e769ebc0f6786460b363fc7636e8c67bf3c60a0",
+      "bytes": 3994
+    },
+    {
+      "path": "solver_attempt_v0/actual_update17_sinkhorn_failure.pt",
+      "sha256": "aa5c3fded796396898e0308b91f4f89ddf627818dac550212e7b49a9786107e2",
+      "bytes": 125373
+    },
+    {
+      "path": "solver_attempt_v0/failure_provenance.json",
+      "sha256": "30830f38efdfc2c1ea32b11fd5d039a644c3da6a7d97e86f51ef54535cfeaa1f",
+      "bytes": 843
+    },
+    {
+      "path": "solver_attempt_v0/source_notebook14.ipynb",
+      "sha256": "bfa8066679d48d912e12cbd8ff0f7a236d6f55ab86bb4382f1072bf7d3e423d3",
+      "bytes": 41480
+    },
+    {
+      "path": "solver_attempt_v0/students_nfe2/E0/manifest.json",
+      "sha256": "a87e37af24184fb4a806e13fd0beb22f0e82691a2a33ace0bd6205640b07604d",
+      "bytes": 1023
+    },
+    {
+      "path": "solver_attempt_v0/students_nfe4/E0/history.json",
+      "sha256": "14156b220f628fc0b8d5bc703249331651357b259d362072d545abc56c468816",
+      "bytes": 259245
+    },
+    {
+      "path": "solver_attempt_v0/students_nfe4/E0/manifest.json",
+      "sha256": "53d16383620dfdf49b728b956c4689d2829be29b33a9dfd0dcd04715c8c798bb",
+      "bytes": 1003
+    },
+    {
+      "path": "students_continuation_nfe2/E0/ema_model/config.json",
+      "sha256": "bef62721257619b37b2c3e04b03b9267b65d4f149771e606bc8be9eded2a0710",
+      "bytes": 399
+    },
+    {
+      "path": "students_continuation_nfe2/E0/ema_model/diffusion_pytorch_model.safetensors",
+      "sha256": "ee681d4bac5b3993560875a980cd479a1c6f32625213065f45ff30f850a0ceb9",
+      "bytes": 1460344
+    },
+    {
+      "path": "students_continuation_nfe2/E0/history.json",
+      "sha256": "226c816e587ea18a8d30bc6e1fab1af268ef8cb96b6ca6906b7bb3104f7b8d2b",
+      "bytes": 257009
+    },
+    {
+      "path": "students_continuation_nfe2/E0/manifest.json",
+      "sha256": "63f72ea47abdabc61b2ed9eff99e2039ba4adbfe01a17a91e87ca8d54a9391ff",
+      "bytes": 1675
+    },
+    {
+      "path": "students_continuation_nfe2/E0/pairing_trace.json",
+      "sha256": "9e5f838d738bbb907f1ae24659e7ace2243050ee81ae882044eed2aed4e4bb9c",
+      "bytes": 73429
+    },
+    {
+      "path": "students_continuation_nfe2/M0/ema_model/config.json",
+      "sha256": "bef62721257619b37b2c3e04b03b9267b65d4f149771e606bc8be9eded2a0710",
+      "bytes": 399
+    },
+    {
+      "path": "students_continuation_nfe2/M0/ema_model/diffusion_pytorch_model.safetensors",
+      "sha256": "37b112c9c647eadc974521a1995817d6c459d8b3050acf44ece3b37c9a69dd3e",
+      "bytes": 1460344
+    },
+    {
+      "path": "students_continuation_nfe2/M0/history.json",
+      "sha256": "c5f6921fdee13437c271d3b832b05cee1d08d9b957482a4d70131334e8f96d5a",
+      "bytes": 239432
+    },
+    {
+      "path": "students_continuation_nfe2/M0/manifest.json",
+      "sha256": "908592cf6ab6d677c452ae24c0f9529cc4bf3fe83b66b2ae202fbb866a982872",
+      "bytes": 1641
+    },
+    {
+      "path": "students_continuation_nfe2/M0/pairing_trace.json",
+      "sha256": "e8d24f7ad3dc69ec7694a297d0f0c99557063474252fe6271a61ee52827823e4",
+      "bytes": 73183
+    },
+    {
+      "path": "students_continuation_nfe2/calibration.json",
+      "sha256": "7575cefda7e715bd07daec44a7f6cbacf7cb65895b07850481002e7375003f19",
+      "bytes": 165238
+    },
+    {
+      "path": "students_continuation_nfe2/train_execution.json",
+      "sha256": "e7071154a07d0ab2e02074806d5e90362d967c0a68f89d24f89afbc94a19b638",
+      "bytes": 1879
+    },
+    {
+      "path": "students_continuation_nfe4/E0/ema_model/config.json",
+      "sha256": "bef62721257619b37b2c3e04b03b9267b65d4f149771e606bc8be9eded2a0710",
+      "bytes": 399
+    },
+    {
+      "path": "students_continuation_nfe4/E0/ema_model/diffusion_pytorch_model.safetensors",
+      "sha256": "9dfb9cd8361f2de52ba959e39bd120c7af5d32a1463fece0e1b2ff09ec98ea27",
+      "bytes": 1460344
+    },
+    {
+      "path": "students_continuation_nfe4/E0/history.json",
+      "sha256": "f4b6aee4642ecd48eebd5ff749c7046c009e67f5c39041eddaa33543f4c0f84b",
+      "bytes": 259252
+    },
+    {
+      "path": "students_continuation_nfe4/E0/manifest.json",
+      "sha256": "75dbb04dc244d7265d348b92bd90cfda35bf683262f3b468f129944c913633d3",
+      "bytes": 1675
+    },
+    {
+      "path": "students_continuation_nfe4/E0/pairing_trace.json",
+      "sha256": "d66af03b9f5df55719df3eb1311546c83806a828f52d3567ad6eea9730f2c8a5",
+      "bytes": 73429
+    },
+    {
+      "path": "students_continuation_nfe4/M0/ema_model/config.json",
+      "sha256": "bef62721257619b37b2c3e04b03b9267b65d4f149771e606bc8be9eded2a0710",
+      "bytes": 399
+    },
+    {
+      "path": "students_continuation_nfe4/M0/ema_model/diffusion_pytorch_model.safetensors",
+      "sha256": "61341d3518f9f992eb39c1f44a0fee079af97559a64278859ab1f5a07054d6fe",
+      "bytes": 1460344
+    },
+    {
+      "path": "students_continuation_nfe4/M0/history.json",
+      "sha256": "7e03c70c11a96a4425aeed0c6f8fbca839ec3c58a133295ba8fae530cfe69839",
+      "bytes": 241151
+    },
+    {
+      "path": "students_continuation_nfe4/M0/manifest.json",
+      "sha256": "98d0e9f3cec306d5758c86bc6123dd992714c312d51225c75d3413a46b998cc4",
+      "bytes": 1641
+    },
+    {
+      "path": "students_continuation_nfe4/M0/pairing_trace.json",
+      "sha256": "831d0b2f883aa24509a498f9f60776267b5ccb5f677f3d2896bdf23dc319232e",
+      "bytes": 73183
+    },
+    {
+      "path": "students_continuation_nfe4/calibration.json",
+      "sha256": "1580f89edd121b75bb47de89997ea40f0da173608fccb89be78ea57a2a246b6f",
+      "bytes": 328072
+    },
+    {
+      "path": "students_continuation_nfe4/train_execution.json",
+      "sha256": "7ce9dc02f28b8073c8f945cc9a28f0f39e92d9ab5df6ed631711523f561559f2",
+      "bytes": 1881
+    },
+    {
+      "path": "teacher/ema_model/config.json",
+      "sha256": "c161f7320bb2ddee0c44010aa890c96ab1bf666be392dc9c6f070c335fc1bcd5",
+      "bytes": 255
+    },
+    {
+      "path": "teacher/ema_model/diffusion_pytorch_model.safetensors",
+      "sha256": "fb5fd9be09a91e744c22f85a8e0d90acb569d067cd46c7f54b896f4fe888ea72",
+      "bytes": 1460344
+    },
+    {
+      "path": "teacher/history.json",
+      "sha256": "fa36913a0449058dc144567899a5145e55dbd9dbe101060c0d42a16a83fc976c",
+      "bytes": 3499434
+    },
+    {
+      "path": "teacher/manifest.json",
+      "sha256": "ee153ddd0095829d7961eedf976dc0e92b0c173ca3e0032d4d52f8bd616c81fc",
+      "bytes": 2290
+    }
+  ]
+}

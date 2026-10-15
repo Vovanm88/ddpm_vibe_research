@@ -1,0 +1,76 @@
+{
+  "status": "completed",
+  "contract": {
+    "scope": "registered_conditional_low_nfe_comparison_one_frozen_parent",
+    "teacher_sha256": "9bc0dbe39c4cb24c4d9b893bac084c89be66fdd7b29d6879fca786b4020d6ce1",
+    "teacher_steps": 32,
+    "student_steps": 4,
+    "student_updates": 1000,
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "methods": [
+      "M0",
+      "M1",
+      "E0",
+      "E1"
+    ],
+    "batch_size": 128,
+    "lr": 0.0001,
+    "warmup": 100,
+    "ema_decay": 0.99,
+    "tube_rho": 0.1,
+    "null_probability": 0.1,
+    "notebook_sha256": "888dee663051544a1571e53466c7aadcff9e208a18379a17e1c8ac14eb51f963",
+    "loss_support": "one requested condition or trained null per entire OT support",
+    "assessment_rule": "No new final noise/reference until all24 models across both grids completed",
+    "final_noise_seed": 940001,
+    "final_reference_seed": 20047
+  },
+  "runs": [
+    {
+      "seed": 101,
+      "status": "completed",
+      "wall_seconds_four_methods": 144.96616616658866,
+      "teacher_sha256_after": "9bc0dbe39c4cb24c4d9b893bac084c89be66fdd7b29d6879fca786b4020d6ce1",
+      "updates_each": 1000,
+      "methods": {
+        "M0": "49881fd7108c25272d24773835d0b9b843d2108e687f22268649cdd70cdb9ba6",
+        "M1": "c1105ef79e4170bf02dbfa298ed84a0892b294f6469dd2518ac27fb5f631c01f",
+        "E0": "9b386a58343431a337d6ae3b07348661747d79b0c8afa37f65e5832e058a91c0",
+        "E1": "b5a732d19222f67987a0c54c4386031286a110b6cd6a682b570b0939d3b51218"
+      },
+      "common_rng_traces_equal": true
+    },
+    {
+      "seed": 202,
+      "status": "completed",
+      "wall_seconds_four_methods": 298.30010375007987,
+      "teacher_sha256_after": "9bc0dbe39c4cb24c4d9b893bac084c89be66fdd7b29d6879fca786b4020d6ce1",
+      "updates_each": 1000,
+      "methods": {
+        "M0": "ab9938a115d2f029ad8278549a59923dad6f03d4845b9b1ef42c678f3a58787a",
+        "M1": "a68d812e8440985e9a195a85d6c3078a2cfebbe3fba8bd7ea91407a462a4f97c",
+        "E0": "c9aa39ceb31028ff9bad9822fb0a2f487f7a8ec6dc39e0b4726de57728176083",
+        "E1": "4d539474fadbad2419a87a6affddb624a4ed81bc10a88f231171a6ef990ad2f8"
+      },
+      "common_rng_traces_equal": true
+    },
+    {
+      "seed": 303,
+      "status": "completed",
+      "wall_seconds_four_methods": 194.19863237487152,
+      "teacher_sha256_after": "9bc0dbe39c4cb24c4d9b893bac084c89be66fdd7b29d6879fca786b4020d6ce1",
+      "updates_each": 1000,
+      "methods": {
+        "M0": "c6448ecaeffcdd10bd50ce9b52f6c087c9a6fa4216c370ecd49dbe98e76b48c7",
+        "M1": "5d8c29c7ecaae2e36ca0de1de7a6286ffe84f1234e64b7f6bc464321baab9797",
+        "E0": "45e971500beee9aba8211d18f768ea79275cb1305e64202aa3572b327fbb5b80",
+        "E1": "25e64196ccaad9c70960cd665ba23b1c7c6fef1200d1b16582e51e70683cbbb0"
+      },
+      "common_rng_traces_equal": true
+    }
+  ]
+}

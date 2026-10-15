@@ -1,0 +1,165 @@
+{
+  "status": "visually_verified",
+  "scope": "registered_closed_test_after_all_four_models_fixed",
+  "teacher_sha256": "71d77760c37e6a053f324f2c810adb323439ed76ef51f09a57db43a5d2da9e79",
+  "source_sha256": "a1efbfd893db576f628c49c6379321be1d07e70996936666dcd5856370d339a5",
+  "noise_sha256": "72258cccfca18d0693a77e9b5cff1552b8cdbee23702aa4dcc4731f0f24f582a",
+  "conditions_sha256": "98f4870d7941d351a9ca69661a8b84d577ccd384f0c00bb45cd0a872bd462889",
+  "reference_paths_sha256": "089034b8f55a2266bca987891af1921aacf1fd99c807bb86a6b4a32d4d25af86",
+  "final_cohort_registration_sha256": "4fee41d5ae5df654cd7b47c3289096dff7b34926656e9ce325bec0c4ef0b68e9",
+  "all_four_training_traces_verified": true,
+  "all_actual_weights_fixed_utc": "2026-10-15T14:43:47.992490+00:00",
+  "selected_scene_index": 0,
+  "selected_path_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31
+  ],
+  "particle_path_indices": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "quality_selection": false,
+  "gifs": {
+    "e0_n2_spatial_particle.gif": {
+      "n_frames": 32,
+      "size": [
+        666,
+        639
+      ],
+      "duration_ms": 100,
+      "sha256": "f2e0561105740a365874e8d313ea957c9062e41b37643b078a874f30ad8181ed",
+      "first_last_differ": true
+    },
+    "e0_n4_spatial_particle.gif": {
+      "n_frames": 32,
+      "size": [
+        666,
+        639
+      ],
+      "duration_ms": 100,
+      "sha256": "4b84b3fadbe4ed0cbe735e35e6aeedd972a4b24dbe87c85847c0be37d1d91ca7",
+      "first_last_differ": true
+    },
+    "m0_n2_spatial_particle.gif": {
+      "n_frames": 32,
+      "size": [
+        666,
+        639
+      ],
+      "duration_ms": 100,
+      "sha256": "f558ac2dbe8efdb19857794d8a48ee7dc87bf7b29d6dedff9db47422f7ec733c",
+      "first_last_differ": true
+    },
+    "m0_n4_spatial_particle.gif": {
+      "n_frames": 32,
+      "size": [
+        666,
+        639
+      ],
+      "duration_ms": 100,
+      "sha256": "3b3a5314a33863046e49ef1352c4ccb68c60a140676d77a9edf922060bce60bc",
+      "first_last_differ": true
+    },
+    "nfe2_fm_denoising.gif": {
+      "n_frames": 33,
+      "size": [
+        1269,
+        855
+      ],
+      "duration_ms": 100,
+      "sha256": "eda187e3fce5069bae4cc181a50299e183cf62c9df4eb196864a16297c386548",
+      "first_last_differ": true
+    },
+    "nfe4_fm_denoising.gif": {
+      "n_frames": 33,
+      "size": [
+        1269,
+        855
+      ],
+      "duration_ms": 100,
+      "sha256": "d25ec70ce5c7c07fc9da1195b41651615ef137f1775e4415e21df5cd8bc8b1bb",
+      "first_last_differ": true
+    },
+    "original_n2_spatial_particle.gif": {
+      "n_frames": 32,
+      "size": [
+        666,
+        639
+      ],
+      "duration_ms": 100,
+      "sha256": "187c936bbbb7a91d93875d450abc5931e43bc3a8f97cb7a2aa2a581155cc7037",
+      "first_last_differ": true
+    },
+    "original_n4_spatial_particle.gif": {
+      "n_frames": 32,
+      "size": [
+        666,
+        639
+      ],
+      "duration_ms": 100,
+      "sha256": "8a9c57e521f7e77a2487087ac95b1dfdf6220e9ca7b195d4fe5a232d6ecd9371",
+      "first_last_differ": true
+    },
+    "teacher_n32_spatial_particle.gif": {
+      "n_frames": 32,
+      "size": [
+        666,
+        639
+      ],
+      "duration_ms": 100,
+      "sha256": "f526cef588bdf4b54fd50a018d3361a14e73206d752e25fd453199ccdabe9843",
+      "first_last_differ": true
+    }
+  },
+  "public_payload_bytes": {
+    "final_endpoints.pt": 13735326,
+    "scene0_histories.pt": 1267181
+  },
+  "inspection": [
+    "Inspected actual first/final whole-path FM frames for NFE2 and final NFE4: all four named methods, actual node counts, A/B labels, wall-crossing routes and captions remain visible.",
+    "First FM state is identical across paired method panels,443points/32paths outside the fixed scene view are labeled without raw-data clamping.",
+    "Inspected physical E0N2 middle frame: waypoint16/31, rainbow red A through green to violet B, title explicitly distinguishes motion on a final decoded spatial path from FM solver time.",
+    "Inspected quality-vs-NFE chart: conditional SWD and full-segment success use final Test values, Original2=37.939% and Original4=86.743%; students/parent are labeled.",
+    "All nine GIFs have differing first/final frames,100ms frame durations,33actual-node FM frames or32spatial-waypoint frames."
+  ],
+  "limitations": [
+    "Preview scene0 first32 and physical first4 are fixed noise IDs, not selected successful examples. First4 happen to favor one mode and do not summarize global two-mode coverage.",
+    "Displayed FM line colors encode paired noise/path ID, not spatial time. Physical rainbow encodes waypoint progress, not FM time.",
+    "N2 and N4 colliding paths remain visible; failure counts are measured over the complete4096path bank.",
+    "One training seed for students; no seed-level confidence claim."
+  ],
+  "assessment_seconds": 5.202023250050843,
+  "elapsed_seconds_with_render": 45.84689099993557
+}

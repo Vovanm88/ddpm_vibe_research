@@ -1,0 +1,77 @@
+{
+  "registered_utc": "2026-10-15T14:38:25.985961+00:00",
+  "scope": "numerical_path_amendment_before_final_E0_reruns_no_Test_access",
+  "original_registration": {
+    "path": "replication/artifacts/wall_navigation_conditional_v1/child_study_registration.json",
+    "sha256": "4d116bb3c6f3b96a66ee1dcc6dc5698ea76854cb05b6ae82c5cc817c61ffe9f4"
+  },
+  "original_notebook": {
+    "path": "replication/artifacts/wall_navigation_conditional_v1/solver_attempt_v0/source_notebook14.ipynb",
+    "sha256": "bfa8066679d48d912e12cbd8ff0f7a236d6f55ab86bb4382f1072bf7d3e423d3"
+  },
+  "notebook": {
+    "path": "notebooks/14_wall_navigation_distillation.ipynb",
+    "sha256": "ee29a0f5c34bff09d37c5142c0c7e2b9efcd48cb6414fd8b79f0fb521c36a55c"
+  },
+  "failure_provenance": {
+    "path": "replication/artifacts/wall_navigation_conditional_v1/solver_attempt_v0/failure_provenance.json",
+    "sha256": "30830f38efdfc2c1ea32b11fd5d039a644c3da6a7d97e86f51ef54535cfeaa1f"
+  },
+  "actual_failure_payload": {
+    "path": "replication/artifacts/wall_navigation_conditional_v1/solver_attempt_v0/actual_update17_sinkhorn_failure.pt",
+    "sha256": "aa5c3fded796396898e0308b91f4f89ddf627818dac550212e7b49a9786107e2"
+  },
+  "solver_backend": {
+    "path": "src/diffusion_lab/transport.py",
+    "sha256": "2c7a98f52d2d166227e7b283f90f882e4553c8e2b1ce493a4ffa4d9cac684df3",
+    "name": "epsilon_continuation_log_newton_v1",
+    "tolerance": 1e-10,
+    "dtype": "float64",
+    "epsilon_scaling": 0.5,
+    "iterations_per_stage": 2000,
+    "final_epsilon_unchanged": true
+  },
+  "change": "Strict physical-dual epsilon continuation warm starts and log/Newton refinement; final epsilon, tolerance, float64, canonical objective and self-term gradients unchanged. The 2000-iteration limit applies per continuation stage rather than a single solve.",
+  "reason": "Original E0 N2 failed exact convergence on actual update17,scene70,interval1,epsilon3.9490028438387424e-5; original E0 N4 retained as numerical control.",
+  "rerun": "BOTH E0 N4 and E0 N2 restart from the same fixed parent for the full original1000 updates. No resume from failure; no new hyperparameter or quality selection.",
+  "teacher_sha256": "71d77760c37e6a053f324f2c810adb323439ed76ef51f09a57db43a5d2da9e79",
+  "controls": [
+    {
+      "student_nfe": 4,
+      "original_directory": "students_nfe4/M0",
+      "directory": "students_continuation_nfe4/M0",
+      "ema_sha256": "ec671a37d24ba9ac89cd07e9ac3701199e8f9c1c2f5b14e01fa88558d7ab93e0",
+      "checkpoint_sha256": "ae6f2305b301bbe42c30085fee1e5a11654abe2c77000bb640e0b9105932c3be",
+      "calibration": {
+        "path": "replication/artifacts/wall_navigation_conditional_v1/students_continuation_nfe4/calibration.json",
+        "sha256": "1580f89edd121b75bb47de89997ea40f0da173608fccb89be78ea57a2a246b6f"
+      },
+      "native_bytes_unchanged": true
+    },
+    {
+      "student_nfe": 2,
+      "original_directory": "students_nfe2/M0",
+      "directory": "students_continuation_nfe2/M0",
+      "ema_sha256": "14846a5be48c57b7312e68a2ab39ae812f591fda2ded0801e2f86f6727dd2cbf",
+      "checkpoint_sha256": "4059ac21c5755c9ea123fa67f836f7c8a370d34dd45506dcde40f4a22100bb1e",
+      "calibration": {
+        "path": "replication/artifacts/wall_navigation_conditional_v1/students_continuation_nfe2/calibration.json",
+        "sha256": "7575cefda7e715bd07daec44a7f6cbacf7cb65895b07850481002e7375003f19"
+      },
+      "native_bytes_unchanged": true
+    }
+  ],
+  "unchanged_training_registration": {
+    "path": "replication/artifacts/wall_navigation_conditional_v1/child_study_registration.json",
+    "sha256": "4d116bb3c6f3b96a66ee1dcc6dc5698ea76854cb05b6ae82c5cc817c61ffe9f4"
+  },
+  "test_accessed": false,
+  "numerical_verification": {
+    "tests": "tests/test_stabilized_transport.py",
+    "critical_tests_passed": 15,
+    "actual_failure_full_backward_seconds": 0.284,
+    "actual_failure_loss": 0.0013963618331280213,
+    "final_cross_row_error": 4.31e-14,
+    "final_cross_column_error": 3.42e-16
+  }
+}

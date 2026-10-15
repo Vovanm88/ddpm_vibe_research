@@ -1,0 +1,84 @@
+{
+  "device": "mps",
+  "torch_threads": 4,
+  "warmup_updates": 100,
+  "measured_updates": 100,
+  "seconds": 1.8753709997981787,
+  "seconds_per_update": 0.018753709997981788,
+  "forecast_20000_updates_seconds": 375.07419995963573,
+  "profile": {
+    "protocol_id": "wall_navigation_conditional_v1",
+    "scope": "one_seed_exploratory_multimodal_navigation_not_recheck_replication",
+    "data": {
+      "n_scenes": 128,
+      "samples_per_scene": 128,
+      "path_length": 32,
+      "seed": 61,
+      "split": "train",
+      "jitter": 0.025,
+      "clearance": 0.06,
+      "margin": 0.035
+    },
+    "validation": {
+      "n_scenes": 32,
+      "samples_per_scene": 128,
+      "path_length": 32,
+      "seed": 10061,
+      "split": "validation",
+      "jitter": 0.025,
+      "clearance": 0.06,
+      "margin": 0.035
+    },
+    "model": {
+      "sample_shape": [
+        30,
+        2
+      ],
+      "hidden_dim": 128,
+      "num_layers": 3,
+      "backbone": "mlp",
+      "conditioner": "mlp",
+      "condition_dim": 8,
+      "num_classes": 0
+    },
+    "teacher": {
+      "seed": 61,
+      "updates": 20000,
+      "batch_size": 256,
+      "lr": 0.001,
+      "weight_decay": 0.0001,
+      "warmup": 1000,
+      "ema_decay": 0.999,
+      "grad_clip": 1.0,
+      "condition_dropout": 0.0
+    },
+    "time_scale": 1000,
+    "threads": 4,
+    "endpoint_clamped_contract": true,
+    "endpoint_reconstruction": "prepend condition[:2], append condition[2:4]; model predicts interior only",
+    "condition_fields": [
+      "start_x",
+      "start_y",
+      "goal_x",
+      "goal_y",
+      "wall_low_x",
+      "wall_low_y",
+      "wall_high_x",
+      "wall_high_y"
+    ],
+    "route_ids_used_by_model": false,
+    "obstacle_penalty": false,
+    "training_objective": "pure_conditional_FM: ((v(x_t,t,condition)-(noise-clean_interior))**2).mean()"
+  },
+  "train_sha256": "7d891a4326eea1401ce687aeb90909efd4f6213e227f89273477f6f8ecc41b08",
+  "conditions_sha256": "d102365ca4496ed4c5fcc61c1331b9edc91c5cf1fb06174e5af61a9300a3c64f",
+  "source_sha256": "abe5850e7a14ebc4e9b9585d16a978478ec52e16ffec576d37c5785687dacd26",
+  "includes": [
+    "CPU train gather and transfer",
+    "conditional FM forward/backward",
+    "AdamW",
+    "clipping",
+    "EMA"
+  ],
+  "timing_context": "two independent rays training cohorts may run concurrently; operational device choice, not latency publication"
+}

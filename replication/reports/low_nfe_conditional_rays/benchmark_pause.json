@@ -1,0 +1,10 @@
+{
+  "pids": [
+    5233,
+    5238
+  ],
+  "paused_monotonic": 4185208.79969775,
+  "reason": "Isolated CPUbenchmark for new wallteacher",
+  "resumed_monotonic": 4185306.244989041,
+  "paused_seconds": 97.44529129099101
+}

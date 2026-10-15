@@ -1,7 +1,8 @@
 {
-  "passed": 595,
+  "passed": 666,
   "skipped": 3,
   "failed": 0,
-  "seconds": 49.17,
-  "note": "Full tree including conditional routing metrics, paired visualization and visible conditional notebook13 tests. Original recheck algorithm unchanged."
+  "warnings": 1,
+  "seconds": 77.86,
+  "note": "Full tree including low-NFE wall dataset/geometry, animation, visible notebook14 training/interactive controls, strict assessment gate, epsilon-continuation numerical regression/gradients. One expected noninteractive Agg display warning. Frozen recheck algorithm unchanged."
 }

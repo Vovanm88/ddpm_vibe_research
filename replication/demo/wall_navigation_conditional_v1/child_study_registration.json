@@ -1,0 +1,52 @@
+{
+  "registered_utc": "2026-10-15T14:16:01Z",
+  "scope": "one_seed_exploratory_harder_wall_benchmark_not_formal_three_seed_study",
+  "teacher_sha256": "71d77760c37e6a053f324f2c810adb323439ed76ef51f09a57db43a5d2da9e79",
+  "teacher_updates": 20000,
+  "notebook_sha256": "bfa8066679d48d912e12cbd8ff0f7a236d6f55ab86bb4382f1072bf7d3e423d3",
+  "train_data_sha256": "7d891a4326eea1401ce687aeb90909efd4f6213e227f89273477f6f8ecc41b08",
+  "conditions_sha256": "d102365ca4496ed4c5fcc61c1331b9edc91c5cf1fb06174e5af61a9300a3c64f",
+  "methods": [
+    "M0",
+    "E0"
+  ],
+  "student_nfe": [
+    4,
+    2
+  ],
+  "teacher_target_nfe": 32,
+  "seed": 161,
+  "updates_each": 1000,
+  "batch_size": 128,
+  "warmup": 100,
+  "lr": 0.0001,
+  "weight_decay": 0.0001,
+  "ema_decay": 0.99,
+  "grad_clip": 1.0,
+  "lambda_w": 1.0,
+  "epsilon_alpha": 0.05,
+  "calibration_support": 128,
+  "representation": "endpoint",
+  "whole_ot_support_single_continuous_condition": true,
+  "endpoint_clamped_contract": true,
+  "state_dimension": 60,
+  "route_id_input": false,
+  "validation": {
+    "n_scenes": 32,
+    "samples_per_scene": 128,
+    "path_length": 32,
+    "seed": 10061,
+    "split": "validation",
+    "noise_seed": 613001
+  },
+  "test_preregistered_not_yet_accessed": {
+    "n_scenes": 32,
+    "samples_per_scene": 128,
+    "path_length": 32,
+    "seed": 20061,
+    "split": "test",
+    "noise_seed": 614001
+  },
+  "test_gate": "all four child final EMA weights completed/fixed before any Test factory call",
+  "parent_limitations": "N64 validation97.8% success with mode imbalance; no perfect-teacher claim"
+}

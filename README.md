@@ -42,6 +42,23 @@ Teacher targets, Sinkhorn, tube и весь Torch training loop видны в я
 [Открыть conditional notebook в Colab](https://colab.research.google.com/github/Vovanm88/ddpm_vibe_research/blob/research/wasserstein-tube-replication/notebooks/13_conditional_rays_distillation.ipynb)
 · [Проверка condition и GIF](replication/reports/conditional_rays/REPORT.md).
 
+В новой серии **32 → 4 и 32 → 2** обучены ещё 24 conditional-ученика:
+[результаты и GIF](replication/reports/low_nfe_conditional_rays/REPORT.md).
+При двух шагах MSE-дистилляция уменьшила conditional SWD с 0.09639 до 0.01534.
+Для воспроизведения в notebook 13 задайте `STUDENT_STEPS=2` или `4`, `UPDATES=1000`.
+
+Более сложная задача — **два обхода стены при одном и том же условии A/B/стена**:
+[notebook 14](notebooks/14_wall_navigation_distillation.ipynb),
+[Colab](https://colab.research.google.com/github/Vovanm88/ddpm_vibe_research/blob/research/wasserstein-tube-replication/notebooks/14_wall_navigation_distillation.ipynb).
+Модель генерирует весь путь; номер обхода ей не передаётся. Непрерывный conditioner,
+обучение teacher и дистилляция на 2/4 шага доступны в ячейках.
+Есть отдельные анимации изменения всего пути при денойзинге и движения частицы
+по готовому маршруту, а также интерактивный выбор сцены, метода и шага.
+[Итоговый тест на новых сценах и GIF](replication/reports/wall_navigation/REPORT.md):
+MSE-дистилляция повысила долю корректных путей с **37.9% до 85.9%** на двух шагах
+и с **86.7% до 95.3%** на четырёх. Оба обхода сохраняются во всех 32 сценах.
+Это один training seed; Sinkhorn немного помог на NFE4 и ухудшил результат на NFE2.
+
 Установка из пустого Jupyter:
 
 ```python
@@ -188,6 +205,22 @@ Collision loss помогает обучению, но допустимость 
 ошибка концов, длина и гладкость. Короткий учебный запуск может выдавать маршруты,
 пересекающие стены; качество необходимо измерять после обучения. В 1D сплошную
 стенку обойти невозможно: среда отклоняет пары A/B из разных компонент.
+
+Для проверки многомодальности есть отдельная среда: одни A/B/стена дают **оба**
+варианта обхода, а ID маршрута остаётся только оценочной меткой:
+
+```python
+from diffusion_lab.environments.multimodal_navigation import make_multimodal_navigation
+
+dataset = make_multimodal_navigation(
+    n_scenes=128, samples_per_scene=128, path_length=32, seed=61, split="train"
+)
+paths, conditions = dataset.samples, dataset.conditions  # [N,32,2], [N,8]
+```
+
+В notebook 14 сеть моделирует 30 внутренних точек, A/B добавляются из condition
+на каждом шаге. Визуализация показывает оба обхода и пересечения; метрика покрытия
+мод учитывает только геометрически допустимые пути.
 
 ## Визуализации и поля
 

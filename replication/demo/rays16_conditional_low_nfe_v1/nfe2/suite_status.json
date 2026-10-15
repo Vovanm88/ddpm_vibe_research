@@ -1,0 +1,76 @@
+{
+  "status": "completed",
+  "contract": {
+    "scope": "registered_conditional_low_nfe_comparison_one_frozen_parent",
+    "teacher_sha256": "9bc0dbe39c4cb24c4d9b893bac084c89be66fdd7b29d6879fca786b4020d6ce1",
+    "teacher_steps": 32,
+    "student_steps": 2,
+    "student_updates": 1000,
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "methods": [
+      "M0",
+      "M1",
+      "E0",
+      "E1"
+    ],
+    "batch_size": 128,
+    "lr": 0.0001,
+    "warmup": 100,
+    "ema_decay": 0.99,
+    "tube_rho": 0.1,
+    "null_probability": 0.1,
+    "notebook_sha256": "888dee663051544a1571e53466c7aadcff9e208a18379a17e1c8ac14eb51f963",
+    "loss_support": "one requested condition or trained null per entire OT support",
+    "assessment_rule": "No new final noise/reference until all24 models across both grids completed",
+    "final_noise_seed": 940001,
+    "final_reference_seed": 20047
+  },
+  "runs": [
+    {
+      "seed": 101,
+      "status": "completed",
+      "wall_seconds_four_methods": 181.71410099975765,
+      "teacher_sha256_after": "9bc0dbe39c4cb24c4d9b893bac084c89be66fdd7b29d6879fca786b4020d6ce1",
+      "updates_each": 1000,
+      "methods": {
+        "M0": "4daf6cb9431f100f7b8e8b2baa2f8fc0376bf240da601d16add200cb179228b4",
+        "M1": "1b0d66159bbd710f4a56f9c2d057267a127e44ba8cf95979bb7a5d6137c5dfd5",
+        "E0": "b990f5d16028d65abb67c6e82b4d933b581d5e6ff23b957634b23a7f27fd5cae",
+        "E1": "9c3f410a364789c6e1a312ee9129bb15a2653194b46002738f136ed7d8671fd3"
+      },
+      "common_rng_traces_equal": true
+    },
+    {
+      "seed": 202,
+      "status": "completed",
+      "wall_seconds_four_methods": 353.6814705412835,
+      "teacher_sha256_after": "9bc0dbe39c4cb24c4d9b893bac084c89be66fdd7b29d6879fca786b4020d6ce1",
+      "updates_each": 1000,
+      "methods": {
+        "M0": "1ea394f568551c15d7cb666434defb7f67b47e5be659a8dabb1c2458b148b297",
+        "M1": "3748d34539c5568c0d93f0c37a3b4181cf3173ae6282e5276dceb08a466542ee",
+        "E0": "f7c898ef6b5cf3247027e92a800d503d00d182bd401436142adaab725aeae07f",
+        "E1": "91652e54c15fdc526a4ad61425409cdbd4b9bc2f54614e45d78bb7daf9d1eca1"
+      },
+      "common_rng_traces_equal": true
+    },
+    {
+      "seed": 303,
+      "status": "completed",
+      "wall_seconds_four_methods": 191.11646758392453,
+      "teacher_sha256_after": "9bc0dbe39c4cb24c4d9b893bac084c89be66fdd7b29d6879fca786b4020d6ce1",
+      "updates_each": 1000,
+      "methods": {
+        "M0": "27f19a58968ab7fd3f0c6daff37627f0f7d998011b0ea1d51a0745cd83576bd1",
+        "M1": "e076506d83cc019af3fffd19121c606c51acc2d1d36ab6431edf6406f0e0a834",
+        "E0": "6ebae9e3f03c5af5fdd4a8d20048ff217c11a2b9d2fe65b422c2167736b60c8c",
+        "E1": "61262db6bcbba323d34e55549cd8846ed74403929393f11dc16eb42613526346"
+      },
+      "common_rng_traces_equal": true
+    }
+  ]
+}
