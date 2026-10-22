@@ -1,0 +1,2233 @@
+{
+  "schema_version": 1,
+  "scope": "all48_fixed_before_any_new_final_bank",
+  "registration": {
+    "path": "replication/reports/method_zoo/registration.json",
+    "sha256": "e420ea63a08389faf1d2f803f4b86437168fe703755a8e6da5a032490c511c05"
+  },
+  "training_config": {
+    "path": "replication/artifacts/method_zoo_v1/run_config.json",
+    "sha256": "5888bb6e18bdd0ac470968e08a823d10f6ae998e9c7e37894c13bf5ed7982292"
+  },
+  "run_root": "replication/artifacts/method_zoo_v1",
+  "source_refs": [
+    {
+      "path": "examples/evaluate_method_zoo.py",
+      "sha256": "7b25b80228e1b355c1fa211cf634d36bc82442c132c0a06b1c4c315f8d8f796c"
+    },
+    {
+      "path": "examples/run_method_zoo_evaluation.py",
+      "sha256": "363e61302f1d7351bad72059aa31327299dfbfd76bcbf3d647893facf11f691c"
+    },
+    {
+      "path": "examples/train_method_zoo.py",
+      "sha256": "8f654691cc4b617f574b22e1b307b583cf636319de6aaf34bf5049dce5ae3797"
+    },
+    {
+      "path": "notebooks/15_conditional_method_zoo.ipynb",
+      "sha256": "b97b1c647fc3897c7cc892fca04717fa0f71b699500c3e83663ae63027a27b1c"
+    },
+    {
+      "path": "src/diffusion_lab/__init__.py",
+      "sha256": "718a5701f5c29330673865b0e589751a752fb9bdd4a6a3871f356f72d11304e9"
+    },
+    {
+      "path": "src/diffusion_lab/cli.py",
+      "sha256": "2212f8ef677a87f73974a2fadefdd5598052a96ca10c4c5b48310553b57e0721"
+    },
+    {
+      "path": "src/diffusion_lab/conditional_metrics.py",
+      "sha256": "23e12d3b818b45209125d7730dc1b1cc0dbe315cebc035bb24248917f18caf13"
+    },
+    {
+      "path": "src/diffusion_lab/conditional_visualization.py",
+      "sha256": "792318b461d1e0553e30eb1b9d75f4b9956a0937968f769d9a51f7383624cab5"
+    },
+    {
+      "path": "src/diffusion_lab/conditioning.py",
+      "sha256": "fe40638cc586d2e67c997bd9bb68af86744831b340cfc44c8dbcc2f0606233b2"
+    },
+    {
+      "path": "src/diffusion_lab/environments/__init__.py",
+      "sha256": "13856d12f61b412940e728435809ab5c5a0f56344b7a212b7f9cb5bfedc4d309"
+    },
+    {
+      "path": "src/diffusion_lab/environments/base.py",
+      "sha256": "1b7bc735374e67d1c3c55757dec4c8fe83b0f8a801da7c037ce1d385a5763ea0"
+    },
+    {
+      "path": "src/diffusion_lab/environments/multimodal_navigation.py",
+      "sha256": "d6c29d457c8540a93b5ebc398fb013204844bbfa5bfb8137239f23fbf9e7fb26"
+    },
+    {
+      "path": "src/diffusion_lab/environments/navigation.py",
+      "sha256": "5dc37697fbea770566e18493e9c8eac9032c5977fdcc5a7482f5a40c00a1a9a3"
+    },
+    {
+      "path": "src/diffusion_lab/environments/point_clouds.py",
+      "sha256": "8fc677f969cd2dd1cc7709913810e641d035a652bca5469e37ee006d4c6b2592"
+    },
+    {
+      "path": "src/diffusion_lab/experiment.py",
+      "sha256": "1f870da08b9c6fa1352222ce84d421a452aa003f829391e03538ebab8b842c9d"
+    },
+    {
+      "path": "src/diffusion_lab/interval_model.py",
+      "sha256": "edd1830193dd77da5251bf4a76e89c82d3587c3c13cb4a474d72c0a7aeb6ce30"
+    },
+    {
+      "path": "src/diffusion_lab/losses.py",
+      "sha256": "9969601c3820c09083fc27fec095bab7f42be65a5e311024b1886ffc4c464b35"
+    },
+    {
+      "path": "src/diffusion_lab/metrics.py",
+      "sha256": "727920d41c4adef833c1854a5344c050e906da00ebc7fd963bbf41881e86be64"
+    },
+    {
+      "path": "src/diffusion_lab/models.py",
+      "sha256": "17a55cff2e86bcd532deec171aada4cf0f766a15ec38ad96f7e99df3df264a15"
+    },
+    {
+      "path": "src/diffusion_lab/navigation_visualization.py",
+      "sha256": "27425227b9f0f2141e82af06dd3a1f70a84a0a47047f3889a3ab2a46a03f3ea0"
+    },
+    {
+      "path": "src/diffusion_lab/notebook.py",
+      "sha256": "be9ffbd0bd6d13698f25eabdec4c183bf814eed01e14d3afec948c99353c2607"
+    },
+    {
+      "path": "src/diffusion_lab/objectives.py",
+      "sha256": "05559fbb8042b2477ccfa523a6d7385e7ac1b1c2178cce37beebe6e1ab58cd4e"
+    },
+    {
+      "path": "src/diffusion_lab/pipeline.py",
+      "sha256": "adcae744630f15be0be5878af330cba344d8f04f26c6902555c5f56c3401177c"
+    },
+    {
+      "path": "src/diffusion_lab/reporting.py",
+      "sha256": "ca67e7cf7f5bb467092116ebb56f9d9c46abf251f7e1f094e40de3a0329dd57b"
+    },
+    {
+      "path": "src/diffusion_lab/research_methods.py",
+      "sha256": "050ff4945d0de0ef85d6623f14837c9e02449bc74aa5af4535da3a57970ca8c9"
+    },
+    {
+      "path": "src/diffusion_lab/schedulers.py",
+      "sha256": "b820eceb16921bb3603b93f2feb44818e205c0309703a09db1b450180e463faa"
+    },
+    {
+      "path": "src/diffusion_lab/training.py",
+      "sha256": "4640bce0e8a0a3b60ecb7878c0534b956b550050937156afe0a8f2b635140f33"
+    },
+    {
+      "path": "src/diffusion_lab/transport.py",
+      "sha256": "2c7a98f52d2d166227e7b283f90f882e4553c8e2b1ce493a4ffa4d9cac684df3"
+    },
+    {
+      "path": "src/diffusion_lab/visualization/__init__.py",
+      "sha256": "3ea6d10f2e26be38ee38e4d8c1a01c9fb7498f3f66b2d8113d5caf40c2c97c53"
+    },
+    {
+      "path": "src/diffusion_lab/visualization/animation.py",
+      "sha256": "cb69f68aafdc08c470141f89ee8694d7070432e32ff286edb04b4b9b975a42b4"
+    },
+    {
+      "path": "src/diffusion_lab/visualization/fields.py",
+      "sha256": "174bce35f83943ec20e3e7892927ac49e9dab719afa1ab70ef0b74b40c523dae"
+    },
+    {
+      "path": "src/diffusion_lab/visualization/interactive.py",
+      "sha256": "6f39b457df8cc9745585b60407c5def2edf9b451ede52ff95114afc400843f76"
+    },
+    {
+      "path": "src/diffusion_lab/visualization/plots.py",
+      "sha256": "b23f347d8e844cb65d37ef7ac8e8bde5e80c0bcce0e046326d597fba8ab8c17b"
+    },
+    {
+      "path": "src/diffusion_lab/visualization/widgets.py",
+      "sha256": "0653ee9006d70d9a6468f6775f4c7fa83f9c00f0623f049d1f429ca42a2a724d"
+    },
+    {
+      "path": "src/recheck/__init__.py",
+      "sha256": "9870e6f9d92bc61997c2d4ae4fea6b3fbac3021389e3d2c53bb5d2ad22f54c5e"
+    },
+    {
+      "path": "src/recheck/calibration.py",
+      "sha256": "993f4d6ecfe4dd813b7bb536c58e69c618db4136524b91be343003657ce196db"
+    },
+    {
+      "path": "src/recheck/cli.py",
+      "sha256": "16061d537aa17ed55842ec0efb3775426a0b54ec02e74b8ba225857fbe77f001"
+    },
+    {
+      "path": "src/recheck/config.py",
+      "sha256": "284c0cdae98cf0f64078c222b948a22cc8c88e59982604b3f14bd41f0dd03a79"
+    },
+    {
+      "path": "src/recheck/data.py",
+      "sha256": "37ff09887b761bbef2b9cde3b725bfc3a50fbca52b03cf5967caae84a6b2a922"
+    },
+    {
+      "path": "src/recheck/diagnostics.py",
+      "sha256": "861e8fa284e55155f8e0a9a459635e94a7a921e28011769488ebe9558172b4ae"
+    },
+    {
+      "path": "src/recheck/distill.py",
+      "sha256": "ba27b8337c578d30bd0d83ed509708d6861bcc5ea2dde064e91c2f0c8abc6d84"
+    },
+    {
+      "path": "src/recheck/evaluate.py",
+      "sha256": "f29a7506d25b5b73634348fe4150138705a609d92de3217602c54f974b1e4055"
+    },
+    {
+      "path": "src/recheck/fm.py",
+      "sha256": "91b910adce5ad99ed087eddbb8128ed1dea3a9fd20c92c944884e1fb347143d9"
+    },
+    {
+      "path": "src/recheck/fourier_model.py",
+      "sha256": "922c8b80812dd7373d13d10db800a4abb3cf05672a86ecd7b0db131ea0948b6b"
+    },
+    {
+      "path": "src/recheck/losses.py",
+      "sha256": "fb633aceb01034ccfbf008638dd3ce22cb7406ebbaae60e891e1a46b62d517e4"
+    },
+    {
+      "path": "src/recheck/mnist.py",
+      "sha256": "ccb9404d32bf406e40a24aa4afd2ea5f67ce02f46dfb8c90caabf419bac4966c"
+    },
+    {
+      "path": "src/recheck/mnist_workflow.py",
+      "sha256": "cd40ec377bcdae278a531582443b4476a647d4c2af3e912488d2d72f7d42c16a"
+    },
+    {
+      "path": "src/recheck/models.py",
+      "sha256": "97bd4f93875d5b45fc1f4ebb3675120015cc171f4609c33a544c0f3f1800435b"
+    },
+    {
+      "path": "src/recheck/oracle.py",
+      "sha256": "4c40226739d95392a9e43efc11b9bfd5804554afd902b175461e415df800ad8b"
+    },
+    {
+      "path": "src/recheck/planning.py",
+      "sha256": "0a8d6bc2ffbdd35506fbb598e66cb73abdc362e1d81b25606581f4379e5fa14a"
+    },
+    {
+      "path": "src/recheck/rays_analysis.py",
+      "sha256": "55317d529f83bf59e6c1ce4d917f4f9ec5543a32280e3e83c6d872536c8d1fe3"
+    },
+    {
+      "path": "src/recheck/reporting.py",
+      "sha256": "99981b4051c5814ef7aa4003fad9b0a2eea4f819e0a81eb275826ffe78ce9f5f"
+    },
+    {
+      "path": "src/recheck/runtime.py",
+      "sha256": "6aa5432da9da2d1d8db4b9ad0dfaf0da59640888af3389e58c3d45e1e9576b22"
+    },
+    {
+      "path": "src/recheck/schedules.py",
+      "sha256": "349567b5e5a75839d710569cd4ab2375a4a818c1e786f6da302a561dbe79ea60"
+    },
+    {
+      "path": "src/recheck/workflow.py",
+      "sha256": "b6c1350e4e1f15c0e15f993db8746ddd82763a316bd9b616f6bced2a24b9c798"
+    }
+  ],
+  "training_source_freeze": {
+    "path": "replication/reports/method_zoo/source_freeze.json",
+    "sha256": "5d4db773b98df84ffb7cbf93ec25e079368e48363c9f0abbeb95a67f0402837b"
+  },
+  "runs": [
+    {
+      "task": "rays",
+      "method": "cfm",
+      "seed": 161,
+      "directory": "replication/artifacts/method_zoo_v1/rays/seed161/cfm",
+      "manifest_sha256": "2939363a150d70f3f4edc7c773f4f06126fa8f58a4ef6e350651ba80c767ceb9",
+      "checkpoint_file_sha256": "c51adedc8666c586d6a8f428e1ae1874e7b59772a6bf57bd4c1d735ba79b72e4",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed161/cfm/ema_model",
+          "sha256": "8a51498117983c1045b9d91bd59fa408751809768418bdc0b624cc71467138aa",
+          "file_sha256": "445b9387292fe84054236b718d66ffafa0ead5c8b1606d870009b1b32f78ac02",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed161/cfm/ema_model",
+          "sha256": "8a51498117983c1045b9d91bd59fa408751809768418bdc0b624cc71467138aa",
+          "file_sha256": "445b9387292fe84054236b718d66ffafa0ead5c8b1606d870009b1b32f78ac02",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed161/cfm/ema_model",
+          "sha256": "8a51498117983c1045b9d91bd59fa408751809768418bdc0b624cc71467138aa",
+          "file_sha256": "445b9387292fe84054236b718d66ffafa0ead5c8b1606d870009b1b32f78ac02",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        }
+      }
+    },
+    {
+      "task": "rays",
+      "method": "cfm",
+      "seed": 262,
+      "directory": "replication/artifacts/method_zoo_v1/rays/seed262/cfm",
+      "manifest_sha256": "74805d2771fd57f1a7ae41f4fa430a7612d7b3943932de8528504f56bc99f46c",
+      "checkpoint_file_sha256": "e793384313b48d389c4ae297b79c08a037ed6dda6ae06fb534995d7b3b6d7e5b",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed262/cfm/ema_model",
+          "sha256": "b1e1881c8dee17f068ac8932769f8a03d77fbe009c5936944b86684b72425510",
+          "file_sha256": "76d869b5b2c03f06342868983176065622be97fda8b05158245eebf8add97b42",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed262/cfm/ema_model",
+          "sha256": "b1e1881c8dee17f068ac8932769f8a03d77fbe009c5936944b86684b72425510",
+          "file_sha256": "76d869b5b2c03f06342868983176065622be97fda8b05158245eebf8add97b42",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed262/cfm/ema_model",
+          "sha256": "b1e1881c8dee17f068ac8932769f8a03d77fbe009c5936944b86684b72425510",
+          "file_sha256": "76d869b5b2c03f06342868983176065622be97fda8b05158245eebf8add97b42",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        }
+      }
+    },
+    {
+      "task": "rays",
+      "method": "cfm",
+      "seed": 363,
+      "directory": "replication/artifacts/method_zoo_v1/rays/seed363/cfm",
+      "manifest_sha256": "e2b37fc4c182c65dee39e538bd222b50a5d82547c389af0537eb3a38e3095c38",
+      "checkpoint_file_sha256": "4484fdc9bec22928942189d2ce93d5ffd900786254530f8593f3fdac1384c6dd",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed363/cfm/ema_model",
+          "sha256": "be8ed03167622ef0d8be71e80f71fa930be5051aec63dca78c6fddae4b2b1bd9",
+          "file_sha256": "017b591923f06e8b153dd7aa53ebc06f6b570ee5cf67df8656edbaef261002f7",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed363/cfm/ema_model",
+          "sha256": "be8ed03167622ef0d8be71e80f71fa930be5051aec63dca78c6fddae4b2b1bd9",
+          "file_sha256": "017b591923f06e8b153dd7aa53ebc06f6b570ee5cf67df8656edbaef261002f7",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed363/cfm/ema_model",
+          "sha256": "be8ed03167622ef0d8be71e80f71fa930be5051aec63dca78c6fddae4b2b1bd9",
+          "file_sha256": "017b591923f06e8b153dd7aa53ebc06f6b570ee5cf67df8656edbaef261002f7",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        }
+      }
+    },
+    {
+      "task": "rays",
+      "method": "consistency",
+      "seed": 161,
+      "directory": "replication/artifacts/method_zoo_v1/rays/seed161/consistency",
+      "manifest_sha256": "e681f90ed21b236cf4dd6da831aee430c46b60da6b9a99f603152605edc220fb",
+      "checkpoint_file_sha256": "27c1a01fef4ba390e53672fb8f8f47e16d33ee40c6b316bdb8bfe96bb00d012a",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed161/consistency/ema_model",
+          "sha256": "7ef3264129726aa4f94f232e30daee92c6854739de3d4fff845ef862f72d1549",
+          "file_sha256": "9d62a6742d037b8f0036328899fba7288583b6287cd248199d7663202ee74b30",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": 1,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed161/consistency/ema_model",
+          "sha256": "7ef3264129726aa4f94f232e30daee92c6854739de3d4fff845ef862f72d1549",
+          "file_sha256": "9d62a6742d037b8f0036328899fba7288583b6287cd248199d7663202ee74b30",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": 1,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed161/consistency/ema_model",
+          "sha256": "7ef3264129726aa4f94f232e30daee92c6854739de3d4fff845ef862f72d1549",
+          "file_sha256": "9d62a6742d037b8f0036328899fba7288583b6287cd248199d7663202ee74b30",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": 1,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        }
+      }
+    },
+    {
+      "task": "rays",
+      "method": "consistency",
+      "seed": 262,
+      "directory": "replication/artifacts/method_zoo_v1/rays/seed262/consistency",
+      "manifest_sha256": "d7daf0b2782aee2108b2bc13871b8686158ae801c5898423abf698b57c6172aa",
+      "checkpoint_file_sha256": "c4b92dda9aadd204849f8b5178b1cdbb7357a48bc90460df649dc94e7261d25c",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed262/consistency/ema_model",
+          "sha256": "fa4130f400fb8a977367c027e867554e0735dabc258b68bbbd11176bfa65f0ff",
+          "file_sha256": "678f5a92e23cb3f492a39f757ee3d7684e98632aac6365bd2d7f7de7e99e3c62",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": 1,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed262/consistency/ema_model",
+          "sha256": "fa4130f400fb8a977367c027e867554e0735dabc258b68bbbd11176bfa65f0ff",
+          "file_sha256": "678f5a92e23cb3f492a39f757ee3d7684e98632aac6365bd2d7f7de7e99e3c62",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": 1,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed262/consistency/ema_model",
+          "sha256": "fa4130f400fb8a977367c027e867554e0735dabc258b68bbbd11176bfa65f0ff",
+          "file_sha256": "678f5a92e23cb3f492a39f757ee3d7684e98632aac6365bd2d7f7de7e99e3c62",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": 1,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        }
+      }
+    },
+    {
+      "task": "rays",
+      "method": "consistency",
+      "seed": 363,
+      "directory": "replication/artifacts/method_zoo_v1/rays/seed363/consistency",
+      "manifest_sha256": "0834e6b776070fd82992d7ac45681603d3ba8d9d02c775d83610505b8a349f0b",
+      "checkpoint_file_sha256": "871edf58a0d20486e9d57bb067e8140563493ff0a084799983a553d8405a1b7b",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed363/consistency/ema_model",
+          "sha256": "44b34b1f7d8c640343df14ea4fc0d675e233717aa753159e19b372c152333480",
+          "file_sha256": "10803f05feb2f541beefc9b7a4184257512226a871a1350960c4ec51678b3ed4",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": 1,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed363/consistency/ema_model",
+          "sha256": "44b34b1f7d8c640343df14ea4fc0d675e233717aa753159e19b372c152333480",
+          "file_sha256": "10803f05feb2f541beefc9b7a4184257512226a871a1350960c4ec51678b3ed4",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": 1,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed363/consistency/ema_model",
+          "sha256": "44b34b1f7d8c640343df14ea4fc0d675e233717aa753159e19b372c152333480",
+          "file_sha256": "10803f05feb2f541beefc9b7a4184257512226a871a1350960c4ec51678b3ed4",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": 1,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        }
+      }
+    },
+    {
+      "task": "rays",
+      "method": "endpoint",
+      "seed": 161,
+      "directory": "replication/artifacts/method_zoo_v1/rays/seed161/endpoint",
+      "manifest_sha256": "178c843b1456b26aa05026b96e5713b0c8f44b361b600aa2618d99258b61249d",
+      "checkpoint_file_sha256": "a74edd29534c620f06f33dcbe9f7174ac12fa651bc25b22d76d29ec42dbbbe5e",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed161/endpoint/ema_model",
+          "sha256": "c5885e11244f781d2f13b023aca25ebb5195af6b1242d52050060a57006a4323",
+          "file_sha256": "645c440c8bc946e108fc1f5550a244833e16dd8775734c84170b25c70540635d",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": 1,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed161/endpoint/ema_model",
+          "sha256": "c5885e11244f781d2f13b023aca25ebb5195af6b1242d52050060a57006a4323",
+          "file_sha256": "645c440c8bc946e108fc1f5550a244833e16dd8775734c84170b25c70540635d",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": 1,
+          "native_or_off_target": "off_target",
+          "cumulative_updates_at_export": 2000
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed161/endpoint/ema_model",
+          "sha256": "c5885e11244f781d2f13b023aca25ebb5195af6b1242d52050060a57006a4323",
+          "file_sha256": "645c440c8bc946e108fc1f5550a244833e16dd8775734c84170b25c70540635d",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": 1,
+          "native_or_off_target": "off_target",
+          "cumulative_updates_at_export": 2000
+        }
+      }
+    },
+    {
+      "task": "rays",
+      "method": "endpoint",
+      "seed": 262,
+      "directory": "replication/artifacts/method_zoo_v1/rays/seed262/endpoint",
+      "manifest_sha256": "dc96a92250cae8a04c05523e4242d8a8da1bf2d775a6b1525db728962ba0701b",
+      "checkpoint_file_sha256": "70059fced5bc481f488fd733c613f380171e6fcccef0aaf9ac045318c1070ffc",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed262/endpoint/ema_model",
+          "sha256": "0be3a72c788e1a0691ff0c39e01d676062caf038797fa2afcbe29d6baebe38e2",
+          "file_sha256": "1189151b74ceb8ff86157c1f71d54989dc9f685a822b278667204f2b2da89c33",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": 1,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed262/endpoint/ema_model",
+          "sha256": "0be3a72c788e1a0691ff0c39e01d676062caf038797fa2afcbe29d6baebe38e2",
+          "file_sha256": "1189151b74ceb8ff86157c1f71d54989dc9f685a822b278667204f2b2da89c33",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": 1,
+          "native_or_off_target": "off_target",
+          "cumulative_updates_at_export": 2000
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed262/endpoint/ema_model",
+          "sha256": "0be3a72c788e1a0691ff0c39e01d676062caf038797fa2afcbe29d6baebe38e2",
+          "file_sha256": "1189151b74ceb8ff86157c1f71d54989dc9f685a822b278667204f2b2da89c33",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": 1,
+          "native_or_off_target": "off_target",
+          "cumulative_updates_at_export": 2000
+        }
+      }
+    },
+    {
+      "task": "rays",
+      "method": "endpoint",
+      "seed": 363,
+      "directory": "replication/artifacts/method_zoo_v1/rays/seed363/endpoint",
+      "manifest_sha256": "c92b52b0b900720e066bb99379e6da96ca2ecba1833f7b14613832d4f6e77452",
+      "checkpoint_file_sha256": "a3e0db423a54b1442d9471c10449d87c3706ee093e06e1cff986685b284b1595",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed363/endpoint/ema_model",
+          "sha256": "10b40f8387935158af62b11f176ca04deead1f91bdd4766b4e5567f17674707d",
+          "file_sha256": "42cee922139297a09554d6b978b15dde81bf10b998bce7e14d6cc3dc5994b34b",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": 1,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed363/endpoint/ema_model",
+          "sha256": "10b40f8387935158af62b11f176ca04deead1f91bdd4766b4e5567f17674707d",
+          "file_sha256": "42cee922139297a09554d6b978b15dde81bf10b998bce7e14d6cc3dc5994b34b",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": 1,
+          "native_or_off_target": "off_target",
+          "cumulative_updates_at_export": 2000
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed363/endpoint/ema_model",
+          "sha256": "10b40f8387935158af62b11f176ca04deead1f91bdd4766b4e5567f17674707d",
+          "file_sha256": "42cee922139297a09554d6b978b15dde81bf10b998bce7e14d6cc3dc5994b34b",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": 1,
+          "native_or_off_target": "off_target",
+          "cumulative_updates_at_export": 2000
+        }
+      }
+    },
+    {
+      "task": "rays",
+      "method": "meanflow",
+      "seed": 161,
+      "directory": "replication/artifacts/method_zoo_v1/rays/seed161/meanflow",
+      "manifest_sha256": "bbc07d663c21c14c50adcca5b8f76e2b02ffd9de3ac4000efbc39a937dfb41d2",
+      "checkpoint_file_sha256": "a99c45fbf8511e5c77b8f971a19b0bc5f442ec0f08c5aee97c28d9c039c7e292",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed161/meanflow/ema_model",
+          "sha256": "646d5c1867d7728bd47a533087a5eccb489b948097ffcde1d8e193a80b1531d0",
+          "file_sha256": "e86d8178cd551a6a864b8cfc339b8f959060e34b3d5f7e7d05c66a57eaeaf256",
+          "config_file_sha256": "3306fe18b607d867efc2a7cce52f62fbcee4dd8889e05e6ce52f03195d5e2fe9",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed161/meanflow/ema_model",
+          "sha256": "646d5c1867d7728bd47a533087a5eccb489b948097ffcde1d8e193a80b1531d0",
+          "file_sha256": "e86d8178cd551a6a864b8cfc339b8f959060e34b3d5f7e7d05c66a57eaeaf256",
+          "config_file_sha256": "3306fe18b607d867efc2a7cce52f62fbcee4dd8889e05e6ce52f03195d5e2fe9",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed161/meanflow/ema_model",
+          "sha256": "646d5c1867d7728bd47a533087a5eccb489b948097ffcde1d8e193a80b1531d0",
+          "file_sha256": "e86d8178cd551a6a864b8cfc339b8f959060e34b3d5f7e7d05c66a57eaeaf256",
+          "config_file_sha256": "3306fe18b607d867efc2a7cce52f62fbcee4dd8889e05e6ce52f03195d5e2fe9",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        }
+      }
+    },
+    {
+      "task": "rays",
+      "method": "meanflow",
+      "seed": 262,
+      "directory": "replication/artifacts/method_zoo_v1/rays/seed262/meanflow",
+      "manifest_sha256": "65bb425e4b5cd6a6753e63396a5aa06c8e456a1816213b8c2f80f2b5744eaef8",
+      "checkpoint_file_sha256": "252a6151c4568c4ad155253c579d0abe1fc93ec424f4247b469f2b5aa0216716",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed262/meanflow/ema_model",
+          "sha256": "3291ef8f8dacbb9b524741772f26b643dbe53e917967512642193b0360f9a751",
+          "file_sha256": "48506b9a11c8df720766f752a0c6e85ed4affae2735fe755d82e5b1c492884df",
+          "config_file_sha256": "3306fe18b607d867efc2a7cce52f62fbcee4dd8889e05e6ce52f03195d5e2fe9",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed262/meanflow/ema_model",
+          "sha256": "3291ef8f8dacbb9b524741772f26b643dbe53e917967512642193b0360f9a751",
+          "file_sha256": "48506b9a11c8df720766f752a0c6e85ed4affae2735fe755d82e5b1c492884df",
+          "config_file_sha256": "3306fe18b607d867efc2a7cce52f62fbcee4dd8889e05e6ce52f03195d5e2fe9",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed262/meanflow/ema_model",
+          "sha256": "3291ef8f8dacbb9b524741772f26b643dbe53e917967512642193b0360f9a751",
+          "file_sha256": "48506b9a11c8df720766f752a0c6e85ed4affae2735fe755d82e5b1c492884df",
+          "config_file_sha256": "3306fe18b607d867efc2a7cce52f62fbcee4dd8889e05e6ce52f03195d5e2fe9",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        }
+      }
+    },
+    {
+      "task": "rays",
+      "method": "meanflow",
+      "seed": 363,
+      "directory": "replication/artifacts/method_zoo_v1/rays/seed363/meanflow",
+      "manifest_sha256": "481f22a0eaa591a6fb41c9aaa98827b792d2a9a6d63e2cb1f936525b8fb0ef37",
+      "checkpoint_file_sha256": "a7da5114267293fa9fb494861d3cf49dc055becd101dd1dc1bd4191d5f69e607",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed363/meanflow/ema_model",
+          "sha256": "e30d734210ecfff8b249ea8ad4b4ab142643910fe0324db7f91e2e51b9599045",
+          "file_sha256": "24dc8df4b5978f6e21d14e4daf5455452a2767fd3b2ea19263d41a1e26d06aa1",
+          "config_file_sha256": "3306fe18b607d867efc2a7cce52f62fbcee4dd8889e05e6ce52f03195d5e2fe9",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed363/meanflow/ema_model",
+          "sha256": "e30d734210ecfff8b249ea8ad4b4ab142643910fe0324db7f91e2e51b9599045",
+          "file_sha256": "24dc8df4b5978f6e21d14e4daf5455452a2767fd3b2ea19263d41a1e26d06aa1",
+          "config_file_sha256": "3306fe18b607d867efc2a7cce52f62fbcee4dd8889e05e6ce52f03195d5e2fe9",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed363/meanflow/ema_model",
+          "sha256": "e30d734210ecfff8b249ea8ad4b4ab142643910fe0324db7f91e2e51b9599045",
+          "file_sha256": "24dc8df4b5978f6e21d14e4daf5455452a2767fd3b2ea19263d41a1e26d06aa1",
+          "config_file_sha256": "3306fe18b607d867efc2a7cce52f62fbcee4dd8889e05e6ce52f03195d5e2fe9",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        }
+      }
+    },
+    {
+      "task": "rays",
+      "method": "ot_cfm",
+      "seed": 161,
+      "directory": "replication/artifacts/method_zoo_v1/rays/seed161/ot_cfm",
+      "manifest_sha256": "84460a6c0e8cb6e824487ce96e6fc5a04fbc05e4925031a14242094925ca0e03",
+      "checkpoint_file_sha256": "30d6ac4e7cfea31c682d6a6d7a9b4bb47251bbedfc332e28b54e64d36ceca33c",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed161/ot_cfm/ema_model",
+          "sha256": "de86b7cbd254fc34f5d95d421677c5cd268ea20f7b7073f9570b1e23b7771828",
+          "file_sha256": "b2c40826f5313373dbeaf55880a8913f93b3507b70dcadd42da80fd2a9cbc64b",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed161/ot_cfm/ema_model",
+          "sha256": "de86b7cbd254fc34f5d95d421677c5cd268ea20f7b7073f9570b1e23b7771828",
+          "file_sha256": "b2c40826f5313373dbeaf55880a8913f93b3507b70dcadd42da80fd2a9cbc64b",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed161/ot_cfm/ema_model",
+          "sha256": "de86b7cbd254fc34f5d95d421677c5cd268ea20f7b7073f9570b1e23b7771828",
+          "file_sha256": "b2c40826f5313373dbeaf55880a8913f93b3507b70dcadd42da80fd2a9cbc64b",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        }
+      }
+    },
+    {
+      "task": "rays",
+      "method": "ot_cfm",
+      "seed": 262,
+      "directory": "replication/artifacts/method_zoo_v1/rays/seed262/ot_cfm",
+      "manifest_sha256": "3d42d768ae660f8724366801438a16a62abe4b56af5c42c4deaac4397d8c698b",
+      "checkpoint_file_sha256": "fd97f71907198c3ea71622d79dc55fce116a7eea3417a771f5b232c05382e15c",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed262/ot_cfm/ema_model",
+          "sha256": "58ee3382f1fe40b8c333342b82a1de538eacffd651760e5829b0977718e6cc9b",
+          "file_sha256": "3aa51d6d674b367fde74bc6c240a5813c5f54edd8264d17e4878b8f0419f4e5a",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed262/ot_cfm/ema_model",
+          "sha256": "58ee3382f1fe40b8c333342b82a1de538eacffd651760e5829b0977718e6cc9b",
+          "file_sha256": "3aa51d6d674b367fde74bc6c240a5813c5f54edd8264d17e4878b8f0419f4e5a",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed262/ot_cfm/ema_model",
+          "sha256": "58ee3382f1fe40b8c333342b82a1de538eacffd651760e5829b0977718e6cc9b",
+          "file_sha256": "3aa51d6d674b367fde74bc6c240a5813c5f54edd8264d17e4878b8f0419f4e5a",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        }
+      }
+    },
+    {
+      "task": "rays",
+      "method": "ot_cfm",
+      "seed": 363,
+      "directory": "replication/artifacts/method_zoo_v1/rays/seed363/ot_cfm",
+      "manifest_sha256": "fa42175f45e827f50e942da2fcb1e14a2ba7a87e74e27bd46e9df94009fd5cd9",
+      "checkpoint_file_sha256": "da8a0fbc41c6076d5be58a0fe8f1e7fdb3770231856b8fe1ac996f89522521d4",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed363/ot_cfm/ema_model",
+          "sha256": "3eb6e6c14dc4e9a869a84db8cafe19239382af023f7b161eee553a0bbab0b44d",
+          "file_sha256": "cc1778235f662809069c69970be79f1250db740816f7727c7e7d179d5099c7a5",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed363/ot_cfm/ema_model",
+          "sha256": "3eb6e6c14dc4e9a869a84db8cafe19239382af023f7b161eee553a0bbab0b44d",
+          "file_sha256": "cc1778235f662809069c69970be79f1250db740816f7727c7e7d179d5099c7a5",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed363/ot_cfm/ema_model",
+          "sha256": "3eb6e6c14dc4e9a869a84db8cafe19239382af023f7b161eee553a0bbab0b44d",
+          "file_sha256": "cc1778235f662809069c69970be79f1250db740816f7727c7e7d179d5099c7a5",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        }
+      }
+    },
+    {
+      "task": "rays",
+      "method": "progressive",
+      "seed": 161,
+      "directory": "replication/artifacts/method_zoo_v1/rays/seed161/progressive",
+      "manifest_sha256": "4d9c0a76dc7f89e2f718c496c14e2ec40d20efcd3199012ae52a5c601952ac4b",
+      "checkpoint_file_sha256": "33ae34e6670e2ba4ab7ee9707c2f3c48f9f6917f2957e7d723f438d7810c8e81",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed161/progressive/stage1/ema_model",
+          "sha256": "260d838e43b92d2d500dd7dc0be3a46157fe69d0fc29cb6abdacf5a873125450",
+          "file_sha256": "d3b587c8e8c3a00924e381ac72eabb2c4bd6444e2ba054308b97c2f00591087f",
+          "config_file_sha256": "0e6a6b3201b7021bf1e24879a59636db9a4dfe9becd31506f51eeb7b57a915f0",
+          "trained_nfe": 1,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed161/progressive/stage2/ema_model",
+          "sha256": "59d84a8c4d575a76a6eb3f63dbd01c0c4689d59e0fbcc4eb99160a57b944e840",
+          "file_sha256": "e4db4b4e793e9fb52baf44ee820651a8dec8bef75e0339a6a920d16399b912ef",
+          "config_file_sha256": "80a9b5662a8e897dee1d180b4da23a8d7a63232171b6bd93ecbacb7f40292d39",
+          "trained_nfe": 2,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 1600
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed161/progressive/stage4/ema_model",
+          "sha256": "3d97c368607867ee3a8d8761517dd9f7f9d3b1d8b4b9778f53882755300986ee",
+          "file_sha256": "a9e92046626b4df7735012b021dc915d7a86986d28677936699f49c3cbb0da20",
+          "config_file_sha256": "8c6b992d9b8175dcc209fc8fa020a16f3b72377da25865164493a7e4f4802c3f",
+          "trained_nfe": 4,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 1200
+        }
+      }
+    },
+    {
+      "task": "rays",
+      "method": "progressive",
+      "seed": 262,
+      "directory": "replication/artifacts/method_zoo_v1/rays/seed262/progressive",
+      "manifest_sha256": "d8697a083da6d5c2d2424f34bc16f119c0cb4d2dc74ea7dbeff89c10eacf14e5",
+      "checkpoint_file_sha256": "609a35ea9a15fb606b552bc92c3c6499a7dbcf7963511a70ca170fd1f9dd13c7",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed262/progressive/stage1/ema_model",
+          "sha256": "e422317e1bc6009e56fbc5951b64bb5343ee98634d74e0df34c92242af590a4f",
+          "file_sha256": "b81f2a1327d36b484de987269d9aabc93f6728ce852cfddbf82736514f789c63",
+          "config_file_sha256": "ee165ebc15b8b685470fed727a819dcdd719219bceec1575540ef2ba28478120",
+          "trained_nfe": 1,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed262/progressive/stage2/ema_model",
+          "sha256": "1d80e93e87172737add59ddfe0ab19730196e8782983db3324a11c697f3274c7",
+          "file_sha256": "135919028c0ecc584ab33d1dbd75dd920b47359dc90673b59271f0bfaa9026a0",
+          "config_file_sha256": "72d36c725708f75377096903fbb6776a8f93606d3445f20ab310f23c3d109dee",
+          "trained_nfe": 2,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 1600
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed262/progressive/stage4/ema_model",
+          "sha256": "12a5fde6b2867b1fad63b7320d059057e282080fd7e3c3fdd8376c11527cf76d",
+          "file_sha256": "8c6bc040e477ffc54ee5c03b4c73b7b770b83814dc714d5a878c8db480b3eb98",
+          "config_file_sha256": "5e163a080ac32966709d9cbd07abd51392e31df480cbd43620a5ae483bcd3f95",
+          "trained_nfe": 4,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 1200
+        }
+      }
+    },
+    {
+      "task": "rays",
+      "method": "progressive",
+      "seed": 363,
+      "directory": "replication/artifacts/method_zoo_v1/rays/seed363/progressive",
+      "manifest_sha256": "7d3f9e6718fd42d6ffdca296e378baf99280893c9772ad85dd9dd8fed73e7bd3",
+      "checkpoint_file_sha256": "02992b5cc32c7dfb87acfc4eb02c963fac27b095084d47290b28f5c168b1e6e2",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed363/progressive/stage1/ema_model",
+          "sha256": "c863fb23fdfd46b5e9ca597e011f5feddb0581cec905a5fd54a216528ddd63f4",
+          "file_sha256": "010b1c9a0668fc32c44ca046419eae572aa36d57df4bf4797275faff1dbb94a8",
+          "config_file_sha256": "ecba5dcbe8418356b4864676e16d9b74de6741a7900078ad6f310fd0469df6fd",
+          "trained_nfe": 1,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed363/progressive/stage2/ema_model",
+          "sha256": "4a94e6a1415435fa7ba32015eff31668832875464701d2c856fae76c685eb164",
+          "file_sha256": "c76f390e924ac47033a10584c43ff0d61450a493414eb0e23c10c11fa5e65c73",
+          "config_file_sha256": "f07dde281dbb9bc0c83d6ccbd8104eec553098a65fc3d2608fcba5f3e9d18060",
+          "trained_nfe": 2,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 1600
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed363/progressive/stage4/ema_model",
+          "sha256": "a11fd05d96884107c8227d79391f8a15950451fd47ae778d4f9d340b41ef9429",
+          "file_sha256": "9559b1c560e767c487043c1b934e690fdec46b6948aabd56024ca50862836115",
+          "config_file_sha256": "baa90986083bb5fa5149dddf1c00a15a02703d4a02688f46045c11e0da6c20df",
+          "trained_nfe": 4,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 1200
+        }
+      }
+    },
+    {
+      "task": "rays",
+      "method": "reflow",
+      "seed": 161,
+      "directory": "replication/artifacts/method_zoo_v1/rays/seed161/reflow",
+      "manifest_sha256": "071d65a54bdb76cd6356a7bfaf52cbad4d980028b5a869a07d79e1288548c5ed",
+      "checkpoint_file_sha256": "c6d6e5275fde47e6efff99247176683e2519098fb2d101360eec276d836e151a",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed161/reflow/ema_model",
+          "sha256": "4934f86fc13bc8b50fc2128e1859b16479f0e1626931757b3b7210c5b5ca0ff5",
+          "file_sha256": "368d2eea0f5e480f79f945fed6432040f442f0879557336710209a4aed137dba",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed161/reflow/ema_model",
+          "sha256": "4934f86fc13bc8b50fc2128e1859b16479f0e1626931757b3b7210c5b5ca0ff5",
+          "file_sha256": "368d2eea0f5e480f79f945fed6432040f442f0879557336710209a4aed137dba",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed161/reflow/ema_model",
+          "sha256": "4934f86fc13bc8b50fc2128e1859b16479f0e1626931757b3b7210c5b5ca0ff5",
+          "file_sha256": "368d2eea0f5e480f79f945fed6432040f442f0879557336710209a4aed137dba",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        }
+      }
+    },
+    {
+      "task": "rays",
+      "method": "reflow",
+      "seed": 262,
+      "directory": "replication/artifacts/method_zoo_v1/rays/seed262/reflow",
+      "manifest_sha256": "9fe65ed9372e8acb904e2722a7231cade06471fecbb5f393a33f24b90a3daad1",
+      "checkpoint_file_sha256": "375010f81c7d7e8c7fe3e6b1f3f9ccdcdea75b7e5ace1fcb2813a72034549aa6",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed262/reflow/ema_model",
+          "sha256": "380e3deb526170a034172053c0dfcb48d5fefe5000676016332093ed8406f652",
+          "file_sha256": "4757f7f0d8309fe3bbecbebcbe74aa867554a729c9a10758e1a881020426340d",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed262/reflow/ema_model",
+          "sha256": "380e3deb526170a034172053c0dfcb48d5fefe5000676016332093ed8406f652",
+          "file_sha256": "4757f7f0d8309fe3bbecbebcbe74aa867554a729c9a10758e1a881020426340d",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed262/reflow/ema_model",
+          "sha256": "380e3deb526170a034172053c0dfcb48d5fefe5000676016332093ed8406f652",
+          "file_sha256": "4757f7f0d8309fe3bbecbebcbe74aa867554a729c9a10758e1a881020426340d",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        }
+      }
+    },
+    {
+      "task": "rays",
+      "method": "reflow",
+      "seed": 363,
+      "directory": "replication/artifacts/method_zoo_v1/rays/seed363/reflow",
+      "manifest_sha256": "60b703e6ebf3a08d660117a98fe7ea8f92c540ce8f32409bec524fe3eadb675b",
+      "checkpoint_file_sha256": "225852c4808125b50212345a0b410b209c3180617325a30b92fe309fae5cf1a2",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed363/reflow/ema_model",
+          "sha256": "d2b73da135d18f5f9151e603587155f4c610ab57d1ed3413815a39f6148d5561",
+          "file_sha256": "f7a3d94e75675040d832b0bc44446346e3e043d606d17aea4da9fa4907ee8116",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed363/reflow/ema_model",
+          "sha256": "d2b73da135d18f5f9151e603587155f4c610ab57d1ed3413815a39f6148d5561",
+          "file_sha256": "f7a3d94e75675040d832b0bc44446346e3e043d606d17aea4da9fa4907ee8116",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed363/reflow/ema_model",
+          "sha256": "d2b73da135d18f5f9151e603587155f4c610ab57d1ed3413815a39f6148d5561",
+          "file_sha256": "f7a3d94e75675040d832b0bc44446346e3e043d606d17aea4da9fa4907ee8116",
+          "config_file_sha256": "2828f799c5f46e7cf2cd59301980893058839893f6587e2ee9349f029b1656a3",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        }
+      }
+    },
+    {
+      "task": "rays",
+      "method": "shortcut",
+      "seed": 161,
+      "directory": "replication/artifacts/method_zoo_v1/rays/seed161/shortcut",
+      "manifest_sha256": "449186882c90a7491ed0832bf053324beb0f4ddfea06de124e475a7aac7d2c04",
+      "checkpoint_file_sha256": "baaceb2638bce2d90069371f669bcb7568842d15f7ff9d1c96e6d8b3c2dca6ae",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed161/shortcut/ema_model",
+          "sha256": "79e357d98fe5c8206ee2c83e8b9ac1c1515ed943cf096d72e54892cd25b77601",
+          "file_sha256": "950d3422c7e7ad6efdeeec204571d73c11c66d74bb899bf6c4d833c2d42f1f89",
+          "config_file_sha256": "3306fe18b607d867efc2a7cce52f62fbcee4dd8889e05e6ce52f03195d5e2fe9",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed161/shortcut/ema_model",
+          "sha256": "79e357d98fe5c8206ee2c83e8b9ac1c1515ed943cf096d72e54892cd25b77601",
+          "file_sha256": "950d3422c7e7ad6efdeeec204571d73c11c66d74bb899bf6c4d833c2d42f1f89",
+          "config_file_sha256": "3306fe18b607d867efc2a7cce52f62fbcee4dd8889e05e6ce52f03195d5e2fe9",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed161/shortcut/ema_model",
+          "sha256": "79e357d98fe5c8206ee2c83e8b9ac1c1515ed943cf096d72e54892cd25b77601",
+          "file_sha256": "950d3422c7e7ad6efdeeec204571d73c11c66d74bb899bf6c4d833c2d42f1f89",
+          "config_file_sha256": "3306fe18b607d867efc2a7cce52f62fbcee4dd8889e05e6ce52f03195d5e2fe9",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        }
+      }
+    },
+    {
+      "task": "rays",
+      "method": "shortcut",
+      "seed": 262,
+      "directory": "replication/artifacts/method_zoo_v1/rays/seed262/shortcut",
+      "manifest_sha256": "23dd3b0f118e33ed1e6fe68609ac2f849de8553be764343456476ded23ac7f99",
+      "checkpoint_file_sha256": "78f4022917af6c1e8e3d33cf793826ee465144efa4bb6f30671becf7e8a74ee7",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed262/shortcut/ema_model",
+          "sha256": "fa49522068ebf52e5ee8ecd04217b0736ac6618630246acef50cfd1d37f5a065",
+          "file_sha256": "2730efe34f3874d81e681bba961a202d69b1d2c6baadf7aa24ab4f1e6597ac5c",
+          "config_file_sha256": "3306fe18b607d867efc2a7cce52f62fbcee4dd8889e05e6ce52f03195d5e2fe9",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed262/shortcut/ema_model",
+          "sha256": "fa49522068ebf52e5ee8ecd04217b0736ac6618630246acef50cfd1d37f5a065",
+          "file_sha256": "2730efe34f3874d81e681bba961a202d69b1d2c6baadf7aa24ab4f1e6597ac5c",
+          "config_file_sha256": "3306fe18b607d867efc2a7cce52f62fbcee4dd8889e05e6ce52f03195d5e2fe9",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed262/shortcut/ema_model",
+          "sha256": "fa49522068ebf52e5ee8ecd04217b0736ac6618630246acef50cfd1d37f5a065",
+          "file_sha256": "2730efe34f3874d81e681bba961a202d69b1d2c6baadf7aa24ab4f1e6597ac5c",
+          "config_file_sha256": "3306fe18b607d867efc2a7cce52f62fbcee4dd8889e05e6ce52f03195d5e2fe9",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        }
+      }
+    },
+    {
+      "task": "rays",
+      "method": "shortcut",
+      "seed": 363,
+      "directory": "replication/artifacts/method_zoo_v1/rays/seed363/shortcut",
+      "manifest_sha256": "8c0f879fc83b7efcfc131054e51b842c55a0d40b48beb8c8daec34011892ded1",
+      "checkpoint_file_sha256": "38ee04cb2c0b1e484f1acf1a2ecdf0a0919fbe5d7423500688f4d689f6b42027",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed363/shortcut/ema_model",
+          "sha256": "4b4973d78ef5c9fd32768a85602e4cbfbc5955d1fde7bb13432346639a19ca43",
+          "file_sha256": "72f0f2d6c402d281c02295abb31bb7e719cf6cdb88432b8d959b1ec633a08f63",
+          "config_file_sha256": "3306fe18b607d867efc2a7cce52f62fbcee4dd8889e05e6ce52f03195d5e2fe9",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed363/shortcut/ema_model",
+          "sha256": "4b4973d78ef5c9fd32768a85602e4cbfbc5955d1fde7bb13432346639a19ca43",
+          "file_sha256": "72f0f2d6c402d281c02295abb31bb7e719cf6cdb88432b8d959b1ec633a08f63",
+          "config_file_sha256": "3306fe18b607d867efc2a7cce52f62fbcee4dd8889e05e6ce52f03195d5e2fe9",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/rays/seed363/shortcut/ema_model",
+          "sha256": "4b4973d78ef5c9fd32768a85602e4cbfbc5955d1fde7bb13432346639a19ca43",
+          "file_sha256": "72f0f2d6c402d281c02295abb31bb7e719cf6cdb88432b8d959b1ec633a08f63",
+          "config_file_sha256": "3306fe18b607d867efc2a7cce52f62fbcee4dd8889e05e6ce52f03195d5e2fe9",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        }
+      }
+    },
+    {
+      "task": "wall",
+      "method": "cfm",
+      "seed": 161,
+      "directory": "replication/artifacts/method_zoo_v1/wall/seed161/cfm",
+      "manifest_sha256": "6bd3656fd2646a5c99b5b26a50c4d17b9edb1d53c8bbbe937e3dcdebb7e9d54e",
+      "checkpoint_file_sha256": "9e5ce8ebeb97e0c9e9f1a7152b5a25430c94ed33998d717018bc4ed5ae085a9e",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed161/cfm/ema_model",
+          "sha256": "e014bd214ce80593325e78af3a7b0c177a625597b68317fa161af58a224128dc",
+          "file_sha256": "ca1396ca6c1f342b0522064dcfbc146b3f2a1a8d2a5d8b1a523a81520f86de1c",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed161/cfm/ema_model",
+          "sha256": "e014bd214ce80593325e78af3a7b0c177a625597b68317fa161af58a224128dc",
+          "file_sha256": "ca1396ca6c1f342b0522064dcfbc146b3f2a1a8d2a5d8b1a523a81520f86de1c",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed161/cfm/ema_model",
+          "sha256": "e014bd214ce80593325e78af3a7b0c177a625597b68317fa161af58a224128dc",
+          "file_sha256": "ca1396ca6c1f342b0522064dcfbc146b3f2a1a8d2a5d8b1a523a81520f86de1c",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        }
+      }
+    },
+    {
+      "task": "wall",
+      "method": "cfm",
+      "seed": 262,
+      "directory": "replication/artifacts/method_zoo_v1/wall/seed262/cfm",
+      "manifest_sha256": "11941bd40f1927fbe9fa18fef707fbf8d5aac51670501513fbdcea12437347ee",
+      "checkpoint_file_sha256": "c543aa2d53ec93d367b7b28220deb732ae2dfaf833012e71e09efb29fbca6c43",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed262/cfm/ema_model",
+          "sha256": "a98c79ba66d8689a470c53768fde176ac5831766bebfbffc2a4f69b716fe8665",
+          "file_sha256": "c88eb7add3de3fbe073afb8868f5e47239d6342dca1997c56ff91a8ec6a29941",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed262/cfm/ema_model",
+          "sha256": "a98c79ba66d8689a470c53768fde176ac5831766bebfbffc2a4f69b716fe8665",
+          "file_sha256": "c88eb7add3de3fbe073afb8868f5e47239d6342dca1997c56ff91a8ec6a29941",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed262/cfm/ema_model",
+          "sha256": "a98c79ba66d8689a470c53768fde176ac5831766bebfbffc2a4f69b716fe8665",
+          "file_sha256": "c88eb7add3de3fbe073afb8868f5e47239d6342dca1997c56ff91a8ec6a29941",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        }
+      }
+    },
+    {
+      "task": "wall",
+      "method": "cfm",
+      "seed": 363,
+      "directory": "replication/artifacts/method_zoo_v1/wall/seed363/cfm",
+      "manifest_sha256": "0f9d9c21069b2c38a5e4301e08ea6d7bf7381ce9d19a6a29c984181c29374dd3",
+      "checkpoint_file_sha256": "bd041d845c8ef2ef683d832ac04145c8393f97fcc80894f03419b3324e61021a",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed363/cfm/ema_model",
+          "sha256": "4bf1d0f14f70f72cef3458ba40c8e8287d923ffd3f4c6db646e40fa94588b3e5",
+          "file_sha256": "95486f3347f6d13eeb9c22596b1662ee1b2e550ab3ee4865ef016443a248f794",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed363/cfm/ema_model",
+          "sha256": "4bf1d0f14f70f72cef3458ba40c8e8287d923ffd3f4c6db646e40fa94588b3e5",
+          "file_sha256": "95486f3347f6d13eeb9c22596b1662ee1b2e550ab3ee4865ef016443a248f794",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed363/cfm/ema_model",
+          "sha256": "4bf1d0f14f70f72cef3458ba40c8e8287d923ffd3f4c6db646e40fa94588b3e5",
+          "file_sha256": "95486f3347f6d13eeb9c22596b1662ee1b2e550ab3ee4865ef016443a248f794",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        }
+      }
+    },
+    {
+      "task": "wall",
+      "method": "consistency",
+      "seed": 161,
+      "directory": "replication/artifacts/method_zoo_v1/wall/seed161/consistency",
+      "manifest_sha256": "4fb88386407ed58a7c5e42b15bfea3cce3b415f86557ed52f0761db8d11b1ca8",
+      "checkpoint_file_sha256": "1502f80e2d8c35090f25e61c04c25d45406b0385d3a7cce4a08cf7856d9eb1c5",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed161/consistency/ema_model",
+          "sha256": "69bbd2f3e0a700d6e1e72a7bcc198f2ba0b2e602b458b7cc065590b90e91722a",
+          "file_sha256": "56a949b67822c8a207ca083c3ab2c3d1d39fd74ff170b5130fde2c87f770ce04",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": 1,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed161/consistency/ema_model",
+          "sha256": "69bbd2f3e0a700d6e1e72a7bcc198f2ba0b2e602b458b7cc065590b90e91722a",
+          "file_sha256": "56a949b67822c8a207ca083c3ab2c3d1d39fd74ff170b5130fde2c87f770ce04",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": 1,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed161/consistency/ema_model",
+          "sha256": "69bbd2f3e0a700d6e1e72a7bcc198f2ba0b2e602b458b7cc065590b90e91722a",
+          "file_sha256": "56a949b67822c8a207ca083c3ab2c3d1d39fd74ff170b5130fde2c87f770ce04",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": 1,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        }
+      }
+    },
+    {
+      "task": "wall",
+      "method": "consistency",
+      "seed": 262,
+      "directory": "replication/artifacts/method_zoo_v1/wall/seed262/consistency",
+      "manifest_sha256": "4fd376b7eb7092cd0058e6b9088d48f4f9018baa185b419d08030d2efbf92ffc",
+      "checkpoint_file_sha256": "3b8b22ea151309fa7edefd80110b8fa0a1ce83d16f5afb0b159da9358601ce1e",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed262/consistency/ema_model",
+          "sha256": "126d0ce5098cc46dc4a5884d6cc1168a33dced0c23dbbf950fb4e1273eb3e7fe",
+          "file_sha256": "75a62df63b8516972caa231103519cc10c8d8ca7d2d2e5c4f8429e28b2a5ea9b",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": 1,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed262/consistency/ema_model",
+          "sha256": "126d0ce5098cc46dc4a5884d6cc1168a33dced0c23dbbf950fb4e1273eb3e7fe",
+          "file_sha256": "75a62df63b8516972caa231103519cc10c8d8ca7d2d2e5c4f8429e28b2a5ea9b",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": 1,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed262/consistency/ema_model",
+          "sha256": "126d0ce5098cc46dc4a5884d6cc1168a33dced0c23dbbf950fb4e1273eb3e7fe",
+          "file_sha256": "75a62df63b8516972caa231103519cc10c8d8ca7d2d2e5c4f8429e28b2a5ea9b",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": 1,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        }
+      }
+    },
+    {
+      "task": "wall",
+      "method": "consistency",
+      "seed": 363,
+      "directory": "replication/artifacts/method_zoo_v1/wall/seed363/consistency",
+      "manifest_sha256": "5664c9f9d9a63213fb43c0e065f4a4c1f8c6f19bbb63f7497f3033ef223fd7dd",
+      "checkpoint_file_sha256": "599117ac37b7810b66fdea9df1bbabf1ef1b903e4f68b63d10bb3e5ffa7a9e25",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed363/consistency/ema_model",
+          "sha256": "26b4ddb1368f42a058a95d37af4d30028ac8a64e0539973944c5d6218a2acd79",
+          "file_sha256": "6b62b9931ad471827c3a3977042d33374a843a681e06df013b77f4ad6650a418",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": 1,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed363/consistency/ema_model",
+          "sha256": "26b4ddb1368f42a058a95d37af4d30028ac8a64e0539973944c5d6218a2acd79",
+          "file_sha256": "6b62b9931ad471827c3a3977042d33374a843a681e06df013b77f4ad6650a418",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": 1,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed363/consistency/ema_model",
+          "sha256": "26b4ddb1368f42a058a95d37af4d30028ac8a64e0539973944c5d6218a2acd79",
+          "file_sha256": "6b62b9931ad471827c3a3977042d33374a843a681e06df013b77f4ad6650a418",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": 1,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        }
+      }
+    },
+    {
+      "task": "wall",
+      "method": "endpoint",
+      "seed": 161,
+      "directory": "replication/artifacts/method_zoo_v1/wall/seed161/endpoint",
+      "manifest_sha256": "d15bc5b92f17892106dd016e67993417cc05e67ee726e10c1c6e742ca41da9cd",
+      "checkpoint_file_sha256": "39137f64bd4e790b5aeaa235a59e9c693a43dcb8b82986adf7173a96bb7947d0",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed161/endpoint/ema_model",
+          "sha256": "8613d38b659580bd90505a595ed7d0bcba82ad3e24dae113a43bcb5d119a0f9f",
+          "file_sha256": "37fc0b358c2160fd69d6f546bfbcf5d829e9faab257b3ecc2603da788991b4d0",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": 1,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed161/endpoint/ema_model",
+          "sha256": "8613d38b659580bd90505a595ed7d0bcba82ad3e24dae113a43bcb5d119a0f9f",
+          "file_sha256": "37fc0b358c2160fd69d6f546bfbcf5d829e9faab257b3ecc2603da788991b4d0",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": 1,
+          "native_or_off_target": "off_target",
+          "cumulative_updates_at_export": 2000
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed161/endpoint/ema_model",
+          "sha256": "8613d38b659580bd90505a595ed7d0bcba82ad3e24dae113a43bcb5d119a0f9f",
+          "file_sha256": "37fc0b358c2160fd69d6f546bfbcf5d829e9faab257b3ecc2603da788991b4d0",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": 1,
+          "native_or_off_target": "off_target",
+          "cumulative_updates_at_export": 2000
+        }
+      }
+    },
+    {
+      "task": "wall",
+      "method": "endpoint",
+      "seed": 262,
+      "directory": "replication/artifacts/method_zoo_v1/wall/seed262/endpoint",
+      "manifest_sha256": "d13e8098a36a4b7011f7d87b09e4a3813ca1336e44d7a1ff3c71bb455131b0f5",
+      "checkpoint_file_sha256": "9e7f4602b3a1bf60b8d08bf53cc22a0197562da6a05fa8351f2ecc49de5d164f",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed262/endpoint/ema_model",
+          "sha256": "ea8333f7145f0778ed4b6ae3ad1caa4dad811c9cee1ea45e491bcfead1c33f47",
+          "file_sha256": "a543134f3a42402184d6e932f8d6e1b489509f34c95d369eccc450b2b6541dae",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": 1,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed262/endpoint/ema_model",
+          "sha256": "ea8333f7145f0778ed4b6ae3ad1caa4dad811c9cee1ea45e491bcfead1c33f47",
+          "file_sha256": "a543134f3a42402184d6e932f8d6e1b489509f34c95d369eccc450b2b6541dae",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": 1,
+          "native_or_off_target": "off_target",
+          "cumulative_updates_at_export": 2000
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed262/endpoint/ema_model",
+          "sha256": "ea8333f7145f0778ed4b6ae3ad1caa4dad811c9cee1ea45e491bcfead1c33f47",
+          "file_sha256": "a543134f3a42402184d6e932f8d6e1b489509f34c95d369eccc450b2b6541dae",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": 1,
+          "native_or_off_target": "off_target",
+          "cumulative_updates_at_export": 2000
+        }
+      }
+    },
+    {
+      "task": "wall",
+      "method": "endpoint",
+      "seed": 363,
+      "directory": "replication/artifacts/method_zoo_v1/wall/seed363/endpoint",
+      "manifest_sha256": "a7a7824ee6e7714b946ac62a260a67a3fdf2a3cce92f200d8e8c48d59f42eef5",
+      "checkpoint_file_sha256": "37dc583ac0a0d1043cd5de4023dddda1a8ff9f477a3675fa2292515f61e4fa16",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed363/endpoint/ema_model",
+          "sha256": "9fbe4c4e4b7a1983cc1469febf8704323862aacac39f17364eab3eff64d881e9",
+          "file_sha256": "e30731331951bd89d4f273e0e0015b095f50d9157d2ad24c3ba43646cddb6451",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": 1,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed363/endpoint/ema_model",
+          "sha256": "9fbe4c4e4b7a1983cc1469febf8704323862aacac39f17364eab3eff64d881e9",
+          "file_sha256": "e30731331951bd89d4f273e0e0015b095f50d9157d2ad24c3ba43646cddb6451",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": 1,
+          "native_or_off_target": "off_target",
+          "cumulative_updates_at_export": 2000
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed363/endpoint/ema_model",
+          "sha256": "9fbe4c4e4b7a1983cc1469febf8704323862aacac39f17364eab3eff64d881e9",
+          "file_sha256": "e30731331951bd89d4f273e0e0015b095f50d9157d2ad24c3ba43646cddb6451",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": 1,
+          "native_or_off_target": "off_target",
+          "cumulative_updates_at_export": 2000
+        }
+      }
+    },
+    {
+      "task": "wall",
+      "method": "meanflow",
+      "seed": 161,
+      "directory": "replication/artifacts/method_zoo_v1/wall/seed161/meanflow",
+      "manifest_sha256": "0d1d08c4422ded2dbd4271adedd92b244aa493fa9847b32dba7ed310a9b05c5d",
+      "checkpoint_file_sha256": "53ce729c05066cc21898afb5a682440e9bba04114688a983642a8e5dbc7fbfbd",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed161/meanflow/ema_model",
+          "sha256": "894fd562d38faf29a7747332e24a66d838015affebd4c49859ace310540d301d",
+          "file_sha256": "c34ceb0c4ddc59dc15bfec3f19b4e18879f1d9b3e36cd3ec1a9f7c772ef20fae",
+          "config_file_sha256": "95ba438e47ca294bfd946f8d564f0cd9cebf6b1a83b20b4c8ca3e4f0e4209a6d",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed161/meanflow/ema_model",
+          "sha256": "894fd562d38faf29a7747332e24a66d838015affebd4c49859ace310540d301d",
+          "file_sha256": "c34ceb0c4ddc59dc15bfec3f19b4e18879f1d9b3e36cd3ec1a9f7c772ef20fae",
+          "config_file_sha256": "95ba438e47ca294bfd946f8d564f0cd9cebf6b1a83b20b4c8ca3e4f0e4209a6d",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed161/meanflow/ema_model",
+          "sha256": "894fd562d38faf29a7747332e24a66d838015affebd4c49859ace310540d301d",
+          "file_sha256": "c34ceb0c4ddc59dc15bfec3f19b4e18879f1d9b3e36cd3ec1a9f7c772ef20fae",
+          "config_file_sha256": "95ba438e47ca294bfd946f8d564f0cd9cebf6b1a83b20b4c8ca3e4f0e4209a6d",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        }
+      }
+    },
+    {
+      "task": "wall",
+      "method": "meanflow",
+      "seed": 262,
+      "directory": "replication/artifacts/method_zoo_v1/wall/seed262/meanflow",
+      "manifest_sha256": "8fcc01788cae344f5299025a10c35b6fca568cc6a4c7081267f8f3ef26333868",
+      "checkpoint_file_sha256": "62173f09c6c0c4aef596cc9a7029075fe8f60270306913f93cdca72a948d63d8",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed262/meanflow/ema_model",
+          "sha256": "2621ebcd90f2fbedf931fc87aa0cfb04aab4ee78f25e6b32544ab6e28ee6ee42",
+          "file_sha256": "45e8fad79f2df9322f8c259faa806cc7be80c8ec08ccc16caeb80f1f2f20d2e4",
+          "config_file_sha256": "95ba438e47ca294bfd946f8d564f0cd9cebf6b1a83b20b4c8ca3e4f0e4209a6d",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed262/meanflow/ema_model",
+          "sha256": "2621ebcd90f2fbedf931fc87aa0cfb04aab4ee78f25e6b32544ab6e28ee6ee42",
+          "file_sha256": "45e8fad79f2df9322f8c259faa806cc7be80c8ec08ccc16caeb80f1f2f20d2e4",
+          "config_file_sha256": "95ba438e47ca294bfd946f8d564f0cd9cebf6b1a83b20b4c8ca3e4f0e4209a6d",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed262/meanflow/ema_model",
+          "sha256": "2621ebcd90f2fbedf931fc87aa0cfb04aab4ee78f25e6b32544ab6e28ee6ee42",
+          "file_sha256": "45e8fad79f2df9322f8c259faa806cc7be80c8ec08ccc16caeb80f1f2f20d2e4",
+          "config_file_sha256": "95ba438e47ca294bfd946f8d564f0cd9cebf6b1a83b20b4c8ca3e4f0e4209a6d",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        }
+      }
+    },
+    {
+      "task": "wall",
+      "method": "meanflow",
+      "seed": 363,
+      "directory": "replication/artifacts/method_zoo_v1/wall/seed363/meanflow",
+      "manifest_sha256": "d3dcc22b84836f4f08be8be5c15c061ab939bf62855dc0ad8f7869764ce284c9",
+      "checkpoint_file_sha256": "682b3f1d25c94d6de2abf61744e88b705680f8d3455fd3709b4daf7b5f14a9ed",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed363/meanflow/ema_model",
+          "sha256": "133f755c04796cb02d319e12124a31337371d68d801286a28d8dfa73a878d057",
+          "file_sha256": "88848cf338e107d836b9457cb01864bbdbebd44ba4d99cc759666b1a2a79b460",
+          "config_file_sha256": "95ba438e47ca294bfd946f8d564f0cd9cebf6b1a83b20b4c8ca3e4f0e4209a6d",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed363/meanflow/ema_model",
+          "sha256": "133f755c04796cb02d319e12124a31337371d68d801286a28d8dfa73a878d057",
+          "file_sha256": "88848cf338e107d836b9457cb01864bbdbebd44ba4d99cc759666b1a2a79b460",
+          "config_file_sha256": "95ba438e47ca294bfd946f8d564f0cd9cebf6b1a83b20b4c8ca3e4f0e4209a6d",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed363/meanflow/ema_model",
+          "sha256": "133f755c04796cb02d319e12124a31337371d68d801286a28d8dfa73a878d057",
+          "file_sha256": "88848cf338e107d836b9457cb01864bbdbebd44ba4d99cc759666b1a2a79b460",
+          "config_file_sha256": "95ba438e47ca294bfd946f8d564f0cd9cebf6b1a83b20b4c8ca3e4f0e4209a6d",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        }
+      }
+    },
+    {
+      "task": "wall",
+      "method": "ot_cfm",
+      "seed": 161,
+      "directory": "replication/artifacts/method_zoo_v1/wall/seed161/ot_cfm",
+      "manifest_sha256": "65af78aa07d584d3d58c45aa5ebe2e44f8892ba1e7e1e0d399fba34ea93543ec",
+      "checkpoint_file_sha256": "95c3ea654c88497e14bf87e7c99b6e7ae523aa00258b0438de9aaa8087e1884b",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed161/ot_cfm/ema_model",
+          "sha256": "6ef50499153af18562169ec5ec4e988d0429c996ec2d6a6cbad746469f89e491",
+          "file_sha256": "e83473637eb1faa026f7b70f6546cffdd895542182d39293423abb4c1836bf37",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed161/ot_cfm/ema_model",
+          "sha256": "6ef50499153af18562169ec5ec4e988d0429c996ec2d6a6cbad746469f89e491",
+          "file_sha256": "e83473637eb1faa026f7b70f6546cffdd895542182d39293423abb4c1836bf37",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed161/ot_cfm/ema_model",
+          "sha256": "6ef50499153af18562169ec5ec4e988d0429c996ec2d6a6cbad746469f89e491",
+          "file_sha256": "e83473637eb1faa026f7b70f6546cffdd895542182d39293423abb4c1836bf37",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        }
+      }
+    },
+    {
+      "task": "wall",
+      "method": "ot_cfm",
+      "seed": 262,
+      "directory": "replication/artifacts/method_zoo_v1/wall/seed262/ot_cfm",
+      "manifest_sha256": "62869b9da903538b7217308d2c01e322e0320ea002976ef94b68d0fcc01d6a2d",
+      "checkpoint_file_sha256": "d3f6ba05812113e2b3149dbffd11450118a539b0055455abf87c3b2d7f099518",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed262/ot_cfm/ema_model",
+          "sha256": "552320cea83b75c46fa29b15c2a731a11e38e61e4021265b5fde972820c1c8c2",
+          "file_sha256": "ad0d9a076294dcb62a6660544ee2d226207567928e56b3047f08117611ef9336",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed262/ot_cfm/ema_model",
+          "sha256": "552320cea83b75c46fa29b15c2a731a11e38e61e4021265b5fde972820c1c8c2",
+          "file_sha256": "ad0d9a076294dcb62a6660544ee2d226207567928e56b3047f08117611ef9336",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed262/ot_cfm/ema_model",
+          "sha256": "552320cea83b75c46fa29b15c2a731a11e38e61e4021265b5fde972820c1c8c2",
+          "file_sha256": "ad0d9a076294dcb62a6660544ee2d226207567928e56b3047f08117611ef9336",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        }
+      }
+    },
+    {
+      "task": "wall",
+      "method": "ot_cfm",
+      "seed": 363,
+      "directory": "replication/artifacts/method_zoo_v1/wall/seed363/ot_cfm",
+      "manifest_sha256": "0457e6bc41c3d81ff915b683820255b4d20c1c9d3ff2c1c0d8640aa55b03ae54",
+      "checkpoint_file_sha256": "3f93f59a16dee6f8c5990ecfbc477b3ac3bd4b7e1da17b6adb763cec514f6e21",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed363/ot_cfm/ema_model",
+          "sha256": "61106ff8b7cf8bb6e1dd0f36df7d2ff59399902d38a7b00297b98d8d9b83c3ee",
+          "file_sha256": "1861f71fd029a1b65753380e47f6b65f7781de80441c36b5724f60c0e63b247d",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed363/ot_cfm/ema_model",
+          "sha256": "61106ff8b7cf8bb6e1dd0f36df7d2ff59399902d38a7b00297b98d8d9b83c3ee",
+          "file_sha256": "1861f71fd029a1b65753380e47f6b65f7781de80441c36b5724f60c0e63b247d",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed363/ot_cfm/ema_model",
+          "sha256": "61106ff8b7cf8bb6e1dd0f36df7d2ff59399902d38a7b00297b98d8d9b83c3ee",
+          "file_sha256": "1861f71fd029a1b65753380e47f6b65f7781de80441c36b5724f60c0e63b247d",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        }
+      }
+    },
+    {
+      "task": "wall",
+      "method": "progressive",
+      "seed": 161,
+      "directory": "replication/artifacts/method_zoo_v1/wall/seed161/progressive",
+      "manifest_sha256": "0896ec6307ffd77336a420662b57f1d89bf7ee472d911552dcb945739ca83f07",
+      "checkpoint_file_sha256": "0480664d2da38a2b16db569d8c0ae47922a758b6b7566d4c29b3dcdd3c62a0ce",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed161/progressive/stage1/ema_model",
+          "sha256": "72fafcd3c3f1b8ae4bfb1bb124be0e7b52789f7bc8825e63b0b7ce5f7a54ffe5",
+          "file_sha256": "7387e7f42290bb24ebda42b5781b4c17408038c8696e37dbcedd0d1b3081617d",
+          "config_file_sha256": "cae0de9edd1889ffc23d6327a72585c48e18e110f07d959f4150d47647d3a161",
+          "trained_nfe": 1,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed161/progressive/stage2/ema_model",
+          "sha256": "c3c4df3c44775c288717fd279a2559c7c453d8b77f9b948cbe632f3987118a8b",
+          "file_sha256": "476f9624f93cb12ef6a17f98516542d0a13699a40f96de454983369405a54c82",
+          "config_file_sha256": "1b264407d9a8b7e7351e0fca99959923ecae717c6c3cdc7c12806d3cf4c2cf05",
+          "trained_nfe": 2,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 1600
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed161/progressive/stage4/ema_model",
+          "sha256": "d3fde548e391d52e2add04a0a889a210d1b3aa0f720b4e4cd4ceec111408d665",
+          "file_sha256": "553f6100ca77c00589a3938e6379160506c3ba7b9632d604c6855ca171b22256",
+          "config_file_sha256": "94afc759afa48f9ecb6cbb66bca7e036c1884ae93e3ab891247f620d3d3f5863",
+          "trained_nfe": 4,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 1200
+        }
+      }
+    },
+    {
+      "task": "wall",
+      "method": "progressive",
+      "seed": 262,
+      "directory": "replication/artifacts/method_zoo_v1/wall/seed262/progressive",
+      "manifest_sha256": "1fe23800269b288019785be2fe8cdec6b13b3150289959658441a2cc695e41b9",
+      "checkpoint_file_sha256": "8d0dc9fada5e8acfe1e3fb9ae6e9b8b32abbf6ec7f19c901c8ff970780f9fc6a",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed262/progressive/stage1/ema_model",
+          "sha256": "96b8fce3cffc4c32ff6665e4a9f6ced2d402281e742d658c18e77c553147612d",
+          "file_sha256": "aabb55ffd4d18f598470c6751d83f676e09082f9332e111da0ad4e9127e87b77",
+          "config_file_sha256": "8b31f30c9ae02e550f569aee4a24c90f6860f93d27084152333f55a89cbab664",
+          "trained_nfe": 1,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed262/progressive/stage2/ema_model",
+          "sha256": "2ebe7e69768f63a41e6dcd24dbcf254b42c4c27704b396880c3bdee069973975",
+          "file_sha256": "c88b5b34075bc66f6368cc96b8759b1e3b69efe8c189af1cc1fa78da71beceab",
+          "config_file_sha256": "25c332da549ee819394153e1e6100ba2a9e241dc48000581fbc2035d984c4d8d",
+          "trained_nfe": 2,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 1600
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed262/progressive/stage4/ema_model",
+          "sha256": "8d7a23bcef4948d9121026d55901390dcaaf455063527e36b532feddfbfc5bb4",
+          "file_sha256": "65bef47b1549cffbe693443076e2220b5e6ac8f90ce0724d256b26329d3b1cc8",
+          "config_file_sha256": "923438438bdbba2182723bf9b532381eef787bdb497e26cec1e62c79a8aadef7",
+          "trained_nfe": 4,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 1200
+        }
+      }
+    },
+    {
+      "task": "wall",
+      "method": "progressive",
+      "seed": 363,
+      "directory": "replication/artifacts/method_zoo_v1/wall/seed363/progressive",
+      "manifest_sha256": "e5a9dbd8ad21bc4b821bb5a253ef46dd9e7c6c8a3f29be46eabb82d321b5a7c2",
+      "checkpoint_file_sha256": "cce166e1e3682a7ff0695bcb02b01eeec4eb1c1a005f6d1715b34a1afb7c8fbb",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed363/progressive/stage1/ema_model",
+          "sha256": "ac197d56b6cf96d2c3a346b99ba08c1d07ba3ecad620686133ad4d7d57590889",
+          "file_sha256": "c4e96025b9aea2803752c0e29cda65180b3ddd529dcd60e6fa7aa74532daa4b5",
+          "config_file_sha256": "06cbf0afbbbcb6ff396901167df3f7d1df1d8bd108f4e4d6004ace6914ffdeeb",
+          "trained_nfe": 1,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed363/progressive/stage2/ema_model",
+          "sha256": "9220934f35d3c09f0dd6605ef5e722bd48e65db85ba9e27fe21bb22cfe134aff",
+          "file_sha256": "b4b87aeab7ce401e2a164e28b2575fb6e2c926f8a5a37ce37e089b1596e082f0",
+          "config_file_sha256": "6a09594a2e8ae6d9d5060ca0babd330c4f44a710e5c8410ca94821316e6bbb0d",
+          "trained_nfe": 2,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 1600
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed363/progressive/stage4/ema_model",
+          "sha256": "2a81520fb39c63f323e031db57127b6ff91c833b6d0b272b0389eb8623c6ed4f",
+          "file_sha256": "7c0769c02259f4a6acb15c2e5f2c7d0da661bf5d04bec02d654588b424830516",
+          "config_file_sha256": "18ec4c9613f2835d6b0499789173b58faf33dc544548d7f1fedc5020e4796ad1",
+          "trained_nfe": 4,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 1200
+        }
+      }
+    },
+    {
+      "task": "wall",
+      "method": "reflow",
+      "seed": 161,
+      "directory": "replication/artifacts/method_zoo_v1/wall/seed161/reflow",
+      "manifest_sha256": "e9edcfe4f9eb4c7502820af4d8b3ecd692b47ba78d11fe0b0a23b2a5265d16b2",
+      "checkpoint_file_sha256": "442d92c3f0ded577aeb7b5ad5e8895e1f4889b91563c38359dddc3bd1188a09d",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed161/reflow/ema_model",
+          "sha256": "c932eae1b81b3c283e5d5a369bc872804b65509e3df976405c5c69c349010bdd",
+          "file_sha256": "f901e15f6f3c1af04f1df308c436095f9bbbc0dc850954c26ea916de5563850e",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed161/reflow/ema_model",
+          "sha256": "c932eae1b81b3c283e5d5a369bc872804b65509e3df976405c5c69c349010bdd",
+          "file_sha256": "f901e15f6f3c1af04f1df308c436095f9bbbc0dc850954c26ea916de5563850e",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed161/reflow/ema_model",
+          "sha256": "c932eae1b81b3c283e5d5a369bc872804b65509e3df976405c5c69c349010bdd",
+          "file_sha256": "f901e15f6f3c1af04f1df308c436095f9bbbc0dc850954c26ea916de5563850e",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        }
+      }
+    },
+    {
+      "task": "wall",
+      "method": "reflow",
+      "seed": 262,
+      "directory": "replication/artifacts/method_zoo_v1/wall/seed262/reflow",
+      "manifest_sha256": "76e4f5d793a17539a4d6467dca800c4580bb6ec6dd12208c234eabbf798c22e5",
+      "checkpoint_file_sha256": "02d07e5cd8b39133244dcf021b5d1ad8d7df76a07323abb775901a149a048483",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed262/reflow/ema_model",
+          "sha256": "f1c114ee22f0818273222119ce5a7186f5cc97b1feac934ba2f057ffab3c9692",
+          "file_sha256": "700212168ae9e064a68fc1510f0b54dd4fc277204e9283e6afd18ee9a8985346",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed262/reflow/ema_model",
+          "sha256": "f1c114ee22f0818273222119ce5a7186f5cc97b1feac934ba2f057ffab3c9692",
+          "file_sha256": "700212168ae9e064a68fc1510f0b54dd4fc277204e9283e6afd18ee9a8985346",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed262/reflow/ema_model",
+          "sha256": "f1c114ee22f0818273222119ce5a7186f5cc97b1feac934ba2f057ffab3c9692",
+          "file_sha256": "700212168ae9e064a68fc1510f0b54dd4fc277204e9283e6afd18ee9a8985346",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        }
+      }
+    },
+    {
+      "task": "wall",
+      "method": "reflow",
+      "seed": 363,
+      "directory": "replication/artifacts/method_zoo_v1/wall/seed363/reflow",
+      "manifest_sha256": "a79ac4a21923e84f92f2e3ce05494a3fdaffc1f98e91f9e1b233478d53ce7440",
+      "checkpoint_file_sha256": "6d59291d7ba1fec248a2433b9253007912dbb9b7764c3800ab6c41d8f463d82e",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed363/reflow/ema_model",
+          "sha256": "8c7cd1aac6c3013b0950022546e835065b1e021561fed644c08c51f4437a5880",
+          "file_sha256": "e3cb02869954aa5f90c3b004e22af3b0ea0b7412f09a16c0d32d8459f0deb3a8",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed363/reflow/ema_model",
+          "sha256": "8c7cd1aac6c3013b0950022546e835065b1e021561fed644c08c51f4437a5880",
+          "file_sha256": "e3cb02869954aa5f90c3b004e22af3b0ea0b7412f09a16c0d32d8459f0deb3a8",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed363/reflow/ema_model",
+          "sha256": "8c7cd1aac6c3013b0950022546e835065b1e021561fed644c08c51f4437a5880",
+          "file_sha256": "e3cb02869954aa5f90c3b004e22af3b0ea0b7412f09a16c0d32d8459f0deb3a8",
+          "config_file_sha256": "6808e555657e44c7681aa77f75143276f8ac24868d857687c7c123dd770ec79a",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        }
+      }
+    },
+    {
+      "task": "wall",
+      "method": "shortcut",
+      "seed": 161,
+      "directory": "replication/artifacts/method_zoo_v1/wall/seed161/shortcut",
+      "manifest_sha256": "f95cb1eb66da25a18f43496dae8b8665647443cb6731950f1280b377049b9701",
+      "checkpoint_file_sha256": "69947a0c1198507713692b8f90fc4e16c0b07fc2eeeb200a5142612912c49c48",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed161/shortcut/ema_model",
+          "sha256": "e71f8e1d2739ddf486394314e61ca1b2b83f009e13422adea8de537f04696350",
+          "file_sha256": "a6358a9bccb656d653d910e4cf437eafc1954a70d251945671f195729ac05aeb",
+          "config_file_sha256": "95ba438e47ca294bfd946f8d564f0cd9cebf6b1a83b20b4c8ca3e4f0e4209a6d",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed161/shortcut/ema_model",
+          "sha256": "e71f8e1d2739ddf486394314e61ca1b2b83f009e13422adea8de537f04696350",
+          "file_sha256": "a6358a9bccb656d653d910e4cf437eafc1954a70d251945671f195729ac05aeb",
+          "config_file_sha256": "95ba438e47ca294bfd946f8d564f0cd9cebf6b1a83b20b4c8ca3e4f0e4209a6d",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed161/shortcut/ema_model",
+          "sha256": "e71f8e1d2739ddf486394314e61ca1b2b83f009e13422adea8de537f04696350",
+          "file_sha256": "a6358a9bccb656d653d910e4cf437eafc1954a70d251945671f195729ac05aeb",
+          "config_file_sha256": "95ba438e47ca294bfd946f8d564f0cd9cebf6b1a83b20b4c8ca3e4f0e4209a6d",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        }
+      }
+    },
+    {
+      "task": "wall",
+      "method": "shortcut",
+      "seed": 262,
+      "directory": "replication/artifacts/method_zoo_v1/wall/seed262/shortcut",
+      "manifest_sha256": "887dff4596c54d461cf0cfead991c6c678de4341494a36ae822a4bae21e23cba",
+      "checkpoint_file_sha256": "d87c2428c6d4a4be940ac2bcf2f6534e0e2c8518eb94bddfbee9af58c713004c",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed262/shortcut/ema_model",
+          "sha256": "1e9243e2a36ea36a556f17beedc2990fe0566d07200d3a7abbb82728c3e62ebc",
+          "file_sha256": "185712ab7e68a3dd8113e254f39f4307334d26e93733f7779c04f07f442a5967",
+          "config_file_sha256": "95ba438e47ca294bfd946f8d564f0cd9cebf6b1a83b20b4c8ca3e4f0e4209a6d",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed262/shortcut/ema_model",
+          "sha256": "1e9243e2a36ea36a556f17beedc2990fe0566d07200d3a7abbb82728c3e62ebc",
+          "file_sha256": "185712ab7e68a3dd8113e254f39f4307334d26e93733f7779c04f07f442a5967",
+          "config_file_sha256": "95ba438e47ca294bfd946f8d564f0cd9cebf6b1a83b20b4c8ca3e4f0e4209a6d",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed262/shortcut/ema_model",
+          "sha256": "1e9243e2a36ea36a556f17beedc2990fe0566d07200d3a7abbb82728c3e62ebc",
+          "file_sha256": "185712ab7e68a3dd8113e254f39f4307334d26e93733f7779c04f07f442a5967",
+          "config_file_sha256": "95ba438e47ca294bfd946f8d564f0cd9cebf6b1a83b20b4c8ca3e4f0e4209a6d",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        }
+      }
+    },
+    {
+      "task": "wall",
+      "method": "shortcut",
+      "seed": 363,
+      "directory": "replication/artifacts/method_zoo_v1/wall/seed363/shortcut",
+      "manifest_sha256": "650e954321893ece5c8c581f01c837ac4a12d855ee1382f49043e87bdb4ce194",
+      "checkpoint_file_sha256": "b8db3962f50ddf65e0e42361e32545e26dffa7e2b36b2d235390487b37c0ec1c",
+      "inference_exports": {
+        "1": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed363/shortcut/ema_model",
+          "sha256": "1de158f5fb78c09b977ff0bf631f401bfc1b617ee55c6d4ad66f57f7866b7e6c",
+          "file_sha256": "69a3cd6c9d76e1243fad25c80f8c6b0b4c4fe94cb3f819520623308ce8cd89f0",
+          "config_file_sha256": "95ba438e47ca294bfd946f8d564f0cd9cebf6b1a83b20b4c8ca3e4f0e4209a6d",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "2": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed363/shortcut/ema_model",
+          "sha256": "1de158f5fb78c09b977ff0bf631f401bfc1b617ee55c6d4ad66f57f7866b7e6c",
+          "file_sha256": "69a3cd6c9d76e1243fad25c80f8c6b0b4c4fe94cb3f819520623308ce8cd89f0",
+          "config_file_sha256": "95ba438e47ca294bfd946f8d564f0cd9cebf6b1a83b20b4c8ca3e4f0e4209a6d",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        },
+        "4": {
+          "path": "replication/artifacts/method_zoo_v1/wall/seed363/shortcut/ema_model",
+          "sha256": "1de158f5fb78c09b977ff0bf631f401bfc1b617ee55c6d4ad66f57f7866b7e6c",
+          "file_sha256": "69a3cd6c9d76e1243fad25c80f8c6b0b4c4fe94cb3f819520623308ce8cd89f0",
+          "config_file_sha256": "95ba438e47ca294bfd946f8d564f0cd9cebf6b1a83b20b4c8ca3e4f0e4209a6d",
+          "trained_nfe": null,
+          "native_or_off_target": "native",
+          "cumulative_updates_at_export": 2000
+        }
+      }
+    }
+  ],
+  "parents": {
+    "rays": {
+      "path": "replication/demo/rays16_conditional_v1/teacher/ema_model",
+      "sha256": "9bc0dbe39c4cb24c4d9b893bac084c89be66fdd7b29d6879fca786b4020d6ce1",
+      "file_sha256": "9fe15863642974b19778c102a2073085746f47cb7630496b862f7375ab9dd837",
+      "config_file_sha256": "a7fbca2c7c801a4371784e2fca8740f2b89c5b1005875c43e9c616f0816e7672"
+    },
+    "wall": {
+      "path": "replication/demo/wall_navigation_conditional_v1/teacher/ema_model",
+      "sha256": "71d77760c37e6a053f324f2c810adb323439ed76ef51f09a57db43a5d2da9e79",
+      "file_sha256": "fb5fd9be09a91e744c22f85a8e0d90acb569d067cd46c7f54b896f4fe888ea72",
+      "config_file_sha256": "c161f7320bb2ddee0c44010aa890c96ab1bf666be392dc9c6f070c335fc1bcd5"
+    }
+  },
+  "historical": [
+    {
+      "path": "replication/demo/rays16_conditional_low_nfe_v1/nfe2/seed101/E0/ema_model",
+      "sha256": "b990f5d16028d65abb67c6e82b4d933b581d5e6ff23b957634b23a7f27fd5cae",
+      "file_sha256": "91e2fe35c747809e1515dd0ad3f8d60a7c53b6dac81a210d01b00c8455dbc971",
+      "config_file_sha256": "f7f38e4c1cbbfca8fdc2a16f05661fb6295e8a7019592f240d8405a87fe0ea4d",
+      "task": "rays",
+      "method": "E0",
+      "seed": 101,
+      "nfe": 2,
+      "updates": 1000
+    },
+    {
+      "path": "replication/demo/rays16_conditional_low_nfe_v1/nfe4/seed101/E0/ema_model",
+      "sha256": "9b386a58343431a337d6ae3b07348661747d79b0c8afa37f65e5832e058a91c0",
+      "file_sha256": "9c42fe5278905c5719438288d9408f84159d84d93104ccc4cd2a4ad547a9e886",
+      "config_file_sha256": "f7f38e4c1cbbfca8fdc2a16f05661fb6295e8a7019592f240d8405a87fe0ea4d",
+      "task": "rays",
+      "method": "E0",
+      "seed": 101,
+      "nfe": 4,
+      "updates": 1000
+    },
+    {
+      "path": "replication/demo/rays16_conditional_low_nfe_v1/nfe2/seed202/E0/ema_model",
+      "sha256": "f7c898ef6b5cf3247027e92a800d503d00d182bd401436142adaab725aeae07f",
+      "file_sha256": "eb66539e00a59e592db25c7a6b90453370817430c86b63603e1b9312e77f72dd",
+      "config_file_sha256": "f7f38e4c1cbbfca8fdc2a16f05661fb6295e8a7019592f240d8405a87fe0ea4d",
+      "task": "rays",
+      "method": "E0",
+      "seed": 202,
+      "nfe": 2,
+      "updates": 1000
+    },
+    {
+      "path": "replication/demo/rays16_conditional_low_nfe_v1/nfe4/seed202/E0/ema_model",
+      "sha256": "c9aa39ceb31028ff9bad9822fb0a2f487f7a8ec6dc39e0b4726de57728176083",
+      "file_sha256": "c358e9647b7982e5ac43a16df1788cabb732e94623b92721e2bad44e988b1e16",
+      "config_file_sha256": "f7f38e4c1cbbfca8fdc2a16f05661fb6295e8a7019592f240d8405a87fe0ea4d",
+      "task": "rays",
+      "method": "E0",
+      "seed": 202,
+      "nfe": 4,
+      "updates": 1000
+    },
+    {
+      "path": "replication/demo/rays16_conditional_low_nfe_v1/nfe2/seed303/E0/ema_model",
+      "sha256": "6ebae9e3f03c5af5fdd4a8d20048ff217c11a2b9d2fe65b422c2167736b60c8c",
+      "file_sha256": "e22704be0a3168cbcc5886b513b4535f6df5f6ca433192447bff6f12632155b3",
+      "config_file_sha256": "f7f38e4c1cbbfca8fdc2a16f05661fb6295e8a7019592f240d8405a87fe0ea4d",
+      "task": "rays",
+      "method": "E0",
+      "seed": 303,
+      "nfe": 2,
+      "updates": 1000
+    },
+    {
+      "path": "replication/demo/rays16_conditional_low_nfe_v1/nfe4/seed303/E0/ema_model",
+      "sha256": "45e971500beee9aba8211d18f768ea79275cb1305e64202aa3572b327fbb5b80",
+      "file_sha256": "20bde07e451e51028a19f816006cf7154c5d51b61605098797760e19100786b1",
+      "config_file_sha256": "f7f38e4c1cbbfca8fdc2a16f05661fb6295e8a7019592f240d8405a87fe0ea4d",
+      "task": "rays",
+      "method": "E0",
+      "seed": 303,
+      "nfe": 4,
+      "updates": 1000
+    },
+    {
+      "path": "replication/demo/rays16_conditional_low_nfe_v1/nfe2/seed101/M0/ema_model",
+      "sha256": "4daf6cb9431f100f7b8e8b2baa2f8fc0376bf240da601d16add200cb179228b4",
+      "file_sha256": "4ce7114e37d2d9dc00e3434e65cfcd071c4479449db00d6395c5e0444fa2a658",
+      "config_file_sha256": "f7f38e4c1cbbfca8fdc2a16f05661fb6295e8a7019592f240d8405a87fe0ea4d",
+      "task": "rays",
+      "method": "M0",
+      "seed": 101,
+      "nfe": 2,
+      "updates": 1000
+    },
+    {
+      "path": "replication/demo/rays16_conditional_low_nfe_v1/nfe4/seed101/M0/ema_model",
+      "sha256": "49881fd7108c25272d24773835d0b9b843d2108e687f22268649cdd70cdb9ba6",
+      "file_sha256": "d6dbd18f3781623b5d46bd8734209e87c546c886848d20cf0b00951811394ff0",
+      "config_file_sha256": "f7f38e4c1cbbfca8fdc2a16f05661fb6295e8a7019592f240d8405a87fe0ea4d",
+      "task": "rays",
+      "method": "M0",
+      "seed": 101,
+      "nfe": 4,
+      "updates": 1000
+    },
+    {
+      "path": "replication/demo/rays16_conditional_low_nfe_v1/nfe2/seed202/M0/ema_model",
+      "sha256": "1ea394f568551c15d7cb666434defb7f67b47e5be659a8dabb1c2458b148b297",
+      "file_sha256": "54c9949690635939a8b95223ba7727535afb52034e7a44b2b89e8b224795420f",
+      "config_file_sha256": "f7f38e4c1cbbfca8fdc2a16f05661fb6295e8a7019592f240d8405a87fe0ea4d",
+      "task": "rays",
+      "method": "M0",
+      "seed": 202,
+      "nfe": 2,
+      "updates": 1000
+    },
+    {
+      "path": "replication/demo/rays16_conditional_low_nfe_v1/nfe4/seed202/M0/ema_model",
+      "sha256": "ab9938a115d2f029ad8278549a59923dad6f03d4845b9b1ef42c678f3a58787a",
+      "file_sha256": "5169ddbde52c666ce1f598068df0fb19b0e639b38c33eb7015f5e3a053af58b2",
+      "config_file_sha256": "f7f38e4c1cbbfca8fdc2a16f05661fb6295e8a7019592f240d8405a87fe0ea4d",
+      "task": "rays",
+      "method": "M0",
+      "seed": 202,
+      "nfe": 4,
+      "updates": 1000
+    },
+    {
+      "path": "replication/demo/rays16_conditional_low_nfe_v1/nfe2/seed303/M0/ema_model",
+      "sha256": "27f19a58968ab7fd3f0c6daff37627f0f7d998011b0ea1d51a0745cd83576bd1",
+      "file_sha256": "2606376568eebaaa7f9a1fa841e43abaf930620a65e01f516ddfa642bbfbe9eb",
+      "config_file_sha256": "f7f38e4c1cbbfca8fdc2a16f05661fb6295e8a7019592f240d8405a87fe0ea4d",
+      "task": "rays",
+      "method": "M0",
+      "seed": 303,
+      "nfe": 2,
+      "updates": 1000
+    },
+    {
+      "path": "replication/demo/rays16_conditional_low_nfe_v1/nfe4/seed303/M0/ema_model",
+      "sha256": "c6448ecaeffcdd10bd50ce9b52f6c087c9a6fa4216c370ecd49dbe98e76b48c7",
+      "file_sha256": "9f3038d6c44d0cb5a64d19809c6e3dc69ad8c272559313e13e0696254a5f3894",
+      "config_file_sha256": "f7f38e4c1cbbfca8fdc2a16f05661fb6295e8a7019592f240d8405a87fe0ea4d",
+      "task": "rays",
+      "method": "M0",
+      "seed": 303,
+      "nfe": 4,
+      "updates": 1000
+    },
+    {
+      "path": "replication/demo/wall_navigation_conditional_v1/students_continuation_nfe2/E0/ema_model",
+      "sha256": "856030af6eb6f21aad65014f1f88e4f919d0a45bea7a47ea559596906465501f",
+      "file_sha256": "ee681d4bac5b3993560875a980cd479a1c6f32625213065f45ff30f850a0ceb9",
+      "config_file_sha256": "bef62721257619b37b2c3e04b03b9267b65d4f149771e606bc8be9eded2a0710",
+      "task": "wall",
+      "method": "E0",
+      "seed": 161,
+      "nfe": 2,
+      "updates": 1000
+    },
+    {
+      "path": "replication/demo/wall_navigation_conditional_v1/students_continuation_nfe4/E0/ema_model",
+      "sha256": "88ae03164ad3e495479951f3d6397b4777cf6c9c9610f730547046f43558fbf0",
+      "file_sha256": "9dfb9cd8361f2de52ba959e39bd120c7af5d32a1463fece0e1b2ff09ec98ea27",
+      "config_file_sha256": "bef62721257619b37b2c3e04b03b9267b65d4f149771e606bc8be9eded2a0710",
+      "task": "wall",
+      "method": "E0",
+      "seed": 161,
+      "nfe": 4,
+      "updates": 1000
+    },
+    {
+      "path": "replication/demo/wall_navigation_conditional_v1/students_continuation_nfe2/M0/ema_model",
+      "sha256": "14846a5be48c57b7312e68a2ab39ae812f591fda2ded0801e2f86f6727dd2cbf",
+      "file_sha256": "37b112c9c647eadc974521a1995817d6c459d8b3050acf44ece3b37c9a69dd3e",
+      "config_file_sha256": "bef62721257619b37b2c3e04b03b9267b65d4f149771e606bc8be9eded2a0710",
+      "task": "wall",
+      "method": "M0",
+      "seed": 161,
+      "nfe": 2,
+      "updates": 1000
+    },
+    {
+      "path": "replication/demo/wall_navigation_conditional_v1/students_continuation_nfe4/M0/ema_model",
+      "sha256": "ec671a37d24ba9ac89cd07e9ac3701199e8f9c1c2f5b14e01fa88558d7ab93e0",
+      "file_sha256": "61341d3518f9f992eb39c1f44a0fee079af97559a64278859ab1f5a07054d6fe",
+      "config_file_sha256": "bef62721257619b37b2c3e04b03b9267b65d4f149771e606bc8be9eded2a0710",
+      "task": "wall",
+      "method": "M0",
+      "seed": 161,
+      "nfe": 4,
+      "updates": 1000
+    }
+  ],
+  "evaluation": {
+    "rays": {
+      "projection_count": 1024,
+      "projection_seed": 1717,
+      "extra_noise_seed": 945002
+    },
+    "wall": {
+      "projection_count": 128,
+      "projection_seed": 861003,
+      "extra_noise_seed": 615002
+    }
+  },
+  "validation_selection": {
+    "path": "replication/reports/method_zoo/validation_selection.json",
+    "sha256": "c23aac3452c6bdc911fefb72c97ce7916f59d40550eeafcde9a835ad36cec3ce"
+  },
+  "fixed_exports": {
+    "path": "replication/reports/method_zoo/fixed_inference_exports.json",
+    "sha256": "729f3f796f6d33287ee405bbef626a38ddbfcd83ce6f05eab3a723fd038761b0"
+  },
+  "notebook_ui_amendment": {
+    "path": "replication/reports/method_zoo/notebook_ui_amendment.json",
+    "sha256": "8d9b14b2ea58928a29d5b28972a2197a3a7674d550b49f1626c09ba9bc6531f9"
+  }
+}

@@ -59,6 +59,25 @@ MSE-дистилляция повысила долю корректных пут
 и с **86.7% до 95.3%** на четырёх. Оба обхода сохраняются во всех 32 сценах.
 Это один training seed; Sinkhorn немного помог на NFE4 и ухудшил результат на NFE2.
 
+Для сравнения разных способов обучения добавлен
+[notebook 15 — восемь методов](notebooks/15_conditional_method_zoo.ipynb):
+CFM, OT-CFM, endpoint regression, progressive distillation, reflow, flow consistency,
+Shortcut Models и MeanFlow. Формулы targets, loss и training loops доступны в ячейках;
+есть режимы общего обученного старта и обучения с нуля.
+[Открыть в Colab](https://colab.research.google.com/github/Vovanm88/ddpm_vibe_research/blob/research/wasserstein-tube-replication/notebooks/15_conditional_method_zoo.ipynb)
+· [Методы, статьи и правила сравнения](docs/method_zoo.md).
+Основное сравнение использует общий parent, три training seeds и бюджеты 1/2/4
+вызова сети на лучах и стенах. Предыдущие MSE/Sinkhorn-модели служат отдельными
+контролями; качество распределения и геометрия оцениваются совместно.
+
+Все **48 запусков завершены**, сохранены 168 оценок и native EMA-веса.
+[Результаты и рекомендации](replication/reports/method_zoo/REPORT.md)
+· [Интерактивный просмотр без обучения — notebook 16](https://colab.research.google.com/github/Vovanm88/ddpm_vibe_research/blob/research/wasserstein-tube-replication/notebooks/16_method_zoo_results.ipynb).
+На стенах progressive достигает 65.9% корректных путей за один вызов;
+MeanFlow — 97.5% за четыре. Endpoint при четырёх вызовах даёт 99.3%,
+но это off-target применение модели, обученной на один вызов.
+Это средние по трём training seeds при общем обученном parent, а не общий рейтинг методов.
+
 Установка из пустого Jupyter:
 
 ```python

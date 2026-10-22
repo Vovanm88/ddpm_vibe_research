@@ -1,0 +1,50 @@
+{
+  "torch": "2.14.1",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "requested_device": "mps",
+  "mps_available": true,
+  "cases": [
+    {
+      "conditioner": "embedding16",
+      "sample_shape": [
+        2
+      ],
+      "actual_device": "mps:0",
+      "initial_parent_max_error": 0.0,
+      "target_max_error": 4.601478576660156e-05,
+      "jvp_max_error": 4.601478576660156e-05,
+      "gradient_max_error": 3.2782554626464844e-06,
+      "gradient_relative_l2_error": 3.994558483100263e-06,
+      "cpu_loss": 0.9995514154434204,
+      "mps_loss": 0.9995514154434204,
+      "shortcut_finite": true,
+      "parent_grad_none": true,
+      "target_detached": true,
+      "optimizer_step_changed": true
+    },
+    {
+      "conditioner": "mlp8",
+      "sample_shape": [
+        6,
+        2
+      ],
+      "actual_device": "mps:0",
+      "initial_parent_max_error": 0.0,
+      "target_max_error": 4.38690185546875e-05,
+      "jvp_max_error": 9.1552734375e-05,
+      "gradient_max_error": 1.0281801223754883e-06,
+      "gradient_relative_l2_error": 3.6620592709368793e-06,
+      "cpu_loss": 0.9999571442604065,
+      "mps_loss": 0.9999571442604065,
+      "shortcut_finite": true,
+      "parent_grad_none": true,
+      "target_detached": true,
+      "optimizer_step_changed": true
+    }
+  ],
+  "source_sha256": {
+    "interval_model.py": "edd1830193dd77da5251bf4a76e89c82d3587c3c13cb4a474d72c0a7aeb6ce30",
+    "research_methods.py": "050ff4945d0de0ef85d6623f14837c9e02449bc74aa5af4535da3a57970ca8c9"
+  },
+  "status": "passed_actual_mps_no_fallback"
+}

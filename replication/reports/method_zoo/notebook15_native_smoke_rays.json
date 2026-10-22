@@ -1,0 +1,461 @@
+{
+  "status": "completed",
+  "task": "rays",
+  "scope": "exploratory_default200_not_main2000cohort",
+  "seconds": 17.43121129181236,
+  "source_sha256": "69a55a69fa7f6f1658e374b15d841c158b19b16c7b200187c64d5f48a8d91c77",
+  "source_unchanged": true,
+  "embedded_outputs": false,
+  "executed_code_cells": [
+    {
+      "index": 1,
+      "tags": [
+        "installer"
+      ]
+    },
+    {
+      "index": 2,
+      "tags": [
+        "imports",
+        "zoo-api"
+      ]
+    },
+    {
+      "index": 3,
+      "tags": [
+        "configuration_and_utilities",
+        "zoo-api"
+      ]
+    },
+    {
+      "index": 4,
+      "tags": [
+        "task_and_model_definitions",
+        "zoo-api"
+      ]
+    },
+    {
+      "index": 6,
+      "tags": [
+        "sampling_definitions",
+        "zoo-api"
+      ]
+    },
+    {
+      "index": 7,
+      "tags": [
+        "pairbank_definitions",
+        "zoo-api"
+      ]
+    },
+    {
+      "index": 9,
+      "tags": [
+        "optimization_definitions",
+        "zoo-api"
+      ]
+    },
+    {
+      "index": 11,
+      "tags": [
+        "cfm_training",
+        "zoo-api"
+      ]
+    },
+    {
+      "index": 13,
+      "tags": [
+        "endpoint_training",
+        "zoo-api"
+      ]
+    },
+    {
+      "index": 15,
+      "tags": [
+        "progressive_training",
+        "zoo-api"
+      ]
+    },
+    {
+      "index": 17,
+      "tags": [
+        "reflow_training",
+        "zoo-api"
+      ]
+    },
+    {
+      "index": 19,
+      "tags": [
+        "consistency_training",
+        "zoo-api"
+      ]
+    },
+    {
+      "index": 21,
+      "tags": [
+        "shortcut_training",
+        "zoo-api"
+      ]
+    },
+    {
+      "index": 23,
+      "tags": [
+        "meanflow_training",
+        "zoo-api"
+      ]
+    },
+    {
+      "index": 24,
+      "tags": [
+        "dispatch_and_exports",
+        "zoo-api"
+      ]
+    },
+    {
+      "index": 26,
+      "tags": [
+        "notebook_execution"
+      ]
+    },
+    {
+      "index": 28,
+      "tags": [
+        "validation_visualization"
+      ]
+    },
+    {
+      "index": 29,
+      "tags": [
+        "cached_gif_export"
+      ]
+    }
+  ],
+  "code_cells_executed": 18,
+  "output_dir": "/private/tmp/recheck_nb15_native_rays",
+  "parameter_overrides": {
+    "task": "rays",
+    "threads": 2,
+    "output_dir": "/private/tmp/recheck_nb15_native_rays",
+    "RUN_TRAINING": true,
+    "EXPORT_GIF": true,
+    "installer_skipped_local_version": "0.5.0"
+  },
+  "parent_native_path": "/Users/vvmelnikov/Documents/thub_eda/diffusion-lab/replication/demo/rays16_conditional_v1/teacher/ema_model",
+  "parent_sha256": "9bc0dbe39c4cb24c4d9b893bac084c89be66fdd7b29d6879fca786b4020d6ce1",
+  "parent_frozen_no_grad": true,
+  "parent_or_neutral_field_initialization_verified": true,
+  "methods": {
+    "cfm": {
+      "status": "completed",
+      "updates": 200,
+      "init_sha256": "9bc0dbe39c4cb24c4d9b893bac084c89be66fdd7b29d6879fca786b4020d6ce1",
+      "ema_sha256": "a83ccceab4d12d6d60eb8e5dfc1699d6dac69a5e7e285e56ca381e1969306235",
+      "training_cost": {
+        "student_forward_calls": 200,
+        "student_sample_evals": 25600
+      }
+    },
+    "ot_cfm": {
+      "status": "completed",
+      "updates": 200,
+      "init_sha256": "9bc0dbe39c4cb24c4d9b893bac084c89be66fdd7b29d6879fca786b4020d6ce1",
+      "ema_sha256": "408cb0784912343f5db59fe889ab8324c9d59f7f1d3f2ba1689b97bd05abf791",
+      "training_cost": {
+        "student_forward_calls": 200,
+        "student_sample_evals": 25600
+      }
+    },
+    "endpoint": {
+      "status": "completed",
+      "updates": 200,
+      "init_sha256": "9bc0dbe39c4cb24c4d9b893bac084c89be66fdd7b29d6879fca786b4020d6ce1",
+      "ema_sha256": "e7365db8750dec3f8d21b567c0467c91ff8ca05054eb5d6c1eb5cd17a38011ee",
+      "training_cost": {
+        "student_forward_calls": 200,
+        "student_sample_evals": 25600
+      }
+    },
+    "progressive": {
+      "status": "completed",
+      "updates": 200,
+      "init_sha256": "9bc0dbe39c4cb24c4d9b893bac084c89be66fdd7b29d6879fca786b4020d6ce1",
+      "ema_sha256": "8dfd84abf75b0ad8226976eaea183a3770d2769297225082e391790ca2dc0549",
+      "training_cost": {
+        "stage_teacher_forward_calls": 400,
+        "stage_teacher_sample_evals": 51200,
+        "student_forward_calls": 200,
+        "student_sample_evals": 25600
+      }
+    },
+    "reflow": {
+      "status": "completed",
+      "updates": 200,
+      "init_sha256": "9bc0dbe39c4cb24c4d9b893bac084c89be66fdd7b29d6879fca786b4020d6ce1",
+      "ema_sha256": "e6aedb8f42c14ce54ec2a279129c61e5442e03f32abc9a5fbcc53a7f43fc3338",
+      "training_cost": {
+        "student_forward_calls": 200,
+        "student_sample_evals": 25600
+      }
+    },
+    "consistency": {
+      "status": "completed",
+      "updates": 200,
+      "init_sha256": "9bc0dbe39c4cb24c4d9b893bac084c89be66fdd7b29d6879fca786b4020d6ce1",
+      "ema_sha256": "b57263957d6965fc9c095c9836f75796d120bae86593e26ecb85674e48baf031",
+      "training_cost": {
+        "teacher_forward_calls": 200,
+        "teacher_sample_evals": 25600,
+        "ema_forward_calls": 200,
+        "ema_sample_evals": 25600,
+        "student_forward_calls": 200,
+        "student_sample_evals": 25600
+      }
+    },
+    "shortcut": {
+      "status": "completed",
+      "updates": 200,
+      "init_sha256": "1daaeb12417e41d9d0073381af48af8576fe6726bf5defb7761ec945a9dbafbd",
+      "ema_sha256": "c4cbf59d010247ff01e13086e03d1a4fd40cfc8a2d81a3713602daa4eb0c72d1",
+      "training_cost": {
+        "ema_forward_calls": 400,
+        "ema_sample_evals": 12800,
+        "student_forward_calls": 200,
+        "student_sample_evals": 25600
+      }
+    },
+    "meanflow": {
+      "status": "completed",
+      "updates": 200,
+      "init_sha256": "1daaeb12417e41d9d0073381af48af8576fe6726bf5defb7761ec945a9dbafbd",
+      "ema_sha256": "ec05c3405d276606373cb1031ac6c1f132f96945c0d635702a247a7a45a5237e",
+      "training_cost": {
+        "student_forward_calls": 400,
+        "student_sample_evals": 32000
+      }
+    }
+  },
+  "sample_evidence": {
+    "cfm_N1": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 512,
+      "nfe": 1,
+      "history_frames": 2,
+      "sampler": "euler",
+      "cumulative_updates_at_export": 200
+    },
+    "cfm_N2": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 1024,
+      "nfe": 2,
+      "history_frames": 3,
+      "sampler": "euler",
+      "cumulative_updates_at_export": 200
+    },
+    "cfm_N4": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 2048,
+      "nfe": 4,
+      "history_frames": 5,
+      "sampler": "euler",
+      "cumulative_updates_at_export": 200
+    },
+    "ot_cfm_N1": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 512,
+      "nfe": 1,
+      "history_frames": 2,
+      "sampler": "euler",
+      "cumulative_updates_at_export": 200
+    },
+    "ot_cfm_N2": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 1024,
+      "nfe": 2,
+      "history_frames": 3,
+      "sampler": "euler",
+      "cumulative_updates_at_export": 200
+    },
+    "ot_cfm_N4": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 2048,
+      "nfe": 4,
+      "history_frames": 5,
+      "sampler": "euler",
+      "cumulative_updates_at_export": 200
+    },
+    "endpoint_N1": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 512,
+      "nfe": 1,
+      "history_frames": 2,
+      "sampler": "euler",
+      "cumulative_updates_at_export": 200
+    },
+    "endpoint_N2": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 1024,
+      "nfe": 2,
+      "history_frames": 3,
+      "sampler": "euler",
+      "cumulative_updates_at_export": 200
+    },
+    "endpoint_N4": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 2048,
+      "nfe": 4,
+      "history_frames": 5,
+      "sampler": "euler",
+      "cumulative_updates_at_export": 200
+    },
+    "progressive_N1": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 512,
+      "nfe": 1,
+      "history_frames": 2,
+      "sampler": "euler",
+      "cumulative_updates_at_export": 200
+    },
+    "progressive_N2": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 1024,
+      "nfe": 2,
+      "history_frames": 3,
+      "sampler": "euler",
+      "cumulative_updates_at_export": 160
+    },
+    "progressive_N4": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 2048,
+      "nfe": 4,
+      "history_frames": 5,
+      "sampler": "euler",
+      "cumulative_updates_at_export": 120
+    },
+    "reflow_N1": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 512,
+      "nfe": 1,
+      "history_frames": 2,
+      "sampler": "euler",
+      "cumulative_updates_at_export": 200
+    },
+    "reflow_N2": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 1024,
+      "nfe": 2,
+      "history_frames": 3,
+      "sampler": "euler",
+      "cumulative_updates_at_export": 200
+    },
+    "reflow_N4": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 2048,
+      "nfe": 4,
+      "history_frames": 5,
+      "sampler": "euler",
+      "cumulative_updates_at_export": 200
+    },
+    "consistency_N1": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 512,
+      "nfe": 1,
+      "history_frames": 2,
+      "sampler": "denoise_renoise",
+      "cumulative_updates_at_export": 200
+    },
+    "consistency_N2": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 1024,
+      "nfe": 2,
+      "history_frames": 4,
+      "sampler": "denoise_renoise",
+      "cumulative_updates_at_export": 200
+    },
+    "consistency_N4": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 2048,
+      "nfe": 4,
+      "history_frames": 8,
+      "sampler": "denoise_renoise",
+      "cumulative_updates_at_export": 200
+    },
+    "shortcut_N1": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 512,
+      "nfe": 1,
+      "history_frames": 2,
+      "sampler": "euler",
+      "cumulative_updates_at_export": 200
+    },
+    "shortcut_N2": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 1024,
+      "nfe": 2,
+      "history_frames": 3,
+      "sampler": "euler",
+      "cumulative_updates_at_export": 200
+    },
+    "shortcut_N4": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 2048,
+      "nfe": 4,
+      "history_frames": 5,
+      "sampler": "euler",
+      "cumulative_updates_at_export": 200
+    },
+    "meanflow_N1": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 512,
+      "nfe": 1,
+      "history_frames": 2,
+      "sampler": "euler",
+      "cumulative_updates_at_export": 200
+    },
+    "meanflow_N2": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 1024,
+      "nfe": 2,
+      "history_frames": 3,
+      "sampler": "euler",
+      "cumulative_updates_at_export": 200
+    },
+    "meanflow_N4": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 2048,
+      "nfe": 4,
+      "history_frames": 5,
+      "sampler": "euler",
+      "cumulative_updates_at_export": 200
+    }
+  },
+  "paired_raw_trace_four_methods_equal": true,
+  "paired_endpoint_reflow_bank_indices_equal": true,
+  "consistency_not_falsely_claimed_bank_pairing": true,
+  "widgets": {
+    "method": true,
+    "nfe_1_2_4": true,
+    "condition_or_scene": true,
+    "noise_index": true,
+    "play_step": 1,
+    "model_calls_on_widget_changes": 0,
+    "last_condition": 15,
+    "last_noise": 1
+  },
+  "gif": {
+    "path": "/private/tmp/recheck_nb15_native_rays/rays_consistency_N4_actual_events.gif",
+    "frames": 8,
+    "size": [
+      700,
+      600
+    ],
+    "method": "consistency",
+    "nfe": 4,
+    "clock": "actual model_input/denoised_endpoint events; no interpolated FM trajectory"
+  },
+  "final_holdout_accessed": false,
+  "official_models_modified": false,
+  "visual_qa": {
+    "status": "passed",
+    "actual_gif_final_frame_inspected": true
+  }
+}

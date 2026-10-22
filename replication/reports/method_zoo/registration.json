@@ -1,0 +1,216 @@
+{
+  "status": "recipes_registered_before_training_and_new_final_banks",
+  "registered_utc": "2026-10-22T04:30:49.378983+00:00",
+  "scope": "exploratory_warm_started_method_comparison_not_literal_image_paper_replication",
+  "parent_updates": 20000,
+  "initialization": "Every method uses the same frozen conditional parent for its task. Interval branches are initialized neutral; no scratch-trained main arm.",
+  "methods": [
+    "cfm",
+    "ot_cfm",
+    "endpoint",
+    "progressive",
+    "reflow",
+    "consistency",
+    "shortcut",
+    "meanflow"
+  ],
+  "training_seeds": [
+    161,
+    262,
+    363
+  ],
+  "tasks": [
+    "rays",
+    "wall"
+  ],
+  "new_method_runs": 48,
+  "evaluation_network_nfe": [
+    1,
+    2,
+    4
+  ],
+  "training": {
+    "updates_total_per_run": 2000,
+    "batch_size": 128,
+    "lr": 0.0001,
+    "warmup_updates": 100,
+    "weight_decay": 0.0001,
+    "ema_decay": 0.99,
+    "grad_clip": 1.0,
+    "optimizer": "AdamW",
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "schedule": "warmup plus cosine, same as existing examples",
+    "conditional_support": "Entire batch has one target ray or one continuous wall scene; route labels never enter model",
+    "cfg": false,
+    "condition_dropout": 0.0,
+    "final_weight_selection": "final EMA only; no best-checkpoint selection on validation or final"
+  },
+  "recipes": {
+    "cfm": {
+      "kind": "continued_data_training",
+      "path": "x_t=(1-t)*clean+t*noise",
+      "t": "Uniform(0,1)",
+      "target": "noise-clean"
+    },
+    "ot_cfm": {
+      "kind": "continued_data_training",
+      "path": "same linear CFM",
+      "coupling": "Exact scipy Hungarian assignment, squared Euclidean full state, only within one condition; raw noise sample unchanged, permutation intentional"
+    },
+    "endpoint": {
+      "kind": "teacher_trajectory_endpoint_regression",
+      "bank": "Common frozen parent32 trajectories",
+      "time_nodes": "positive t=1,31/32,...,1/32; exclude trivial t=0",
+      "prediction": "f(x,t)=x-t*v_theta(x,t)",
+      "target": "same trajectory final parent endpoint",
+      "loss": "coordinate MSE"
+    },
+    "progressive": {
+      "kind": "binary_flow_adaptation_of_progressive_distillation",
+      "stages": [
+        16,
+        8,
+        4,
+        2,
+        1
+      ],
+      "updates_per_stage": 400,
+      "warmup_per_stage": 20,
+      "handoff": "Every stage reinitializes live student+EMA from previous frozen stage EMA, fresh AdamW and stage-local cosine; two teacher steps per student step",
+      "evaluation": "Use matching stage4/2/1 final EMA; cumulative trained updates1200/1600/2000; full cohort completes2000 before final bank"
+    },
+    "reflow": {
+      "kind": "one_reflow_round",
+      "bank": "Same fixed Gaussian\u2192parent32endpoint pairs as endpoint method",
+      "path": "linear interpolation between paired noise and parent endpoint",
+      "target": "noise-parent_endpoint",
+      "t": "Uniform(0,1)"
+    },
+    "consistency": {
+      "kind": "flow_consistency_distillation_adaptation",
+      "t": "Uniform positive grid j/32,j=1..32",
+      "step": 0.03125,
+      "f": "x-t*v_theta(x,t); f(x,0)=x by construction",
+      "target": "stop-gradient f_EMA(x_t-h*v_parent(x_t,t),t-h)",
+      "loss": "sqrt(mean_D(error**2)+0.03**2)-0.03",
+      "sampler": "Denoise then re-noise in linear CFM convention; call times1,1-1/K,...,1/K; Gaussian re-noising extra draws separately registered and shared across conditions",
+      "history": "actual model inputs and post-call endpoint predictions, explicit nonmonotone sampling events; no invented intermediate states"
+    },
+    "shortcut": {
+      "kind": "warm_started_shortcut_adaptation",
+      "model": "IntervalPointDenoiser normalizedt,d",
+      "fm_fraction": 0.75,
+      "bootstrap_fraction": 0.25,
+      "coarse_widths": [
+        0.0625,
+        0.125,
+        0.25,
+        0.5,
+        1.0
+      ],
+      "smallest_half_step": 0.03125,
+      "target": "Mean of two EMA half-shortcut velocities at actual first-step endpoint; at smallest half width query duration0",
+      "loss": "MSE on velocity"
+    },
+    "meanflow": {
+      "kind": "warm_started_meanflow_adaptation",
+      "model": "IntervalPointDenoiser normalizedt,d=t-r",
+      "fm_fraction": 0.75,
+      "off_diagonal_fraction": 0.25,
+      "time_sampling": "sort two independent sigmoid(N(-0.4,1)) draws; t>=r",
+      "target": "stopgrad(v-d*JVP[u;(v,1,1)]) with native coordinates(x,t,d), holding r fixed",
+      "metric": "adaptive L2, p=1, c=0.001, weights detached; no higher-order optimization through JVP target"
+    }
+  },
+  "teacher_pairbank": {
+    "points_per_task": 8192,
+    "parent_steps": 32,
+    "seed": 816001,
+    "rays": "16 train labels \u00d7512 noises",
+    "wall": "128 train scenes \u00d764 noises",
+    "reuse": "Single train-only cache per task reused by all training seeds/methods; no endpoint quality filtering",
+    "save_full_histories": "private ignored cache only, selected small examples/public hashes"
+  },
+  "parents": {
+    "rays": {
+      "native_path": "replication/demo/rays16_conditional_v1/teacher/ema_model",
+      "sha256": "9bc0dbe39c4cb24c4d9b893bac084c89be66fdd7b29d6879fca786b4020d6ce1",
+      "sample_shape": [
+        2
+      ],
+      "data_seed": 47,
+      "train_count": 65536,
+      "conditions": "categorical16"
+    },
+    "wall": {
+      "native_path": "replication/demo/wall_navigation_conditional_v1/teacher/ema_model",
+      "sha256": "71d77760c37e6a053f324f2c810adb323439ed76ef51f09a57db43a5d2da9e79",
+      "sample_shape": [
+        30,
+        2
+      ],
+      "data_seed": 61,
+      "train_scenes": 128,
+      "paths_per_scene": 128,
+      "conditions": "continuous8; endpoints reconstructed, route ID evaluation-only"
+    }
+  },
+  "validation": {
+    "rays": {
+      "reference_seed": 10047,
+      "reference_samples": 8192,
+      "noise_seed": 830001,
+      "generated_per_condition": 256
+    },
+    "wall": {
+      "scene_seed": 10061,
+      "split": "validation",
+      "n_scenes": 32,
+      "paths_per_scene": 128,
+      "noise_seed": 613001
+    }
+  },
+  "final": {
+    "rays": {
+      "reference_seed": 30047,
+      "reference_samples": 8192,
+      "noise_seed": 945001,
+      "generated_per_condition": 512,
+      "total_generated": 8192
+    },
+    "wall": {
+      "scene_seed": 30061,
+      "split": "test",
+      "n_scenes": 32,
+      "paths_per_scene": 128,
+      "noise_seed": 615001,
+      "total_generated": 4096
+    },
+    "gate": "ALL48 new full-budget runs and all stage4/2/1 exports fixed/hashed, validation selection record/source freeze verified before any new final data/noise generation; final bank cannot tune recipes"
+  },
+  "comparison": {
+    "rays": "Conditional rawXY SWD with requested-ray routing+outer correct fraction/coverage/radial+phase; no winner based only on global SWD",
+    "wall": "Exact segment success primary, both modes over all requested scenes, mode balance, conditional raw60D SWD and lengths of valid paths",
+    "ranking": "Per task and actual NFE; raw metrics+Pareto tiers, no arbitrary universal weighted score",
+    "uncertainty": "Paired t95 intervals over three training seeds, conditional on one common parent and shared final bank; generated paths do not count as independent training repeats",
+    "cost": "Common parent20000 cost plus offline teacher queries and per-method training cost disclosed; update counts are not equal wall-clock; extra interval parameters disclosed"
+  },
+  "historical_references": {
+    "rays": "Published M0/E0,1000updates, seeds101/202/303,nativeNFE2/4",
+    "wall": "Published M0/E0,1000updates,seed161,nativeNFE2/4",
+    "rule": "Separate unequal-budget historical league; never paired seed CI against new training seeds"
+  },
+  "frozen_recheck_algorithm_sha256": "ac296cb09412f60a0e56fa2cb0c5c72af2cf25c5ab6408fb9d891bac76048acb",
+  "papers": {
+    "cfm": "https://arxiv.org/abs/2210.02747",
+    "ot_cfm": "https://arxiv.org/abs/2302.00482",
+    "progressive": "https://arxiv.org/abs/2202.00512",
+    "reflow": "https://arxiv.org/abs/2209.03003",
+    "consistency": "https://arxiv.org/abs/2303.01469",
+    "shortcut": "https://arxiv.org/abs/2410.12557",
+    "meanflow": "https://arxiv.org/abs/2505.13447"
+  }
+}

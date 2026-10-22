@@ -1,0 +1,186 @@
+{
+  "status": "passed_actual_completed_report_cached_widgets",
+  "notebook_sha256": "d3f748842ec13ecece9cd0715f20085f37e3ba72efd09506422ee129722ae1af",
+  "executed_code_cells": [
+    1,
+    2,
+    4,
+    5,
+    7
+  ],
+  "code_cell_count": 5,
+  "results_sha256": "6f22c983e7f90de55ad060982b207335009230d13e876b5cf92e478d7e6f80bf",
+  "completed_rows": 168,
+  "tasks": [
+    "rays",
+    "wall"
+  ],
+  "preview_policy": "condition0 first16 noise draws; seed161 and frozenparent",
+  "checks": [
+    {
+      "task": "rays",
+      "method": "Original",
+      "nfe": 2,
+      "last_event": 2,
+      "noise": 15,
+      "condition": 0
+    },
+    {
+      "task": "rays",
+      "method": "endpoint",
+      "nfe": 1,
+      "last_event": 1,
+      "noise": 15,
+      "condition": 0
+    },
+    {
+      "task": "rays",
+      "method": "endpoint",
+      "nfe": 2,
+      "last_event": 2,
+      "noise": 15,
+      "condition": 0
+    },
+    {
+      "task": "rays",
+      "method": "endpoint",
+      "nfe": 4,
+      "last_event": 4,
+      "noise": 15,
+      "condition": 0
+    },
+    {
+      "task": "rays",
+      "method": "consistency",
+      "nfe": 1,
+      "last_event": 1,
+      "noise": 15,
+      "condition": 0
+    },
+    {
+      "task": "rays",
+      "method": "consistency",
+      "nfe": 2,
+      "last_event": 3,
+      "noise": 15,
+      "condition": 0
+    },
+    {
+      "task": "rays",
+      "method": "consistency",
+      "nfe": 4,
+      "last_event": 7,
+      "noise": 15,
+      "condition": 0
+    },
+    {
+      "task": "rays",
+      "method": "meanflow",
+      "nfe": 4,
+      "last_event": 4,
+      "noise": 15,
+      "condition": 0
+    },
+    {
+      "task": "wall",
+      "method": "Original",
+      "nfe": 2,
+      "last_event": 2,
+      "noise": 15,
+      "condition": 0
+    },
+    {
+      "task": "wall",
+      "method": "endpoint",
+      "nfe": 1,
+      "last_event": 1,
+      "noise": 15,
+      "condition": 0
+    },
+    {
+      "task": "wall",
+      "method": "endpoint",
+      "nfe": 2,
+      "last_event": 2,
+      "noise": 15,
+      "condition": 0
+    },
+    {
+      "task": "wall",
+      "method": "endpoint",
+      "nfe": 4,
+      "last_event": 4,
+      "noise": 15,
+      "condition": 0
+    },
+    {
+      "task": "wall",
+      "method": "consistency",
+      "nfe": 1,
+      "last_event": 1,
+      "noise": 15,
+      "condition": 0
+    },
+    {
+      "task": "wall",
+      "method": "consistency",
+      "nfe": 2,
+      "last_event": 3,
+      "noise": 15,
+      "condition": 0
+    },
+    {
+      "task": "wall",
+      "method": "consistency",
+      "nfe": 4,
+      "last_event": 7,
+      "noise": 15,
+      "condition": 0
+    },
+    {
+      "task": "wall",
+      "method": "meanflow",
+      "nfe": 4,
+      "last_event": 4,
+      "noise": 15,
+      "condition": 0
+    }
+  ],
+  "cm_nfe4_actual_event_times": [
+    1.0,
+    0.0,
+    0.75,
+    0.0,
+    0.5,
+    0.0,
+    0.25,
+    0.0
+  ],
+  "new_model_weight_or_sampling_calls": 0,
+  "source_csv_hashes_unchanged": true,
+  "numeric_display_significant_digits": 5,
+  "endpoint_off_target_nfe": [
+    2,
+    4
+  ],
+  "training_seed_count": 3,
+  "progressive_cumulative_updates": {
+    "4": 1200,
+    "2": 1600,
+    "1": 2000
+  },
+  "outputs_embedded_in_notebook": false,
+  "visual_qa_files": [
+    "/private/tmp/notebook16_rays_widget.png",
+    "/private/tmp/notebook16_wall_widget.png"
+  ],
+  "visual_qa": {
+    "inspected_actual_cached_figures": true,
+    "rays": "Requested ray and actual CM event order visible; nonmonotone-time caveat, red-to-violet event colors and selected black marker readable.",
+    "wall": "Wall, fixed A/B, complete spatial path and waypoint-progress color visible; labels and caveats readable with no clipping.",
+    "figure_sha256": {
+      "rays": "4d3344c9e30cf6b67ae78398f4b90403869b6ed53f9e6bb83a7aa0a1591c8215",
+      "wall": "bc6900445fe568d505f79ae92f6d3f8adf7a28ddec70e8ec5133deea12e8ea53"
+    }
+  }
+}

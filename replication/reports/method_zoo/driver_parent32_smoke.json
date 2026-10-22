@@ -1,0 +1,25 @@
+{
+  "status": "passed_actual_published_parent32",
+  "scope": "arbitrary2Gaussian smoke only; no final factory or registered final noise",
+  "noise_seed": 129801,
+  "noise_sha256": "fbf7b777a2721c2953e546c0868fe6433f2c9522b25b80f34ba3fdc34017b2f2",
+  "conditions": [
+    0,
+    15
+  ],
+  "parent_sha256": "9bc0dbe39c4cb24c4d9b893bac084c89be66fdd7b29d6879fca786b4020d6ce1",
+  "nfe": 32,
+  "event_frames": 33,
+  "samples_finite": true,
+  "measurement": {
+    "parameter_count": 333698,
+    "actual_device": "cpu",
+    "sampling_seconds": 0.00977537501603365,
+    "actual_network_cost": {
+      "nfe_per_sample": 32.0,
+      "total_model_calls": 32,
+      "total_sample_evaluations": 64
+    }
+  },
+  "driver_sha256": "363e61302f1d7351bad72059aa31327299dfbfd76bcbf3d647893facf11f691c"
+}

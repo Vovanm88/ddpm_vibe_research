@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "task": "wall",
+  "method": "progressive",
+  "seed": 363,
+  "updates_planned": 2000,
+  "updates_completed": 2000,
+  "model_kind": "velocity",
+  "model_class": "PointDenoiser",
+  "ema_sha256": "ac197d56b6cf96d2c3a346b99ba08c1d07ba3ecad620686133ad4d7d57590889",
+  "init_sha256": "71d77760c37e6a053f324f2c810adb323439ed76ef51f09a57db43a5d2da9e79",
+  "teacher_sha256": "71d77760c37e6a053f324f2c810adb323439ed76ef51f09a57db43a5d2da9e79",
+  "common_ancestor_sha256": "71d77760c37e6a053f324f2c810adb323439ed76ef51f09a57db43a5d2da9e79",
+  "source_sha256": "69a55a69fa7f6f1658e374b15d841c158b19b16c7b200187c64d5f48a8d91c77",
+  "config_sha256": "b598342e6a4def9f5e455dfdc61ec4e36f42d17f2241e0155b9a41c5b3c0d0cb",
+  "train_data_sha256": "7d891a4326eea1401ce687aeb90909efd4f6213e227f89273477f6f8ecc41b08",
+  "train_state_sha256": "bb4ba926deb9cbc5fdf27ecaba4edc931516a0b613e8cbadebb7b4e6016da6d7",
+  "train_conditions_sha256": "d102365ca4496ed4c5fcc61c1331b9edc91c5cf1fb06174e5af61a9300a3c64f",
+  "condition_spec": {
+    "kind": "continuous",
+    "dimension": 8,
+    "route_id_input": false
+  },
+  "condition_dropout": 0.0,
+  "cfg": false,
+  "whole_support_single_condition": true,
+  "route_id_input": false,
+  "endpoint_clamped_contract": true,
+  "state_dimension": 60,
+  "pairbank_sha256": "fd2096390e78797a2a11b0ab157ba64454bbf045cc00ed36e52eb99ea479b35e",
+  "pairbank_contract": {
+    "task": "wall",
+    "split": "train",
+    "teacher_sha256": "71d77760c37e6a053f324f2c810adb323439ed76ef51f09a57db43a5d2da9e79",
+    "train_data_sha256": "7d891a4326eea1401ce687aeb90909efd4f6213e227f89273477f6f8ecc41b08",
+    "train_conditions_sha256": "d102365ca4496ed4c5fcc61c1331b9edc91c5cf1fb06174e5af61a9300a3c64f",
+    "size": 8192,
+    "seed": 816001,
+    "teacher_steps": 32
+  },
+  "initialization": "parent",
+  "warm_start": "same fixed20000-update task parent; neutral interval branch where applicable",
+  "training_seconds": 12.46819837577641,
+  "training_cost": {
+    "stage_teacher_forward_calls": 4000,
+    "stage_teacher_sample_evals": 512000,
+    "student_forward_calls": 2000,
+    "student_sample_evals": 256000
+  },
+  "cost_definition": "actual forward calls/sample-evals; not FLOPs. Walltime includes optimizer/backward/JVP. Offline shared pairbank cost is separate.",
+  "raw_batch_trace_sha256": "8b806f4265e19eab0cf4965a77b90876019dc6bcd48987c23a30fa89ed76c322",
+  "pair_indices_trace_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "inference_exports": {
+    "1": {
+      "path": "stage1/ema_model",
+      "sha256": "ac197d56b6cf96d2c3a346b99ba08c1d07ba3ecad620686133ad4d7d57590889",
+      "trained_nfe": 1,
+      "native_or_off_target": "native",
+      "cumulative_updates_at_export": 2000
+    },
+    "2": {
+      "path": "stage2/ema_model",
+      "sha256": "9220934f35d3c09f0dd6605ef5e722bd48e65db85ba9e27fe21bb22cfe134aff",
+      "trained_nfe": 2,
+      "native_or_off_target": "native",
+      "cumulative_updates_at_export": 1600
+    },
+    "4": {
+      "path": "stage4/ema_model",
+      "sha256": "2a81520fb39c63f323e031db57127b6ff91c833b6d0b272b0389eb8623c6ed4f",
+      "trained_nfe": 4,
+      "native_or_off_target": "native",
+      "cumulative_updates_at_export": 1200
+    }
+  },
+  "validation_selection": "final EMA only; no best-checkpoint selection"
+}

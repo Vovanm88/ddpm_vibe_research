@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "tests_passed": 23,
+  "seconds": 23.99,
+  "command": "MPLBACKEND=Agg MPLCONFIGDIR=/private/tmp/recheck-matplotlib .venv/bin/pytest -q tests/test_method_zoo_notebook.py",
+  "source_sha256": {
+    "notebooks/15_conditional_method_zoo.ipynb": "69a55a69fa7f6f1658e374b15d841c158b19b16c7b200187c64d5f48a8d91c77",
+    "examples/train_method_zoo.py": "8f654691cc4b617f574b22e1b307b583cf636319de6aaf34bf5049dce5ae3797",
+    "tests/test_method_zoo_notebook.py": "6ff142f2f2aa35423b2d368a17cd676c0821967f82633bbd4cebb7fdee2b0add"
+  },
+  "actual_methods_tested": [
+    "cfm",
+    "ot_cfm",
+    "endpoint",
+    "progressive",
+    "reflow",
+    "consistency",
+    "shortcut",
+    "meanflow"
+  ],
+  "actual_tasks_tested": [
+    "rays",
+    "wall"
+  ],
+  "updates_each_tiny_case": 10,
+  "checks": [
+    "all objective loops finite actual gradients",
+    "frozen parent no gradient and unchanged",
+    "all native inference exports load with matching tensor hash",
+    "exact uninterrupted vs3+resume10 finalEMA/history/RNG/costs for all8methods",
+    "progressive missing stage export boundary recovery",
+    "actual network sample-eval counts at NFE4",
+    "CM nonmonotone input/endpoint events",
+    "continuous wall endpoint reconstruction eachframe",
+    "shared raw traces cfm/ot_cfm/shortcut/meanflow",
+    "shared bank index traces endpoint/reflow",
+    "independent Gaussian bank rows and immutable tensorhashcache",
+    "strictunknown/nan config and final split refusal",
+    "scratch explicitdata-only initialization",
+    "cached NFE/target-or-scene/noise/Playstep1 controls no modelcalls",
+    "parallel fresh root config atomic write serialized"
+  ],
+  "ruff": "passed",
+  "source_notebook_outputs_embedded": false,
+  "main_cohort_training_started_by_this_test": false,
+  "final_holdout_accessed": false
+}

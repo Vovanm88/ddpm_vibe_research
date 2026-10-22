@@ -1,0 +1,462 @@
+{
+  "status": "completed_with_visual_issue",
+  "task": "wall",
+  "scope": "exploratory_default200_not_main2000cohort",
+  "seconds": 19.09801962506026,
+  "source_sha256": "69a55a69fa7f6f1658e374b15d841c158b19b16c7b200187c64d5f48a8d91c77",
+  "source_unchanged": true,
+  "embedded_outputs": false,
+  "executed_code_cells": [
+    {
+      "index": 1,
+      "tags": [
+        "installer"
+      ]
+    },
+    {
+      "index": 2,
+      "tags": [
+        "imports",
+        "zoo-api"
+      ]
+    },
+    {
+      "index": 3,
+      "tags": [
+        "configuration_and_utilities",
+        "zoo-api"
+      ]
+    },
+    {
+      "index": 4,
+      "tags": [
+        "task_and_model_definitions",
+        "zoo-api"
+      ]
+    },
+    {
+      "index": 6,
+      "tags": [
+        "sampling_definitions",
+        "zoo-api"
+      ]
+    },
+    {
+      "index": 7,
+      "tags": [
+        "pairbank_definitions",
+        "zoo-api"
+      ]
+    },
+    {
+      "index": 9,
+      "tags": [
+        "optimization_definitions",
+        "zoo-api"
+      ]
+    },
+    {
+      "index": 11,
+      "tags": [
+        "cfm_training",
+        "zoo-api"
+      ]
+    },
+    {
+      "index": 13,
+      "tags": [
+        "endpoint_training",
+        "zoo-api"
+      ]
+    },
+    {
+      "index": 15,
+      "tags": [
+        "progressive_training",
+        "zoo-api"
+      ]
+    },
+    {
+      "index": 17,
+      "tags": [
+        "reflow_training",
+        "zoo-api"
+      ]
+    },
+    {
+      "index": 19,
+      "tags": [
+        "consistency_training",
+        "zoo-api"
+      ]
+    },
+    {
+      "index": 21,
+      "tags": [
+        "shortcut_training",
+        "zoo-api"
+      ]
+    },
+    {
+      "index": 23,
+      "tags": [
+        "meanflow_training",
+        "zoo-api"
+      ]
+    },
+    {
+      "index": 24,
+      "tags": [
+        "dispatch_and_exports",
+        "zoo-api"
+      ]
+    },
+    {
+      "index": 26,
+      "tags": [
+        "notebook_execution"
+      ]
+    },
+    {
+      "index": 28,
+      "tags": [
+        "validation_visualization"
+      ]
+    },
+    {
+      "index": 29,
+      "tags": [
+        "cached_gif_export"
+      ]
+    }
+  ],
+  "code_cells_executed": 18,
+  "output_dir": "/private/tmp/recheck_nb15_native_wall",
+  "parameter_overrides": {
+    "task": "wall",
+    "threads": 2,
+    "output_dir": "/private/tmp/recheck_nb15_native_wall",
+    "RUN_TRAINING": true,
+    "EXPORT_GIF": true,
+    "installer_skipped_local_version": "0.5.0"
+  },
+  "parent_native_path": "/Users/vvmelnikov/Documents/thub_eda/diffusion-lab/replication/demo/wall_navigation_conditional_v1/teacher/ema_model",
+  "parent_sha256": "71d77760c37e6a053f324f2c810adb323439ed76ef51f09a57db43a5d2da9e79",
+  "parent_frozen_no_grad": true,
+  "parent_or_neutral_field_initialization_verified": true,
+  "methods": {
+    "cfm": {
+      "status": "completed",
+      "updates": 200,
+      "init_sha256": "71d77760c37e6a053f324f2c810adb323439ed76ef51f09a57db43a5d2da9e79",
+      "ema_sha256": "279434722bb9c6a8c170b423c79a81d3cd5da3d0940f54096c8593de141f15f4",
+      "training_cost": {
+        "student_forward_calls": 200,
+        "student_sample_evals": 25600
+      }
+    },
+    "ot_cfm": {
+      "status": "completed",
+      "updates": 200,
+      "init_sha256": "71d77760c37e6a053f324f2c810adb323439ed76ef51f09a57db43a5d2da9e79",
+      "ema_sha256": "6e0d0e3422fa95d3042443e36969ca0d7fce7746000e8138f78cfdb0a7ab9d06",
+      "training_cost": {
+        "student_forward_calls": 200,
+        "student_sample_evals": 25600
+      }
+    },
+    "endpoint": {
+      "status": "completed",
+      "updates": 200,
+      "init_sha256": "71d77760c37e6a053f324f2c810adb323439ed76ef51f09a57db43a5d2da9e79",
+      "ema_sha256": "fafc81f2640f68ad851c5363540637308a0229df8767b0ec62df34ae8262f302",
+      "training_cost": {
+        "student_forward_calls": 200,
+        "student_sample_evals": 25600
+      }
+    },
+    "progressive": {
+      "status": "completed",
+      "updates": 200,
+      "init_sha256": "71d77760c37e6a053f324f2c810adb323439ed76ef51f09a57db43a5d2da9e79",
+      "ema_sha256": "52f9aab973654dca406ac5d3fbba644ab9c4379213945ff9450c2717259c9cf4",
+      "training_cost": {
+        "stage_teacher_forward_calls": 400,
+        "stage_teacher_sample_evals": 51200,
+        "student_forward_calls": 200,
+        "student_sample_evals": 25600
+      }
+    },
+    "reflow": {
+      "status": "completed",
+      "updates": 200,
+      "init_sha256": "71d77760c37e6a053f324f2c810adb323439ed76ef51f09a57db43a5d2da9e79",
+      "ema_sha256": "a7d0868ad8aaa316e62fd6413b33c5d37e27e0748d3491faf9c7dd62cd560ff9",
+      "training_cost": {
+        "student_forward_calls": 200,
+        "student_sample_evals": 25600
+      }
+    },
+    "consistency": {
+      "status": "completed",
+      "updates": 200,
+      "init_sha256": "71d77760c37e6a053f324f2c810adb323439ed76ef51f09a57db43a5d2da9e79",
+      "ema_sha256": "a20d644eefe9a9603908a45fb42680c994c9e0e090a41892a70becc64d61d37e",
+      "training_cost": {
+        "teacher_forward_calls": 200,
+        "teacher_sample_evals": 25600,
+        "ema_forward_calls": 200,
+        "ema_sample_evals": 25600,
+        "student_forward_calls": 200,
+        "student_sample_evals": 25600
+      }
+    },
+    "shortcut": {
+      "status": "completed",
+      "updates": 200,
+      "init_sha256": "86c36d8f6ebd99013cdef868c7a39c53754e7a41b742152e4fe36cc804cbaa1e",
+      "ema_sha256": "30810156f0cc43a7e5b614bea9717c1ed77f63b399b9fb71e695d97e3186cbad",
+      "training_cost": {
+        "ema_forward_calls": 400,
+        "ema_sample_evals": 12800,
+        "student_forward_calls": 200,
+        "student_sample_evals": 25600
+      }
+    },
+    "meanflow": {
+      "status": "completed",
+      "updates": 200,
+      "init_sha256": "86c36d8f6ebd99013cdef868c7a39c53754e7a41b742152e4fe36cc804cbaa1e",
+      "ema_sha256": "e14a62558da31d184da5901212ab1bfaf4a458b95bb661d357232863e3fecdb9",
+      "training_cost": {
+        "student_forward_calls": 400,
+        "student_sample_evals": 32000
+      }
+    }
+  },
+  "sample_evidence": {
+    "cfm_N1": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 1024,
+      "nfe": 1,
+      "history_frames": 2,
+      "sampler": "euler",
+      "cumulative_updates_at_export": 200
+    },
+    "cfm_N2": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 2048,
+      "nfe": 2,
+      "history_frames": 3,
+      "sampler": "euler",
+      "cumulative_updates_at_export": 200
+    },
+    "cfm_N4": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 4096,
+      "nfe": 4,
+      "history_frames": 5,
+      "sampler": "euler",
+      "cumulative_updates_at_export": 200
+    },
+    "ot_cfm_N1": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 1024,
+      "nfe": 1,
+      "history_frames": 2,
+      "sampler": "euler",
+      "cumulative_updates_at_export": 200
+    },
+    "ot_cfm_N2": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 2048,
+      "nfe": 2,
+      "history_frames": 3,
+      "sampler": "euler",
+      "cumulative_updates_at_export": 200
+    },
+    "ot_cfm_N4": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 4096,
+      "nfe": 4,
+      "history_frames": 5,
+      "sampler": "euler",
+      "cumulative_updates_at_export": 200
+    },
+    "endpoint_N1": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 1024,
+      "nfe": 1,
+      "history_frames": 2,
+      "sampler": "euler",
+      "cumulative_updates_at_export": 200
+    },
+    "endpoint_N2": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 2048,
+      "nfe": 2,
+      "history_frames": 3,
+      "sampler": "euler",
+      "cumulative_updates_at_export": 200
+    },
+    "endpoint_N4": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 4096,
+      "nfe": 4,
+      "history_frames": 5,
+      "sampler": "euler",
+      "cumulative_updates_at_export": 200
+    },
+    "progressive_N1": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 1024,
+      "nfe": 1,
+      "history_frames": 2,
+      "sampler": "euler",
+      "cumulative_updates_at_export": 200
+    },
+    "progressive_N2": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 2048,
+      "nfe": 2,
+      "history_frames": 3,
+      "sampler": "euler",
+      "cumulative_updates_at_export": 160
+    },
+    "progressive_N4": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 4096,
+      "nfe": 4,
+      "history_frames": 5,
+      "sampler": "euler",
+      "cumulative_updates_at_export": 120
+    },
+    "reflow_N1": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 1024,
+      "nfe": 1,
+      "history_frames": 2,
+      "sampler": "euler",
+      "cumulative_updates_at_export": 200
+    },
+    "reflow_N2": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 2048,
+      "nfe": 2,
+      "history_frames": 3,
+      "sampler": "euler",
+      "cumulative_updates_at_export": 200
+    },
+    "reflow_N4": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 4096,
+      "nfe": 4,
+      "history_frames": 5,
+      "sampler": "euler",
+      "cumulative_updates_at_export": 200
+    },
+    "consistency_N1": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 1024,
+      "nfe": 1,
+      "history_frames": 2,
+      "sampler": "denoise_renoise",
+      "cumulative_updates_at_export": 200
+    },
+    "consistency_N2": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 2048,
+      "nfe": 2,
+      "history_frames": 4,
+      "sampler": "denoise_renoise",
+      "cumulative_updates_at_export": 200
+    },
+    "consistency_N4": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 4096,
+      "nfe": 4,
+      "history_frames": 8,
+      "sampler": "denoise_renoise",
+      "cumulative_updates_at_export": 200
+    },
+    "shortcut_N1": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 1024,
+      "nfe": 1,
+      "history_frames": 2,
+      "sampler": "euler",
+      "cumulative_updates_at_export": 200
+    },
+    "shortcut_N2": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 2048,
+      "nfe": 2,
+      "history_frames": 3,
+      "sampler": "euler",
+      "cumulative_updates_at_export": 200
+    },
+    "shortcut_N4": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 4096,
+      "nfe": 4,
+      "history_frames": 5,
+      "sampler": "euler",
+      "cumulative_updates_at_export": 200
+    },
+    "meanflow_N1": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 1024,
+      "nfe": 1,
+      "history_frames": 2,
+      "sampler": "euler",
+      "cumulative_updates_at_export": 200
+    },
+    "meanflow_N2": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 2048,
+      "nfe": 2,
+      "history_frames": 3,
+      "sampler": "euler",
+      "cumulative_updates_at_export": 200
+    },
+    "meanflow_N4": {
+      "native_reload_samples_bitwise_equal": true,
+      "model_sample_evals": 4096,
+      "nfe": 4,
+      "history_frames": 5,
+      "sampler": "euler",
+      "cumulative_updates_at_export": 200
+    }
+  },
+  "paired_raw_trace_four_methods_equal": true,
+  "paired_endpoint_reflow_bank_indices_equal": true,
+  "consistency_not_falsely_claimed_bank_pairing": true,
+  "widgets": {
+    "method": true,
+    "nfe_1_2_4": true,
+    "condition_or_scene": true,
+    "noise_index": true,
+    "play_step": 1,
+    "model_calls_on_widget_changes": 0,
+    "last_condition": 31,
+    "last_noise": 1
+  },
+  "gif": {
+    "path": "/private/tmp/recheck_nb15_native_wall/wall_consistency_N4_actual_events.gif",
+    "frames": 8,
+    "size": [
+      700,
+      600
+    ],
+    "method": "consistency",
+    "nfe": 4,
+    "clock": "actual model_input/denoised_endpoint events; no interpolated FM trajectory"
+  },
+  "final_holdout_accessed": false,
+  "official_models_modified": false,
+  "visual_qa": {
+    "status": "failed",
+    "actual_gif_final_frame_inspected": true,
+    "issue": "Repeated navigation progress colorbars accumulate across GIF frames; numerical training/sampling validation passed. Source not changed during frozen cohort training."
+  }
+}

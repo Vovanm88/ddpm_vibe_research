@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "kind": "ui_only_gif_colorbar_lifecycle_fix",
+  "training_notebook": {
+    "path": "replication/reports/method_zoo/training_notebook15.ipynb",
+    "sha256": "69a55a69fa7f6f1658e374b15d841c158b19b16c7b200187c64d5f48a8d91c77"
+  },
+  "current_notebook": {
+    "path": "notebooks/15_conditional_method_zoo.ipynb",
+    "sha256": "b97b1c647fc3897c7cc892fca04717fa0f71b699500c3e83663ae63027a27b1c"
+  },
+  "changed_cell_tags": [
+    "cached_gif_export"
+  ],
+  "changed_cell_indices": [
+    29
+  ],
+  "zoo_api_source_sha256_before": "f7022b88fdeeb2b9d961b4cffca42f2dbc70a0aa00ce6c859baf28270bd7df0a",
+  "zoo_api_source_sha256_after": "f7022b88fdeeb2b9d961b4cffca42f2dbc70a0aa00ce6c859baf28270bd7df0a",
+  "zoo_api_sources_identical": true,
+  "all_other_code_cell_sources_identical": true,
+  "change": "GIF frame callback clears the figure and recreates its subplot, so the progress colorbar is recreated once per frame without accumulating axes.",
+  "training_effect": "None: all zoo-api and every other code cell source byte-identical. Main processes already loaded frozen definitions. Original training hashes, manifests, registration and source_freeze remain unchanged.",
+  "full_training_rerun": false
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "task": "wall",
+  "method": "progressive",
+  "seed": 363,
+  "ema_sha256": "b1f59b6f26ee50d86921c4e1ad53426f381ec4414fd7e69eb427f0b609519311",
+  "teacher_sha256": "71d77760c37e6a053f324f2c810adb323439ed76ef51f09a57db43a5d2da9e79",
+  "source_sha256": "69a55a69fa7f6f1658e374b15d841c158b19b16c7b200187c64d5f48a8d91c77",
+  "trained_nfe": 16,
+  "cumulative_updates_at_export": 400
+}

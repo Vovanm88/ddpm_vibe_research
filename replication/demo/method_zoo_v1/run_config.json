@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "protocol_id": "method_zoo_v1_preregistered_48_warm_started_runs",
+  "output_dir": "replication/artifacts/method_zoo_v1",
+  "tasks": [
+    "rays",
+    "wall"
+  ],
+  "methods": [
+    "cfm",
+    "ot_cfm",
+    "endpoint",
+    "progressive",
+    "reflow",
+    "consistency",
+    "shortcut",
+    "meanflow"
+  ],
+  "seeds": [
+    161,
+    262,
+    363
+  ],
+  "updates": 2000,
+  "batch_size": 128,
+  "lr": 0.0001,
+  "warmup": 100,
+  "weight_decay": 0.0001,
+  "ema_decay": 0.99,
+  "grad_clip": 1.0,
+  "device": "cpu",
+  "threads": 4,
+  "teacher_steps": 32,
+  "pairbank_size": 8192,
+  "pairbank_seed": 816001,
+  "pairbank_batch_size": 256,
+  "checkpoint_every": 100,
+  "progress": false,
+  "initialization": "parent",
+  "progressive_steps": [
+    16,
+    8,
+    4,
+    2,
+    1
+  ],
+  "progressive_stage_warmup": 20,
+  "consistency_step": 0.03125,
+  "consistency_huber": 0.03,
+  "shortcut_fm_fraction": 0.75,
+  "shortcut_widths": [
+    0.0625,
+    0.125,
+    0.25,
+    0.5,
+    1.0
+  ],
+  "shortcut_smallest_half": 0.03125,
+  "meanflow_fm_fraction": 0.75,
+  "meanflow_logit_mean": -0.4,
+  "meanflow_logit_std": 1.0,
+  "meanflow_adaptive_p": 1.0,
+  "meanflow_adaptive_c": 0.001
+}

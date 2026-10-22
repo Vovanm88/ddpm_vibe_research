@@ -1,0 +1,17 @@
+{
+  "status": "policy_fixed_before_training_and_validation_results",
+  "policy": "fixed_final_EMA_no_search",
+  "registration": {
+    "path": "replication/reports/method_zoo/registration.json",
+    "sha256": "e420ea63a08389faf1d2f803f4b86437168fe703755a8e6da5a032490c511c05"
+  },
+  "source_freeze": {
+    "path": "replication/reports/method_zoo/source_freeze.json",
+    "sha256": "5d4db773b98df84ffb7cbf93ec25e079368e48363c9f0abbeb95a67f0402837b"
+  },
+  "updates_total": 2000,
+  "selected_weights": "Each completed method final EMA; progressive matching stage4/2/1 EMA with cumulative1200/1600/2000updates",
+  "checkpoint_selection_on_validation": false,
+  "hyperparameter_search": false,
+  "rule": "Validation may describe quality/bugs; no quality-based per-method changes before the registered fixed comparison. New recipes require a separate protocol and a new final bank."
+}

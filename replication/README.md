@@ -65,6 +65,27 @@ Test MNIST не открывался. Полный код и notebook 11 сох�
 Оба варианта OT повторены после зарегистрированного численного дополнения;
 финальные epsilon и точность решения сохранены. Предыдущий `recheck` не менялся.
 
+## Другие методы: отдельный сравнительный стенд
+
+[Notebook 15](../notebooks/15_conditional_method_zoo.ipynb) добавляет CFM/OT-CFM,
+регрессию teacher endpoint, progressive distillation, reflow, flow consistency,
+Shortcut Models и MeanFlow. Все основные методы начинают с одного conditional
+parent для своей задачи; это отдельные toy-адаптации, а не повторение image-рецептов
+оригинальных статей. Старый протокол `recheck` остаётся самостоятельным экспериментом.
+
+Рецепты 48 новых запусков и закрытые финальные seeds заданы до обучения:
+[registration](reports/method_zoo/registration.json),
+[run config](configs/method_zoo_v1.json).
+Подробности формул, границ сравнения и критериев качества —
+[docs/method_zoo.md](../docs/method_zoo.md).
+
+Все 48 запусков и 168 итоговых оценок завершены:
+[таблицы, рекомендации и GIF](reports/method_zoo/REPORT.md).
+[Notebook 16](../notebooks/16_method_zoo_results.ipynb) открывает готовые таблицы
+и интерактивные иллюстрации без обучения и новых model calls.
+[Публичные native EMA-экспорты](demo/method_zoo_v1/README.md) содержат 48 моделей
+и выбранные progressive-стадии, без optimizer/RNG checkpoints и полных teacher banks.
+
 ## Запуск из корня репозитория
 
 ```bash

@@ -1,0 +1,27 @@
+{
+  "status": "completed",
+  "contract": {
+    "task": "rays",
+    "split": "train",
+    "teacher_sha256": "9bc0dbe39c4cb24c4d9b893bac084c89be66fdd7b29d6879fca786b4020d6ce1",
+    "train_data_sha256": "723b7a3f2d9072d13014da0d4509712334f813cdf771a0e4ff7a47127256b7b0",
+    "train_conditions_sha256": "40d4223b08bb83901c2fd58bbe27253aae68e0e9ebb552a48a8c341293be3e15",
+    "size": 8192,
+    "seed": 816001,
+    "teacher_steps": 32
+  },
+  "hashes": {
+    "history": "c9dec7961c410c32ec6bfd373c0b35c33d6546b017c6decd1f0c2ba49d9bcd01",
+    "noise": "eaa2c0f427058ffb385bdc0da436146366d54258ac40d6d345d5fedcba83b70f",
+    "conditions": "220e4ac875d71b77e20cce6a655fe01541d6636207cf020dc7f7cd42e3f70233",
+    "condition_ids": "220e4ac875d71b77e20cce6a655fe01541d6636207cf020dc7f7cd42e3f70233"
+  },
+  "generation_seconds": 1.0186449997127056,
+  "generation_cost": {
+    "teacher_forward_calls": 1024,
+    "teacher_sample_evals": 262144
+  },
+  "quality_filtering": false,
+  "reuse": "same fixed bank across all methods and seeds",
+  "sha256": "75de36076769d936c8133c69211360a904def5f6eee5a441647dc19c6edea438"
+}

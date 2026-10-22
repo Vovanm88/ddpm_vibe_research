@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "task": "rays",
+  "method": "progressive",
+  "seed": 363,
+  "ema_sha256": "a11fd05d96884107c8227d79391f8a15950451fd47ae778d4f9d340b41ef9429",
+  "teacher_sha256": "9bc0dbe39c4cb24c4d9b893bac084c89be66fdd7b29d6879fca786b4020d6ce1",
+  "source_sha256": "69a55a69fa7f6f1658e374b15d841c158b19b16c7b200187c64d5f48a8d91c77",
+  "trained_nfe": 4,
+  "cumulative_updates_at_export": 1200
+}

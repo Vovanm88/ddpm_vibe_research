@@ -1,0 +1,101 @@
+{
+  "status": "passed",
+  "verified_utc": "2026-10-22T05:12:34.990230+00:00",
+  "software": {
+    "python": "3.11.16",
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "diffusion-lab": "0.5.0",
+    "torch": "2.14.1",
+    "diffusers": "0.39.0",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1"
+  },
+  "full_test_suite": {
+    "passed": 742,
+    "skipped": 3,
+    "warnings": 2,
+    "seconds": 53.98,
+    "latest_notebook16_ui_checked_separately": true
+  },
+  "latest_notebook16_targeted_tests": {
+    "passed": 5,
+    "seconds": 18.11
+  },
+  "ruff": "passed for src/tests/examples and notebooks10-16; report-only plotting script checked separately",
+  "uv_lock_offline_check": "passed",
+  "notebooks": {
+    "count_including_archived_numerical_source": 18,
+    "all_outputs_execution_counts_attachments_empty": true
+  },
+  "notebook_smoke_reports": [
+    {
+      "path": "replication/reports/method_zoo/notebook15_native_smoke_rays.json",
+      "sha256": "8d72f306b04eb06923d041fbadb058a41e6fe887bf5a70fabad46928b7b5c56f"
+    },
+    {
+      "path": "replication/reports/method_zoo/notebook15_native_smoke_wall.json",
+      "sha256": "6a799cd2a5bd6fdf2856b87999798de302f95e0dcd291eb365e4ca9746e88233"
+    },
+    {
+      "path": "replication/reports/method_zoo/notebook16_native_smoke.json",
+      "sha256": "fa96d08f171bac2aa2840037660b21d96097b6eaf793055e4e59a548434f6519"
+    },
+    {
+      "path": "replication/reports/method_zoo/interval_mps_smoke.json",
+      "sha256": "2b22759d50664341c9e2c66515bf4f1eee6869f3e67eac928d2a1201117fd5f1"
+    },
+    {
+      "path": "replication/reports/method_zoo/driver_parent32_smoke.json",
+      "sha256": "48af49b56c0c0cdc2bfbbda91d04b0e5f5c92d3e9380d68e91b5b54dd177b444"
+    }
+  ],
+  "publication": {
+    "runs": 48,
+    "native_directories": 66,
+    "inference_export_references": 144,
+    "files": 313,
+    "bytes": 116370277,
+    "all_native_tensor_hashes_verified": true,
+    "exact_resume_available": false
+  },
+  "evaluation": {
+    "rows": 168,
+    "status": "completed",
+    "seconds": 289.10063424985856,
+    "all48_fixed_before_final_bank": true,
+    "all144_exports_fixed_before_final_bank": true,
+    "all_native_hashes_verified_before_final_bank": true,
+    "results": {
+      "path": "replication/reports/method_zoo/final/results.json",
+      "sha256": "6f22c983e7f90de55ad060982b207335009230d13e876b5cf92e478d7e6f80bf"
+    },
+    "gate": {
+      "path": "replication/reports/method_zoo/final_gate.json",
+      "sha256": "238c4554348060835bc2f62a419847661a18eb54ee726729e20cb29d344edfb1"
+    }
+  },
+  "frozen_recheck_algorithm_sha256": "ac296cb09412f60a0e56fa2cb0c5c72af2cf25c5ab6408fb9d891bac76048acb",
+  "post_evaluation_gate_metadata_and_source_recheck": "passed; no numerical source changed",
+  "notebook15_ui_amendment": {
+    "path": "replication/reports/method_zoo/notebook_ui_amendment.json",
+    "sha256": "8d9b14b2ea58928a29d5b28972a2197a3a7674d550b49f1626c09ba9bc6531f9"
+  },
+  "root_visual_review": {
+    "passed": true,
+    "files": [
+      "final/previews/rays/rays_nfe1_final.png",
+      "final/previews/rays/rays_nfe4_sampling_events.gif",
+      "final/previews/wall/wall_nfe4_final.png",
+      "final/previews/wall/wall_nfe4_sampling_events.gif",
+      "final/previews/wall/wall_endpoint_nfe2_spatial_particle.gif",
+      "wall_summary.png"
+    ],
+    "checks": [
+      "actual middle GIF frames inspected",
+      "labels and separate sampling/physical clocks readable",
+      "red A to violet B spatial colors",
+      "raw out-of-view waypoint counts shown",
+      "no GIF colorbar accumulation"
+    ]
+  }
+}

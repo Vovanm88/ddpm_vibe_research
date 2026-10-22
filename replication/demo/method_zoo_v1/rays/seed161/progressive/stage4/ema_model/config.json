@@ -1,0 +1,15 @@
+{
+  "_class_name": "PointDenoiser",
+  "_diffusers_version": "0.39.0",
+  "_name_or_path": "/Users/vvmelnikov/Documents/thub_eda/diffusion-lab/replication/artifacts/method_zoo_v1/rays/seed161/progressive/stage8/ema_model",
+  "backbone": "mlp",
+  "condition_dim": 0,
+  "conditioner": "embedding",
+  "hidden_dim": 128,
+  "num_classes": 16,
+  "num_heads": 4,
+  "num_layers": 3,
+  "sample_shape": [
+    2
+  ]
+}
